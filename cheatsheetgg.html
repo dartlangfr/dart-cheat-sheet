@@ -1,0 +1,187 @@
+<!doctype html>
+<html itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<head>
+<style type="text/css">
+body {
+padding: .5em 0 0 .5em;
+font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+color: 333;
+font-size: 12px;
+-webkit-print-color-adjust: exact;
+print-color-adjust: exact;
+}
+
+.table {
+display: table;
+width: 100%;
+}
+
+.table>* {
+display: table-row;
+}
+
+.table>*>* {
+display: table-cell;
+}
+
+.main {
+table-layout: fixed;
+}
+
+.main>*>* {
+padding: 0 1em 0 0;
+}
+
+.package {
+border: solid 1px black;
+margin: .5em 0 0 0;
+overflow: hidden;
+}
+
+.package * {
+margin: 0;
+}
+
+.package h3 {
+padding: 0.4em;
+font-size: 1.1em;
+line-height: 1em;
+background-color: #00544d;
+color: #EEE;
+}
+
+.sheet>*>* {
+padding: 0.5em;
+}
+
+.sheet>*:nth-child(even) {
+background: #FFF;
+}
+
+.sheet>*:nth-child(odd) {
+background: #d5e3e2;
+}
+
+.sheet>*.sub>* {
+background: rgba(255,255,255,.5);
+}
+
+/*.sheet>*.sub:nth-child(even) {
+background: #E8E8E8;
+}
+
+.sheet>*.sub:nth-child(odd) {
+background: #DDD;
+}*/
+
+.sheet .sub>*:first-child {
+text-indent: 1em;
+}
+
+.footer {
+font-style: italic;
+}
+</style>
+<title>Dart cheat sheet</title>
+</head>
+<body>
+<h1>Dart cheat sheet (M2)</h1>
+<div class="main table">
+<div>
+<div>
+<div class="package">
+<h3>dart:core</h3>
+<div class="table sheet">
+<div><div>test</div><div>Soluce</div></div>
+<div><div>test</div><div>Soluce</div></div>
+<div><div>test</div><div>Soluce</div></div>
+</div>
+</div>
+
+<div class="package">
+<h3>dart:collection</h3>
+<div class="table sheet">
+<div><div>test</div><div>Soluce</div></div>
+</div>
+</div>
+
+<div class="package">
+<h3>dart:isolate</h3>
+<div class="table sheet">
+<div><div>spawnFunction(topLevelFunction)</div><div>Creates a new isolate</div></div>
+<div><div>port</div><div>The initial ReveivePort</div></div>
+<div><div>ReceivePort</div><div>Receives messages from SendPorts</div></div>
+<div class="sub"><div>.receive(callback)</div><div>For receiving messages</div></div>
+<div><div>SendPort</div><div>Sends messages to its ReceivePort</div></div>
+<div class="sub"><div>.send(message)</div><div>Sends a message</div></div>
+<div class="sub"><div>.call(message)</div><div>Sends a message</div></div>
+</div>
+</div>
+
+<div class="package">
+<h3>dart:io</h3>
+<div class="table sheet">
+<div><div>test</div><div>Soluce</div></div>
+</div>
+</div>
+
+<div class="package">
+<h3>dart:mirrors <i>PARTIAL</i></h3>
+<div class="table sheet">
+<div><div>test</div><div>Soluce</div></div>
+</div>
+</div>
+</div>
+<div>
+<div class="package">
+<h3>dart:html</h3>
+<div class="table sheet">
+<div><div>test</div><div>Soluce</div></div>
+</div>
+</div>
+
+<div class="package">
+<h3>web_ui</h3>
+<div class="table sheet">
+<div><div>test</div><div>Soluce</div></div>
+</div>
+</div>
+
+<div class="package">
+<h3>js_interop</h3>
+<div class="table sheet">
+<div><div>test</div><div>Soluce</div></div>
+</div>
+</div>
+</div>
+<div>
+<div class="package">
+<h3>unittest</h3>
+<div class="table sheet">
+<div><div>test</div><div>Soluce</div></div>
+</div>
+</div>
+
+<div class="package">
+<h3>logging</h3>
+<div class="table sheet">
+<div><div>test</div><div>Soluce</div></div>
+</div>
+</div>
+
+<div class="package">
+<h3>intl</h3>
+<div class="table sheet">
+<div><div>test</div><div>Soluce</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<p class="footer">
+Made by <a href="#todo">Guillaume Girou</a>, <a href="#todo">Vincent Bostoen</a> and <a href="#todo">Nicolas Fran��ois</a>.<br/>
+Version 0.3-M3-20130128<br/>
+</p>
+</body>
+</html>
