@@ -1,0 +1,26 @@
+.library-section {
+	border: 1px solid black;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background-color: #d4503f;
+	color: white;
+	padding-top: 4px;
+	padding-left: 8px;	
+	padding-right: 4px;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.class-section {
+	padding-left: 8px;	
+	padding-right: 2px;
+	color: black;
+	font-weight: normal;
+	font-size: 12px;	
+}
+
+.method-section {
+	padding-left: 8px;
+	padding-right: 2px;
+	color: black;
+}
