@@ -1,8 +1,11 @@
+body {
+	background-color: #333;
+}
+
+h1 {
+	color: white;
+}
 .library-section {
-	border: 1px solid black;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-	background-color: #d4503f;
 	color: white;
 	padding-top: 4px;
 	padding-left: 8px;	
@@ -23,4 +26,20 @@
 	padding-left: 8px;
 	padding-right: 2px;
 	color: black;
+}
+
+#core-section {
+	background-color: #ED764A;
+}
+
+#keyword-section {
+	background-color: #009999;
+}
+
+#operators-collection-section {
+	background-color: #86B32D;
+}
+
+#io-section {
+	background-color: #BF3030;
 }
