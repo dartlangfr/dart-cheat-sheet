@@ -1,0 +1,192 @@
+<!doctype html>
+<html itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<head>
+<style type="text/css">
+body {
+padding: .5em 0 0 .5em;
+font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+color: 333;
+font-size: 12px;
+-webkit-print-color-adjust: exact;
+print-color-adjust: exact;
+}
+
+.table {
+display: table;
+width: 100%;
+}
+
+.table>* {
+display: table-row;
+}
+
+.table>*>* {
+display: table-cell;
+}
+
+.main {
+table-layout: fixed;
+}
+
+.main>*>* {
+padding: 0 1em 0 0;
+}
+
+.package {
+border: solid 1px black;
+margin: .5em 0 0 0;
+overflow: hidden;
+}
+
+.package * {
+margin: 0;
+}
+
+.package h3 {
+padding: 0.4em;
+font-size: 1.1em;
+line-height: 1em;
+background-color: #00544d;
+color: #EEE;
+}
+
+.sheet>*>* {
+padding: 0.5em;
+}
+
+.sheet>*:nth-child(even) {
+background: #FFF;
+}
+
+.sheet>*:nth-child(odd) {
+background: #d5e3e2;
+}
+
+.sheet>*.sub>* {
+background: rgba(255,255,255,.5);
+}
+
+/*.sheet>*.sub:nth-child(even) {
+background: #E8E8E8;
+}
+
+.sheet>*.sub:nth-child(odd) {
+background: #DDD;
+}*/
+
+.sheet .sub>*:first-child {
+text-indent: 1em;
+}
+
+.sheet .sub .constructor {
+
+}
+
+.sheet .sub .static {
+
+}
+
+.footer {
+font-style: italic;
+}
+</style>
+<title>Dart cheat sheet</title>
+</head>
+<body>
+<h1>Dart cheat sheet (M2)</h1>
+<div class="main table">
+	<div>
+		<div>
+			<div class="package">
+				<h3>dart:aysnc</h3>
+				<div class="table sheet">
+
+					<div><div>Completer<T></div><div>A Completer is used to produce Futures and supply their value when it becomes available.</div></div>
+					<div class="sub"><div>.future</div><div>The future that will contain the result provided to this completer.</div></div>
+					<!--div class="sub"><div>.isCompleted</div><div>Whether the future has been completed.</div></div-->
+					<div class="sub"><div>.complete(value)</div><div>Completes future with the supplied values.</div></div>
+					<div class="sub"><div>.completeError(exception, [stackTrace])</div><div>Complete future with an error.</div></div>
+
+					<div><div>Future<T></div><div>A Future represents a delayed computation. It is used to obtain a not-yet available value, or error, sometime in the future.</div></div>
+					<div class="sub static"><div>.wait(futures)</div><div>Wait for all the given futures to complete and collect their values.</div></div>
+					<div class="sub static"><div>.delayed(duration, [computation()])</div><div>Creates a future that completes after a delay.</div></div>
+					<div class="sub constructor"><div>.immediate(value])</div><div>A future whose value is available in the next event-loop iteration.</div></div>
+					<div class="sub constructor"><div>.of(function()</div><div>Creates a future containing the result of calling function.</div></div>
+					<div class="sub constructor"><div>.asStream()</div><div>Creates a Stream that sends this' completion value, data or error, to its subscribers.</div></div>
+					<div class="sub"><div>.catchError(onError(asyncError), {test(error)})</div><div>Handles errors emitted by this Future.</div></div>
+					<div class="sub"><div>.then(onValue(value), {onError(asyncError)})</div><div>When this future completes with a value, then onValue is called with this value.</div></div>
+					<div class="sub"><div>.whenComplete(action())</div><div>Register a function to be called when this future completes.</div></div>
+
+
+					<div><div>Stream<T></div><div>A source of asynchronous data events.</div></div>
+					<div class="sub constructor"><div>.fromFuture(future)(action())</div><div>Creates a new single-subscription stream from the future.</div></div>
+					<div class="sub constructor"><div>.fromIterable(data)</div><div>Creates a single-subscription stream that gets its data from data.</div></div>
+					<div class="sub constructor"><div>.periodic(period, [computation(computationCount)]))</div><div>Creates a stream that repeatedly emits events at period intervals.</div></div>
+					<!--div class="sub"><div>.first</div><div>Returns the first element.</div></div-->
+					<div class="sub"><div>.isBroadcast</div><div>Reports whether this stream is a broadcast stream.</div></div>
+					<div class="sub"><div>.isEmpty</div><div>Reports whether this stream contains any elements.</div></div>
+					<!--div class="sub"><div>.last</div><div>Returns the last element.</div></div-->
+					<!--div class="sub"><div>.any(test(element))</div><div>Checks whether test accepts any element provided by this stream.</div></div-->
+					<div class="sub"><div>.asBroadcastStream()</div><div>Returns a multi-subscription stream that produces the same events as this.</div></div>
+					<!--div class="sub"><div>.contains(match)</div><div>Checks whether match occurs in the elements provided by this stream.</div></div-->
+					<!--div class="sub"><div>.distinct([equals(previous, next)])</div><div>Checks whether test accepts all elements provided by this stream.</div></div-->
+					<!--div class="sub"><div>.elementAt(index)</div><div>Returns the value of the indexth data event of this stream.</div></div-->
+					<!--div class="sub"><div>.every(test(element))</div><div>Checks whether test accepts all elements provided by this stream.</div></div-->
+					<div class="sub"><div>.expand(convert(value))</div><div>Creates a new stream from this stream that converts each element into zero or more events.</div></div>
+					<!--div class="sub"><div>.firstWhere(test(value), {defaultValue()})</div><div>Finds the first element of this stream matching test.</div></div-->
+					<div class="sub"><div>.handleError(handle(error), {test(error)})</div><div>Creates a wrapper Stream that intercepts some errors from this stream.</div></div>
+					<!--div class="sub"><div>.lastWhere(test(value), {defaultValue()})</div><div>Finds the last element in this stream matching test.</div></div-->
+					<div class="sub"><div>.listen(onData(event), {onError(error), onDone(), unsubscribeOnError})</div><div>Adds a subscription to this stream.</div></div>
+					<div class="sub"><div>.map(convert(event))</div><div>Creates a new stream that converts each element of this stream to a new value using the convert function.</div></div>
+					<!--div class="sub"><div>.max([compare(a,b)])</div><div>Finds the largest element in the stream.</div></div-->
+					<!--div class="sub"><div>.min([compare(a, b)])</div><div>Finds the least element in the stream.</div></div-->
+					<div class="sub"><div>.pipe(streamConsumer)</div><div>Binds this stream as the input of the provided StreamConsumer.</div></div>
+					<div class="sub"><div>.pipeInto(sink, {onError(error), unsubscribeOnError})</div><div></div></div>
+					<!--div class="sub"><div>.reduce(initialValue, combine(previous, element))</div><div>Reduces a sequence of values by repeatedly applying combine.</div></div-->
+					<!--div class="sub"><div>.singleWhere(test(value))</div><div>Finds the single element in this stream matching test.</div></div-->
+					<!--div class="sub"><div>.skip(count)</div><div>Skips the first count data events from this stream.</div></div-->
+					<div class="sub"><div>.skipWhile(test(value))</div><div>Skip data events from this stream while they are matched by test.</div></div>
+					<!--div class="sub"><div>.take(count)</div><div>Provides at most the first n values of this stream.</div></div-->
+					<div class="sub"><div>.takeWhile(test(value))</div><div>Forwards data events while test is successful.</div></div>
+					<!--div class="sub"><div>.toList()</div><div>Collects the data of this stream in a List</div></div-->
+					<!--div class="sub"><div>.toSet()</div><div>Collects the data of this stream in a Set.</div></div-->
+					<div class="sub"><div>.transform(streamTransformer)</div><div>Chains this stream as the input of the provided StreamTransformer.</div></div>
+					<div class="sub"><div>.where(test(event))</div><div>Creates a new stream from this stream that discards some data events.</div></div>
+
+
+					<div><div>Timer</div><div>Soluce</div></div>
+					<div class="sub static"><div>.run(callback()))</div><div>Runs the given callback asynchronously as soon as possible.</div></div>
+					<div class="sub constructor"><div>Timer(duration, callback())</div><div>RCreates a new timer.</div></div>
+					<div class="sub constructor"><div>.periodic(duration, callback(timer)</div><div>Creates a new repeating timer.</div></div>
+					<div class="sub"><div>.cancel()</div><div>Cancels the timer.</div></div>			
+
+
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<div class="package">
+				<h3>dart:mirrors</h3>
+				<div class="table sheet">
+					<div><div>test</div><div>Soluce</div></div>
+				</div>
+			</div>
+			
+			<div class="package">
+				<h3>unittest</h3>
+				<div class="table sheet">
+					<div><div>test</div><div>Soluce</div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<p class="footer">
+Made by <a href="#todo">Guillaume Girou</a>, <a href="#todo">Vincent Bostoen</a> and <a href="#todo">Nicolas François</a>.<br/>
+Version 0.3-M3-20130128<br/>
+</p>
+</body>
+</html>
