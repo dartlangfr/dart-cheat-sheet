@@ -1,8 +1,15 @@
+body {
+	background-color: #333;
+}
+
+h1 {
+	color: white;
+}
 .library-section {
 	border: 1px solid black;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
-	background-color: #d4503f;
+	background-color: #ED764A;
 	color: white;
 	padding-top: 4px;
 	padding-left: 8px;	
