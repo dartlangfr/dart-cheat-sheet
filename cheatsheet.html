@@ -106,13 +106,73 @@
 				    <div class="library-section">
     				  <p>dart:collection</p>
 	    				<div class="class-section">
-		    				<p>arrays</p>
+		    				<p>Iterable</p>
 				    		<div class="method-section">
-				    			<p>int hashCode</p>
-				    			<p>Type runtimeType</p>
-				    			<p>String toString()</p>
+				    			<p>factory Iterable.generate(int count, E generator(int index))</p>
+                  <p>bool isEmpty</p>
+                  <p>int length</p>
+                  <p>E first</p>
+                  <p>E single</p>
+                  <p>E last</p>
+                  <p>E elementAt(int index)</p>
+                  <p>E max([int compare(E a, E b)])</p>
+                  <p>E min([int compare(E a, E b)])</p>
+                  <p>bool contains(E element)</p>
+                  <p>bool any(bool f(E element))</p>
+                  <p>bool every(bool f(E element))</p>
+                  <p>Iterable map(f(E element))</p>
+                  <p>Iterable expand(Iterable f(E element))</p>
+                  <p>Iterable<E> where(bool f(E element))</p>
+                  <p>void forEach(void f(E element))</p>
+                  <p>Iterable<E> skip(int n)</p>
+                  <p>Iterable<E> take(int n)</p>
+                  <p>reduce(initialValue, combine(previousValue, E element))</p>
+                  <p>String join([String separator])</p>
+                  <p>List<E> toList()</p>
+                  <p>Set<E> toSet()</p>
 				    		</div>
 	    				</div>
+              <div class="class-section">
+                <p>Collection</p>
+                <div class="method-section">
+                  <p>add(E element);</p>
+                  <p>addAll(Iterable<E> elements)</p>
+                  <p>remove(Object element);</p>
+                  <p>removeAll(Iterable elements)</p>
+                  <p>retainAll(Iterable elements)</p>
+                  <p>clear()</p>
+                </div>
+              </div>
+              <div class="class-section">
+                <p>List</p>
+                <div class="method-section">
+                  <p>E operator [](int index);</p>
+                  <p>operator []=(int index, E value);</p>
+                  <p>Iterable<E> get reversed;</p>
+                  <p>sort([int compare(E a, E b)]);</p>
+                  <p>int indexOf(E element, [int start = 0]);</p>
+                  <p>int lastIndexOf(E element, [int start]);</p>
+                  <p>E removeAt(int index);</p>
+                  <p>E removeLast();</p>
+                  <p>List<E> getRange(int start, int length);</p>
+                  <p>void removeRange(int start, int length);</p>
+                  <p>void insertRange(int start, int length, [E fill]);</p>
+                </div>
+              </div>
+              <div class="class-section">
+                <p>Map</p>
+                <div class="method-section">
+                  <p>bool containsValue(V value);</p>
+                  <p>bool containsKey(K key);</p>
+                  <p>V operator [](K key);</p>
+                  <p>operator []=(K key, V value);</p>
+                  <p>V putIfAbsent(K key, V ifAbsent());</p>
+                  <p>V remove(K key);</p>
+                  <p>forEach(void f(K key, V value));</p>
+                  <p>Iterable<K> get keys;</p>
+                  <p>Iterable<V> get values;</p>
+                </div>
+              </div>
 	    			</div>
 		    	</div>
 	  	
@@ -121,13 +181,42 @@
 	    				<p>dart:io
 	    				</p>
 	    				<div class="class-section">
-		    				<p>arrays</p>
+		    				<p>File</p>
 				    		<div class="method-section">
-				    			<p>int hashCode</p>
-				    			<p>Type runtimeType</p>
-				    			<p>String toString()</p>
+				    			<p>Directory</p>
+                  <p>File</p>
+                  <p>Path</p>
+                  <p>Encoding</p>
 				    		</div>
 	    				</div>
+              <div class="class-section">
+                <p>HTTP</p>
+                <div class="method-section">
+                  <p>ContentType</p>
+                  <p>Cookie</p>
+                  <p>HttpHeaders</p>
+                  <p>HttpSession</p>
+                  <p>HttpClient</p>
+                  <p>HttpServer</p>
+                  <p>WebSocket</p>
+                  <p>Socket</p>
+                </div>
+              </div>
+              <div class="class-section">
+                <p>Stream</p>
+                <div class="method-section">
+                  <p>LineTransformer</p>
+                  <p>StringDecoder</p>
+                  <p>StringEncoder</p>
+                </div>
+              </div>
+              <div class="class-section">
+                <p>System</p>
+                <div class="method-section">
+                  <p>Platform</p>
+                  <p>Process</p>
+                </div>
+              </div>
 	    			</div>
 		    	</div>
 	  	</div>
