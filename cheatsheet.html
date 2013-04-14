@@ -12,12 +12,12 @@
     		<h1>Cheat sheet</h1>
 	    	<div class="row-fluid">
 	  			<div class="span4" id="core-section">
-	  				<div class="library-section">
+	  				<div class="section-container">
 	    				<p>dart:core</p>
 	    				
-              <div class="class-section">
+              <div class="section">
                 <p>Built-in Types</p>
-                <div class="method-section">
+                <div class="section-content">
                   <ul>
                     <li>Numbers : num, int, double</li>
                     <li>Strings : String, StringBuilder, RegExp</li>
@@ -28,7 +28,7 @@
                 </div>
               </div>
               
-              <div class="class-section">
+              <div class="section">
                 <p>Collections</p>
                 <table class="table table-condensed">
                   <thead>
@@ -42,9 +42,9 @@
                 </table>                
               </div>
 	    				
-	    				<div class="class-section">
+	    				<div class="section">
 		    				<p>Object</p>
-				    		<div class="method-section">
+				    		<div class="section-content">
                   <ul>
   				    			<li>int hashCode</li>
   				    			<li>Type runtimeType</li>
@@ -52,7 +52,7 @@
                   </ul>
 				    		</div>
 				    		<p>RegExp</p>
-				    		<div class="method-section">
+				    		<div class="section-content">
                   <ul>
   				    			<li>Iterable<Match> allMatches(String str)</li>
   				    			<li>Match firstMatch(String str)</li>
@@ -65,10 +65,10 @@
           <div class="span4">
             <div class="row-fluid">
     		    	<div id="keyword-section">
-                <div class="library-section">
+                <div class="section-container">
                   <p>Keywords</p>
-                  <div class="class-section">
-                    <div class="method-section">
+                  <div class="section">
+                    <div class="section-content">
                       <table class="table table-condensed">
                         <colgroup><col><col><col><col><col></colgroup>
                         <tbody>
@@ -90,21 +90,21 @@
               </div>
               <div class="row-fluid">
                 <div id="io-section">
-                  <div class="library-section">
+                  <div class="section-container">
                     <p>dart:io
                     </p>
-                    <div class="class-section">
+                    <div class="section">
                       <p>File</p>
-                      <ul class="method-section">                        
+                      <ul class="section-content">                        
                           <li>Directory</li>
                           <li>File</li>
                           <li>Path</li>
                           <li>Encoding</li>
                       </ul>
                     </div>
-                    <div class="class-section">
+                    <div class="section">
                       <p>HTTP</p>
-                      <ul class="method-section">
+                      <ul class="section-content">
                           <li>ContentType</li>
                           <li>Cookie</li>
                           <li>HttpHeaders</li>
@@ -115,17 +115,17 @@
                           <li>Socket</li>
                         </ul>
                     </div>
-                    <div class="class-section">
+                    <div class="section">
                       <p>Stream</p>
-                      <ul class="method-section">
+                      <ul class="section-content">
                           <li>LineTransformer</li>
                           <li>StringDecoder</li>
                           <li>StringEncoder</li>                       
                       </ul>
                     </div>
-                    <div class="class-section">
+                    <div class="section">
                       <p>System</p>
-                      <ul class="method-section">
+                      <ul class="section-content">
                           <li>Platform</li>
                           <li>Process</li>
                       </ul>
@@ -137,20 +137,20 @@
           </div>
 			
 			<div class="span4" id="operators-collection-section">
-            <div class="library-section">
+            <div class="section-container">
               <p>Operators</p>
-              <div class="class-section">
+              <div class="section">
                 <p></p>
-                <div class="method-section">
+                <div class="section-content">
                   <p></p>
                 </div>
               </div>
             </div>
-				    <div class="library-section">
+				    <div class="section-container">
     				  <p>dart:collection</p>
-	    				<div class="class-section">
+	    				<div class="section">
 		    				<p>Iterable</p>
-				    		<ul class="method-section">
+				    		<ul class="section-content">
   				    			<li>factory Iterable.generate(int count, E generator(int index))</li>
                     <li>bool isEmpty</li>
                     <li>int length</li>
@@ -175,9 +175,9 @@
                     <li>Set<E> toSet()</li>
                 </ul>
 	    				</div>
-              <div class="class-section">
+              <div class="section">
                 <p>Collection</p>
-                <ul class="method-section">
+                <ul class="section-content">
                     <li>add(E element);</li>
                     <li>addAll(Iterable<E> elements)</li>
                     <li>remove(Object element);</li>
@@ -186,9 +186,9 @@
                     <li>clear()</li>
                 </ul>
               </div>
-              <div class="class-section">
+              <div class="section">
                 <p>List</p>
-                <ul class="method-section">
+                <ul class="section-content">
                     <li>E operator [](int index);</li>
                     <li>operator []=(int index, E value);</li>
                     <li>Iterable<E> get reversed;</li>
@@ -202,9 +202,9 @@
                     <li>void insertRange(int start, int length, [E fill]);</li>
                 </ul>
               </div>
-              <div class="class-section">
+              <div class="section">
                 <p>Map</p>
-                <ul class="method-section">
+                <ul class="section-content">
                     <li>bool containsValue(V value);</li>
                     <li>bool containsKey(K key);</li>
                     <li>V operator [](K key);</li>
