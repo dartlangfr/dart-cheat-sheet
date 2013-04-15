@@ -6,7 +6,8 @@ body {
 h1 {
 	color: white;
 }
-.library-section {
+
+.section-container {
 	color: white;
 	padding-top: 4px;
 	padding-left: 8px;	
@@ -15,7 +16,7 @@ h1 {
 	font-size: 17px;
 }
 
-.class-section {
+.section {
 	padding-left: 8px;	
 	padding-right: 2px;
 	color: black;
@@ -23,7 +24,7 @@ h1 {
 	font-size: 12px;	
 }
 
-.method-section {
+.section-content {
 	padding-left: 8px;
 	padding-right: 2px;
 	color: black;
