@@ -11,8 +11,8 @@
   		<div class="container-fluid">
     		<h1>Cheat sheet</h1>
 	    	<div class="row-fluid">
-	  			<div class="span4" id="core-section">
-	  				<div class="library-section">
+	  			<div class="span4" >
+	  				<div class="library-section" id="core-section">
 	    				<p>dart:core</p>
 	    				
               <div class="class-section">
@@ -61,6 +61,73 @@
 				    		</div>
 	    				</div>
 	    			</div>
+                    <div class="library-section" id="async-section">
+                        <p>dart:async</p>
+
+                        <div class="class-section">
+                            <p>Completer</p>
+                            <ul class="method-section" />
+                                <li>future</li>
+                                <li>complete(value)</li>
+                                <li>completeError(exception, [stackTrace])</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="class-section">
+                            <p>Future</p>
+                            <ul class="method-section" />
+
+                                <li>wait(futures)</li>
+                                <li>delayed(duration, [computation()])</li>
+                                <li>immediate(value])</li>
+                                <li>of(function()</li>
+                                <li>asStream()</li>
+                                <li>catchError(onError(asyncError), {test(error)})</li>
+                                <li>then(onValue(value), {onError(asyncError)})</li>
+                                <li>whenComplete(action())</li>
+
+                            </ul>
+                        </div>
+
+
+                        <div class="class-section">
+                            <p>Stream</p>
+                            <ul class="method-section" />
+
+                                <li>fromFuture(future)(action())</li>
+                                <li>fromIterable(data)</li>
+                                <li>periodic(period, [computation(computationCount)]))</li>
+                                <li>isBroadcast</li>
+                                <li>isEmpty</li>
+                                <li>asBroadcastStream()</li>
+                                <li>expand(convert(value))</li>
+                                <li>handleError(handle(error), {test(error)})</li>
+                                <li>listen(onData(event), {onError(error), onDone(), unsubscribeOnError})</li>
+                                <li>map(convert(event))</li>
+                                <li>pipe(streamConsumer)</li>
+                                <li>pipeInto(sink, {onError(error), unsubscribeOnError})</li>
+                                <li>skipWhile(test(value))</li>
+                                <li>takeWhile(test(value))</li>
+                                <li>transform(streamTransformer)</li>
+                                <li>where(test(event))</li>
+                            </ul>
+                        </div>
+
+
+
+
+                        <div class="class-section">
+                            <p>Timer</p>
+                            <ul class="method-section" />
+                                <li>run(callback()))</li>
+                                <li>Timer(duration, callback())</li>
+                                <li>periodic(duration, callback(timer)</li>
+                                <li>cancel()</li>
+                            </ul>
+                         </div>
+
+                    </div>
 	    		</div>
           <div class="span4">
             <div class="row-fluid">
