@@ -30,6 +30,26 @@ h1 {
 	color: black;
 }
 
+.method {
+	color: white;
+}
+
+.return-type {
+	color: rgb(0, 149, 248);
+	padding-right: 2px;
+	font-weight: bold;
+}
+
+.method-name {
+	color: rgb(255, 58, 58);
+	font-weight: bold;
+}
+
+.params {
+	color: rgb(255, 229, 94);
+	font-weight: bold;
+}
+
 #core-section {
 	background-color: #ED764A;
 }
