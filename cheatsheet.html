@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Cheat sheet</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
@@ -238,7 +239,7 @@
               </div>
             </div>
             <div class="row-fluid">
-              <div id="io-section">
+              <div id="isolate-section">
                 <div class="section-container">
                   <p>dart:isolate</p>
                   <div class="section">
@@ -287,140 +288,148 @@
             </div>
           </div>
         </div>
-        <div class="span4" id="operators-collection-section">
-          <div class="section-container">
-            <p>Operators</p>
-            <div class="section">
-              <ul class="section-content">
-                <li>Arithmetics &nbsp;&nbsp; + &nbsp;&nbsp; - &nbsp;&nbsp; * &nbsp;&nbsp; / &nbsp;&nbsp; %
-                  &nbsp;&nbsp; ~/ &nbsp;&nbsp; -<em class="replaceable"><code>expr</code></em>
-                </li>
-                <li>Increment / Decrement &nbsp;&nbsp; <em class="replaceable"><code>expr</code></em>++
-                  &nbsp;&nbsp; <em class="replaceable"><code>expr</code></em>-- &nbsp;&nbsp;
-                  ++<em class="replaceable"><code>expr</code></em> &nbsp;&nbsp;
-                  --<em class="replaceable"><code>expr</code></em>
-                </li>
-                <li>Bitwise &nbsp;&nbsp; &amp; &nbsp;&nbsp; | &nbsp;&nbsp; ^ &nbsp;&nbsp; ~<em class="replaceable"><code>expr</code></em> &nbsp;&nbsp; &lt;&lt; &nbsp;&nbsp; &gt;&gt;</li>
-                <li>Comparison &nbsp;&nbsp; == &nbsp;&nbsp; !=
-                  &nbsp;&nbsp; &gt;= &nbsp;&nbsp; &gt; &nbsp;&nbsp;
-                  &lt;= &nbsp;&nbsp; &lt; &nbsp;&nbsp; 
-                </li>
-                <li>Logical &nbsp;&nbsp; &amp;&amp; &nbsp;&nbsp; || &nbsp;&nbsp; !<em class="replaceable"><code>expr</code></em></li>
-                <li>Conditional <em class="replaceable"><code>expr1</code></em> ?
-                  <em class="replaceable"><code>expr2</code></em> :
-                  <em class="replaceable"><code>expr3</code></em>
-                </li>
-                <li>Assignment &nbsp;&nbsp; = &nbsp;&nbsp; *= &nbsp;&nbsp; /=
-                  &nbsp;&nbsp; ~/= &nbsp;&nbsp; %= &nbsp;&nbsp; += &nbsp;&nbsp; -=
-                  &nbsp;&nbsp; &lt;&lt;= &nbsp;&nbsp; &gt;&gt;= &nbsp;&nbsp; &amp;=
-                  &nbsp;&nbsp; ^= &nbsp;&nbsp; |= &nbsp;&nbsp;
-                </li>
-                <li>Accessors &nbsp;&nbsp; [] &nbsp;&nbsp; . &nbsp;&nbsp; ..</li>
-                <li>Type / Argument &nbsp;&nbsp; as &nbsp;&nbsp; is &nbsp;&nbsp; is! &nbsp;&nbsp; ?<em class="replaceable"><code>identifier</code></em></li>
-              </ul>
+        <div class="span4">
+          <div class="row-fluid">
+            <div id="operators-section">
+              <div class="section-container">
+                <p>Operators</p>
+                <div class="section">
+                  <ul class="section-content">
+                    <li>Arithmetics &nbsp;&nbsp; + &nbsp;&nbsp; - &nbsp;&nbsp; * &nbsp;&nbsp; / &nbsp;&nbsp; %
+                      &nbsp;&nbsp; ~/ &nbsp;&nbsp; -<em class="replaceable"><code>expr</code></em>
+                    </li>
+                    <li>Increment / Decrement &nbsp;&nbsp; <em class="replaceable"><code>expr</code></em>++
+                      &nbsp;&nbsp; <em class="replaceable"><code>expr</code></em>-- &nbsp;&nbsp;
+                      ++<em class="replaceable"><code>expr</code></em> &nbsp;&nbsp;
+                      --<em class="replaceable"><code>expr</code></em>
+                    </li>
+                    <li>Bitwise &nbsp;&nbsp; &amp; &nbsp;&nbsp; | &nbsp;&nbsp; ^ &nbsp;&nbsp; ~<em class="replaceable"><code>expr</code></em> &nbsp;&nbsp; &lt;&lt; &nbsp;&nbsp; &gt;&gt;</li>
+                    <li>Comparison &nbsp;&nbsp; == &nbsp;&nbsp; !=
+                      &nbsp;&nbsp; &gt;= &nbsp;&nbsp; &gt; &nbsp;&nbsp;
+                      &lt;= &nbsp;&nbsp; &lt; &nbsp;&nbsp; 
+                    </li>
+                    <li>Logical &nbsp;&nbsp; &amp;&amp; &nbsp;&nbsp; || &nbsp;&nbsp; !<em class="replaceable"><code>expr</code></em></li>
+                    <li>Conditional <em class="replaceable"><code>expr1</code></em> ?
+                      <em class="replaceable"><code>expr2</code></em> :
+                      <em class="replaceable"><code>expr3</code></em>
+                    </li>
+                    <li>Assignment &nbsp;&nbsp; = &nbsp;&nbsp; *= &nbsp;&nbsp; /=
+                      &nbsp;&nbsp; ~/= &nbsp;&nbsp; %= &nbsp;&nbsp; += &nbsp;&nbsp; -=
+                      &nbsp;&nbsp; &lt;&lt;= &nbsp;&nbsp; &gt;&gt;= &nbsp;&nbsp; &amp;=
+                      &nbsp;&nbsp; ^= &nbsp;&nbsp; |= &nbsp;&nbsp;
+                    </li>
+                    <li>Accessors &nbsp;&nbsp; [] &nbsp;&nbsp; . &nbsp;&nbsp; ..</li>
+                    <li>Type / Argument &nbsp;&nbsp; as &nbsp;&nbsp; is &nbsp;&nbsp; is! &nbsp;&nbsp; ?<em class="replaceable"><code>identifier</code></em></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="section-container">
-            <p>dart:collection</p>
-            <div class="section">
-              <table class="table table-condensed">
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>Unordered</th>
-                    <th>Ordered</th>
-                    <th>Sorted</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>List</td>
-                    <td></td>
-                    <td>List</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Set</td>
-                    <td>HashSet</td>
-                    <td>LinkedHashSet</td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Map</td>
-                    <td>HashMap</td>
-                    <td>LinkedHashMap</td>
-                    <td>SplayTreeMap</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="section">
-              <p>Iterable</p>
-              <ul class="section-content">
-                <li>factory Iterable.generate(int count, E generator(int index))</li>
-                <li>bool isEmpty</li>
-                <li>int length</li>
-                <li>E first</li>
-                <li>E single</li>
-                <li>E last</li>
-                <li>E elementAt(int index)</li>
-                <li>E max([int compare(E a, E b)])</li>
-                <li>E min([int compare(E a, E b)])</li>
-                <li>bool contains(E element)</li>
-                <li>bool any(bool f(E element))</li>
-                <li>bool every(bool f(E element))</li>
-                <li>Iterable map(f(E element))</li>
-                <li>Iterable expand(Iterable f(E element))</li>
-                <li>Iterable&lt;E&gt; where(bool f(E element))</li>
-                <li>void forEach(void f(E element))</li>
-                <li>Iterable&lt;E&gt; skip(int n)</li>
-                <li>Iterable&lt;E&gt; take(int n)</li>
-                <li>reduce(initialValue, combine(previousValue, E element))</li>
-                <li>String join([String separator])</li>
-                <li>List&lt;E&gt; toList()</li>
-                <li>Set&lt;E&gt; toSet()</li>
-              </ul>
-            </div>
-            <div class="section">
-              <p>Collection</p>
-              <ul class="section-content">
-                <li>add(E element)</li>
-                <li>addAll(Iterable&lt;E&gt; elements)</li>
-                <li>remove(Object element)</li>
-                <li>removeAll(Iterable elements)</li>
-                <li>retainAll(Iterable elements)</li>
-                <li>clear()</li>
-              </ul>
-            </div>
-            <div class="section">
-              <p>List</p>
-              <ul class="section-content">
-                <li>E operator [](int index)</li>
-                <li>operator []=(int index, E value)</li>
-                <li>Iterable&lt;E&gt; get reversed</li>
-                <li>sort([int compare(E a, E b)])</li>
-                <li>int indexOf(E element, [int start = 0])</li>
-                <li>int lastIndexOf(E element, [int start])</li>
-                <li>E removeAt(int index)</li>
-                <li>E removeLast()</li>
-                <li>List&lt;E&gt; getRange(int start, int length)</li>
-                <li>void removeRange(int start, int length)</li>
-                <li>void insertRange(int start, int length, [E fill])</li>
-              </ul>
-            </div>
-            <div class="section">
-              <p>Map</p>
-              <ul class="section-content">
-                <li>bool containsValue(V value)</li>
-                <li>bool containsKey(K key)</li>
-                <li>V operator [](K key)</li>
-                <li>operator []=(K key, V value)</li>
-                <li>V putIfAbsent(K key, V ifAbsent())</li>
-                <li>V remove(K key)</li>
-                <li>forEach(void f(K key, V value))</li>
-                <li>Iterable&lt;K&gt; get keys</li>
-                <li>Iterable&lt;V&gt; get values</li>
-              </ul>
+          <div class="row-fluid">
+            <div id="collection-section">
+              <div class="section-container">
+                <p>dart:collection</p>
+                <div class="section">
+                  <table class="table table-condensed">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>Unordered</th>
+                        <th>Ordered</th>
+                        <th>Sorted</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>List</td>
+                        <td></td>
+                        <td>List</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Set</td>
+                        <td>HashSet</td>
+                        <td>LinkedHashSet</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Map</td>
+                        <td>HashMap</td>
+                        <td>LinkedHashMap</td>
+                        <td>SplayTreeMap</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="section">
+                  <p>Iterable</p>
+                  <ul class="section-content">
+                    <li>factory Iterable.generate(int count, E generator(int index))</li>
+                    <li>bool isEmpty</li>
+                    <li>int length</li>
+                    <li>E first</li>
+                    <li>E single</li>
+                    <li>E last</li>
+                    <li>E elementAt(int index)</li>
+                    <li>E max([int compare(E a, E b)])</li>
+                    <li>E min([int compare(E a, E b)])</li>
+                    <li>bool contains(E element)</li>
+                    <li>bool any(bool f(E element))</li>
+                    <li>bool every(bool f(E element))</li>
+                    <li>Iterable map(f(E element))</li>
+                    <li>Iterable expand(Iterable f(E element))</li>
+                    <li>Iterable&lt;E&gt; where(bool f(E element))</li>
+                    <li>void forEach(void f(E element))</li>
+                    <li>Iterable&lt;E&gt; skip(int n)</li>
+                    <li>Iterable&lt;E&gt; take(int n)</li>
+                    <li>reduce(initialValue, combine(previousValue, E element))</li>
+                    <li>String join([String separator])</li>
+                    <li>List&lt;E&gt; toList()</li>
+                    <li>Set&lt;E&gt; toSet()</li>
+                  </ul>
+                </div>
+                <div class="section">
+                  <p>Collection</p>
+                  <ul class="section-content">
+                    <li>add(E element)</li>
+                    <li>addAll(Iterable&lt;E&gt; elements)</li>
+                    <li>remove(Object element)</li>
+                    <li>removeAll(Iterable elements)</li>
+                    <li>retainAll(Iterable elements)</li>
+                    <li>clear()</li>
+                  </ul>
+                </div>
+                <div class="section">
+                  <p>List</p>
+                  <ul class="section-content">
+                    <li>E operator [](int index)</li>
+                    <li>operator []=(int index, E value)</li>
+                    <li>Iterable&lt;E&gt; get reversed</li>
+                    <li>sort([int compare(E a, E b)])</li>
+                    <li>int indexOf(E element, [int start = 0])</li>
+                    <li>int lastIndexOf(E element, [int start])</li>
+                    <li>E removeAt(int index)</li>
+                    <li>E removeLast()</li>
+                    <li>List&lt;E&gt; getRange(int start, int length)</li>
+                    <li>void removeRange(int start, int length)</li>
+                    <li>void insertRange(int start, int length, [E fill])</li>
+                  </ul>
+                </div>
+                <div class="section">
+                  <p>Map</p>
+                  <ul class="section-content">
+                    <li>bool containsValue(V value)</li>
+                    <li>bool containsKey(K key)</li>
+                    <li>V operator [](K key)</li>
+                    <li>operator []=(K key, V value)</li>
+                    <li>V putIfAbsent(K key, V ifAbsent())</li>
+                    <li>V remove(K key)</li>
+                    <li>forEach(void f(K key, V value))</li>
+                    <li>Iterable&lt;K&gt; get keys</li>
+                    <li>Iterable&lt;V&gt; get values</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>

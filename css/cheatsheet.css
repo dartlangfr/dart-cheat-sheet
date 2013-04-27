@@ -62,10 +62,18 @@ h1 {
 	background-color: #009999;
 }
 
-#operators-collection-section {
-	background-color: #86B32D;
+#operators-section {
+    background-color: #A200FF;
+}
+
+#collection-section {
+    background-color: #86B32D;
 }
 
 #io-section {
-	background-color: #BF3030;
+    background-color: #BF3030;
+}
+
+#isolate-section {
+    background-color: #00ABA9;
 }
