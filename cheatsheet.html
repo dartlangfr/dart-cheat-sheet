@@ -19,11 +19,11 @@
               <p>Built-in Types</p>
               <div class="section-content">
                 <ul>
-                  <li>Numbers : num, int, double</li>
-                  <li>Strings : String, StringBuilder, RegExp</li>
-                  <li>Booleans : bool, true, false</li>
-                  <li>Dates &amp; Times : Date, DateTime, Duration, Stopwatch</li>
-                  <li>Collections : List&lt;E&gt;, Set&lt;E&gt;, Map&lt;K, V&gt;, Collection&lt;E&gt;, Iterable&lt;E&gt;, Iterator&lt;E&gt;</li>
+                  <li>Numbers: num, int, double</li>
+                  <li>Strings: String, StringBuilder, RegExp</li>
+                  <li>Booleans: bool, true, false</li>
+                  <li>Dates &amp; Times: Date, DateTime, Duration, Stopwatch</li>
+                  <li>Collections: List&lt;E&gt;, Set&lt;E&gt;, Map&lt;K, V&gt;, Collection&lt;E&gt;, Iterable&lt;E&gt;, Iterator&lt;E&gt;</li>
                 </ul>
               </div>
             </div>
@@ -108,87 +108,17 @@
                 <p>Keywords</p>
                 <div class="section">
                   <div class="section-content">
-                    <table class="table table-condensed">
-                      <colgroup>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                      </colgroup>
-                      <tbody>
-                        <tr>
-                          <td>abstract</td>
-                          <td>do</td>
-                          <td>finally</td>
-                          <td>new</td>
-                          <td>this</td>
-                        </tr>
-                        <tr>
-                          <td>as</td>
-                          <td>dynamic</td>
-                          <td>for</td>
-                          <td>null</td>
-                          <td>throw-fluid</td>
-                        </tr>
-                        <tr>
-                          <td>assert</td>
-                          <td>else</td>
-                          <td>get</td>
-                          <td>operator</td>
-                          <td>true</td>
-                        </tr>
-                        <tr>
-                          <td>break</td>
-                          <td>export</td>
-                          <td>if</td>
-                          <td>part</td>
-                          <td>try</td>
-                        </tr>
-                        <tr>
-                          <td>case</td>
-                          <td>external</td>
-                          <td>implements</td>
-                          <td>return</td>
-                          <td>typedef</td>
-                        </tr>
-                        <tr>
-                          <td>catch</td>
-                          <td>extends</td>
-                          <td>import</td>
-                          <td>set</td>
-                          <td>var</td>
-                        </tr>
-                        <tr>
-                          <td>class</td>
-                          <td>factory</td>
-                          <td>in</td>
-                          <td>static</td>
-                          <td>void</td>
-                        </tr>
-                        <tr>
-                          <td>const</td>
-                          <td>false</td>
-                          <td>is</td>
-                          <td>super</td>
-                          <td>while</td>
-                        </tr>
-                        <tr>
-                          <td>continue</td>
-                          <td>final</td>
-                          <td>library</td>
-                          <td>switch</td>
-                          <td>with</td>
-                        </tr>
-                        <tr>
-                          <td>default</td>
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                          <td>&nbsp;</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <ul>
+                      <li>Library: library, part, part of, import, export, show, hide</li>
+                      <li>Class: class, abstract, extends, implements, this, super</li>
+                      <li>Constructor: new, factory, const</li>
+                      <li>Function: operator, external</li>
+                      <li>Getter / Setter: get, set</li>
+                      <li>Type: void, null, var, dynamic, typedef, is, as, false, true</li>
+                      <li>Modifier: static, final, const</li>
+                      <li>Control flow: if, else, for, in, while, do, break, continue, return, switch, case, default, assert</li>
+                      <li>Exception: try, catch, finally, throw</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -295,31 +225,31 @@
                 <p>Operators</p>
                 <div class="section">
                   <ul class="section-content">
-                    <li>Arithmetics &nbsp;&nbsp; + &nbsp;&nbsp; - &nbsp;&nbsp; * &nbsp;&nbsp; / &nbsp;&nbsp; %
+                    <li>Arithmetics: &nbsp;&nbsp; + &nbsp;&nbsp; - &nbsp;&nbsp; * &nbsp;&nbsp; / &nbsp;&nbsp; %
                       &nbsp;&nbsp; ~/ &nbsp;&nbsp; -<em class="replaceable"><code>expr</code></em>
                     </li>
-                    <li>Increment / Decrement &nbsp;&nbsp; <em class="replaceable"><code>expr</code></em>++
+                    <li>Increment / Decrement: &nbsp;&nbsp; <em class="replaceable"><code>expr</code></em>++
                       &nbsp;&nbsp; <em class="replaceable"><code>expr</code></em>-- &nbsp;&nbsp;
                       ++<em class="replaceable"><code>expr</code></em> &nbsp;&nbsp;
                       --<em class="replaceable"><code>expr</code></em>
                     </li>
-                    <li>Bitwise &nbsp;&nbsp; &amp; &nbsp;&nbsp; | &nbsp;&nbsp; ^ &nbsp;&nbsp; ~<em class="replaceable"><code>expr</code></em> &nbsp;&nbsp; &lt;&lt; &nbsp;&nbsp; &gt;&gt;</li>
+                    <li>Bitwise: &nbsp;&nbsp; &amp; &nbsp;&nbsp; | &nbsp;&nbsp; ^ &nbsp;&nbsp; ~<em class="replaceable"><code>expr</code></em> &nbsp;&nbsp; &lt;&lt; &nbsp;&nbsp; &gt;&gt;</li>
                     <li>Comparison &nbsp;&nbsp; == &nbsp;&nbsp; !=
                       &nbsp;&nbsp; &gt;= &nbsp;&nbsp; &gt; &nbsp;&nbsp;
                       &lt;= &nbsp;&nbsp; &lt; &nbsp;&nbsp; 
                     </li>
-                    <li>Logical &nbsp;&nbsp; &amp;&amp; &nbsp;&nbsp; || &nbsp;&nbsp; !<em class="replaceable"><code>expr</code></em></li>
-                    <li>Conditional <em class="replaceable"><code>expr1</code></em> ?
+                    <li>Logical: &nbsp;&nbsp; &amp;&amp; &nbsp;&nbsp; || &nbsp;&nbsp; !<em class="replaceable"><code>expr</code></em></li>
+                    <li>Conditional: <em class="replaceable"><code>expr1</code></em> ?
                       <em class="replaceable"><code>expr2</code></em> :
                       <em class="replaceable"><code>expr3</code></em>
                     </li>
-                    <li>Assignment &nbsp;&nbsp; = &nbsp;&nbsp; *= &nbsp;&nbsp; /=
+                    <li>Assignment: &nbsp;&nbsp; = &nbsp;&nbsp; *= &nbsp;&nbsp; /=
                       &nbsp;&nbsp; ~/= &nbsp;&nbsp; %= &nbsp;&nbsp; += &nbsp;&nbsp; -=
                       &nbsp;&nbsp; &lt;&lt;= &nbsp;&nbsp; &gt;&gt;= &nbsp;&nbsp; &amp;=
                       &nbsp;&nbsp; ^= &nbsp;&nbsp; |= &nbsp;&nbsp;
                     </li>
-                    <li>Accessors &nbsp;&nbsp; [] &nbsp;&nbsp; . &nbsp;&nbsp; ..</li>
-                    <li>Type / Argument &nbsp;&nbsp; as &nbsp;&nbsp; is &nbsp;&nbsp; is! &nbsp;&nbsp; ?<em class="replaceable"><code>identifier</code></em></li>
+                    <li>Accessors: &nbsp;&nbsp; [] &nbsp;&nbsp; . &nbsp;&nbsp; ..</li>
+                    <li>Type / Argument: &nbsp;&nbsp; as &nbsp;&nbsp; is &nbsp;&nbsp; is! &nbsp;&nbsp; ?<em class="replaceable"><code>identifier</code></em></li>
                   </ul>
                 </div>
               </div>
