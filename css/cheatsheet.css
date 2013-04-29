@@ -77,3 +77,8 @@ h1 {
 #isolate-section {
     background-color: #00ABA9;
 }
+
+.footer {
+	background-color: #555;
+	color: #EEE;
+}
