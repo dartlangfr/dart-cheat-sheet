@@ -49,53 +49,74 @@
           <div class="section-container" id="async-section">
             <p>dart:async</p>
             <div class="section">
-              <p>Completer</p>
+              <p>Completer&lt;T&gt;</p>
               <ul class="section-content">
-                <li>future</li>
-                <li>complete(value)</li>
-                <li>completeError(exception, [stackTrace])</li>
+                <li>Future future</li>
+                <li>bool complete([T value])</li>
+                <li>completeError(exception)</li>
               </ul>
             </div>
             <div class="section">
-              <p>Future</p>
+              <p>Future&lt;T&gt;</p>
               <ul class="section-content">
-                <li>wait(futures)</li>
-                <li>delayed(duration, [computation()])</li>
-                <li>immediate(value])</li>
-                <li>of(function()</li>
-                <li>asStream()</li>
-                <li>catchError(onError(asyncError), {test(error)})</li>
-                <li>then(onValue(value), {onError(asyncError)})</li>
-                <li>whenComplete(action())</li>
+                <li>Future&lt;List&gt; Future.wait(Iterable&lt;Future&gt; futures)</li>
+                <li>Future Future.forEach(Iterable input, Future f(e))</li>
+                <li>new Future(computation())</li>
+                <li>new Future.delayed(Duration duration)</li>
+                <li>new Future.error(Object error)</li>
+                <li>new Future.value(T value)</li>
+                <li>Stream&lt;List&gt; asStream()</li>
+                <li>Future catchError(onError(Object error))</li>
+                <li>Future then(onValue(T value))</li>
+                <li>Future&lt;List&gt; whenComplete(action())</li>
               </ul>
             </div>
             <div class="section">
-              <p>Stream</p>
+              <p>Stream&lt;T&gt;</p>
               <ul class="section-content">
-                <li>fromFuture(future)(action())</li>
-                <li>fromIterable(data)</li>
-                <li>periodic(period, [computation(computationCount)]))</li>
-                <li>isBroadcast</li>
-                <li>isEmpty</li>
-                <li>asBroadcastStream()</li>
-                <li>expand(convert(value))</li>
-                <li>handleError(handle(error), {test(error)})</li>
-                <li>listen(onData(event), {onError(error), onDone(), unsubscribeOnError})</li>
-                <li>map(convert(event))</li>
-                <li>pipe(streamConsumer)</li>
-                <li>pipeInto(sink, {onError(error), unsubscribeOnError})</li>
-                <li>skipWhile(test(value))</li>
-                <li>takeWhile(test(value))</li>
-                <li>transform(streamTransformer)</li>
-                <li>where(test(event))</li>
+                <li>new Stream.fromFuture(Future&lt;T&gt; future)</li>
+                <li>new Stream.fromIterable(Iterable&lt;T&gt; iterable)</li>
+                <li>new Stream.periodic(Duration period)</li>
+                <li>Future&lt;T&gt; first</li>
+                <li>bool isBroadcast</li>
+                <li>Future&lt;bool&gt; isEmpty</li>
+                <li>Future&lt;T&gt; last</li>
+                <li>Future&lt;int&gt; length</li>
+                <li>Future&lt;T&gt; single</li>
+                <li>Stream&lt;T&gt; asBroadcastStream()</li>
+                <li>Future&lt;bool&gt; any(bool test(T element))</li>
+                <li>Stream&lt;T&gt; asBroadcastStream()</li>
+                <li>Future&lt;bool&gt; contains(T match)</li>
+                <li>Stream&lt;T&gt; distinct()</li>
+                <li>Future&lt;T&gt; elementAt(int index)</li>
+                <li>Future&lt;bool&gt; every((bool test(T element))</li>
+                <li>Stream expand(Iterable convert(T value))</li>
+                <li>Future&lt;T&gt; firstWhere(bool test(T value))</li>
+                <li>Future fold(initialValue, combine(previous, T element))</li>
+                <li>Future forEach(action(T element))
+                <li>Stream&lt;T&gt; handleError(handle(error))</li>
+                <li>Future&lt;T&gt; lastWhere(bool test(T value))</li>
+                <li>StreamSubscription&lt;T&gt; listen(onData(T event))</li>
+                <li>Stream map(convert(T event))</li>
+                <li>Future pipe(StreamConsumer&lt;T&gt; streamConsumer)</li>
+                <li>Future&lt;T&gt; reduce(T combine(T previous, T element))</li>
+                <li>Future&lt;T&gt; singleWhere(bool test(T value))</li>
+                <li>Stream&lt;T&gt; skip(int count)</li>
+                <li>Stream&lt;T&gt; skipWhile(bool test(value))</li>
+                <li>Stream&lt;T&gt; take(int count)</li>
+                <li>Stream&lt;T&gt; takeWhile(bool test(value))</li>
+                <li>Future&lt;List&lt;T&gt;&gt; toList()</li>
+                <li>Future&lt;Set&lt;T&gt;&gt; toSet()</li>
+                <li>Stream transform(StreamTransformer streamTransformer)</li>
+                <li>Stream&lt;T&gt; where(bool test(T event))</li>
               </ul>
             </div>
             <div class="section">
               <p>Timer</p>
               <ul class="section-content">
-                <li>run(callback()))</li>
-                <li>Timer(duration, callback())</li>
-                <li>periodic(duration, callback(timer)</li>
+                <li>Timer.run(callback()))</li>
+                <li>new Timer.Timer(Duration duration, callback())</li>
+                <li>new Timer.periodic(Duration duration, callback(timer)</li>
                 <li>cancel()</li>
               </ul>
             </div>
