@@ -279,28 +279,21 @@
                     <div class="section">
                         <p>Matcher</p>
                         <ul class="section-content">
-                          <li>anything, returnsNormally,isEmpty</li>
-                          <li>isFalse, isTrue</li>
-                          <li>isList, isMap</li>
-                          <li>isNegative, isNonNegative, isNonPositive, isPositive, isNonZero, isZero</li>
-                          <li>isNotNull, isNull</li>
-                          <li>isArgumentError, isException, isFormatException, isRangeError, isStateError, isUnimplementedError, isUnsupportedError, isNoSuchMethodError</li>
-                          <li>throws, throwsArgumentError, throwsException, throwsFormatException, throwsNoSuchMethodError, throwsRangeError, throwsStateError, throwsUnimplementedError, throwsUnsupportedError</li>
-                          <li>completes, wrapAsync</li>
-                          <li>new isInstanceOf<Foo>()</li>
-                          <li>isNot(matcher)</li>
-                          <li>matches(re), predicate(Function f), wrapMatcher(x)</li>
-                          <li>stringContainsInOrder(substrings), endsWith(suffixString), startsWith(prefixString)</li>
-                          <li>equalsIgnoringWhitespace(value), equalsIgnoringCase(value)</li>
-                          <li>anyOf(arg0, ...), allOf(arg0, ...)</li>
-                          <li>inClosedOpenRange(low, high), inOpenClosedRange(low, high), inExclusiveRange(low, high), inInclusiveRange(low, high), closeTo(value, delta), lessThanOrEqualTo(value), lessThan(value), greaterThanOrEqualTo(value), greaterThan(value)</li>
-                          <li>containsPair(key, value), containsValue(value)
-                          <li>completion(matcher)</li>
-                          <li>isIn(expected), contains(expected)</li>
-                          <li>hasLength(matcher)</li>
-                          <li>throwsA(matcher)</li>
-                          <li>equals(expected), same(expected), unorderedEquals(Iterable expected), orderedEquals(Iterable expected)</li>
-                          <li>someElement(matcher),everyElement(matcher)</li>
+                          <li>isInstanceOf</li>
+                          <li>is[Null | NotNull]</li>
+                          <li>matches, predicate, wrapMatcher</li>
+                          <li>is[List | Map]</li>
+                          <li>isNot,anyOf, allOf, someElement, everyElement</li>
+                          <li>anything, returnsNormally</li>
+                          <li>equals, same, unorderedEquals, orderedEquals</li>
+                          <li>completes, wrapAsync, completion</li>
+                          <li>is[True, False]</li>
+                          <li>is[Negative | NonNegative | NonPositive | Positive | NonZero | Zero]</li>
+                          <li>in[ClosedOpen, CloseOpen, Exclusive, Inclusive ]Range, closeTo, lessThanOrEqualTo, lessThan, greaterThanOrEqualTo, greaterThan</li>
+                          <li>stringContainsInOrder, endsWith, startsWith, equalsIgnoringWhitespace, equalsIgnoringCase</li>
+                          <li>containsPair, containsValue, isIn, contains, isEmpty, hasLength</li>
+                          <li>is[ArgumentError | Exception | FormatException | RangeError | StateError | UnimplementedError | UnsupportedError | NoSuchMethodError]</li>
+                          <li>throws, throws[A | ArgumentError | Exception | FormatException | NoSuchMethodError | RangeError | StateError | UnimplementedError | UnsupportedError]</li>
                         </ul>
                     </div>
                 </div>
