@@ -279,11 +279,10 @@
                     <div class="section">
                         <p>Matcher</p>
                         <ul class="section-content">
-                          <li>isInstanceOf</li>
+                          <li>is[InstanceOf, List | Map]</li>
                           <li>is[Null | NotNull]</li>
                           <li>matches, predicate, wrapMatcher</li>
-                          <li>is[List | Map]</li>
-                          <li>isNot,anyOf, allOf, someElement, everyElement</li>
+                          <li>isNot, anyOf, allOf, someElement, everyElement</li>
                           <li>anything, returnsNormally</li>
                           <li>equals, same, unorderedEquals, orderedEquals</li>
                           <li>completes, wrapAsync, completion</li>
@@ -294,6 +293,22 @@
                           <li>containsPair, containsValue, isIn, contains, isEmpty, hasLength</li>
                           <li>is[ArgumentError | Exception | FormatException | RangeError | StateError | UnimplementedError | UnsupportedError | NoSuchMethodError]</li>
                           <li>throws, throws[A | ArgumentError | Exception | FormatException | NoSuchMethodError | RangeError | StateError | UnimplementedError | UnsupportedError]</li>
+                        </ul>
+                    </div>
+                    <div class="section">
+                        <p>Mock</p>
+                        <ul class="section-content">
+                            <li>happened[AtLeastOnce, AtMostOnce, Once, AtMost, AtLeast, Exactly], neverHappened</li>
+                            <li>sharedLog</li>
+                            <li>[never, sometime, always]Threw, throwing</li>
+                            <li>[never, sometime, always]Returned</li>
+                            <li>returning</li>
+                            <li>callsTo</li>
+                            <li>Mock:<ul>
+                                <li>new Mock(), new Mock.custom(), new Mock.spy(Object realObject)</li>
+                                <li>log, logging, name</li>
+                                <li>calls(), clearLogs(), getLogs(), reset(), resetBehavior(), verifyZeroInteractions(), when(CallMatcher logFilter)</li>
+                             </ul></li>
                         </ul>
                     </div>
                 </div>
