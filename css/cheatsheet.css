@@ -1,3 +1,33 @@
+@media print {
+  body {
+    page-break-after: avoid;
+		/*width: 29.7cm;
+		height: 21cm;*/
+		/*height: 29.7cm;
+		width: 21cm;*/
+		-moz-transform-origin: 0 0;
+		-ms-transform-origin: 0 0;
+		-webkit-transform-origin: 0 0;
+		transform-origin: 0 0;
+		-moz-transform: scale(1, 0.4);
+		-ms-transform: scale(1, 0.4);
+		-webkit-transform: scale(1, 0.4);
+		transform: scale(1, 0.4);
+		background: transparent !important;
+  }
+  
+	@page {
+	  margin: 0cm;
+		/*size: A4 landscape;*/
+		size: A4;
+	}
+  
+	* {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
 body {
 	background-color: #333;
 	margin-bottom: 20px;

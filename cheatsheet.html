@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cheat sheet</title>
+    <title>Dart Cheat sheet</title>
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="css/cheatsheet.css" rel="stylesheet" media="screen">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!--<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">-->
+    <link href="css/cheatsheet.css" rel="stylesheet">
   </head>
   <body>
     <div class="container-fluid">
-      <h1>Cheat sheet</h1>
+      <h1>Dart Cheat sheet</h1>
       <div class="row-fluid">
         <div class="span4">
           <div class="section-container" id="core-section">
@@ -19,11 +19,11 @@
               <p>Built-in Types</p>
               <div class="section-content">
                 <ul>
-                  <li>Numbers: num, int, double</li>
-                  <li>Strings: String, StringBuilder, RegExp</li>
-                  <li>Booleans: bool, true, false</li>
-                  <li>Dates &amp; Times: Date, DateTime, Duration, Stopwatch</li>
-                  <li>Collections: List&lt;E&gt;, Set&lt;E&gt;, Map&lt;K, V&gt;, Collection&lt;E&gt;, Iterable&lt;E&gt;, Iterator&lt;E&gt;</li>
+                  <li><b>Numbers</b>: num, int, double</li>
+                  <li><b>Strings</b>: String, StringBuilder, RegExp</li>
+                  <li><b>Booleans</b>: bool, true, false</li>
+                  <li><b>Dates &amp; Times</b>: Date, DateTime, Duration, Stopwatch</li>
+                  <li><b>Collections</b>: List&lt;E&gt;, Set&lt;E&gt;, Map&lt;K, V&gt;, Collection&lt;E&gt;, Iterable&lt;E&gt;, Iterator&lt;E&gt;</li>
                 </ul>
               </div>
             </div>
@@ -123,345 +123,338 @@
           </div>
         </div>
         <div class="span4">
-          <div class="row-fluid">
-            <div id="keyword-section">
-              <div class="section-container">
-                <p>Keywords</p>
-                <div class="section">
-                  <div class="section-content">
-                    <ul>
-                      <li>Library: library, part, part of, import, export, show, hide</li>
-                      <li>Class: class, abstract, extends, implements, this, super</li>
-                      <li>Constructor: new, factory, const</li>
-                      <li>Function: operator, external</li>
-                      <li>Getter / Setter: get, set</li>
-                      <li>Type: void, null, var, dynamic, typedef, is, as, false, true</li>
-                      <li>Modifier: static, final, const</li>
-                      <li>Control flow: if, else, for, in, while, do, break, continue, return, switch, case, default, assert</li>
-                      <li>Exception: try, catch, finally, throw</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            </div>
-            <div class="row-fluid">
-              <div id="io-section">
-                <div class="section-container">
-                    <p>dart:io</p>
-                    <div class="row-fluid">
-                    <div class="span6">
-                    <div class="section">
-                      <p>File</p>
-                      <ul class="section-content">
-                        <li>Directory</li>
-                        <li>File</li>
-                        <li>Path</li>
-                        <li>Encoding</li>
-                      </ul>
-                    </div>
-                    <div class="section">
-                      <p>HTTP</p>
-                      <ul class="section-content">
-                        <li>ContentType</li>
-                        <li>Cookie</li>
-                        <li>HttpHeaders</li>
-                        <li>HttpSession</li>
-                        <li>HttpClient</li>
-                        <li>HttpServer</li>
-                        <li>WebSocket</li>
-                        <li>Socket</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="span6">
-                    <div class="section">
-                      <p>Stream</p>
-                      <ul class="section-content">
-                        <li>LineTransformer</li>
-                        <li>StringDecoder</li>
-                        <li>StringEncoder</li>
-                      </ul>
-                    </div>
-                    <div class="section">
-                      <p>System</p>
-                      <ul class="section-content">
-                        <li>Platform</li>
-                        <li>Process</li>
-                      </ul>
-                    </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row-fluid">
-              <div id="isolate-section">
-                <div class="section-container">
-                  <p>dart:isolate</p>
-                  <div class="section">
-                    <table class="table table-condensed">
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th>Messaging</th>
-                          <th>Streaming</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Top-level</td>
-                          <td>
-                            ReceivePort port<br/>
-                            SendPort spawnFunction(void topLevelFunction())<br/>
-                            SendPort spawnUri(String uri)<br/>
-                          </td>
-                          <td>
-                            IsolateStream stream<br/>
-                            IsolateSink streamSpawnFunction(void topLevelFunction())<br/>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Receveir</td>
-                          <td>ReceivePort</td>
-                          <td>IsolateSink</td>
-                        </tr>
-                        <tr>
-                          <td>Sender</td>
-                          <td>
-                            SendPort<br/>
-                            SendPortSync<br/>
-                          </td>
-                          <td>
-                            IsolateStream<br/>
-                            MessageBox<br/>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="mirrors-section">
-              <div class="section-container">
-                <p>dart:mirrors</p>
-                <div class="section">
-                  <p>InstanceMirror reflect(Object reflectee)</p>
-                </div>
-                <div class="section">
-                  <p>MirrorSystem currentMirrorSystem()</p>
-                </div>
-                <div class="section">
-                  <p>Objects</p>
-                  <ul class="section-content">
-                     <li>Mirror, LibraryMirror, MirrorSystem</li>
-                     <li>InstanceMirror, ClassMirror</li>
-                     <li>MethodMirror, Comment</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div id="test-section">
-                <div class="section-container">
-                    <p>Test</p>
-                    <div class="section">
-                        <p>Unittest</p>
-                        <ul class="section-content">
-                          <li>group(String description, body())</li>
-                          <li>setUp(Function setupTest)</li>
-                          <li>tearDown(Function teardownTest)</li>
-                          <li>test(String spec, TestFunction body)</li>
-                          <li>expect(actual, matcher</li>
-                          <li>fail(String message)</li>
-                        </ul>
-                    </div>
-                    <div class="section">
-                        <p>Matcher</p>
-                        <ul class="section-content">
-                          <li>is[InstanceOf, List | Map]</li>
-                          <li>is[Null | NotNull]</li>
-                          <li>matches, predicate, wrapMatcher</li>
-                          <li>isNot, anyOf, allOf, someElement, everyElement</li>
-                          <li>anything, returnsNormally</li>
-                          <li>equals, same, unorderedEquals, orderedEquals</li>
-                          <li>completes, wrapAsync, completion</li>
-                          <li>is[True, False]</li>
-                          <li>is[Negative | NonNegative | NonPositive | Positive | NonZero | Zero]</li>
-                          <li>in[ClosedOpen, CloseOpen, Exclusive, Inclusive ]Range, closeTo, lessThanOrEqualTo, lessThan, greaterThanOrEqualTo, greaterThan</li>
-                          <li>stringContainsInOrder, endsWith, startsWith, equalsIgnoringWhitespace, equalsIgnoringCase</li>
-                          <li>containsPair, containsValue, isIn, contains, isEmpty, hasLength</li>
-                          <li>is[ArgumentError | Exception | FormatException | RangeError | StateError | UnimplementedError | UnsupportedError | NoSuchMethodError]</li>
-                          <li>throws, throws[A | ArgumentError | Exception | FormatException | NoSuchMethodError | RangeError | StateError | UnimplementedError | UnsupportedError]</li>
-                        </ul>
-                    </div>
-                    <div class="section">
-                        <p>Mock</p>
-                        <ul class="section-content">
-                            <li>happened[AtLeastOnce, AtMostOnce, Once, AtMost, AtLeast, Exactly], neverHappened</li>
-                            <li>sharedLog</li>
-                            <li>[never, sometime, always]Threw, throwing</li>
-                            <li>[never, sometime, always]Returned</li>
-                            <li>returning</li>
-                            <li>callsTo</li>
-                            <li>Mock:<ul>
-                                <li>new Mock(), new Mock.custom(), new Mock.spy(Object realObject)</li>
-                                <li>log, logging, name</li>
-                                <li>calls(), clearLogs(), getLogs(), reset(), resetBehavior(), verifyZeroInteractions(), when(CallMatcher logFilter)</li>
-                             </ul></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="span4">
-          <div class="row-fluid">
-            <div id="operators-section">
-              <div class="section-container">
-                <p>Operators</p>
-                <div class="section">
-                  <ul class="section-content">
-                    <li>Arithmetics: &nbsp;&nbsp; + &nbsp;&nbsp; - &nbsp;&nbsp; * &nbsp;&nbsp; / &nbsp;&nbsp; %
-                      &nbsp;&nbsp; ~/ &nbsp;&nbsp; -<em class="replaceable"><code>expr</code></em>
-                    </li>
-                    <li>Increment / Decrement: &nbsp;&nbsp; <em class="replaceable"><code>expr</code></em>++
-                      &nbsp;&nbsp; <em class="replaceable"><code>expr</code></em>-- &nbsp;&nbsp;
-                      ++<em class="replaceable"><code>expr</code></em> &nbsp;&nbsp;
-                      --<em class="replaceable"><code>expr</code></em>
-                    </li>
-                    <li>Bitwise: &nbsp;&nbsp; &amp; &nbsp;&nbsp; | &nbsp;&nbsp; ^ &nbsp;&nbsp; ~<em class="replaceable"><code>expr</code></em> &nbsp;&nbsp; &lt;&lt; &nbsp;&nbsp; &gt;&gt;</li>
-                    <li>Comparison &nbsp;&nbsp; == &nbsp;&nbsp; !=
-                      &nbsp;&nbsp; &gt;= &nbsp;&nbsp; &gt; &nbsp;&nbsp;
-                      &lt;= &nbsp;&nbsp; &lt; &nbsp;&nbsp; 
-                    </li>
-                    <li>Logical: &nbsp;&nbsp; &amp;&amp; &nbsp;&nbsp; || &nbsp;&nbsp; !<em class="replaceable"><code>expr</code></em></li>
-                    <li>Conditional: <em class="replaceable"><code>expr1</code></em> ?
-                      <em class="replaceable"><code>expr2</code></em> :
-                      <em class="replaceable"><code>expr3</code></em>
-                    </li>
-                    <li>Assignment: &nbsp;&nbsp; = &nbsp;&nbsp; *= &nbsp;&nbsp; /=
-                      &nbsp;&nbsp; ~/= &nbsp;&nbsp; %= &nbsp;&nbsp; += &nbsp;&nbsp; -=
-                      &nbsp;&nbsp; &lt;&lt;= &nbsp;&nbsp; &gt;&gt;= &nbsp;&nbsp; &amp;=
-                      &nbsp;&nbsp; ^= &nbsp;&nbsp; |= &nbsp;&nbsp;
-                    </li>
-                    <li>Accessors: &nbsp;&nbsp; [] &nbsp;&nbsp; . &nbsp;&nbsp; ..</li>
-                    <li>Type / Argument: &nbsp;&nbsp; as &nbsp;&nbsp; is &nbsp;&nbsp; is! &nbsp;&nbsp; ?<em class="replaceable"><code>identifier</code></em></li>
+          <div id="keyword-section">
+            <div class="section-container">
+              <p>Keywords</p>
+              <div class="section">
+                <div class="section-content">
+                  <ul>
+                    <li><b>Library</b>: library, part, part of, import, export, show, hide</li>
+                    <li><b>Class</b>: class, abstract, extends, implements, this, super</li>
+                    <li><b>Constructor</b>: new, factory, const</li>
+                    <li><b>Function</b>: operator, external</li>
+                    <li><b>Getter / Setter</b>: get, set</li>
+                    <li><b>Type</b>: void, null, var, dynamic, typedef, is, as, false, true</li>
+                    <li><b>Modifier</b>: static, final, const</li>
+                    <li><b>Control flow</b>: if, else, for, in, while, do, break, continue, return, switch, case, default, assert</li>
+                    <li><b>Exception</b>: try, catch, finally, throw</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row-fluid">
-            <div id="collection-section">
-              <div class="section-container">
-                <p>dart:collection</p>
-                <div class="section">
-                  <table class="table table-condensed">
-                    <thead>
-                      <tr>
-                        <th></th>
-                        <th>Unordered</th>
-                        <th>Ordered</th>
-                        <th>Sorted</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>List</td>
-                        <td></td>
-                        <td>List</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Set</td>
-                        <td>HashSet</td>
-                        <td>LinkedHashSet</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>Map</td>
-                        <td>HashMap</td>
-                        <td>LinkedHashMap</td>
-                        <td>SplayTreeMap</td>
-                      </tr>
-                    </tbody>
-                  </table>
+          <div id="io-section">
+            <div class="section-container">
+              <p>dart:io</p>
+              <div class="row-fluid">
+                <div class="span6">
+                  <div class="section">
+                    <p>File</p>
+                    <ul class="section-content">
+                      <li>Directory</li>
+                      <li>File</li>
+                      <li>Path</li>
+                      <li>Encoding</li>
+                    </ul>
+                  </div>
+                  <div class="section">
+                    <p>HTTP</p>
+                    <ul class="section-content">
+                      <li>ContentType</li>
+                      <li>Cookie</li>
+                      <li>HttpHeaders</li>
+                      <li>HttpSession</li>
+                      <li>HttpClient</li>
+                      <li>HttpServer</li>
+                      <li>WebSocket</li>
+                      <li>Socket</li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="section">
-                  <p>Iterable</p>
-                  <ul class="section-content">
-                    <li>factory Iterable.generate(int count, E generator(int index))</li>
-                    <li>bool isEmpty</li>
-                    <li>int length</li>
-                    <li>E first</li>
-                    <li>E single</li>
-                    <li>E last</li>
-                    <li>E elementAt(int index)</li>
-                    <li>E max([int compare(E a, E b)])</li>
-                    <li>E min([int compare(E a, E b)])</li>
-                    <li>bool contains(E element)</li>
-                    <li>bool any(bool f(E element))</li>
-                    <li>bool every(bool f(E element))</li>
-                    <li>Iterable map(f(E element))</li>
-                    <li>Iterable expand(Iterable f(E element))</li>
-                    <li>Iterable&lt;E&gt; where(bool f(E element))</li>
-                    <li>void forEach(void f(E element))</li>
-                    <li>Iterable&lt;E&gt; skip(int n)</li>
-                    <li>Iterable&lt;E&gt; take(int n)</li>
-                    <li>reduce(initialValue, combine(previousValue, E element))</li>
-                    <li>String join([String separator])</li>
-                    <li>List&lt;E&gt; toList()</li>
-                    <li>Set&lt;E&gt; toSet()</li>
-                  </ul>
+                <div class="span6">
+                  <div class="section">
+                    <p>Stream</p>
+                    <ul class="section-content">
+                      <li>LineTransformer</li>
+                      <li>StringDecoder</li>
+                      <li>StringEncoder</li>
+                    </ul>
+                  </div>
+                  <div class="section">
+                    <p>System</p>
+                    <ul class="section-content">
+                      <li>Platform</li>
+                      <li>Process</li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="section">
-                  <p>Collection</p>
-                  <ul class="section-content">
-                    <li>add(E element)</li>
-                    <li>addAll(Iterable&lt;E&gt; elements)</li>
-                    <li>remove(Object element)</li>
-                    <li>removeAll(Iterable elements)</li>
-                    <li>retainAll(Iterable elements)</li>
-                    <li>clear()</li>
-                  </ul>
-                </div>
-                <div class="section">
-                  <p>List</p>
-                  <ul class="section-content">
-                    <li>E operator [](int index)</li>
-                    <li>operator []=(int index, E value)</li>
-                    <li>Iterable&lt;E&gt; get reversed</li>
-                    <li>sort([int compare(E a, E b)])</li>
-                    <li>int indexOf(E element, [int start = 0])</li>
-                    <li>int lastIndexOf(E element, [int start])</li>
-                    <li>E removeAt(int index)</li>
-                    <li>E removeLast()</li>
-                    <li>List&lt;E&gt; getRange(int start, int length)</li>
-                    <li>void removeRange(int start, int length)</li>
-                    <li>void insertRange(int start, int length, [E fill])</li>
-                  </ul>
-                </div>
-                <div class="section">
-                  <p>Map</p>
-                  <ul class="section-content">
-                    <li>bool containsValue(V value)</li>
-                    <li>bool containsKey(K key)</li>
-                    <li>V operator [](K key)</li>
-                    <li>operator []=(K key, V value)</li>
-                    <li>V putIfAbsent(K key, V ifAbsent())</li>
-                    <li>V remove(K key)</li>
-                    <li>forEach(void f(K key, V value))</li>
-                    <li>Iterable&lt;K&gt; get keys</li>
-                    <li>Iterable&lt;V&gt; get values</li>
-                  </ul>
-                </div>
+              </div>
+            </div>
+          </div>
+          <div id="isolate-section">
+            <div class="section-container">
+              <p>dart:isolate</p>
+              <div class="section">
+                <table class="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Messaging</th>
+                      <th>Streaming</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Top-level</td>
+                      <td>
+                        ReceivePort port<br/>
+                        SendPort spawnFunction(void topLevelFunction())<br/>
+                        SendPort spawnUri(String uri)<br/>
+                      </td>
+                      <td>
+                        IsolateStream stream<br/>
+                        IsolateSink streamSpawnFunction(void topLevelFunction())<br/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Receveir</td>
+                      <td>ReceivePort</td>
+                      <td>IsolateSink</td>
+                    </tr>
+                    <tr>
+                      <td>Sender</td>
+                      <td>
+                        SendPort<br/>
+                        SendPortSync<br/>
+                      </td>
+                      <td>
+                        IsolateStream<br/>
+                        MessageBox<br/>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div id="mirrors-section">
+            <div class="section-container">
+              <p>dart:mirrors</p>
+              <div class="section">
+                <p>InstanceMirror reflect(Object reflectee)</p>
+              </div>
+              <div class="section">
+                <p>MirrorSystem currentMirrorSystem()</p>
+              </div>
+              <div class="section">
+                <p>Objects</p>
+                <ul class="section-content">
+                  <li>Mirror, LibraryMirror, MirrorSystem</li>
+                  <li>InstanceMirror, ClassMirror</li>
+                  <li>MethodMirror, Comment</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="test-section">
+            <div class="section-container">
+              <p>Test</p>
+              <div class="section">
+                <p>Unittest</p>
+                <ul class="section-content">
+                  <li>group(String description, body())</li>
+                  <li>setUp(Function setupTest)</li>
+                  <li>tearDown(Function teardownTest)</li>
+                  <li>test(String spec, TestFunction body)</li>
+                  <li>expect(actual, matcher</li>
+                  <li>fail(String message)</li>
+                </ul>
+              </div>
+              <div class="section">
+                <p>Matcher</p>
+                <ul class="section-content">
+                  <li>is[InstanceOf, List | Map]</li>
+                  <li>is[Null | NotNull]</li>
+                  <li>matches, predicate, wrapMatcher</li>
+                  <li>isNot, anyOf, allOf, someElement, everyElement</li>
+                  <li>anything, returnsNormally</li>
+                  <li>equals, same, unorderedEquals, orderedEquals</li>
+                  <li>completes, wrapAsync, completion</li>
+                  <li>is[True, False]</li>
+                  <li>is[Negative | NonNegative | NonPositive | Positive | NonZero | Zero]</li>
+                  <li>in[ClosedOpen, CloseOpen, Exclusive, Inclusive ]Range, closeTo, lessThanOrEqualTo, lessThan, greaterThanOrEqualTo, greaterThan</li>
+                  <li>stringContainsInOrder, endsWith, startsWith, equalsIgnoringWhitespace, equalsIgnoringCase</li>
+                  <li>containsPair, containsValue, isIn, contains, isEmpty, hasLength</li>
+                  <li>is[ArgumentError | Exception | FormatException | RangeError | StateError | UnimplementedError | UnsupportedError | NoSuchMethodError]</li>
+                  <li>throws, throws[A | ArgumentError | Exception | FormatException | NoSuchMethodError | RangeError | StateError | UnimplementedError | UnsupportedError]</li>
+                </ul>
+              </div>
+              <div class="section">
+                <p>Mock</p>
+                <ul class="section-content">
+                  <li>happened[AtLeastOnce, AtMostOnce, Once, AtMost, AtLeast, Exactly], neverHappened</li>
+                  <li>sharedLog</li>
+                  <li>[never, sometime, always]Threw, throwing</li>
+                  <li>[never, sometime, always]Returned</li>
+                  <li>returning</li>
+                  <li>callsTo</li>
+                  <li>
+                    Mock:
+                    <ul>
+                      <li>new Mock(), new Mock.custom(), new Mock.spy(Object realObject)</li>
+                      <li>log, logging, name</li>
+                      <li>calls(), clearLogs(), getLogs(), reset(), resetBehavior(), verifyZeroInteractions(), when(CallMatcher logFilter)</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="span4">
+          <div id="operators-section">
+            <div class="section-container">
+              <p>Operators</p>
+              <div class="section">
+                <ul class="section-content">
+                  <li><b>Arithmetics</b>: &nbsp;&nbsp; + &nbsp;&nbsp; - &nbsp;&nbsp; * &nbsp;&nbsp; / &nbsp;&nbsp; %
+                    &nbsp;&nbsp; ~/ &nbsp;&nbsp; -<em class="replaceable"><code>expr</code></em>
+                  </li>
+                  <li><b>Increment / Decrement</b>: &nbsp;&nbsp; <em class="replaceable"><code>expr</code></em>++
+                    &nbsp;&nbsp; <em class="replaceable"><code>expr</code></em>-- &nbsp;&nbsp;
+                    ++<em class="replaceable"><code>expr</code></em> &nbsp;&nbsp;
+                    --<em class="replaceable"><code>expr</code></em>
+                  </li>
+                  <li><b>Bitwise</b>: &nbsp;&nbsp; &amp; &nbsp;&nbsp; | &nbsp;&nbsp; ^ &nbsp;&nbsp; ~<em class="replaceable"><code>expr</code></em> &nbsp;&nbsp; &lt;&lt; &nbsp;&nbsp; &gt;&gt;</li>
+                  <li><b>Comparison</b>: &nbsp;&nbsp; == &nbsp;&nbsp; !=
+                    &nbsp;&nbsp; &gt;= &nbsp;&nbsp; &gt; &nbsp;&nbsp;
+                    &lt;= &nbsp;&nbsp; &lt; &nbsp;&nbsp; 
+                  </li>
+                  <li><b>Logical</b>: &nbsp;&nbsp; &amp;&amp; &nbsp;&nbsp; || &nbsp;&nbsp; !<em class="replaceable"><code>expr</code></em></li>
+                  <li><b>Conditional</b>: <em class="replaceable"><code>expr1</code></em> ?
+                    <em class="replaceable"><code>expr2</code></em> :
+                    <em class="replaceable"><code>expr3</code></em>
+                  </li>
+                  <li><b>Assignment</b>: &nbsp;&nbsp; = &nbsp;&nbsp; *= &nbsp;&nbsp; /=
+                    &nbsp;&nbsp; ~/= &nbsp;&nbsp; %= &nbsp;&nbsp; += &nbsp;&nbsp; -=
+                    &nbsp;&nbsp; &lt;&lt;= &nbsp;&nbsp; &gt;&gt;= &nbsp;&nbsp; &amp;=
+                    &nbsp;&nbsp; ^= &nbsp;&nbsp; |= &nbsp;&nbsp;
+                  </li>
+                  <li><b>Accessors</b>: &nbsp;&nbsp; [] &nbsp;&nbsp; . &nbsp;&nbsp; ..</li>
+                  <li><b>Type / Argument</b>: &nbsp;&nbsp; as &nbsp;&nbsp; is &nbsp;&nbsp; is! &nbsp;&nbsp; ?<em class="replaceable"><code>identifier</code></em></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="collection-section">
+            <div class="section-container">
+              <p>dart:collection</p>
+              <div class="section">
+                <table class="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Unordered</th>
+                      <th>Ordered</th>
+                      <th>Sorted</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>List</td>
+                      <td></td>
+                      <td>List</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Set</td>
+                      <td>HashSet</td>
+                      <td>LinkedHashSet</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Map</td>
+                      <td>HashMap</td>
+                      <td>LinkedHashMap</td>
+                      <td>SplayTreeMap</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="section">
+                <p>Iterable</p>
+                <ul class="section-content">
+                  <li>factory Iterable.generate(int count, E generator(int index))</li>
+                  <li>bool isEmpty</li>
+                  <li>int length</li>
+                  <li>E first</li>
+                  <li>E single</li>
+                  <li>E last</li>
+                  <li>E elementAt(int index)</li>
+                  <li>E max([int compare(E a, E b)])</li>
+                  <li>E min([int compare(E a, E b)])</li>
+                  <li>bool contains(E element)</li>
+                  <li>bool any(bool f(E element))</li>
+                  <li>bool every(bool f(E element))</li>
+                  <li>Iterable map(f(E element))</li>
+                  <li>Iterable expand(Iterable f(E element))</li>
+                  <li>Iterable&lt;E&gt; where(bool f(E element))</li>
+                  <li>void forEach(void f(E element))</li>
+                  <li>Iterable&lt;E&gt; skip(int n)</li>
+                  <li>Iterable&lt;E&gt; take(int n)</li>
+                  <li>reduce(initialValue, combine(previousValue, E element))</li>
+                  <li>String join([String separator])</li>
+                  <li>List&lt;E&gt; toList()</li>
+                  <li>Set&lt;E&gt; toSet()</li>
+                </ul>
+              </div>
+              <div class="section">
+                <p>Collection</p>
+                <ul class="section-content">
+                  <li>add(E element)</li>
+                  <li>addAll(Iterable&lt;E&gt; elements)</li>
+                  <li>remove(Object element)</li>
+                  <li>removeAll(Iterable elements)</li>
+                  <li>retainAll(Iterable elements)</li>
+                  <li>clear()</li>
+                </ul>
+              </div>
+              <div class="section">
+                <p>List</p>
+                <ul class="section-content">
+                  <li>E operator [](int index)</li>
+                  <li>operator []=(int index, E value)</li>
+                  <li>Iterable&lt;E&gt; get reversed</li>
+                  <li>sort([int compare(E a, E b)])</li>
+                  <li>int indexOf(E element, [int start = 0])</li>
+                  <li>int lastIndexOf(E element, [int start])</li>
+                  <li>E removeAt(int index)</li>
+                  <li>E removeLast()</li>
+                  <li>List&lt;E&gt; getRange(int start, int length)</li>
+                  <li>void removeRange(int start, int length)</li>
+                  <li>void insertRange(int start, int length, [E fill])</li>
+                </ul>
+              </div>
+              <div class="section">
+                <p>Map</p>
+                <ul class="section-content">
+                  <li>bool containsValue(V value)</li>
+                  <li>bool containsKey(K key)</li>
+                  <li>V operator [](K key)</li>
+                  <li>operator []=(K key, V value)</li>
+                  <li>V putIfAbsent(K key, V ifAbsent())</li>
+                  <li>V remove(K key)</li>
+                  <li>forEach(void f(K key, V value))</li>
+                  <li>Iterable&lt;K&gt; get keys</li>
+                  <li>Iterable&lt;V&gt; get values</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="row-fluid footer">
-        +Made by <a href="https://plus.google.com/u/0/115049522200141162219"><span class="label label-inverse">Guillaume Girou</span></a>, <a href="https://plus.google.com/u/0/106226789128312528511"><span class="label label-inverse">Nicolas Fran&ccedil;ois</span></a> and <a href="https://plus.google.com/u/0/109253530406296308866"><span class="label label-inverse">Vincent Bostoen</span></a>.<br/>+Version xxxxx<br/>
+        +Made by <a href="http://plus.google.com/115049522200141162219"><span class="label label-inverse">Guillaume Girou</span></a>, <a href="http://plus.google.com/106226789128312528511"><span class="label label-inverse">Nicolas Fran&ccedil;ois</span></a> and <a href="http://plus.google.com/109253530406296308866"><span class="label label-inverse">Vincent Bostoen</span></a>.<br/>+Version xxxxx<br/>
       </div>
     </div>
     <script src="http://code.jquery.com/jquery.js"></script>
