@@ -9,10 +9,10 @@
 		-ms-transform-origin: 0 0;
 		-webkit-transform-origin: 0 0;
 		transform-origin: 0 0;
-		-moz-transform: scale(1, 0.4);
-		-ms-transform: scale(1, 0.4);
-		-webkit-transform: scale(1, 0.4);
-		transform: scale(1, 0.4);
+		/*-moz-transform: scale(1, 0.45);
+		-ms-transform: scale(1, 0.45);
+		-webkit-transform: scale(1, 0.45);
+		transform: scale(1, 0.45);*/
 		background: transparent !important;
   }
   
@@ -35,29 +35,67 @@ body {
 
 h1 {
 	color: white;
+	font-size: 40px;
+}
+
+h1 img {
+  height: 30px;
+	margin: 0 5px 0 0;
+	vertical-align: baseline;
+}
+
+code {
+  padding: 2px;
 }
 
 .section-container {
 	color: white;
-	padding-top: 4px;
-	padding-left: 8px;	
-	padding-right: 4px;
+	padding: 4px 4px 4px 8px;
 	font-weight: bold;
 	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.section-container p {
+  margin: 0 0 0 2px;
+	font-family: Tahoma;
+}
+
+.section-container ul {
+  margin: 0;
+}
+
+.section-container li {
+  list-style: none;
+}
+
+.section-container li:nth-child(even) {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.section-container li:nth-child(odd) {
+	background-color: rgba(255, 255, 255, 0.4);
 }
 
 .section {
 	padding-left: 8px;	
 	padding-right: 2px;
+	margin: 4px;
 	color: black;
 	font-weight: normal;
 	font-size: 12px;	
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.section-container .section p {
+	font-size: 13px;
+	font-family: Impact;
 }
 
 .section-content {
 	padding-left: 8px;
 	padding-right: 2px;
-	color: black;
+	color: black;	
 }
 
 .method {
@@ -85,7 +123,7 @@ h1 {
 }
 
 #async-section {
-    background-color: #ed79e3;
+	background-color: #ed79e3;
 }
 
 #keyword-section {
@@ -93,28 +131,27 @@ h1 {
 }
 
 #operators-section {
-    background-color: #A200FF;
+	background-color: #A200FF;
 }
 
 #collection-section {
-    background-color: #86B32D;
+	background-color: #86B32D;
 }
 
 #io-section {
-    background-color: #BF3030;
-    margin-bottom: 10px;
+	background-color: #BF3030;
 }
 
 #isolate-section {
-    background-color: #00ABA9;
+	background-color: #00ABA9;
 }
 
 #mirrors-section{
-    background-color: #FFE25F;
+	background-color: #FFE25F;
 }
 
 #test-section{
-    background-color: #2d3999;
+	background-color: #2d3999;
 }
 
 .footer {
