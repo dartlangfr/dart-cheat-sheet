@@ -67,6 +67,7 @@ code {
 
 .section-container li {
   list-style: none;
+	padding-left: 2px;
 }
 
 .section-container li:nth-child(even) {
