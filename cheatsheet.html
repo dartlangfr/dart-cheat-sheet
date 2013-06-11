@@ -375,13 +375,18 @@
                 <ul class="section-content">
                   <li>factory Iterable.generate(count, E generator(index))</li>
                   <li>bool isEmpty</li>
-                  <li>length</li>
+                  <li>bool isNotEmpty</li>
+                  <li>Iterator&lt;E&gt; iterator</E></li>
+                  <li>int length</li>
                   <li>E first</li>
                   <li>E single</li>
                   <li>E last</li>
                   <li>E elementAt(index)</li>
                   <li>E max([comparator])</li>
                   <li>E min([comparator])</li>
+                  <li>E firstWhere(predicate)</li>
+                  <li>E lastWhere(predicate)</li>
+                  <li>singleWhere(predicate)</li>
                   <li>bool contains(E e)</li>
                   <li>bool any(predicate)</li>
                   <li>bool every(predicate)</li>
@@ -390,8 +395,11 @@
                   <li>Iterable&lt;E&gt; where(predicate)</li>
                   <li>void forEach(f(E e))</li>
                   <li>Iterable&lt;E&gt; skip(n)</li>
+                  <li>Iterable&lt;E&gt; skipWhile(predicate)</li>
                   <li>Iterable&lt;E&gt; take(n)</li>
-                  <li>reduce(initialValue, combine(previous, E e))</li>
+                  <li>Iterable&lt;E&gt; takeWhile(predicate)</li>
+                  <li>E reduce(combine(E value, E e))</li>
+                  <li>dynamic fold(initialValue, combine(previous, E e))</li>
                   <li>String join([separator])</li>
                   <li>List&lt;E&gt; toList()</li>
                   <li>Set&lt;E&gt; toSet()</li>
