@@ -15,6 +15,10 @@
 		transform: scale(1, 0.45);*/
 		background: transparent !important;
   }
+
+  a[href]:after {
+    content: none;
+  }
   
 	@page {
 	  margin: 0cm;
@@ -139,12 +143,20 @@ code {
 	background-color: #86B32D;
 }
 
+#collection-section table {
+	width: 99%;
+}
+
 #io-section {
 	background-color: #BF3030;
 }
 
 #isolate-section {
 	background-color: #00ABA9;
+}
+
+#isolate-section table {
+	width: 99%;
 }
 
 #mirrors-section{
@@ -160,6 +172,3 @@ code {
 	color: #EEE;
 }
 
- a[href]:after {
-    content: none;
-  }
