@@ -159,3 +159,7 @@ code {
 	background-color: #555;
 	color: #EEE;
 }
+
+ a[href]:after {
+    content: none;
+  }
