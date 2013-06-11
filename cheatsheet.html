@@ -393,7 +393,7 @@
                   <li>Iterable map(f(E e))</li>
                   <li>Iterable expand(Iterable f(E e))</li>
                   <li>Iterable&lt;E&gt; where(predicate)</li>
-                  <li>void forEach(f(E e))</li>
+                  <li>forEach(f(E e))</li>
                   <li>Iterable&lt;E&gt; skip(n)</li>
                   <li>Iterable&lt;E&gt; skipWhile(predicate)</li>
                   <li>Iterable&lt;E&gt; take(n)</li>
@@ -406,30 +406,31 @@
                 </ul>
               </div>
               <div class="section">
-                <p>Collection</p>
+                <p>List</p>
                 <ul class="section-content">
-                  <li>add(E e)</li>
+                  <li>void add(E e)</li>
+                  <li>insert(index, E e)</li>
                   <li>addAll(Iterable&lt;E&gt; elements)</li>
                   <li>remove(Object element)</li>
                   <li>removeAll(Iterable elements)</li>
-                  <li>retainAll(Iterable elements)</li>
+                  <li>retainWhere(predicate)</li>
+                  <li>insertAll(index, Iterable&lt;E&gt; iterable)</li>
+                  <li>setAll(index, Iterable&lt;E&gt; iterable)</li>
                   <li>clear()</li>
-                </ul>
-              </div>
-              <div class="section">
-                <p>List</p>
-                <ul class="section-content">
-                  <li>E operator [](index)</li>
-                  <li>operator []=(index, E value)</li>
+                  <li>E operator [&nbsp;](index)</li>
+                  <li>operator [&nbsp;]=(index, E value)</li>
                   <li>Iterable&lt;E&gt; get reversed</li>
                   <li>sort([comparator])</li>
                   <li>indexOf(E e, [start = 0])</li>
                   <li>int lastIndexOf(E e, [start])</li>
                   <li>E removeAt(index)</li>
                   <li>E removeLast()</li>
-                  <li>List&lt;E&gt; getRange(start, length)</li>
-                  <li>void removeRange(start, length)</li>
-                  <li>void insertRange(start, length, [E fill])</li>
+                  <li>List&lt;E&gt; sublist(start, length)</li>
+                  <li>removeRange(start, length)</li>
+                  <li>fillRange(start, length, [E fill])</li>
+                  <li>replaceRange(start, end, Iterable&lt;E&gt; iterable)</li>
+                  <li>setRange(start, end, Iterable&lt;E&gt; iterable)</li>
+                  <li>Map&lt;int, E&gt; asMap()</int></li>
                 </ul>
               </div>
               <div class="section">
