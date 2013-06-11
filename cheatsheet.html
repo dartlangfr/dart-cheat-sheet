@@ -74,11 +74,11 @@
                 <li>new Stream.fromIterable(Iterable&lt;T&gt; iterable)</li>
                 <li>new Stream.periodic(Duration period)</li>
                 <li>Future&lt;T&gt; first</li>
-                <li>bool isBroadcast</li>
-                <li>Future&lt;bool&gt; isEmpty</li>
-                <li>Future&lt;T&gt; last</li>
-                <li>Future&lt;int&gt; length</li>
-                <li>Future&lt;T&gt; single</li>
+                <li>bool get isBroadcast</li>
+                <li>Future&lt;bool&gt; get isEmpty</li>
+                <li>Future&lt;T&gt; get last</li>
+                <li>Future&lt;int&gt; get length</li>
+                <li>Future&lt;T&gt; get single</li>
                 <li>Stream&lt;T&gt; asBroadcastStream()</li>
                 <li>Future&lt;bool&gt; any(predicate)</li>
                 <li>Stream&lt;T&gt; asBroadcastStream()</li>
@@ -374,13 +374,13 @@
                 <p>Iterable</p>
                 <ul class="section-content">
                   <li>factory Iterable.generate(count, E generator(index))</li>
-                  <li>bool isEmpty</li>
-                  <li>bool isNotEmpty</li>
-                  <li>Iterator&lt;E&gt; iterator</E></li>
-                  <li>int length</li>
-                  <li>E first</li>
-                  <li>E single</li>
-                  <li>E last</li>
+                  <li>bool get isEmpty</li>
+                  <li>bool get isNotEmpty</li>
+                  <li>Iterator&lt;E&gt; get iterator</E></li>
+                  <li>int get length</li>
+                  <li>E get first</li>
+                  <li>E get single</li>
+                  <li>E get last</li>
                   <li>E elementAt(index)</li>
                   <li>E max([comparator])</li>
                   <li>E min([comparator])</li>
