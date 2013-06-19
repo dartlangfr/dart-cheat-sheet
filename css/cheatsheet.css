@@ -54,6 +54,20 @@ html, body{
 	margin-bottom: 20px;
 }
 
+code {
+	padding: 2px;
+	color: #d14;
+	white-space: nowrap;
+	background-color: #f7f7f9;
+	border: 1px solid #e1e1e8;
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+	font-size: 12px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-style: italic;
+}
+
 .container {
 	margin-left: 1%;
 	margin-right: 1%;
@@ -142,6 +156,7 @@ code {
 .section-container li {
 	list-style: none;
 	padding-left: 2px;
+	line-height: 20px;
 }
 
 .section-container li:nth-child(even) {
