@@ -1,460 +1,463 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Dart Cheat Sheet</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link href="css/cheatsheet.css" rel="stylesheet">
-</head>
-<body>
-	<div class="container">
-		<div class="header">
-			<h1>
-				<img alt="Dart Logo" src="img/dart-logo.png"/>
-				Dart Cheat Sheet
-			</h1>
-		</div>
-		<div class="group">
-			<div class="section-container" id="core-section">
-				<p>dart:core</p>
-				<div class="section">
-					<p>Built-in Types</p>
-					<ul class="section-content">
-						<li><b>Numbers</b>: num, int, double</li>
-						<li><b>Strings</b>: String, StringBuilder, RegExp</li>
-						<li><b>Booleans</b>: bool, true, false</li>
-						<li><b>Dates &amp; Times</b>: Date, DateTime, Duration, Stopwatch</li>
-						<li><b>Collections</b>: List&lt;E&gt;, Set&lt;E&gt;, Map&lt;K, V&gt;, Collection&lt;E&gt;, Iterable&lt;E&gt;, Iterator&lt;E&gt;</li>
-					</ul>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Dart Cheat Sheet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/cheatsheet.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>
+          <img alt="Dart Logo" src="img/dart-logo.png"/>
+          Dart Cheat Sheet
+        </h1>
+      </div>
+      <div class="content">
+        <div class="grid">
+          <div id="core-section" class="section-container">
+            <p>dart:core</p>
+            <div class="section">
+              <p>Built-in Types</p>
+              <ul class="section-content">
+                <li><b>Numbers</b>: num, int, double</li>
+                <li><b>Strings</b>: String, StringBuilder, RegExp</li>
+                <li><b>Booleans</b>: bool, true, false</li>
+                <li><b>Dates &amp; Times</b>: Date, DateTime, Duration, Stopwatch</li>
+                <li><b>Collections</b>: List&lt;E&gt;, Set&lt;E&gt;, Map&lt;K, V&gt;, Collection&lt;E&gt;, Iterable&lt;E&gt;, Iterator&lt;E&gt;</li>
+              </ul>
+            </div>
+            <div class="section">
+              <p>Object</p>
+              <ul class="section-content">
+                <li>int hashCode</li>
+                <li>Type runtimeType</li>
+                <li>String toString()</li>
+              </ul>
+            </div>
+            <div class="section">
+              <p>RegExp</p>
+              <ul class="section-content">
+                <li>Iterable&lt;Match&gt; allMatches(String str)</li>
+                <li>Match firstMatch(String str)</li>
+                <li>bool hasMatch(String str)</li>
+              </ul>
+            </div>
+          </div>
+          <div id="async-section" class="section-container">
+            <p>dart:async</p>
+            <div class="section">
+              <p>Completer&lt;T&gt;</p>
+              <ul class="section-content">
+                <li>Future future</li>
+                <li>bool complete([T value])</li>
+                <li>completeError(exception)</li>
+              </ul>
+            </div>
+            <div class="section">
+              <p>Future&lt;T&gt;</p>
+              <ul class="section-content">
+                <li>Future&lt;List&gt; Future.wait(Iterable&lt;Future&gt; futures)</li>
+                <li>Future Future.forEach(Iterable input, Future f(e))</li>
+                <li>new Future(computation())</li>
+                <li>new Future.delayed(Duration duration)</li>
+                <li>new Future.error(Object error)</li>
+                <li>new Future.value(T value)</li>
+                <li>Stream&lt;List&gt; asStream()</li>
+                <li>Future catchError(onError(Object error))</li>
+                <li>Future then(onValue(T value))</li>
+                <li>Future&lt;List&gt; whenComplete(action())</li>
+              </ul>
+            </div>
+            <div class="section">
+              <p>Stream&lt;T&gt;</p>
+              <ul class="section-content">
+                <li>new Stream.fromFuture(Future&lt;T&gt; future)</li>
+                <li>new Stream.fromIterable(Iterable&lt;T&gt; iterable)</li>
+                <li>new Stream.periodic(Duration period)</li>
+                <li>Future&lt;bool&gt; get isEmpty</li>
+                <li>Future&lt;int&gt; get length</li>
+                <li>Future&lt;T&gt; get first</li>
+                <li>Future&lt;T&gt; get last</li>
+                <li>Future&lt;T&gt; get single</li>
+                <li>bool get isBroadcast</li>
+                <li>Future&lt;bool&gt; any(predicate)</li>
+                <li>Stream&lt;T&gt; asBroadcastStream()</li>
+                <li>Stream&lt;T&gt; distinct()</li>
+                <li>Stream&lt;T&gt; skip(count)</li>
+                <li>Stream&lt;T&gt; skipWhile(predicate)</li>
+                <li>Stream&lt;T&gt; take(count)</li>
+                <li>Stream&lt;T&gt; where(predicate)</li>
+                <li>Stream&lt;T&gt; takeWhile(predicate)</li>
+                <li>Stream expand(Iterable convert(T value))</li>
+                <li>Stream map(convert(T event))</li>
+                <li>Stream transform(StreamTransformer streamTransformer)</li>
+                <li>Stream&lt;T&gt; handleError(handle(error))</li>
+                <li>StreamSubscription&lt;T&gt; listen(onData(T event))</li>
+                <li>Future pipe(StreamConsumer&lt;T&gt; streamConsumer)</li>
+                <li>Future&lt;bool&gt; contains(T match)</li>
+                <li>Future&lt;T&gt; elementAt(index)</li>
+                <li>Future&lt;bool&gt; every(predicate)</li>
+                <li>Future&lt;T&gt; firstWhere(predicate)</li>
+                <li>Future&lt;T&gt; lastWhere(predicate)</li>
+                <li>Future&lt;T&gt; singleWhere(predicate)</li>
+                <li>Future&lt;T&gt; reduce(T combine(T previous, T element))</li>
+                <li>Future fold(initialValue, combine(previous, T element))</li>
+                <li>Future&lt;List&lt;T&gt;&gt; toList()</li>
+                <li>Future&lt;Set&lt;T&gt;&gt; toSet()</li>
+              </ul>
+            </div>
+            <div class="section">
+              <p>Timer</p>
+              <ul class="section-content">
+                <li>Timer.run(callback()))</li>
+                <li>new Timer.Timer(Duration duration, callback())</li>
+                <li>new Timer.periodic(Duration duration, callback(timer)</li>
+                <li>cancel()</li>
+              </ul>
+            </div>
+          </div>
+          <div id="keyword-section" class="section-container">
+            <p>Keywords</p>
+            <div class="section">
+              <ul class="section-content">
+                <li><b>Library</b>: library, part, part of, import, export, show, hide</li>
+                <li><b>Class</b>: class, abstract, extends, implements, this, super</li>
+                <li><b>Constructor</b>: new, factory, const</li>
+                <li><b>Function</b>: operator, external</li>
+                <li><b>Getter / Setter</b>: get, set</li>
+                <li><b>Type</b>: void, null, var, dynamic, typedef, is, as, false, true</li>
+                <li><b>Modifier</b>: static, final, const</li>
+                <li><b>Control flow</b>: if, else, for, in, while, do, break, continue, return, switch, case, default, assert</li>
+                <li><b>Exception</b>: try, catch, finally, throw</li>
+              </ul>
+            </div>
+          </div>
+          <div id="io-section" class="section-container">
+            <p>dart:io</p>
+            <div class="section-group">
+              <div class="section">
+                <p>System</p>
+                <ul class="section-content">
+                  <li>Platform</li>
+                  <li>Process</li>
+                </ul>
+              </div>
+              <div class="section">
+                <p>HTTP</p>
+                <ul class="section-content">
+                  <li>ContentType</li>
+                  <li>Cookie</li>
+                  <li>HttpHeaders</li>
+                  <li>HttpSession</li>
+                  <li>HttpClient</li>
+                  <li>HttpServer</li>
+                  <li>WebSocket</li>
+                  <li>Socket</li>
+                </ul>
+              </div>
+              <div class="section">
+                <p>Stream</p>
+                <ul class="section-content">
+                  <li>LineTransformer</li>
+                  <li>StringDecoder</li>
+                  <li>StringEncoder</li>
+                </ul>
+              </div>
+              <div class="section">
+                <p>File</p>
+                <ul class="section-content">
+                  <li>Directory</li>
+                  <li>File</li>
+                  <li>Path</li>
+                  <li>Encoding</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="isolate-section" class="section-container">
+            <p>dart:isolate</p>
+            <div class="section-group">
+              <div class="section">
+                <p>Messaging</p>
+                <ul class="section-content">
+                  <li class="section-content">
+                    <p>Top-level</p>
+                    <ul class="section-content">
+                      <li>ReceivePort port</li>
+                      <li>spawnFunction</li>
+                      <li>spawnUri</li>
+                    </ul>
+                  </li>
+                  <li class="section-content">
+                    <p>Receveir</p>
+                    <ul class="section-content">
+                      <li>ReceivePort</li>
+                    </ul>
+                  </li>
+                  <li class="section-content">
+                    <p>Sender</p>
+                    <ul class="section-content">
+                      <li>SendPort</li>
+                      <li>SendPortSync</li>
+                    </ul>
+									</li>
+                </ul>
+              </div>
+              <div class="section">
+                <p>Streaming</p>
+                <ul class="section-content">
+                  <li class="section-content">
+                    <p>Top-level</p>
+                    <ul class="section-content">
+                      <li>IsolateStream stream</li>
+                      <li>streamSpawnFunction</li>
+                    </ul>
+                  </li>
+                  <li class="section-content">
+                    <p>Receveir</p>
+                    <ul class="section-content">
+                      <li>IsolateSink</li>
+                    </ul>
+                  </li>
+                  <li class="section-content">
+                    <p>Sender</p>
+                    <ul class="section-content">
+                      <li>IsolateStream</li>
+                      <li>MessageBox</li>
+                    </ul>
+									</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="mirrors-section" class="section-container">
+            <p>dart:mirrors</p>
+            <div class="section">
+              <p>Top-level functions</p>
+              <ul class="section-content">
+                <li>InstanceMirror reflect(Object reflectee)</li>
+                <li>MirrorSystem currentMirrorSystem()</li>
+              </ul>
+            </div>
+            <div class="section">
+              <p>Classes</p>
+              <ul class="section-content">
+                <li>MirrorSystem, LibraryMirror, ClassMirror, </li>
+                <li>MethodMirror, Mirror, InstanceMirror, Comment</li>
+              </ul>
+            </div>
+          </div>
+          <div id="operators-section" class="section-container">
+            <p>Operators</p>
+            <div class="section">
+              <ul class="section-content">
+                <li><b>Arithmetics</b>: &nbsp;&nbsp; + &nbsp;&nbsp; - &nbsp;&nbsp; * &nbsp;&nbsp; / &nbsp;&nbsp; %
+                  &nbsp;&nbsp; ~/ &nbsp;&nbsp; -<em class="replaceable"><code>expr</code></em>
+                </li>
+                <li><b>Increment / Decrement</b>: &nbsp;&nbsp; <em class="replaceable"><code>expr</code></em>++
+                  &nbsp;&nbsp; <em class="replaceable"><code>expr</code></em>-- &nbsp;&nbsp;
+                  ++<em class="replaceable"><code>expr</code></em> &nbsp;&nbsp;
+                  --<em class="replaceable"><code>expr</code></em>
+                </li>
+                <li><b>Bitwise</b>: &nbsp;&nbsp; &amp; &nbsp;&nbsp; | &nbsp;&nbsp; ^ &nbsp;&nbsp; ~<em class="replaceable"><code>expr</code></em> &nbsp;&nbsp; &lt;&lt; &nbsp;&nbsp; &gt;&gt;</li>
+                <li><b>Comparison</b>: &nbsp;&nbsp; == &nbsp;&nbsp; !=
+                  &nbsp;&nbsp; &gt;= &nbsp;&nbsp; &gt; &nbsp;&nbsp;
+                  &lt;= &nbsp;&nbsp; &lt; &nbsp;&nbsp; 
+                </li>
+                <li><b>Logical</b>: &nbsp;&nbsp; &amp;&amp; &nbsp;&nbsp; || &nbsp;&nbsp; !<em class="replaceable"><code>expr</code></em></li>
+                <li><b>Conditional</b>: <em class="replaceable"><code>expr1</code></em> ?
+                  <em class="replaceable"><code>expr2</code></em> :
+                  <em class="replaceable"><code>expr3</code></em>
+                </li>
+                <li><b>Assignment</b>: &nbsp;&nbsp; = &nbsp;&nbsp; *= &nbsp;&nbsp; /=
+                  &nbsp;&nbsp; ~/= &nbsp;&nbsp; %= &nbsp;&nbsp; += &nbsp;&nbsp; -=
+                  &nbsp;&nbsp; &lt;&lt;= &nbsp;&nbsp; &gt;&gt;= &nbsp;&nbsp; &amp;=
+                  &nbsp;&nbsp; ^= &nbsp;&nbsp; |= &nbsp;&nbsp;
+                </li>
+                <li><b>Accessors</b>: &nbsp;&nbsp; [] &nbsp;&nbsp; . &nbsp;&nbsp; ..</li>
+                <li><b>Type / Argument</b>: &nbsp;&nbsp; as &nbsp;&nbsp; is &nbsp;&nbsp; is! &nbsp;&nbsp; ?<em class="replaceable"><code>identifier</code></em></li>
+              </ul>
+            </div>
+          </div>
+          <div id="test-section" class="section-container">
+            <p>Test</p>
+            <div class="section">
+              <p>Unit test functions</p>
+              <ul class="section-content">
+                <li>test(String spec, TestFunction body)</li>
+                <li>expect(actual, matcher)</li>
+                <li>fail(String message)</li>
+                <li>group(String description, body())</li>
+                <li>setUp(Function setupTest)</li>
+                <li>tearDown(Function teardownTest)</li>
+              </ul>
+            </div>
+            <div class="section">
+              <p>Matchers</p>
+              <ul class="section-content">
+                <li>is<i>[InstanceOf, List | Map]</i></li>
+                <li>is<i>[Null | NotNull]</i></li>
+                <li>matches, predicate, wrapMatcher</li>
+                <li>isNot, anyOf, allOf, someElement, everyElement</li>
+                <li>anything, returnsNormally</li>
+                <li>equals, same, unorderedEquals, orderedEquals</li>
+                <li>completes, wrapAsync, completion</li>
+                <li>is<i>[True, False]</i></li>
+                <li>is<i>[Negative | NonNegative | NonPositive | Positive | NonZero | Zero]</i></li>
+                <li>in<i>[ClosedOpen, CloseOpen, Exclusive, Inclusive ]</i>Range, closeTo, lessThanOrEqualTo, lessThan, greaterThanOrEqualTo, greaterThan</li>
+                <li>stringContainsInOrder, endsWith, startsWith, equalsIgnoringWhitespace, equalsIgnoringCase</li>
+                <li>containsPair, containsValue, isIn, contains, isEmpty, hasLength</li>
+                <li>is<i>[ArgumentError | Exception | FormatException | RangeError | StateError | UnimplementedError | UnsupportedError | NoSuchMethodError]</i></li>
+                <li>throws, throws<i>[A | ArgumentError | Exception | FormatException | NoSuchMethodError | RangeError | StateError | UnimplementedError | UnsupportedError]</i></li>
+              </ul>
+            </div>
+            <div class="section">
+              <p>Mocks</p>
+              <ul class="section-content">
+                <li class="section-content">
+                  <p>Top-level functions</p>
+                  <ul class="section-content">
+                    <li>happened<i>[AtLeastOnce, AtMostOnce, Once, AtMost, AtLeast, Exactly]</i>, neverHappened</li>
+                    <li>sharedLog</li>
+                    <li><i>[never, sometime, always]</i>Threw, throwing</li>
+                    <li><i>[never, sometime, always]</i>Returned</li>
+                    <li>returning</li>
+                    <li>callsTo</li>
+                  </ul>
+                </li>
+                <li class="section-content">
+                  <p>Mock class</p>
+                  <ul class="section-content">
+                    <li>new Mock(), new Mock.custom(), new Mock.spy(Object realObject)</li>
+                    <li>log, logging, name</li>
+                    <li>calls(), clearLogs(), getLogs(), reset(), resetBehavior(), verifyZeroInteractions(), when(CallMatcher logFilter)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="collection-section" class="section-container">
+            <p>dart:collection</p>
+            <table class="section table table-condensed">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Unordered</th>
+                  <th>Ordered</th>
+                  <th>Sorted</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>List</td>
+                  <td></td>
+                  <td>List</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Set</td>
+                  <td>HashSet</td>
+                  <td>LinkedHashSet</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Map</td>
+                  <td>HashMap</td>
+                  <td>LinkedHashMap</td>
+                  <td>SplayTreeMap</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="section">
+              <p>Iterable</p>
+              <ul class="section-content">
+                <li>factory Iterable.generate(count, E generator(index))</li>
+                <li>bool get isEmpty</li>
+                <li>bool get isNotEmpty</li>
+                <li>Iterator&lt;E&gt; get iterator</li>
+                <li>int get length</li>
+                <li>E get first</li>
+                <li>E get single</li>
+                <li>E get last</li>
+                <li>E elementAt(index)</li>
+                <li>E max([comparator])</li>
+                <li>E min([comparator])</li>
+                <li>E firstWhere(predicate)</li>
+                <li>E lastWhere(predicate)</li>
+                <li>singleWhere(predicate)</li>
+                <li>bool contains(E e)</li>
+                <li>bool any(predicate)</li>
+                <li>bool every(predicate)</li>
+                <li>Iterable map(f(E e))</li>
+                <li>Iterable expand(Iterable f(E e))</li>
+                <li>Iterable&lt;E&gt; where(predicate)</li>
+                <li>forEach(f(E e))</li>
+                <li>Iterable&lt;E&gt; skip(n)</li>
+                <li>Iterable&lt;E&gt; skipWhile(predicate)</li>
+                <li>Iterable&lt;E&gt; take(n)</li>
+                <li>Iterable&lt;E&gt; takeWhile(predicate)</li>
+                <li>E reduce(combine(E value, E e))</li>
+                <li>dynamic fold(initialValue, combine(previous, E e))</li>
+                <li>String join([separator])</li>
+                <li>List&lt;E&gt; toList()</li>
+                <li>Set&lt;E&gt; toSet()</li>
+              </ul>
+            </div>
+            <div class="section">
+              <p>List</p>
+              <ul class="section-content">
+                <li>void add(E e)</li>
+                <li>insert(index, E e)</li>
+                <li>addAll(Iterable&lt;E&gt; elements)</li>
+                <li>remove(Object element)</li>
+                <li>removeAll(Iterable elements)</li>
+                <li>retainWhere(predicate)</li>
+                <li>insertAll(index, Iterable&lt;E&gt; iterable)</li>
+                <li>setAll(index, Iterable&lt;E&gt; iterable)</li>
+                <li>clear()</li>
+                <li>E operator [&nbsp;](index)</li>
+                <li>operator [&nbsp;]=(index, E value)</li>
+                <li>Iterable&lt;E&gt; get reversed</li>
+                <li>sort([comparator])</li>
+                <li>indexOf(E e, [start = 0])</li>
+                <li>int lastIndexOf(E e, [start])</li>
+                <li>E removeAt(index)</li>
+                <li>E removeLast()</li>
+                <li>List&lt;E&gt; sublist(start, length)</li>
+                <li>removeRange(start, length)</li>
+                <li>fillRange(start, length, [E fill])</li>
+                <li>replaceRange(start, end, Iterable&lt;E&gt; iterable)</li>
+                <li>setRange(start, end, Iterable&lt;E&gt; iterable)</li>
+                <li>Map&lt;int, E&gt; asMap()</li>
+              </ul>
+            </div>
+            <div class="section">
+              <p>Map</p>
+              <ul class="section-content">
+                <li>clear()</li>
+                <li>bool containsValue(V value)</li>
+                <li>bool containsKey(K key)</li>
+                <li>V operator [&nbsp;](K key)</li>
+                <li>operator [&nbsp;]=(K key, V value)</li>
+                <li>V putIfAbsent(K key, V ifAbsent())</li>
+                <li>V remove(K key)</li>
+                <li>forEach(void f(K key, V value))</li>
+                <li>Iterable&lt;K&gt; get keys</li>
+                <li>Iterable&lt;V&gt; get values</li>
+              </ul>
+            </div>
+          </div>
 				</div>
-				<div class="section">
-					<p>Object</p>
-					<ul class="section-content">
-						<li>int hashCode</li>
-						<li>Type runtimeType</li>
-						<li>String toString()</li>
-					</ul>
-				</div>
-				<div class="section">
-					<p>RegExp</p>
-					<ul class="section-content">
-						<li>Iterable&lt;Match&gt; allMatches(String str)</li>
-						<li>Match firstMatch(String str)</li>
-						<li>bool hasMatch(String str)</li>
-					</ul>
-				</div>
-			</div>
-			<div class="section-container" id="async-section">
-				<p>dart:async</p>
-				<div class="section">
-					<p>Completer&lt;T&gt;</p>
-					<ul class="section-content">
-						<li>Future future</li>
-						<li>bool complete([T value])</li>
-						<li>completeError(exception)</li>
-					</ul>
-				</div>
-				<div class="section">
-					<p>Future&lt;T&gt;</p>
-					<ul class="section-content">
-						<li>Future&lt;List&gt; Future.wait(Iterable&lt;Future&gt; futures)</li>
-						<li>Future Future.forEach(Iterable input, Future f(e))</li>
-						<li>new Future(computation())</li>
-						<li>new Future.delayed(Duration duration)</li>
-						<li>new Future.error(Object error)</li>
-						<li>new Future.value(T value)</li>
-						<li>Stream&lt;List&gt; asStream()</li>
-						<li>Future catchError(onError(Object error))</li>
-						<li>Future then(onValue(T value))</li>
-						<li>Future&lt;List&gt; whenComplete(action())</li>
-					</ul>
-				</div>
-				<div class="section">
-					<p>Stream&lt;T&gt;</p>
-					<ul class="section-content">
-						<li>new Stream.fromFuture(Future&lt;T&gt; future)</li>
-						<li>new Stream.fromIterable(Iterable&lt;T&gt; iterable)</li>
-						<li>new Stream.periodic(Duration period)</li>
-						<li>Future&lt;bool&gt; get isEmpty</li>
-						<li>Future&lt;int&gt; get length</li>
-						<li>Future&lt;T&gt; get first</li>
-						<li>Future&lt;T&gt; get last</li>
-						<li>Future&lt;T&gt; get single</li>
-						<li>bool get isBroadcast</li>
-						<li>Future&lt;bool&gt; any(predicate)</li>
-						<li>Stream&lt;T&gt; asBroadcastStream()</li>
-						<li>Stream&lt;T&gt; distinct()</li>
-						<li>Stream&lt;T&gt; skip(count)</li>
-						<li>Stream&lt;T&gt; skipWhile(predicate)</li>
-						<li>Stream&lt;T&gt; take(count)</li>
-						<li>Stream&lt;T&gt; where(predicate)</li>
-						<li>Stream&lt;T&gt; takeWhile(predicate)</li>
-						<li>Stream expand(Iterable convert(T value))</li>
-						<li>Stream map(convert(T event))</li>
-						<li>Stream transform(StreamTransformer streamTransformer)</li>
-						<li>Stream&lt;T&gt; handleError(handle(error))</li>
-						<li>StreamSubscription&lt;T&gt; listen(onData(T event))</li>
-						<li>Future pipe(StreamConsumer&lt;T&gt; streamConsumer)</li>
-						<li>Future&lt;bool&gt; contains(T match)</li>
-						<li>Future&lt;T&gt; elementAt(index)</li>
-						<li>Future&lt;bool&gt; every(predicate)</li>
-						<li>Future&lt;T&gt; firstWhere(predicate)</li>
-						<li>Future&lt;T&gt; lastWhere(predicate)</li>
-						<li>Future&lt;T&gt; singleWhere(predicate)</li>
-						<li>Future&lt;T&gt; reduce(T combine(T previous, T element))</li>
-						<li>Future fold(initialValue, combine(previous, T element))</li>
-						<li>Future&lt;List&lt;T&gt;&gt; toList()</li>
-						<li>Future&lt;Set&lt;T&gt;&gt; toSet()</li>
-					</ul>
-				</div>
-				<div class="section">
-					<p>Timer</p>
-					<ul class="section-content">
-						<li>Timer.run(callback()))</li>
-						<li>new Timer.Timer(Duration duration, callback())</li>
-						<li>new Timer.periodic(Duration duration, callback(timer)</li>
-						<li>cancel()</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="group middle">
-			<div class="section-container" id="keyword-section">
-				<p>Keywords</p>
-				<div class="section">
-					<ul class="section-content">
-						<li><b>Library</b>: library, part, part of, import, export, show, hide</li>
-						<li><b>Class</b>: class, abstract, extends, implements, this, super</li>
-						<li><b>Constructor</b>: new, factory, const</li>
-						<li><b>Function</b>: operator, external</li>
-						<li><b>Getter / Setter</b>: get, set</li>
-						<li><b>Type</b>: void, null, var, dynamic, typedef, is, as, false, true</li>
-						<li><b>Modifier</b>: static, final, const</li>
-						<li><b>Control flow</b>: if, else, for, in, while, do, break, continue, return, switch, case, default, assert</li>
-						<li><b>Exception</b>: try, catch, finally, throw</li>
-					</ul>
-				</div>
-			</div>
-			<div class="section-container" id="io-section">
-				<p>dart:io</p>
-				<div class="section-group first">
-					<div class="section">
-						<p>Stream</p>
-						<ul class="section-content">
-							<li>LineTransformer</li>
-							<li>StringDecoder</li>
-							<li>StringEncoder</li>
-						</ul>
-					</div>
-					<div class="section">
-						<p>File</p>
-						<ul class="section-content">
-							<li>Directory</li>
-							<li>File</li>
-							<li>Path</li>
-							<li>Encoding</li>
-						</ul>
-					</div>
-				</div>
-				<div class="section-group">
-					<div class="section">
-						<p>System</p>
-						<ul class="section-content">
-							<li>Platform</li>
-							<li>Process</li>
-						</ul>
-					</div>
-					<div class="section">
-						<p>HTTP</p>
-						<ul class="section-content">
-							<li>ContentType</li>
-							<li>Cookie</li>
-							<li>HttpHeaders</li>
-							<li>HttpSession</li>
-							<li>HttpClient</li>
-							<li>HttpServer</li>
-							<li>WebSocket</li>
-							<li>Socket</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div id="isolate-section" class="section-container">
-				<p>dart:isolate</p>
-				<table class="section table table-condensed">
-					<thead>
-						<tr>
-							<th></th>
-							<th>Messaging</th>
-							<th>Streaming</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Top-level</td>
-							<td>
-								ReceivePort port<br/>
-								SendPort spawnFunction(void topLevelFunction())<br/>
-								SendPort spawnUri(String uri)<br/>
-							</td>
-							<td>
-								IsolateStream stream<br/>
-								IsolateSink streamSpawnFunction(void topLevelFunction())<br/>
-							</td>
-						</tr>
-						<tr>
-							<td>Receveir</td>
-							<td>ReceivePort</td>
-							<td>IsolateSink</td>
-						</tr>
-						<tr>
-							<td>Sender</td>
-							<td>
-								SendPort<br/>
-								SendPortSync<br/>
-							</td>
-							<td>
-								IsolateStream<br/>
-								MessageBox<br/>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div id="mirrors-section">
-				<div class="section-container">
-					<p>dart:mirrors</p>
-					<div class="section">
-						<p>Top-level functions</p>
-						<ul class="section-content">
-							<li>InstanceMirror reflect(Object reflectee)</li>
-							<li>MirrorSystem currentMirrorSystem()</li>
-						</ul>
-					</div>
-					<div class="section">
-						<p>Classes</p>
-						<ul class="section-content">
-							<li>MirrorSystem, LibraryMirror, ClassMirror, </li>
-							<li>MethodMirror, Mirror, InstanceMirror, Comment</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div id="test-section">
-				<div class="section-container">
-					<p>Test</p>
-					<div class="section">
-						<p>Unit test functions</p>
-						<ul class="section-content">
-							<li>test(String spec, TestFunction body)</li>
-							<li>expect(actual, matcher)</li>
-							<li>fail(String message)</li>
-							<li>group(String description, body())</li>
-							<li>setUp(Function setupTest)</li>
-							<li>tearDown(Function teardownTest)</li>
-						</ul>
-					</div>
-					<div class="section">
-						<p>Matchers</p>
-						<ul class="section-content">
-							<li>is<i>[InstanceOf, List | Map]</i></li>
-							<li>is<i>[Null | NotNull]</i></li>
-							<li>matches, predicate, wrapMatcher</li>
-							<li>isNot, anyOf, allOf, someElement, everyElement</li>
-							<li>anything, returnsNormally</li>
-							<li>equals, same, unorderedEquals, orderedEquals</li>
-							<li>completes, wrapAsync, completion</li>
-							<li>is<i>[True, False]</i></li>
-							<li>is<i>[Negative | NonNegative | NonPositive | Positive | NonZero | Zero]</i></li>
-							<li>in<i>[ClosedOpen, CloseOpen, Exclusive, Inclusive ]</i>Range, closeTo, lessThanOrEqualTo, lessThan, greaterThanOrEqualTo, greaterThan</li>
-							<li>stringContainsInOrder, endsWith, startsWith, equalsIgnoringWhitespace, equalsIgnoringCase</li>
-							<li>containsPair, containsValue, isIn, contains, isEmpty, hasLength</li>
-							<li>is<i>[ArgumentError | Exception | FormatException | RangeError | StateError | UnimplementedError | UnsupportedError | NoSuchMethodError]</i></li>
-							<li>throws, throws<i>[A | ArgumentError | Exception | FormatException | NoSuchMethodError | RangeError | StateError | UnimplementedError | UnsupportedError]</i></li>
-						</ul>
-					</div>
-					<div class="section">
-						<p>Mocks</p>
-						<ul class="section-content">
-							<li class="section-content">
-								<p>Top-level functions</p>
-								<ul>
-									<li>happened[AtLeastOnce, AtMostOnce, Once, AtMost, AtLeast, Exactly], neverHappened</li>
-									<li>sharedLog</li>
-									<li><i>[never, sometime, always]</i>Threw, throwing</li>
-									<li><i>[never, sometime, always]</i>Returned</li>
-									<li>returning</li>
-									<li>callsTo</li>
-								</ul>
-							</li>
-							<li class="section-content">
-								<p>Mock class</p>
-								<ul>
-									<li>new Mock(), new Mock.custom(), new Mock.spy(Object realObject)</li>
-									<li>log, logging, name</li>
-									<li>calls(), clearLogs(), getLogs(), reset(), resetBehavior(), verifyZeroInteractions(), when(CallMatcher logFilter)</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="group">
-			<div id="operators-section">
-				<div class="section-container">
-					<p>Operators</p>
-					<div class="section">
-						<ul class="section-content">
-							<li><b>Arithmetics</b>: &nbsp;&nbsp; + &nbsp;&nbsp; - &nbsp;&nbsp; * &nbsp;&nbsp; / &nbsp;&nbsp; %
-								&nbsp;&nbsp; ~/ &nbsp;&nbsp; -<em class="replaceable"><code>expr</code></em>
-							</li>
-							<li><b>Increment / Decrement</b>: &nbsp;&nbsp; <em class="replaceable"><code>expr</code></em>++
-								&nbsp;&nbsp; <em class="replaceable"><code>expr</code></em>-- &nbsp;&nbsp;
-								++<em class="replaceable"><code>expr</code></em> &nbsp;&nbsp;
-								--<em class="replaceable"><code>expr</code></em>
-							</li>
-							<li><b>Bitwise</b>: &nbsp;&nbsp; &amp; &nbsp;&nbsp; | &nbsp;&nbsp; ^ &nbsp;&nbsp; ~<em class="replaceable"><code>expr</code></em> &nbsp;&nbsp; &lt;&lt; &nbsp;&nbsp; &gt;&gt;</li>
-							<li><b>Comparison</b>: &nbsp;&nbsp; == &nbsp;&nbsp; !=
-								&nbsp;&nbsp; &gt;= &nbsp;&nbsp; &gt; &nbsp;&nbsp;
-								&lt;= &nbsp;&nbsp; &lt; &nbsp;&nbsp; 
-							</li>
-							<li><b>Logical</b>: &nbsp;&nbsp; &amp;&amp; &nbsp;&nbsp; || &nbsp;&nbsp; !<em class="replaceable"><code>expr</code></em></li>
-							<li><b>Conditional</b>: <em class="replaceable"><code>expr1</code></em> ?
-								<em class="replaceable"><code>expr2</code></em> :
-								<em class="replaceable"><code>expr3</code></em>
-							</li>
-							<li><b>Assignment</b>: &nbsp;&nbsp; = &nbsp;&nbsp; *= &nbsp;&nbsp; /=
-								&nbsp;&nbsp; ~/= &nbsp;&nbsp; %= &nbsp;&nbsp; += &nbsp;&nbsp; -=
-								&nbsp;&nbsp; &lt;&lt;= &nbsp;&nbsp; &gt;&gt;= &nbsp;&nbsp; &amp;=
-								&nbsp;&nbsp; ^= &nbsp;&nbsp; |= &nbsp;&nbsp;
-							</li>
-							<li><b>Accessors</b>: &nbsp;&nbsp; [] &nbsp;&nbsp; . &nbsp;&nbsp; ..</li>
-							<li><b>Type / Argument</b>: &nbsp;&nbsp; as &nbsp;&nbsp; is &nbsp;&nbsp; is! &nbsp;&nbsp; ?<em class="replaceable"><code>identifier</code></em></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div id="collection-section">
-				<div class="section-container">
-					<p>dart:collection</p>
-					<table class="section table table-condensed">
-						<thead>
-							<tr>
-								<th></th>
-								<th>Unordered</th>
-								<th>Ordered</th>
-								<th>Sorted</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>List</td>
-								<td></td>
-								<td>List</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>Set</td>
-								<td>HashSet</td>
-								<td>LinkedHashSet</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>Map</td>
-								<td>HashMap</td>
-								<td>LinkedHashMap</td>
-								<td>SplayTreeMap</td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="section">
-						<p>Iterable</p>
-						<ul class="section-content">
-							<li>factory Iterable.generate(count, E generator(index))</li>
-							<li>bool get isEmpty</li>
-							<li>bool get isNotEmpty</li>
-							<li>Iterator&lt;E&gt; get iterator</E></li>
-							<li>int get length</li>
-							<li>E get first</li>
-							<li>E get single</li>
-							<li>E get last</li>
-							<li>E elementAt(index)</li>
-							<li>E max([comparator])</li>
-							<li>E min([comparator])</li>
-							<li>E firstWhere(predicate)</li>
-							<li>E lastWhere(predicate)</li>
-							<li>singleWhere(predicate)</li>
-							<li>bool contains(E e)</li>
-							<li>bool any(predicate)</li>
-							<li>bool every(predicate)</li>
-							<li>Iterable map(f(E e))</li>
-							<li>Iterable expand(Iterable f(E e))</li>
-							<li>Iterable&lt;E&gt; where(predicate)</li>
-							<li>forEach(f(E e))</li>
-							<li>Iterable&lt;E&gt; skip(n)</li>
-							<li>Iterable&lt;E&gt; skipWhile(predicate)</li>
-							<li>Iterable&lt;E&gt; take(n)</li>
-							<li>Iterable&lt;E&gt; takeWhile(predicate)</li>
-							<li>E reduce(combine(E value, E e))</li>
-							<li>dynamic fold(initialValue, combine(previous, E e))</li>
-							<li>String join([separator])</li>
-							<li>List&lt;E&gt; toList()</li>
-							<li>Set&lt;E&gt; toSet()</li>
-						</ul>
-					</div>
-					<div class="section">
-						<p>List</p>
-						<ul class="section-content">
-							<li>void add(E e)</li>
-							<li>insert(index, E e)</li>
-							<li>addAll(Iterable&lt;E&gt; elements)</li>
-							<li>remove(Object element)</li>
-							<li>removeAll(Iterable elements)</li>
-							<li>retainWhere(predicate)</li>
-							<li>insertAll(index, Iterable&lt;E&gt; iterable)</li>
-							<li>setAll(index, Iterable&lt;E&gt; iterable)</li>
-							<li>clear()</li>
-							<li>E operator [&nbsp;](index)</li>
-							<li>operator [&nbsp;]=(index, E value)</li>
-							<li>Iterable&lt;E&gt; get reversed</li>
-							<li>sort([comparator])</li>
-							<li>indexOf(E e, [start = 0])</li>
-							<li>int lastIndexOf(E e, [start])</li>
-							<li>E removeAt(index)</li>
-							<li>E removeLast()</li>
-							<li>List&lt;E&gt; sublist(start, length)</li>
-							<li>removeRange(start, length)</li>
-							<li>fillRange(start, length, [E fill])</li>
-							<li>replaceRange(start, end, Iterable&lt;E&gt; iterable)</li>
-							<li>setRange(start, end, Iterable&lt;E&gt; iterable)</li>
-							<li>Map&lt;int, E&gt; asMap()</int></li>
-						</ul>
-					</div>
-					<div class="section">
-						<p>Map</p>
-						<ul class="section-content">
-							<li>clear()</li>
-							<li>bool containsValue(V value)</li>
-							<li>bool containsKey(K key)</li>
-							<li>V operator [&nbsp;](K key)</li>
-							<li>operator [&nbsp;]=(K key, V value)</li>
-							<li>V putIfAbsent(K key, V ifAbsent())</li>
-							<li>V remove(K key)</li>
-							<li>forEach(void f(K key, V value))</li>
-							<li>Iterable&lt;K&gt; get keys</li>
-							<li>Iterable&lt;V&gt; get values</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="footer">
-			+Made by <a href="http://plus.google.com/115049522200141162219"><span>Guillaume Girou</span></a>, <a href="http://plus.google.com/106226789128312528511"><span>Nicolas François</span></a> and <a href="http://plus.google.com/109253530406296308866"><span>Vincent Bostoen</span></a> from 
-			<a href="https://plus.google.com/115816334172157652403?prsrc=3" rel="publisher" target="_top" style="text-decoration:none;display:inline-block;color:#333;text-align:center; font:13px/16px arial,sans-serif;white-space:nowrap;">
-				<span style="display:inline-block;font-weight:bold;vertical-align:top;margin-right:5px; margin-top:0px;color: white;">Dartlang [FR] - ʕ๏̮๏ʔ</span></a>
-				<br><em>+Version 0.5.16.0_r23799 - 20130612</em><br>
-			</div>
-		</div>
-	</body> 
-	</html>
+      </div>
+      <div class="footer">
+        <div>
+          +Made by <a href="http://plus.google.com/115049522200141162219"><span>Guillaume Girou</span></a>, <a href="http://plus.google.com/106226789128312528511"><span>Nicolas François</span></a> and <a href="http://plus.google.com/109253530406296308866"><span>Vincent Bostoen</span></a> from 
+          <a href="https://plus.google.com/115816334172157652403"><span>Dartlang [FR] - ʕ๏̮๏ʔ</span></a><br>
+          <em>+Version 0.5.16.0_r23799 - 20130622</em><br>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
