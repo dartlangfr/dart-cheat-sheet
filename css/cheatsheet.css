@@ -87,15 +87,8 @@ code {
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
   column-break-inside: avoid;
-	display: inline-block;
+	display: block;
 	width: 100%;
-}
-
-/* Hacks for firefox */
-@-moz-document url-prefix() { 
-	.grid .section-container {
-		display: inline-block;
-	}
 }
 
 .section-container {
