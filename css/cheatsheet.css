@@ -38,8 +38,10 @@ code {
 	width: 100%;
 }
 
-#header {
+#header  h1 {
   font-family: 'Open Sans Condensed', sans-serif;
+  white-space: nowrap;
+  overflow-x: hidden;
 }
 
 #content {
