@@ -4,6 +4,7 @@ body{
 	background-color: #333;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
+	width: 100%;
 	height: 100%;
 }
 
@@ -33,31 +34,29 @@ code {
 	font-style: italic;
 }
 
-.container, .container .content {
+#header, #content, #footer {
+	width: 100%;
+}
+
+#header {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#content {
 	height: 100%;
-	width: 100%;
 }
 
-.container {
-	/*display: table;*/
-}
-
-.container .header, .container .content, .container .footer {
-  /*display: table-row;*/
-	width: 100%;
-}
-
-.footer {
+#footer {
 	margin-top: 7px;
 	background-color: #555;
 	color: #EEE;
 }
 
-.footer div {
+#footer div {
 	padding: 2px;
 }
 
-.footer span {
+#footer span {
 	background-color: #333333;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -83,12 +82,19 @@ code {
 	display: block;
 }
 
-.grid .section-container {
+.grid .section-container, .section-group .section {
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
   column-break-inside: avoid;
 	display: block;
 	width: 100%;
+}
+
+/* Hacks for firefox */
+@-moz-document url-prefix() { 
+  .grid .section-container, .section-group .section {
+    display: inline-block;
+  }
 }
 
 .section-container {
@@ -102,7 +108,7 @@ code {
 
 .section-container p {
 	margin: 0 0 0 2px;
-	font-family: Tahoma;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .section-container ul {
@@ -132,11 +138,6 @@ code {
 	column-gap: 0.1em;
 }
 
-.section-group .section {
-	display: inline-block;
-	width: 100%;
-}
-
 .section {
 	padding-left: 8px;	
 	padding-right: 2px;
@@ -149,7 +150,7 @@ code {
 
 .section p {
 	font-size: 1.1em;
-	font-family: Impact;
+  font-family: Impact, 'Anton', sans-serif;
 }
 
 .section-content {
@@ -206,6 +207,12 @@ code {
 	background-color: #BF3030;
 }
 
+#io-section .section:nth-child(3) {
+  -webkit-column-break-before: always;
+  -moz-column-break-before: always;
+  column-break-before: always;
+}
+  
 #isolate-section {
 	background-color: #00ABA9;
 }
@@ -224,6 +231,10 @@ code {
 
 
 @media print {
+	.noprint {
+		display: none ;
+	}
+
 	body {
 	  background-color: #fff;
 		page-break-after: avoid;
@@ -233,11 +244,7 @@ code {
 		max-height: 21cm;*/
 	}
 	
-	/*a[href]:after {
-		content: none;
-	}*/
-	
-	.header h1 {
+	#header h1 {
 		color: #333;
 	}
 
@@ -269,8 +276,8 @@ code {
 	
 	#keyword-section, #operators-section, #collection-section {
 		-webkit-column-break-before: always;
-    -moz-column-break-before: always;
-    column-break-before: always;
+		-moz-column-break-before: always;
+		column-break-before: always;
 	}
 }
 
@@ -291,8 +298,8 @@ code {
 	
 	#operators-section {
 		-webkit-column-break-before: always;
-    -moz-column-break-before: always;
-    column-break-before: always;
+		-moz-column-break-before: always;
+		column-break-before: always;
 	}
 }
 
