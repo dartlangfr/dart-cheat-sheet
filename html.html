@@ -34,8 +34,36 @@
     </div>
     <div id="content">
       <div class="grid">
+        <div id="query-dom-section" class="section-container">
+          <p>Query the DOM</p>
+          <div class="section">
+            <ul class="section-content">
+              <li>query(cssSelector);</li>
+              <li>queryAll(cssSelector);</li>
+            </ul>
+            <ul class="section-content samples">
+              <li>query('#foo');</li>
+              <li>queryAll('div');</li>
+              <li>queryAll('[name="foo"]');</li>
+              <li>queryAll('.foo');</li>
+              <li>query('.foo .bar');</li>
+              <li>queryAll('.foo .bar');</li>
+            </ul>
+          </div>
+        </div>
+        <div id="http-request-section" class="section-container">
+          <p>HTTP Request</p>
+          <div class="section">
+            <pre>
+HttpRequest.getString('http://theUrl').then((response) {
+  doSomethingWith(response);
+});
+          </pre>
+          
+        </div>
       </div>
     </div>
+  </div>
     <div id="footer">
       <div>
         +Made by <a href="http://plus.google.com/115049522200141162219"><span>Guillaume Girou</span></a>, <a href="http://plus.google.com/106226789128312528511"><span>Nicolas François</span></a> and <a href="http://plus.google.com/109253530406296308866"><span>Vincent Bostoen</span></a> from 
