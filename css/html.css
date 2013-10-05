@@ -1,3 +1,20 @@
 .samples{
 	border: 1px solid orange;
 }
+
+#query-dom-section {
+	background-color: #ED764A;
+}
+
+#http-request-section {
+	background-color: #ed79e3;
+  column-span: all;
+/*  -moz-column-span: all;
+  -ms-column-span: all;
+  -webkit-column-span: all;
+  -o-column-span: all;*/
+}
+
+#elements-section {
+	background-color: #009999;
+}
