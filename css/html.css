@@ -18,3 +18,17 @@
 #elements-section {
 	background-color: #009999;
 }
+
+/*
+#elements-section  #html-elements-section li:nth-child(n+22),
+#elements-section  #input-elements-section li:nth-child(n+8)
+{
+  text-align: center;
+}
+
+#elements-section  #html-elements-section li:nth-child(n+43),
+#elements-section  #input-elements-section li:nth-child(n+15)
+{
+  text-align: right;
+}
+*/
