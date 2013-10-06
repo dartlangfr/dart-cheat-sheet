@@ -102,8 +102,6 @@ code {
 .section-container {
 	color: white;
 	padding: 4px 4px 4px 8px;
-	font-weight: bold;
-	font-size: 1.4em;
 	margin-bottom: 10px;
 	background: #eee;
 }
@@ -111,6 +109,8 @@ code {
 .section-container p {
 	margin: 0 0 0 2px;
   font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+	font-size: 1.4em;
 }
 
 .section-container ul {
@@ -164,13 +164,14 @@ code {
 	margin: 4px;
 	color: black;
 	font-weight: normal;
-	font-size: 0.6em;	
+	font-size: 0.85em;	
 	background-color: rgba(255, 255, 255, 0.5);
 }
 
 .section p {
 	font-size: 1.1em;
   font-family: Impact, 'Anton', sans-serif;
+  font-weight: normal;
 }
 
 .section-content {
