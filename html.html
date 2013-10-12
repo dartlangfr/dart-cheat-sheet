@@ -320,30 +320,30 @@ HttpRequest.getString('http://theUrl').then((response) {
           </div>
         </div>
         <div id="local-storage-section" class="section-container">
-          <p>Local Storage</p>
-          <div class="section">
-            <p>Methods</p>
-            <ul class="section-content">
-              <li>clear()</li>
-              <li>bool containsValue(String value)</li>
-              <li>bool containsKey(String key)</li>
-              <li>V operator [&nbsp;](String key)</li>
-              <li>operator [&nbsp;]=(String key, String value)</li>
-              <li>String putIfAbsent(String key, String ifAbsent())</li>
-              <li>String remove(String key)</li>
-              <li>forEach(void f(String key, String value))</li>
-              <li>Iterable&lt;K&gt; get keys</li>
-              <li>Iterable&lt;V&gt; get values</li>
-            </ul>
-            <ul class="section-content samples">
-              <li>var foo = window.localStorage['bar']</li>
-              <li>window.localStorage['bar'] = "foo"</li>
-            </ul>
-          </div>
+            <p>Local Storage</p>
+            <div class="section">
+                <p>Methods</p>
+                <ul class="section-content">
+                    <li>clear()</li>
+                    <li>bool containsValue(String value)</li>
+                    <li>bool containsKey(String key)</li>
+                    <li>V operator [&nbsp;](String key)</li>
+                    <li>operator [&nbsp;]=(String key, String value)</li>
+                    <li>String putIfAbsent(String key, String ifAbsent())</li>
+                    <li>String remove(String key)</li>
+                    <li>forEach(void f(String key, String value))</li>
+                    <li>Iterable&lt;K&gt; get keys</li>
+                    <li>Iterable&lt;V&gt; get values</li>
+                </ul>
+                <ul class="section-content samples">
+                    <li>var foo = window.localStorage['bar']</li>
+                    <li>window.localStorage['bar'] = "foo"</li>
+                </ul>
+            </div>
         </div>
         <div id="web-rtc-section" class="section-container">
-          <p>Web RTC</p>
-          <div class="section">
+            <p>Web RTC</p>
+            <div class="section">
             <pre>
 window.navigator.getUserMedia(video: true)
   ..then((LocalMediaStream stream) {
@@ -354,8 +354,59 @@ window.navigator.getUserMedia(video: true)
          });
   });
               </pre>
-          </div>
+            </div>
         </div>
+        <div id="file-api-section" class="section-container">
+            <p>File Api</p>
+            <div class="section">
+              <p>File</p>
+              <ul class="section-content">
+                <li>DateTime lastModifiedDate</li>
+                <li>String name</li>
+                <li>String relativePath</li>
+                <li>int size</li>
+                <li>String type</li>
+              </ul>
+            </div>
+            <div class="section">
+                <p>File Reader</p>
+                <ul class="section-content">
+                    <li>EventStreamProvider&lt;Event&gt; errorEvent</li>
+                    <li>EventStreamProvider&lt;ProgressEvent&gt; abortEvent</li>
+                    <li>EventStreamProvider&lt;ProgressEvent&gt; loadEndEvent</li>
+                    <li>EventStreamProvider&lt;ProgressEvent&gt; loadEvent</li>
+                    <li>EventStreamProvider&lt;ProgressEvent&gt; loadStartEvent</li>
+                    <li>EventStreamProvider&lt;ProgressEvent&gt; progressEvent</li>
+                    <li>Stream&lt;ProgressEvent&gt; onAbort</li>
+                    <li>Stream&lt;Event&gt; onError</li>
+                    <li>Stream&lt;ProgressEvent&gt; onLoad</li>
+                    <li>Stream&lt;ProgressEvent&gt; onLoadEnd</li>
+                    <li>Stream&lt;ProgressEvent&gt; onLoadStart</li>
+                    <li>Stream&lt;ProgressEvent&gt; onProgress</li>
+                    <li>int readyState</li>
+                    <li>Object result</li>
+                    <li>void abort()</li>
+                    <li>bool dispatchEvent(Event event)</li>
+                    <li>readAsArrayBuffer(Blob blob)</li>
+                    <li>readAsBinaryString(Blob blob)</li>
+                    <li>readAsDataUrl(Blob blob)</li>
+                    <li>readAsText(Blob blob)</li>
+                </ul>
+            </div>
+            <div class="section">
+                <pre>
+var reader = new FileReader();
+var fileInput = query("#fileInput");
+fileInput.onChange.listen((e) {
+reader..readAsArrayBuffer(fileInput.files[0])
+      ..onLoad.listen((e) {
+        print(new String.fromCharCodes(reader.result));
+    });
+});
+                </pre>
+            </div>
+        </div>
+
   </div>  
   </div>
     <div id="footer">
