@@ -340,6 +340,24 @@ HttpRequest.getString('http://theUrl').then((response) {
             <li>window.localStorage['bar'] = "foo"</li>
           </ul>
         </div>
+        <div class="section">
+            <p>Web RTC</p>
+            <div class="section">
+                <pre>
+window.navigator.getUserMedia(video: true)
+  ..catchError((e) => _displayError("Unable to access the camera."))
+  ..then((LocalMediaStream stream) {
+    video
+    ..autoplay = true
+    ..src = Url.createObjectUrl(stream)
+    ..onLoadedMetadata.listen((e) {
+       doSomething()
+    });
+  });
+              </pre>
+
+            </div>
+        </div>
     </div>
   </div>  
   </div>
