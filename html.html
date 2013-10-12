@@ -319,10 +319,10 @@ HttpRequest.getString('http://theUrl').then((response) {
             </ul>
           </div>
         </div>
-      <div id="html5-section" class="section-container">
-        <p>Html 5</p>
+      <div id="local-storage-section" class="section-container">
+        <p>Local Storage</p>
         <div class="section">
-          <p>Local Storage</p>
+          <p>Methods</p>
           <ul class="section-content">
             <li>clear()</li>
             <li>bool containsValue(String value)</li>
@@ -340,24 +340,21 @@ HttpRequest.getString('http://theUrl').then((response) {
             <li>window.localStorage['bar'] = "foo"</li>
           </ul>
         </div>
+      </div>
+      <div id="web-rtc-section" class="section-container">
+        <p>Web RTC</p>
         <div class="section">
-            <p>Web RTC</p>
-            <div class="section">
-                <pre>
+            <pre>
 window.navigator.getUserMedia(video: true)
-  ..catchError((e) => _displayError("Unable to access the camera."))
   ..then((LocalMediaStream stream) {
-    video
-    ..autoplay = true
-    ..src = Url.createObjectUrl(stream)
-    ..onLoadedMetadata.listen((e) {
-       doSomething()
-    });
+    video..autoplay = true
+         ..src = Url.createObjectUrl(stream)
+         ..onLoadedMetadata.listen((e) {
+          doSomething()
+         });
   });
               </pre>
-
-            </div>
-        </div>
+       </div>
     </div>
   </div>  
   </div>
