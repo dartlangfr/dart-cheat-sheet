@@ -349,7 +349,7 @@ HttpRequest.getString('http://theUrl').then((response) {
             <div class="section">
             <pre>
 window.navigator.getUserMedia(video: true)
-  ..then((LocalMediaStream stream) {
+  .then((LocalMediaStream stream) {
     video..autoplay = true
          ..src = Url.createObjectUrl(stream)
          ..onLoadedMetadata.listen((e) {
