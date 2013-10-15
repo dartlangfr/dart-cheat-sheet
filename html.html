@@ -324,20 +324,8 @@ HttpRequest.getString('http://theUrl').then((response) {
         </div>
         <div id="local-storage-section" class="section-container">
             <p>Local Storage</p>
+            <i>Storage is implemented as a Map&lt;String, String&gt;</i>
             <div class="section">
-                <p>Methods</p>
-                <ul class="section-content">
-                    <li>clear()</li>
-                    <li>bool containsValue(String value)</li>
-                    <li>bool containsKey(String key)</li>
-                    <li>V operator [&nbsp;](String key)</li>
-                    <li>operator [&nbsp;]=(String key, String value)</li>
-                    <li>String putIfAbsent(String key, String ifAbsent())</li>
-                    <li>String remove(String key)</li>
-                    <li>forEach(void f(String key, String value))</li>
-                    <li>Iterable&lt;K&gt; get keys</li>
-                    <li>Iterable&lt;V&gt; get values</li>
-                </ul>
                 <ul class="section-content samples">
                     <li>var foo = window.localStorage['bar']</li>
                     <li>window.localStorage['bar'] = "foo"</li>
@@ -348,14 +336,15 @@ HttpRequest.getString('http://theUrl').then((response) {
             <p>Web RTC</p>
             <div class="section">
             <pre>
-window.navigator.getUserMedia(video: true)
-  .then((LocalMediaStream stream) {
-    video..autoplay = true
-         ..src = Url.createObjectUrl(stream)
-         ..onLoadedMetadata.listen((e) {
-          doSomething()
-         });
-  });
+window.navigator.getUserMedia(audio: true, video: true).then((stream) {
+  var video = new VideoElement()
+    ..autoplay = true
+    ..src = Url.createObjectUrlFromStream(stream)
+    ..onLoadedMetadata.listen((e) {
+      // Ready
+     });;
+  document.body.append(video);
+});
               </pre>
             </div>
         </div>
@@ -373,27 +362,29 @@ window.navigator.getUserMedia(video: true)
             </div>
             <div class="section">
                 <p>File Reader</p>
-                <ul class="section-content">
-                    <li>EventStreamProvider&lt;Event&gt; errorEvent</li>
-                    <li>EventStreamProvider&lt;ProgressEvent&gt; abortEvent</li>
-                    <li>EventStreamProvider&lt;ProgressEvent&gt; loadEndEvent</li>
-                    <li>EventStreamProvider&lt;ProgressEvent&gt; loadEvent</li>
-                    <li>EventStreamProvider&lt;ProgressEvent&gt; loadStartEvent</li>
-                    <li>EventStreamProvider&lt;ProgressEvent&gt; progressEvent</li>
-                    <li>Stream&lt;ProgressEvent&gt; onAbort</li>
-                    <li>Stream&lt;Event&gt; onError</li>
-                    <li>Stream&lt;ProgressEvent&gt; onLoad</li>
-                    <li>Stream&lt;ProgressEvent&gt; onLoadEnd</li>
-                    <li>Stream&lt;ProgressEvent&gt; onLoadStart</li>
-                    <li>Stream&lt;ProgressEvent&gt; onProgress</li>
+                <ul class="section-content column3">
                     <li>int readyState</li>
                     <li>Object result</li>
                     <li>void abort()</li>
-                    <li>bool dispatchEvent(Event event)</li>
-                    <li>readAsArrayBuffer(Blob blob)</li>
-                    <li>readAsBinaryString(Blob blob)</li>
-                    <li>readAsDataUrl(Blob blob)</li>
-                    <li>readAsText(Blob blob)</li>
+                    <li><b>EventStreamProvider</b></li>
+                    <li>errorEvent</li>
+                    <li>abortEvent</li>
+                    <li>loadEndEvent</li>
+                    <li>loadEvent</li>
+                    <li>loadStartEvent</li>
+                    <li>progressEvent</li>
+                    <li><b>Stream on___</b></li>
+                    <li>Abort</li>
+                    <li>Error</li>
+                    <li>Load</li>
+                    <li>LoadEnd</li>
+                    <li>LoadStart</li>
+                    <li>Progress</li>
+                    <li><b>readAs___(Blob blob)</b></li>
+                    <li>ArrayBuffer</li>
+                    <li>BinaryString</li>
+                    <li>DataUrl</li>
+                    <li>Text</li>
                 </ul>
             </div>
             <div class="section">
@@ -401,12 +392,37 @@ window.navigator.getUserMedia(video: true)
 var reader = new FileReader();
 var fileInput = query("#fileInput");
 fileInput.onChange.listen((e) {
-reader..readAsArrayBuffer(fileInput.files[0])
+reader..readAsText(fileInput.files[0])
       ..onLoad.listen((e) {
-        print(new String.fromCharCodes(reader.result));
+        print(reader.result);
     });
 });
                 </pre>
+            </div>
+            <div class="section">
+              <p>File Writer</p>
+              <ul class="section-content column3">
+                <li>int position</li>
+                <li>int readyStage</li>
+                <li>abort()</li>
+                <li>seek(int position)</li>
+                <li>truncate(int size)</li>
+                <li>write(Blob data</li>
+                <li><b>EventStreamProvider</b></li>
+                <li>errorEvent</li>
+                <li>abortEvent</li>
+                <li>progressEvent</li>
+                <li>writeEndEvent</li>
+                <li>writeEvent</li>
+                <li>writeStartEvent</li>
+                <li><b>Stream on___</b></li>
+                <li>Error</li>
+                <li>Abort</li>
+                <li>Progress</li>
+                <li>Write</li>
+                <li>WriteEnd</li>
+                <li>WriteStart</li>
+              </ul>
             </div>
         </div>
         <div id="history-section" class="section-container">
