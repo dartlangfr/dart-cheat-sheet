@@ -38,11 +38,45 @@ code {
 	width: 100%;
 }
 
+#header {
+	display: table;
+}
+
 #header  h1 {
   font-family: 'Open Sans Condensed', sans-serif;
   white-space: nowrap;
   overflow-x: hidden;
+  float: left;
 }
+
+.nav {
+	display: inline-block;
+	list-style-type: none;
+	float: right;
+}
+
+.nav  ul li { 
+	display: table-cell;
+	border: 1px solid white; 
+	color: white;
+	padding: 8px;
+}
+
+.nav a:link {
+	color: white;
+}
+
+.nav a:visited {
+	color:white;
+}
+
+.nav a:hover {
+	color:white;
+}
+
+.nav a:active {
+	color:white;
+} 
 
 #content {
 	height: 100%;
