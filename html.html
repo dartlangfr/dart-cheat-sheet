@@ -31,17 +31,27 @@
           <span class="g-plusone" data-href="http://dartlangfr.net/dart-cheat-sheet/"></span>
         </span>
       </h1>
+      <div class="nav">
+        <ul>
+          <li><a href="index.html">core</a></li>
+          <li><a href="html.html">html</a></li>
+        </ul>
+      </div>
     </div>
     <div id="content">
       <div class="grid">
         <div id="query-dom-section" class="section-container">
           <p>Query the DOM</p>
           <div class="section">
+            <p>Methods</p> 
             <ul class="section-content">
               <li>query(cssSelector);</li>
               <li>queryAll(cssSelector);</li>
             </ul>
-            <ul class="section-content samples">
+          </div>
+          <div class="section">
+            <p>Examples</p>
+            <ul class="section-content">
               <li>query('#foo');</li>
               <li>queryAll('div');</li>
               <li>queryAll('[name="foo"]');</li>
@@ -236,6 +246,15 @@ HttpRequest.getString('http://theUrl').then((response) {
               <li>scrollIntoView([ScrollAlignment alignment])</li>
             </ul>
           </div>
+          <div class="section">
+            <p>Examples</p>
+            <ul class="section-content">
+              <li>element.attributes.containsKey('name');</li>
+              <li>element.attributes['name'];</li>
+              <li>element.attributes['name'] = 'value';</li>
+              <li>element.attributes.remove('name');</li>
+            </ul>
+          </div>
         </div>
         <div id="events-section" class="section-container">
           <p>Events</p>
@@ -336,14 +355,15 @@ HttpRequest.getString('http://theUrl').then((response) {
             <p>Web RTC</p>
             <div class="section">
             <pre>
-window.navigator.getUserMedia(audio: true, video: true).then((stream) {
-  var video = new VideoElement()
-    ..autoplay = true
-    ..src = Url.createObjectUrlFromStream(stream)
-    ..onLoadedMetadata.listen((e) {
-      // Ready
-     });;
-  document.body.append(video);
+window.navigator.getUserMedia(audio: true, video: true)
+  .then((stream) {
+    var video = new VideoElement()
+      ..autoplay = true
+      ..src = Url.createObjectUrlFromStream(stream)
+      ..onLoadedMetadata.listen((e) {
+        // Ready
+       });;
+    document.body.append(video);
 });
               </pre>
             </div>
@@ -388,6 +408,7 @@ window.navigator.getUserMedia(audio: true, video: true).then((stream) {
                 </ul>
             </div>
             <div class="section">
+              <p>Example :</p>
                 <pre>
 var reader = new FileReader();
 var fileInput = query("#fileInput");
