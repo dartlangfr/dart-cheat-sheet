@@ -60,6 +60,7 @@ code {
 	border: 1px solid white; 
 	color: white;
 	padding: 8px;
+	background-color: #474747;
 }
 
 .nav a:link {
