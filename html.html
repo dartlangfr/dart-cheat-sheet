@@ -45,19 +45,19 @@
           <div class="section">
             <p>Methods</p> 
             <ul class="section-content">
-              <li>query(cssSelector);</li>
-              <li>queryAll(cssSelector);</li>
+              <li>querySelector(cssSelector);</li>
+              <li>querySelectorAll(cssSelector);</li>
             </ul>
           </div>
           <div class="section">
             <p>Examples</p>
             <ul class="section-content">
-              <li>query('#foo');</li>
-              <li>queryAll('div');</li>
-              <li>queryAll('[name="foo"]');</li>
-              <li>queryAll('.foo');</li>
-              <li>query('.foo .bar');</li>
-              <li>queryAll('.foo .bar');</li>
+              <li>querySelector('#foo');</li>
+              <li>querySelectorAll('div');</li>
+              <li>querySelectorAll('[name="foo"]');</li>
+              <li>querySelectorAll('.foo');</li>
+              <li>querySelector('.foo .bar');</li>
+              <li>querySelectorAll('.foo .bar');</li>
             </ul>
           </div>
         </div>
@@ -237,8 +237,8 @@ HttpRequest.getString('http://theUrl').then((response) {
               <li>bool dispatchEvent(Event event)</li>
               <li>focus()</li>
               <li>Point offsetTo(Element parent)</li>
-              <li>Element query(String selectors)</li>
-              <li>ElementList queryAll(String selectors)</li>
+              <li>Element querySelector(String selectors)</li>
+              <li>ElementList querySelectorAll(String selectors)</li>
               <li>remove()</li>
               <li>Node replaceWith(Node otherNode)</li>
               <li>scrollByLines(int lines)</li>
@@ -411,7 +411,7 @@ window.navigator.getUserMedia(audio: true, video: true)
               <p>Example :</p>
                 <pre>
 var reader = new FileReader();
-var fileInput = query("#fileInput");
+var fileInput = querySelector("#fileInput");
 fileInput.onChange.listen((e) {
 reader..readAsText(fileInput.files[0])
       ..onLoad.listen((e) {
