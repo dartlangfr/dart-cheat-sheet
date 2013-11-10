@@ -382,10 +382,15 @@ window.navigator.getUserMedia(audio: true, video: true)
             </div>
             <div class="section">
                 <p>File Reader</p>
-                <ul class="section-content column3">
+                <ul class="section-content column2">
                     <li>int readyState</li>
                     <li>Object result</li>
                     <li>void abort()</li>
+                    <li><b>readAs___(Blob blob)</b></li>
+                    <li>ArrayBuffer</li>
+                    <li>BinaryString</li>
+                    <li>DataUrl</li>
+                    <li>Text</li>
                     <li><b>EventStreamProvider</b></li>
                     <li>errorEvent</li>
                     <li>abortEvent</li>
@@ -400,11 +405,6 @@ window.navigator.getUserMedia(audio: true, video: true)
                     <li>LoadEnd</li>
                     <li>LoadStart</li>
                     <li>Progress</li>
-                    <li><b>readAs___(Blob blob)</b></li>
-                    <li>ArrayBuffer</li>
-                    <li>BinaryString</li>
-                    <li>DataUrl</li>
-                    <li>Text</li>
                 </ul>
             </div>
             <div class="section">
@@ -422,8 +422,7 @@ reader..readAsText(fileInput.files[0])
             </div>
             <div class="section">
               <p>File Writer</p>
-              <ul class="section-content column3">
-                <li>&nbsp;<!-- Empty  --></li>
+              <ul class="section-content column2">
                 <li>int position</li>
                 <li>int readyStage</li>
                 <li>abort()</li>
