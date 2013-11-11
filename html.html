@@ -341,6 +341,17 @@ HttpRequest.getString('http://theUrl').then((response) {
             </ul>
           </div>
         </div>
+        <div id="event-source-section" class="section-container">
+            <p>Event Source</p>
+            <div class="section">
+              <pre>
+var source = new EventSource('/the/url');
+  ..onError.listen((Event e) => print("Error:$e"))
+  ..onOpen.listen((Event e) => print('open'))
+  ..onMessage.listen((MessageEvent me)  => print(me.data));
+              </pre>
+            </div>
+        </div>
         <div id="local-storage-section" class="section-container">
             <p>Local Storage</p>
             <i>Storage is implemented as a Map&lt;String, String&gt;</i>
