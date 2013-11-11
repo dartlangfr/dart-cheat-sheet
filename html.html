@@ -351,6 +351,25 @@ HttpRequest.getString('http://theUrl').then((response) {
                 </ul>
             </div>
         </div>
+        <div id="index-db-section" class="section-container">
+            <p>Index DB</p>
+            <div class="section">
+                <pre>
+Future open() {
+  return window.indexedDB.open('myIndexedDB',
+      version: 1,
+      onUpgradeNeeded: _initializeDatabase)
+    .then(_loadFromDB);
+}
+void _initializeDatabase(VersionChangeEvent e) {
+  // Initialize your database
+}
+Future _loadFromDB(Database db) {
+  // Load request
+}
+                </pre>
+            </div>
+        </div>
         <div id="web-rtc-section" class="section-container">
             <p>Web RTC</p>
             <div class="section">
