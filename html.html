@@ -28,7 +28,7 @@
         <img alt="Dart Logo" src="img/dart-logo.png"/>
         Dart Cheat Sheet [HTML]
         <span class="noprint" style="display: inline">
-          <span class="g-plusone" data-href="http://dartlangfr.net/dart-cheat-sheet/"></span>
+        <span class="g-plusone" data-href="http://dartlangfr.net/dart-cheat-sheet/"></span>
         </span>
       </h1>
       <div class="nav">
@@ -43,7 +43,7 @@
         <div id="query-dom-section" class="section-container">
           <p>Query the DOM</p>
           <div class="section">
-            <p>Methods</p> 
+            <p>Methods</p>
             <ul class="section-content">
               <li>querySelector(cssSelector);</li>
               <li>querySelectorAll(cssSelector);</li>
@@ -69,9 +69,8 @@ HttpRequest.getString('http://theUrl').then((response) {
   doSomethingWith(response);
 });
           </pre>
-          
+          </div>
         </div>
-      </div>
         <div id="elements-section" class="section-container">
           <p>Elements</p>
           <div id="html-elements-section" class="section">
@@ -342,30 +341,30 @@ HttpRequest.getString('http://theUrl').then((response) {
           </div>
         </div>
         <div id="event-source-section" class="section-container">
-            <p>Event Source</p>
-            <div class="section">
-              <pre>
+          <p>Event Source</p>
+          <div class="section">
+            <pre>
 var source = new EventSource('/the/url');
   ..onError.listen((Event e) => print("Error:$e"))
   ..onOpen.listen((Event e) => print('open'))
   ..onMessage.listen((MessageEvent me)  => print(me.data));
               </pre>
-            </div>
+          </div>
         </div>
         <div id="local-storage-section" class="section-container">
-            <p>Local Storage</p>
-            <i>Storage is implemented as a Map&lt;String, String&gt;</i>
-            <div class="section">
-                <ul class="section-content samples">
-                    <li>var foo = window.localStorage['bar']</li>
-                    <li>window.localStorage['bar'] = "foo"</li>
-                </ul>
-            </div>
+          <p>Local Storage</p>
+          <i>Storage is implemented as a Map&lt;String, String&gt;</i>
+          <div class="section">
+            <ul class="section-content samples">
+              <li>var foo = window.localStorage['bar']</li>
+              <li>window.localStorage['bar'] = "foo"</li>
+            </ul>
+          </div>
         </div>
         <div id="index-db-section" class="section-container">
-            <p>Index DB</p>
-            <div class="section">
-                <pre>
+          <p>Index DB</p>
+          <div class="section">
+            <pre>
 Future open() {
   return window.indexedDB.open('myIndexedDB',
       version: 1,
@@ -379,11 +378,11 @@ Future _loadFromDB(Database db) {
   // Load request
 }
                 </pre>
-            </div>
+          </div>
         </div>
         <div id="web-rtc-section" class="section-container">
-            <p>Web RTC</p>
-            <div class="section">
+          <p>Web RTC</p>
+          <div class="section">
             <pre>
 window.navigator.getUserMedia(audio: true, video: true)
   .then((stream) {
@@ -396,50 +395,50 @@ window.navigator.getUserMedia(audio: true, video: true)
     document.body.append(video);
 });
               </pre>
-            </div>
+          </div>
         </div>
         <div id="file-api-section" class="section-container">
-            <p>File Api</p>
-            <div class="section">
-              <p>File</p>
-              <ul class="section-content">
-                <li>DateTime lastModifiedDate</li>
-                <li>String name</li>
-                <li>String relativePath</li>
-                <li>int size</li>
-                <li>String type</li>
-              </ul>
-            </div>
-            <div class="section">
-                <p>File Reader</p>
-                <ul class="section-content column2">
-                    <li>int readyState</li>
-                    <li>Object result</li>
-                    <li>void abort()</li>
-                    <li><b>readAs___(Blob blob)</b></li>
-                    <li>ArrayBuffer</li>
-                    <li>BinaryString</li>
-                    <li>DataUrl</li>
-                    <li>Text</li>
-                    <li><b>EventStreamProvider</b></li>
-                    <li>errorEvent</li>
-                    <li>abortEvent</li>
-                    <li>loadEndEvent</li>
-                    <li>loadEvent</li>
-                    <li>loadStartEvent</li>
-                    <li>progressEvent</li>
-                    <li><b>Stream on___</b></li>
-                    <li>Abort</li>
-                    <li>Error</li>
-                    <li>Load</li>
-                    <li>LoadEnd</li>
-                    <li>LoadStart</li>
-                    <li>Progress</li>
-                </ul>
-            </div>
-            <div class="section">
-              <p>Example :</p>
-                <pre>
+          <p>File Api</p>
+          <div class="section">
+            <p>File</p>
+            <ul class="section-content">
+              <li>DateTime lastModifiedDate</li>
+              <li>String name</li>
+              <li>String relativePath</li>
+              <li>int size</li>
+              <li>String type</li>
+            </ul>
+          </div>
+          <div class="section">
+            <p>File Reader</p>
+            <ul class="section-content column2">
+              <li>int readyState</li>
+              <li>Object result</li>
+              <li>void abort()</li>
+              <li><b>readAs___(Blob blob)</b></li>
+              <li>ArrayBuffer</li>
+              <li>BinaryString</li>
+              <li>DataUrl</li>
+              <li>Text</li>
+              <li><b>EventStreamProvider</b></li>
+              <li>errorEvent</li>
+              <li>abortEvent</li>
+              <li>loadEndEvent</li>
+              <li>loadEvent</li>
+              <li>loadStartEvent</li>
+              <li>progressEvent</li>
+              <li><b>Stream on___</b></li>
+              <li>Abort</li>
+              <li>Error</li>
+              <li>Load</li>
+              <li>LoadEnd</li>
+              <li>LoadStart</li>
+              <li>Progress</li>
+            </ul>
+          </div>
+          <div class="section">
+            <p>Example :</p>
+            <pre>
 var reader = new FileReader();
 var fileInput = querySelector("#fileInput");
 fileInput.onChange.listen((e) {
@@ -449,57 +448,429 @@ reader..readAsText(fileInput.files[0])
     });
 });
                 </pre>
-            </div>
-            <div class="section">
-              <p>File Writer</p>
-              <ul class="section-content column2">
-                <li>int position</li>
-                <li>int readyStage</li>
-                <li>abort()</li>
-                <li>seek(int position)</li>
-                <li>truncate(int size)</li>
-                <li>write(Blob data</li>
-                <li><b>EventStreamProvider</b></li>
-                <li>errorEvent</li>
-                <li>abortEvent</li>
-                <li>progressEvent</li>
-                <li>writeEndEvent</li>
-                <li>writeEvent</li>
-                <li>writeStartEvent</li>
-                <li><b>Stream on___</b></li>
-                <li>Error</li>
-                <li>Abort</li>
-                <li>Progress</li>
-                <li>Write</li>
-                <li>WriteEnd</li>
-                <li>WriteStart</li>
-              </ul>
-            </div>
+          </div>
+          <div class="section">
+            <p>File Writer</p>
+            <ul class="section-content column2">
+              <li>int position</li>
+              <li>int readyStage</li>
+              <li>abort()</li>
+              <li>seek(int position)</li>
+              <li>truncate(int size)</li>
+              <li>write(Blob data</li>
+              <li><b>EventStreamProvider</b></li>
+              <li>errorEvent</li>
+              <li>abortEvent</li>
+              <li>progressEvent</li>
+              <li>writeEndEvent</li>
+              <li>writeEvent</li>
+              <li>writeStartEvent</li>
+              <li><b>Stream on___</b></li>
+              <li>Error</li>
+              <li>Abort</li>
+              <li>Progress</li>
+              <li>Write</li>
+              <li>WriteEnd</li>
+              <li>WriteStart</li>
+            </ul>
+          </div>
         </div>
         <div id="history-section" class="section-container">
-            <p>History</p>
-            <div class="section">
-              <p>Properties</p>
-              <ul class="section-content">
-                <li>bool supportsState</li>
-                <li>int length</li>
-                <li>dynamic state</li>
-              </ul>
-            </div>
-            <div class="section">
-                <p>Methods</p>
-                <ul class="section-content">
-                  <li>back()</li>
-                  <li>forward()</li>
-                  <li>go(int distance)</li>
-                  <li>pushState(Object data, String title)</li>
-                  <li>replaceState(Object data, String title)</li>
-                </ul>
-            </div>
+          <p>History</p>
+          <div class="section">
+            <p>Properties</p>
+            <ul class="section-content">
+              <li>bool supportsState</li>
+              <li>int length</li>
+              <li>dynamic state</li>
+            </ul>
+          </div>
+          <div class="section">
+            <p>Methods</p>
+            <ul class="section-content">
+              <li>back()</li>
+              <li>forward()</li>
+              <li>go(int distance)</li>
+              <li>pushState(Object data, String title)</li>
+              <li>replaceState(Object data, String title)</li>
+            </ul>
+          </div>
         </div>
-
-  </div>  
-  </div>
+        <div id="css-section" class="section-container">
+          <p>CSS</p>
+          <div class="section">
+            <p>Properties</p>
+            <ul class="section-content column3">
+              <li>alignContent</li>
+              <li>alignItems</li>
+              <li>alignSelf</li>
+              <li>animation</li>
+              <li>animationDelay</li>
+              <li>animationDirection</li>
+              <li>animationDuration</li>
+              <li>animationFillMode</li>
+              <li>animationIterationCount</li>
+              <li>animationName</li>
+              <li>animationPlayState</li>
+              <li>animationTimingFunction</li>
+              <li>appearance</li>
+              <li>appRegion</li>
+              <li>aspectRatio</li>
+              <li>backfaceVisibility</li>
+              <li>background</li>
+              <li>backgroundAttachment</li>
+              <li>backgroundClip</li>
+              <li>backgroundColor</li>
+              <li>backgroundComposite</li>
+              <li>backgroundImage</li>
+              <li>backgroundOrigin</li>
+              <li>backgroundPosition</li>
+              <li>backgroundPositionX</li>
+              <li>backgroundPositionY</li>
+              <li>backgroundRepeat</li>
+              <li>backgroundRepeatX</li>
+              <li>backgroundRepeatY</li>
+              <li>backgroundSize</li>
+              <li>blendMode</li>
+              <li>border</li>
+              <li>borderAfter</li>
+              <li>borderAfterColor</li>
+              <li>borderAfterStyle</li>
+              <li>borderAfterWidth</li>
+              <li>borderBefore</li>
+              <li>borderBeforeColor</li>
+              <li>borderBeforeStyle</li>
+              <li>borderBeforeWidth</li>
+              <li>borderBottom</li>
+              <li>borderBottomColor</li>
+              <li>borderBottomLeftRadius</li>
+              <li>borderBottomRightRadius</li>
+              <li>borderBottomStyle</li>
+              <li>borderBottomWidth</li>
+              <li>borderCollapse</li>
+              <li>borderColor</li>
+              <li>borderEnd</li>
+              <li>borderEndColor</li>
+              <li>borderEndStyle</li>
+              <li>borderEndWidth</li>
+              <li>borderFit</li>
+              <li>borderHorizontalSpacing</li>
+              <li>borderImage</li>
+              <li>borderImageOutset</li>
+              <li>borderImageRepeat</li>
+              <li>borderImageSlice</li>
+              <li>borderImageSource</li>
+              <li>borderImageWidth</li>
+              <li>borderLeft</li>
+              <li>borderLeftColor</li>
+              <li>borderLeftStyle</li>
+              <li>borderLeftWidth</li>
+              <li>borderRadius</li>
+              <li>borderRight</li>
+              <li>borderRightColor</li>
+              <li>borderRightStyle</li>
+              <li>borderRightWidth</li>
+              <li>borderSpacing</li>
+              <li>borderStart</li>
+              <li>borderStartColor</li>
+              <li>borderStartStyle</li>
+              <li>borderStartWidth</li>
+              <li>borderStyle</li>
+              <li>borderTop</li>
+              <li>borderTopColor</li>
+              <li>borderTopLeftRadius</li>
+              <li>borderTopRightRadius</li>
+              <li>borderTopStyle</li>
+              <li>borderTopWidth</li>
+              <li>borderVerticalSpacing</li>
+              <li>borderWidth</li>
+              <li>bottom</li>
+              <li>boxAlign</li>
+              <li>boxDecorationBreak</li>
+              <li>boxDirection</li>
+              <li>boxFlex</li>
+              <li>boxFlexGroup</li>
+              <li>boxLines</li>
+              <li>boxOrdinalGroup</li>
+              <li>boxOrient</li>
+              <li>boxPack</li>
+              <li>boxReflect</li>
+              <li>boxShadow</li>
+              <li>boxSizing</li>
+              <li>captionSide</li>
+              <li>clear</li>
+              <li>clip</li>
+              <li>clipPath</li>
+              <li>color</li>
+              <li>colorCorrection</li>
+              <li>columnAxis</li>
+              <li>columnBreakAfter</li>
+              <li>columnBreakBefore</li>
+              <li>columnBreakInside</li>
+              <li>columnCount</li>
+              <li>columnGap</li>
+              <li>columnProgression</li>
+              <li>columnRule</li>
+              <li>columnRuleColor</li>
+              <li>columnRuleStyle</li>
+              <li>columnRuleWidth</li>
+              <li>columns</li>
+              <li>columnSpan</li>
+              <li>columnWidth</li>
+              <li>content</li>
+              <li>counterIncrement</li>
+              <li>counterReset</li>
+              <li>String cssText</li>
+              <li>cursor</li>
+              <li>dashboardRegion</li>
+              <li>direction</li>
+              <li>display</li>
+              <li>emptyCells</li>
+              <li>filter</li>
+              <li>flex</li>
+              <li>flexBasis</li>
+              <li>flexDirection</li>
+              <li>flexFlow</li>
+              <li>flexGrow</li>
+              <li>flexShrink</li>
+              <li>flexWrap</li>
+              <li>float</li>
+              <li>flowFrom</li>
+              <li>flowInto</li>
+              <li>font</li>
+              <li>fontFamily</li>
+              <li>fontFeatureSettings</li>
+              <li>fontKerning</li>
+              <li>fontSize</li>
+              <li>fontSizeDelta</li>
+              <li>fontSmoothing</li>
+              <li>fontStretch</li>
+              <li>fontStyle</li>
+              <li>fontVariant</li>
+              <li>fontVariantLigatures</li>
+              <li>fontWeight</li>
+              <li>gridColumn</li>
+              <li>gridColumns</li>
+              <li>gridRow</li>
+              <li>gridRows</li>
+              <li>final int hashCode</li>
+              <li>height</li>
+              <li>highlight</li>
+              <li>hyphenateCharacter</li>
+              <li>hyphenateLimitAfter</li>
+              <li>hyphenateLimitBefore</li>
+              <li>hyphenateLimitLines</li>
+              <li>hyphens</li>
+              <li>imageOrientation</li>
+              <li>imageRendering</li>
+              <li>imageResolution</li>
+              <li>justifyContent</li>
+              <li>left</li>
+              <li>final int length</li>
+              <li>letterSpacing</li>
+              <li>lineAlign</li>
+              <li>lineBoxContain</li>
+              <li>lineBreak</li>
+              <li>lineClamp</li>
+              <li>lineGrid</li>
+              <li>lineHeight</li>
+              <li>lineSnap</li>
+              <li>listStyle</li>
+              <li>listStyleImage</li>
+              <li>listStylePosition</li>
+              <li>listStyleType</li>
+              <li>locale</li>
+              <li>logicalHeight</li>
+              <li>logicalWidth</li>
+              <li>margin</li>
+              <li>marginAfter</li>
+              <li>marginAfterCollapse</li>
+              <li>marginBefore</li>
+              <li>marginBeforeCollapse</li>
+              <li>marginBottom</li>
+              <li>marginBottomCollapse</li>
+              <li>marginCollapse</li>
+              <li>marginEnd</li>
+              <li>marginLeft</li>
+              <li>marginRight</li>
+              <li>marginStart</li>
+              <li>marginTop</li>
+              <li>marginTopCollapse</li>
+              <li>marquee</li>
+              <li>marqueeDirection</li>
+              <li>marqueeIncrement</li>
+              <li>marqueeRepetition</li>
+              <li>marqueeSpeed</li>
+              <li>marqueeStyle</li>
+              <li>mask</li>
+              <li>maskAttachment</li>
+              <li>maskBoxImage</li>
+              <li>maskBoxImageOutset</li>
+              <li>maskBoxImageRepeat</li>
+              <li>maskBoxImageSlice</li>
+              <li>maskBoxImageSource</li>
+              <li>maskBoxImageWidth</li>
+              <li>maskClip</li>
+              <li>maskComposite</li>
+              <li>maskImage</li>
+              <li>maskOrigin</li>
+              <li>maskPosition</li>
+              <li>maskPositionX</li>
+              <li>maskPositionY</li>
+              <li>maskRepeat</li>
+              <li>maskRepeatX</li>
+              <li>maskRepeatY</li>
+              <li>maskSize</li>
+              <li>maxHeight</li>
+              <li>maxLogicalHeight</li>
+              <li>maxLogicalWidth</li>
+              <li>maxWidth</li>
+              <li>maxZoom</li>
+              <li>minHeight</li>
+              <li>minLogicalHeight</li>
+              <li>minLogicalWidth</li>
+              <li>minWidth</li>
+              <li>minZoom</li>
+              <li>nbspMode</li>
+              <li>opacity</li>
+              <li>order</li>
+              <li>orientation</li>
+              <li>orphans</li>
+              <li>outline</li>
+              <li>outlineColor</li>
+              <li>outlineOffset</li>
+              <li>outlineStyle</li>
+              <li>outlineWidth</li>
+              <li>overflow</li>
+              <li>overflowScrolling</li>
+              <li>overflowWrap</li>
+              <li>overflowX</li>
+              <li>overflowY</li>
+              <li>padding</li>
+              <li>paddingAfter</li>
+              <li>paddingBefore</li>
+              <li>paddingBottom</li>
+              <li>paddingEnd</li>
+              <li>paddingLeft</li>
+              <li>paddingRight</li>
+              <li>paddingStart</li>
+              <li>paddingTop</li>
+              <li>page</li>
+              <li>pageBreakAfter</li>
+              <li>pageBreakBefore</li>
+              <li>pageBreakInside</li>
+              <li>final CssRule parentRule</li>
+              <li>perspective</li>
+              <li>perspectiveOrigin</li>
+              <li>perspectiveOriginX</li>
+              <li>perspectiveOriginY</li>
+              <li>pointerEvents</li>
+              <li>position</li>
+              <li>printColorAdjust</li>
+              <li>quotes</li>
+              <li>regionBreakAfter</li>
+              <li>regionBreakBefore</li>
+              <li>regionBreakInside</li>
+              <li>regionOverflow</li>
+              <li>resize</li>
+              <li>right</li>
+              <li>rtlOrdering</li>
+              <li>final Type runtimeType</li>
+              <li>shapeInside</li>
+              <li>shapeMargin</li>
+              <li>shapeOutside</li>
+              <li>shapePadding</li>
+              <li>size</li>
+              <li>speak</li>
+              <li>src</li>
+              <li>tableLayout</li>
+              <li>tabSize</li>
+              <li>tapHighlightColor</li>
+              <li>textAlign</li>
+              <li>textAlignLast</li>
+              <li>textCombine</li>
+              <li>textDecoration</li>
+              <li>textDecorationLine</li>
+              <li>textDecorationsInEffect</li>
+              <li>textDecorationStyle</li>
+              <li>textEmphasis</li>
+              <li>textEmphasisColor</li>
+              <li>textEmphasisPosition</li>
+              <li>textEmphasisStyle</li>
+              <li>textFillColor</li>
+              <li>textIndent</li>
+              <li>textLineThrough</li>
+              <li>textLineThroughColor</li>
+              <li>textLineThroughMode</li>
+              <li>textLineThroughStyle</li>
+              <li>textLineThroughWidth</li>
+              <li>textOrientation</li>
+              <li>textOverflow</li>
+              <li>textOverline</li>
+              <li>textOverlineColor</li>
+              <li>textOverlineMode</li>
+              <li>textOverlineStyle</li>
+              <li>textOverlineWidth</li>
+              <li>textRendering</li>
+              <li>textSecurity</li>
+              <li>textShadow</li>
+              <li>textSizeAdjust</li>
+              <li>textStroke</li>
+              <li>textStrokeColor</li>
+              <li>textStrokeWidth</li>
+              <li>textTransform</li>
+              <li>textUnderline</li>
+              <li>textUnderlineColor</li>
+              <li>textUnderlineMode</li>
+              <li>textUnderlineStyle</li>
+              <li>textUnderlineWidth</li>
+              <li>top</li>
+              <li>transform</li>
+              <li>transformOrigin</li>
+              <li>transformOriginX</li>
+              <li>transformOriginY</li>
+              <li>transformOriginZ</li>
+              <li>transformStyle</li>
+              <li>transition</li>
+              <li>transitionDelay</li>
+              <li>transitionDuration</li>
+              <li>transitionProperty</li>
+              <li>transitionTimingFunction</li>
+              <li>unicodeBidi</li>
+              <li>unicodeRange</li>
+              <li>userDrag</li>
+              <li>userModify</li>
+              <li>userSelect</li>
+              <li>userZoom</li>
+              <li>verticalAlign</li>
+              <li>visibility</li>
+              <li>whiteSpace</li>
+              <li>widows</li>
+              <li>width</li>
+              <li>wordBreak</li>
+              <li>wordSpacing</li>
+              <li>wordWrap</li>
+              <li>wrap</li>
+              <li>wrapFlow</li>
+              <li>wrapThrough</li>
+              <li>writingMode</li>
+              <li>zIndex</li>
+              <li>zoom</li>
+            </ul>
+          </div>
+          <div class="section">
+            <p>Methods</p>
+            <ul class="section-content">
+              <li>getPropertyPriority(propertyName)</li>
+              <li>getPropertyValue(propertyName)</li>
+              <li>item(index)</li>
+              <li>removeProperty(propertyName)</li>
+              <li>setProperty(propertyName, value, [priority])</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="footer">
       <div>
         +Made by <a href="http://plus.google.com/115049522200141162219"><span>Guillaume Girou</span></a>, <a href="http://plus.google.com/106226789128312528511"><span>Nicolas François</span></a> and <a href="http://plus.google.com/109253530406296308866"><span>Vincent Bostoen</span></a> from 
@@ -514,3 +885,4 @@ reader..readAsText(fileInput.files[0])
     <script type="text/javascript">gapi.plusone.go("header");</script>
   </body>
 </html>
+
