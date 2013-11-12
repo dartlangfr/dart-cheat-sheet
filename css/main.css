@@ -34,6 +34,44 @@ code {
 	font-style: italic;
 }
 
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+  color: #333;
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.btn:hover, .btn:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
 #header, #content, #footer {
 	width: 100%;
 }
@@ -57,27 +95,17 @@ code {
 
 .nav  ul li { 
 	display: table-cell;
-	border: 1px solid white; 
-	color: white;
-	padding: 8px;
-	background-color: #474747;
 }
 
-.nav a:link {
-	color: white;
+.nav  img {
+  vertical-align: middle;
+  height: 24px;
 }
 
-.nav a:visited {
-	color:white;
+.nav a {
+  text-decoration: none;
+  font-weight: bold;
 }
-
-.nav a:hover {
-	color:white;
-}
-
-.nav a:active {
-	color:white;
-} 
 
 #content {
 	height: 100%;
