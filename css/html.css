@@ -43,6 +43,10 @@
     background-color: #ff842e;
 }
 
+#web-socket-section {
+    background-color: #91D100; 
+}
+
 #web-rtc-section {
     background-color: #FFE25F;
 }

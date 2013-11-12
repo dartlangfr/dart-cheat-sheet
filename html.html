@@ -382,6 +382,24 @@ Future _loadFromDB(Database db) {
                 </pre>
           </div>
         </div>
+        <div id="web-socket-section" class="section-container">
+          <p>Web Socket</p>
+          <div class="section">
+            <pre>
+var webSocket = 
+    new WebSocket('ws://127.0.0.1:1337/ws');
+if (webSocket != null && 
+    webSocket.readyState == WebSocket.OPEN) {
+  webSocket.send(data);
+} else {
+  print('WebSocket not connected');
+}
+webSocket.onMessage.listen((MessageEvent e) {
+  receivedData(e.data);
+});
+            </pre>
+          </div>
+        </div>  
         <div id="web-rtc-section" class="section-container">
           <p>Web RTC</p>
           <div class="section">
