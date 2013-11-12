@@ -65,7 +65,8 @@
           <p>HTTP Request</p>
           <div class="section">
             <pre>
-HttpRequest.getString('http://theUrl').then((response) {
+HttpRequest.getString('http://theUrl')
+           .then((response) {
   doSomethingWith(response);
 });
           </pre>
@@ -344,7 +345,7 @@ HttpRequest.getString('http://theUrl').then((response) {
           <p>Event Source</p>
           <div class="section">
             <pre>
-var source = new EventSource('/the/url');
+var source = new EventSource('/the/url')
   ..onError.listen((Event e) => print("Error:$e"))
   ..onOpen.listen((Event e) => print("Open"))
   ..onMessage.listen((MessageEvent me) => 
@@ -404,7 +405,8 @@ webSocket.onMessage.listen((MessageEvent e) {
           <p>Web RTC</p>
           <div class="section">
             <pre>
-window.navigator.getUserMedia(audio: true, video: true)
+window.navigator
+      .getUserMedia(audio: true, video: true)
   .then((stream) {
     var video = new VideoElement()
       ..autoplay = true
