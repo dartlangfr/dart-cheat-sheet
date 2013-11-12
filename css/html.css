@@ -2,6 +2,10 @@
 	background-color: #ED764A;
 }
 
+#query-dom-section  table {
+  width: 99%;
+}
+
 #http-request-section {
 	background-color: #ed79e3;
   column-span: all;
