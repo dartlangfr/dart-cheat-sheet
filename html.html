@@ -51,19 +51,62 @@
           </div>
           <div class="section">
             <p>Examples</p>
-            <ul class="section-content">
-              <li>querySelector('#foo');</li>
-              <li>querySelectorAll('div');</li>
-              <li>querySelectorAll('[name="foo"]');</li>
-              <li>querySelectorAll('.foo');</li>
-              <li>querySelector('.foo .bar');</li>
-              <li>querySelectorAll('.foo .bar');</li>
-            </ul>
+             <table class="section table">
+            <thead>
+              <tr>
+                <th>Selector type</th>
+                <th>Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ID selector</td>
+                <td>querySelector('#foo');</td>
+              </tr>
+              <tr>
+                <td>HTML element</td>
+                <td>querySelectorAll('div');</td>
+              </tr>
+              <tr>
+                <td>Name</td>
+                <td>querySelectorAll('[name="foo"]');</td>
+              </tr>
+              <tr>
+                <td>Class</td>
+                <td>querySelectorAll('.foo');</td>
+              </tr>
+              <tr>
+                <td>Class</td>
+                <td>querySelector('.foo .bar');</td>
+              </tr>
+              <tr>
+                <td>Class</td>
+                <td>querySelectorAll('.foo .bar');</td>
+              </tr>
+            </tbody>
+          </table>
           </div>
         </div>
         <div id="http-request-section" class="section-container">
           <p>HTTP Request</p>
           <div class="section">
+            <p>Static Methods</p>
+            <ul class="section-content">
+              <li>getString(String url, {bool withCredentials, void onProgress(Event e)})</li>
+              <li>postFormData(String url, Map data, {bool withCredentials, String responseType, Map requestHeaders, void onProgress(Event e)})</li>
+            </ul>
+          </div>
+          <div class="section">
+            <p>Methods</p>
+            <ul class="section-content">
+              <li>String getResponseHeader(String header)</li>
+              <li>open(String method, String url, {bool async, String user, String password}) </li>
+              <li>setRequestHeader(String header, String value)</li>
+              <li>abort()</li>
+            </ul>
+          </div>
+          <div class="section">
+            <p>Example</p>
             <pre>
 <span class="typ">HttpRequest</span>.getString(<span class="str">'http://theUrl'</span>)
            .then((response) {
@@ -344,6 +387,7 @@
         <div id="web-socket-section" class="section-container">
           <p>Web Socket</p>
           <div class="section">
+            <p>Example</p>
             <pre>
 <span class="kwd">var</span> webSocket =
     <span class="kwd">new</span> <span class="typ">WebSocket</span>(<span class="str">'ws://127.0.0.1:1337/ws'</span>);
@@ -362,6 +406,7 @@ webSocket.onMessage.listen((<span class="typ">MessageEvent</span> e) {
         <div id="event-source-section" class="section-container">
           <p>Event Source</p>
           <div class="section">
+            <p>Example</p>
             <pre>
 <span class="kwd">var</span> source = <span class="kwd">new</span> <span class="typ">EventSource</span>(<span class="str">'/the/url'</span>)
   ..onError.listen((<span class="typ">Event</span> e) => <span class="kwd">print</span>(<span class="str">'Error: $e'</span>))
@@ -385,6 +430,7 @@ webSocket.onMessage.listen((<span class="typ">MessageEvent</span> e) {
         <div id="index-db-section" class="section-container">
           <p>Index DB</p>
           <div class="section">
+            <p>Example</p>
             <pre>
 <span class="typ">Future</span> open() {
   <span class="kwd">return</span> window.indexedDB.open(<span class="str">'myIndexedDB'</span>,
@@ -404,6 +450,7 @@ webSocket.onMessage.listen((<span class="typ">MessageEvent</span> e) {
         <div id="web-rtc-section" class="section-container">
           <p>Web RTC</p>
           <div class="section">
+            <p>Example</p>
             <pre>
 window.navigator
       .getUserMedia(audio: <span class="kwd">true</span>, video: <span class="kwd">true</span>)
@@ -417,6 +464,20 @@ window.navigator
     document.body.append(video);
 });
               </pre>
+          </div>
+        </div>
+        <div id="canvas-section" class="section-container">
+          <p>Canvas Api</p>
+          <div class="section">
+            <p>Example</p>
+            <pre>
+<span class="typ">CanvasElement</span> canvas =
+   <span class="typ">new</span> <span class="typ">CanvasElement</span>(width: <span class="lit">600</span>, height: <span class="lit">600</span>);
+<span class="typ">CanvasRenderingContext2D</span> ctx = canvas.context2D;
+<span class="typ">ImageElement</span> img = document.query(<span class="str">'img'</span>);
+
+ctx.drawImage(img, <span class="lit">100</span>, <span class="lit">100</span>);
+                </pre>
           </div>
         </div>
         <div id="file-api-section" class="section-container">
@@ -459,7 +520,7 @@ window.navigator
             </ul>
           </div>
           <div class="section">
-            <p>Example :</p>
+            <p>Example</p>
             <pre>
 <span class="kwd">var</span> reader = <span class="kwd">new</span> <span class="typ">FileReader</span>();
 <span class="kwd">var</span> fileInput = querySelector(<span class="str">'#fileInput'</span>);
