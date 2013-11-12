@@ -436,6 +436,20 @@ window.navigator
               </pre>
           </div>
         </div>
+        <div id="canvas-section" class="section-container">
+          <p>Canvas Api</p>
+          <div class="section">
+            <p>Example :</p>
+            <pre>
+CanvasElement canvas = 
+              new CanvasElement(width: 600, height: 600);
+CanvasRenderingContext2D ctx = canvas.context2D;
+ImageElement img = document.query('img');
+
+ctx.drawImage(img, 100, 100);
+                </pre>
+          </div>
+        </div>
         <div id="file-api-section" class="section-container">
           <p>File Api</p>
           <div class="section">
