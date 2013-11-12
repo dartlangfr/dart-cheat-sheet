@@ -65,7 +65,7 @@
           <p>HTTP Request</p>
           <div class="section">
             <pre>
-HttpRequest.getString('http://theUrl')
+<span class="typ">HttpRequest</span>.getString(<span class="str">'http://theUrl'</span>)
            .then((response) {
   doSomethingWith(response);
 });
@@ -345,15 +345,15 @@ HttpRequest.getString('http://theUrl')
           <p>Web Socket</p>
           <div class="section">
             <pre>
-var webSocket = 
-    new WebSocket('ws://127.0.0.1:1337/ws');
-if (webSocket != null && 
-    webSocket.readyState == WebSocket.OPEN) {
+<span class="kwd">var</span> webSocket =
+    <span class="kwd">new</span> <span class="typ">WebSocket</span>(<span class="str">'ws://127.0.0.1:1337/ws'</span>);
+if (webSocket != <span class="kwd">null</span> &&
+    webSocket.readyState == <span class="typ">WebSocket</span>.OPEN) {
   webSocket.send(data);
 } else {
-  print('WebSocket not connected');
+  <span class="kwd">print</span>(<span class="str">'WebSocket not connected'</span>);
 }
-webSocket.onMessage.listen((MessageEvent e) {
+webSocket.onMessage.listen((<span class="typ">MessageEvent</span> e) {
   receivedData(e.data);
 });
             </pre>
@@ -363,11 +363,11 @@ webSocket.onMessage.listen((MessageEvent e) {
           <p>Event Source</p>
           <div class="section">
             <pre>
-var source = new EventSource('/the/url')
-  ..onError.listen((Event e) => print("Error:$e"))
-  ..onOpen.listen((Event e) => print("Open"))
-  ..onMessage.listen((MessageEvent me) => 
-          print("Message: ${me.data=")
+<span class="kwd">var</span> source = <span class="kwd">new</span> <span class="typ">EventSource</span>(<span class="str">'/the/url'</span>)
+  ..onError.listen((<span class="typ">Event</span> e) => <span class="kwd">print</span>(<span class="str">'Error: $e'</span>))
+  ..onOpen.listen((<span class="typ">Event</span> e) => <span class="kwd">print</span>(<span class="str">'Open'</span>))
+  ..onMessage.listen((<span class="typ">MessageEvent</span> me) =>
+          <span class="kwd">print</span>(<span class="str">'Message: ${me.data}'</span>)
     );
               </pre>
           </div>
@@ -386,17 +386,17 @@ var source = new EventSource('/the/url')
           <p>Index DB</p>
           <div class="section">
             <pre>
-Future open() {
-  return window.indexedDB.open('myIndexedDB',
-      version: 1,
+<span class="typ">Future</span> open() {
+  <span class="kwd">return</span> window.indexedDB.open(<span class="str">'myIndexedDB'</span>,
+      version: <span class="lit">1</span>,
       onUpgradeNeeded: _initializeDatabase)
     .then(_loadFromDB);
 }
-void _initializeDatabase(VersionChangeEvent e) {
-  // Initialize your database
+<span class="kwd">void</span> _initializeDatabase(<span class="typ">VersionChangeEvent</span> e) {
+  <span class="com">// Initialize your database</span>
 }
-Future _loadFromDB(Database db) {
-  // Load request
+<span class="typ">Future</span> _loadFromDB(<span class="typ">Database</span> db) {
+  <span class="com">// Load request</span>
 }
                 </pre>
           </div>
@@ -406,14 +406,14 @@ Future _loadFromDB(Database db) {
           <div class="section">
             <pre>
 window.navigator
-      .getUserMedia(audio: true, video: true)
+      .getUserMedia(audio: <span class="kwd">true</span>, video: <span class="kwd">true</span>)
   .then((stream) {
-    var video = new VideoElement()
-      ..autoplay = true
-      ..src = Url.createObjectUrlFromStream(stream)
+    <span class="kwd">var</span> video = <span class="kwd">new</span> <span class="typ">VideoElement</span>()
+      ..autoplay = <span class="kwd">true</span>
+      ..src = <span class="typ">Url</span>.createObjectUrlFromStream(stream)
       ..onLoadedMetadata.listen((e) {
-        // Ready
-       });;
+        <span class="com">// Ready</span>
+      });
     document.body.append(video);
 });
               </pre>
@@ -461,12 +461,12 @@ window.navigator
           <div class="section">
             <p>Example :</p>
             <pre>
-var reader = new FileReader();
-var fileInput = querySelector("#fileInput");
+<span class="kwd">var</span> reader = <span class="kwd">new</span> <span class="typ">FileReader</span>();
+<span class="kwd">var</span> fileInput = querySelector(<span class="str">'#fileInput'</span>);
 fileInput.onChange.listen((e) {
-reader..readAsText(fileInput.files[0])
+reader..readAsText(fileInput.files[<span class="lit">0</span>])
       ..onLoad.listen((e) {
-        print(reader.result);
+        <span class="kwd">print</span>(reader.result);
     });
 });
                 </pre>

@@ -55,6 +55,41 @@
     background-color: #B81B6C;
 }
 
+/* Dart lint */
+pre {
+    background-color: #EEEEEE;
+    padding-top: 7px;
+    padding-left: 5px;
+}
+
+.typ {
+    color: #2b91af;
+}
+
+.str {
+    color: #800000;
+}
+
+.kwd {
+    color: #00008b;
+}
+
+.lit {
+    color: #800000;
+}
+
+.com {
+    color: gray;
+}
+
+.pln {
+    color: #000000;
+}
+
+.pun {
+    color: #000000;
+}
+
 /*
 #elements-section  #html-elements-section li:nth-child(n+22),
 #elements-section  #input-elements-section li:nth-child(n+8)
