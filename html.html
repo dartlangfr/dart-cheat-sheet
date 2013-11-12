@@ -346,8 +346,10 @@ HttpRequest.getString('http://theUrl').then((response) {
             <pre>
 var source = new EventSource('/the/url');
   ..onError.listen((Event e) => print("Error:$e"))
-  ..onOpen.listen((Event e) => print('open'))
-  ..onMessage.listen((MessageEvent me)  => print(me.data));
+  ..onOpen.listen((Event e) => print("Open"))
+  ..onMessage.listen((MessageEvent me) => 
+          print("Message: ${me.data=")
+    );
               </pre>
           </div>
         </div>
