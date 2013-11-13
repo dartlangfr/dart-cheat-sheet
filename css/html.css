@@ -90,6 +90,10 @@ pre {
     color: gray;
 }
 
+.var {
+    color: #7F1294;
+}
+
 .pln {
     color: #000000;
 }

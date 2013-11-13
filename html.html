@@ -108,8 +108,8 @@
             <p>Example</p>
             <pre>
 <span class="typ">HttpRequest</span>.getString(<span class="str">'http://theUrl'</span>)
-           .then((response) {
-  doSomethingWith(response);
+           .then((<span class="var">response</span>) {
+  doSomethingWith(<span class="var">response</span>);
 });
           </pre>
           </div>
@@ -400,7 +400,7 @@
             <p>Example</p>
             <pre>
 <span class="typ">Future</span> open() {
-  <span class="kwd">return</span> window.indexedDB.open(<span class="str">'myIndexedDB'</span>,
+  <span class="kwd">return</span> <span class="var">window</span>.indexedDB.open(<span class="str">'myIndexedDB'</span>,
       version: <span class="lit">1</span>,
       onUpgradeNeeded: _initializeDatabase)
     .then(_loadFromDB);
@@ -419,16 +419,16 @@ _initializeDatabase(<span class="typ">VersionChangeEvent</span> e) {
           <div class="section">
             <p>Example</p>
             <pre>
-<span class="kwd">var</span> webSocket =
+<span class="kwd">var</span> <span class="var">webSocket</span> =
     <span class="kwd">new</span> <span class="typ">WebSocket</span>(<span class="str">'ws://127.0.0.1:1337/ws'</span>);
-if (webSocket != <span class="kwd">null</span> &&
-    webSocket.readyState == <span class="typ">WebSocket</span>.OPEN) {
-  webSocket.send(data);
+if (<span class="var">webSocket</span> != <span class="kwd">null</span> &&
+    <span class="var">webSocket</span>.readyState == <span class="typ">WebSocket</span>.OPEN) {
+  <span class="var">webSocket</span>.send(data);
 } else {
   print(<span class="str">'WebSocket not connected'</span>);
 }
-webSocket.onMessage.listen((<span class="typ">MessageEvent</span> e) {
-  receivedData(e.data);
+<span class="var">webSocket</span>.onMessage.listen((<span class="typ">MessageEvent</span> <span class="var">e</span>) {
+  receivedData(<span class="var">e</span>.data);
 });
             </pre>
           </div>
@@ -438,10 +438,10 @@ webSocket.onMessage.listen((<span class="typ">MessageEvent</span> e) {
           <div class="section">
             <p>Example</p>
             <pre>
-<span class="kwd">var</span> source = <span class="kwd">new</span> <span class="typ">EventSource</span>(<span class="str">'/the/url'</span>)
-  ..onError.listen((<span class="typ">Event</span> e) => print(<span class="str">'Error: $e'</span>))
-  ..onOpen.listen((<span class="typ">Event</span> e) => print(<span class="str">'Open'</span>))
-  ..onMessage.listen((<span class="typ">MessageEvent</span> me) =>
+<span class="kwd">var</span> <span class="var">source</span> = <span class="kwd">new</span> <span class="typ">EventSource</span>(<span class="str">'/the/url'</span>)
+  ..onError.listen((<span class="typ">Event</span> <span class="var">e</span>) => print(<span class="str">'Error: $e'</span>))
+  ..onOpen.listen((<span class="typ">Event</span> <span class="var">e</span>) => print(<span class="str">'Open'</span>))
+  ..onMessage.listen((<span class="typ">MessageEvent</span> <span class="var">me</span>) =>
           print(<span class="str">'Message: ${me.data}'</span>)
     );
               </pre>
@@ -452,17 +452,19 @@ webSocket.onMessage.listen((<span class="typ">MessageEvent</span> e) {
           <div class="section">
             <p>Example</p>
             <pre>
-window.navigator
-      .getUserMedia(audio: <span class="kwd">true</span>, video: <span class="kwd">true</span>)
-  .then((stream) {
-    <span class="kwd">var</span> video = <span class="kwd">new</span> <span class="typ">VideoElement</span>()
-      ..autoplay = <span class="kwd">true</span>
-      ..src = <span class="typ">Url</span>.createObjectUrlFromStream(stream)
-      ..onLoadedMetadata.listen((e) {
-        <span class="com">// Ready</span>
-      });
-    document.body.append(video);
-});
+<span class="var">window</span>.navigator
+  .getUserMedia(audio: <span class="kwd">true</span>, video: <span class="kwd">true</span>)
+  .then(_onStream);
+
+_onStream((<span class="var">stream</span>) {
+  <span class="kwd">var</span> <span class="var">video</span> = <span class="kwd">new</span> <span class="typ">VideoElement</span>()
+   ..autoplay = <span class="kwd">true</span>
+   ..src = <span class="typ">Url</span>.createObjectUrlFromStream(<span class="var">stream</span>)
+   ..onLoadedMetadata.listen((<span class="var">e</span>) {
+     <span class="com">// Ready</span>
+   });
+  <span class="var">document</span>.body.append(<span class="var">video</span>);
+}
               </pre>
           </div>
         </div>
@@ -471,12 +473,12 @@ window.navigator
           <div class="section">
             <p>Example</p>
             <pre>
-<span class="typ">CanvasElement</span> canvas =
+<span class="typ">CanvasElement</span> <span class="var">canvas</span> =
    <span class="kwd">new</span> <span class="typ">CanvasElement</span>(width: <span class="lit">600</span>, height: <span class="lit">600</span>);
-<span class="typ">CanvasRenderingContext2D</span> ctx = canvas.context2D;
-<span class="typ">ImageElement</span> img = document.query(<span class="str">'img'</span>);
+<span class="typ">CanvasRenderingContext2D</span> <span class="var">ctx</span> = <span class="var">canvas</span>.context2D;
+<span class="typ">ImageElement</span> <span class="var">img</span> = <span class="var">document</span>.query(<span class="str">'img'</span>);
 
-ctx.drawImage(img, <span class="lit">100</span>, <span class="lit">100</span>);
+<span class="var">ctx</span>.drawImage(img, <span class="lit">100</span>, <span class="lit">100</span>);
                 </pre>
           </div>
         </div>
@@ -522,13 +524,13 @@ ctx.drawImage(img, <span class="lit">100</span>, <span class="lit">100</span>);
           <div class="section">
             <p>Example</p>
             <pre>
-<span class="kwd">var</span> reader = <span class="kwd">new</span> <span class="typ">FileReader</span>();
-<span class="kwd">var</span> fileInput = querySelector(<span class="str">'#fileInput'</span>)
+<span class="kwd">var</span> <span class="var">reader</span> = <span class="kwd">new</span> <span class="typ">FileReader</span>();
+<span class="kwd">var</span> <span class="var">fileInput</span> = querySelector(<span class="str">'#fileInput'</span>)
      ..onChange.listen(_onFileChange);
 
-_onFileChange(Event e){
-  reader..readAsText(fileInput.files[<span class="lit">0</span>])
-        ..onLoad.listen((e) {
+_onFileChange(<span class="var">e</span>){
+  <span class="var">reader</span>..readAsText(fileInput.files[<span class="lit">0</span>])
+        ..onLoad.listen((<span class="var">e2</span>) {
            print(reader.result);      
         });
 }
