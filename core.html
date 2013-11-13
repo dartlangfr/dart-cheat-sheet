@@ -34,10 +34,10 @@
       <div class="nav">
         <ul>
           <li>
-              <div class="btn-group">
-                <a href="core.html" alt="dart:core" class="btn btn-default active"><img src="img/core32.png"> Core</a>
-                <a href="html.html" alt="dart:html" class="btn btn-default"><img src="img/html32.png"> HTML</a>
-              </div>
+            <div class="btn-group">
+              <a href="core.html" alt="dart:core" class="btn btn-default active"><img src="img/core32.png"> Core</a>
+              <a href="html.html" alt="dart:html" class="btn btn-default"><img src="img/html32.png"> HTML</a>
+            </div>
           </li>
         </ul>
       </div>
@@ -170,6 +170,7 @@
               <ul class="section-content">
                 <li>Directory</li>
                 <li>File</li>
+                <li>Path</li>
                 <li>Encoding</li>
               </ul>
             </div>
@@ -305,7 +306,6 @@
               </li>
               <li><b>Accessors</b>: &nbsp;&nbsp; [] &nbsp;&nbsp; . &nbsp;&nbsp; ..</li>
               <li><b>Type / Argument</b>: &nbsp;&nbsp; as &nbsp;&nbsp; is &nbsp;&nbsp; is! &nbsp;&nbsp; ?<em class="replaceable"><code>identifier</code></em></li>
-              <li><b>Symbol</b>: #<code>identifier</code></li>
             </ul>
           </div>
         </div>
@@ -402,20 +402,18 @@
             <p>Iterable</p>
             <ul class="section-content">
               <li>factory Iterable.generate(count, E generator(index))</li>
-              <li>bool get isEmpty</li>
-              <li>bool get isNotEmpty</li>
-              <li>Iterator&lt;E&gt; get iterator</li>
-              <li>int get length</li>
-              <li>E get first</li>
-              <li>E get single</li>
-              <li>E get last</li>
+              <li>bool isEmpty</li>
+              <li>bool isNotEmpty</li>
+              <li>Iterator&lt;E&gt; iterator</li>
+              <li>int length</li>
+              <li>E first</li>
+              <li>E single</li>
+              <li>E last</li>
               <li>E elementAt(index)</li>
-              <li>E max([comparator])</li>
-              <li>E min([comparator])</li>
               <li>E firstWhere(predicate)</li>
               <li>E lastWhere(predicate)</li>
               <li>singleWhere(predicate)</li>
-              <li>bool contains(E e)</li>
+              <li>bool contains(e)</li>
               <li>bool any(predicate)</li>
               <li>bool every(predicate)</li>
               <li>Iterable map(f(E e))</li>
@@ -483,7 +481,7 @@
       <div>
         +Made by <a href="http://plus.google.com/115049522200141162219"><span>Guillaume Girou</span></a>, <a href="http://plus.google.com/106226789128312528511"><span>Nicolas François</span></a> and <a href="http://plus.google.com/109253530406296308866"><span>Vincent Bostoen</span></a> from 
         <a href="https://plus.google.com/115816334172157652403"><span>Dartlang [FR] - ʕ๏̮๏ʔ</span></a><br>
-        <em>+Version 1.0.0 - 20131114</em><br>
+        <em>+Version 0.5.16.0_r23799 - 20130706</em><br>
       </div>
     </div>
     <!-- Google+ +1 button. -->
