@@ -106,7 +106,7 @@
           </div>
           <div class="section">
             <p>Example</p>
-            <pre>
+            <pre class="dart-code">
 <span class="typ">HttpRequest</span>.getString(<span class="str">'http://theUrl'</span>)
            .then((<span class="var">response</span>) {
   doSomethingWith(<span class="var">response</span>);
@@ -398,7 +398,7 @@
           <p>Index DB</p>
           <div class="section">
             <p>Example</p>
-            <pre>
+            <pre  class="dart-code">
 <span class="typ">Future</span> open() {
   <span class="kwd">return</span> <span class="var">window</span>.indexedDB.open(<span class="str">'myIndexedDB'</span>,
       version: <span class="lit">1</span>,
@@ -418,7 +418,7 @@ _initializeDatabase(<span class="typ">VersionChangeEvent</span> e) {
           <p>Web Socket</p>
           <div class="section">
             <p>Example</p>
-            <pre>
+            <pre  class="dart-code">
 <span class="kwd">var</span> <span class="var">webSocket</span> =
     <span class="kwd">new</span> <span class="typ">WebSocket</span>(<span class="str">'ws://127.0.0.1:1337/ws'</span>);
 if (<span class="var">webSocket</span> != <span class="kwd">null</span> &&
@@ -437,7 +437,7 @@ if (<span class="var">webSocket</span> != <span class="kwd">null</span> &&
           <p>Event Source</p>
           <div class="section">
             <p>Example</p>
-            <pre>
+            <pre class="dart-code">
 <span class="kwd">var</span> <span class="var">source</span> = <span class="kwd">new</span> <span class="typ">EventSource</span>(<span class="str">'/the/url'</span>)
   ..onError.listen((<span class="typ">Event</span> <span class="var">e</span>) => print(<span class="str">'Error: $e'</span>))
   ..onOpen.listen((<span class="typ">Event</span> <span class="var">e</span>) => print(<span class="str">'Open'</span>))
@@ -451,7 +451,7 @@ if (<span class="var">webSocket</span> != <span class="kwd">null</span> &&
           <p>Web RTC</p>
           <div class="section">
             <p>Example</p>
-            <pre>
+            <pre class="dart-code">
 <span class="var">window</span>.navigator
   .getUserMedia(audio: <span class="kwd">true</span>, video: <span class="kwd">true</span>)
   .then(_onStream);
@@ -472,7 +472,7 @@ _onStream((<span class="var">stream</span>) {
           <p>Canvas Api</p>
           <div class="section">
             <p>Example</p>
-            <pre>
+            <pre class="dart-code">
 <span class="typ">CanvasElement</span> <span class="var">canvas</span> =
    <span class="kwd">new</span> <span class="typ">CanvasElement</span>(width: <span class="lit">600</span>, height: <span class="lit">600</span>);
 <span class="typ">CanvasRenderingContext2D</span> <span class="var">ctx</span> = <span class="var">canvas</span>.context2D;
@@ -523,7 +523,7 @@ _onStream((<span class="var">stream</span>) {
           </div>
           <div class="section">
             <p>Example</p>
-            <pre>
+            <pre class="dart-code">
 <span class="kwd">var</span> <span class="var">reader</span> = <span class="kwd">new</span> <span class="typ">FileReader</span>();
 <span class="kwd">var</span> <span class="var">fileInput</span> = querySelector(<span class="str">'#fileInput'</span>)
      ..onChange.listen(_onFileChange);

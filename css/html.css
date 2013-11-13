@@ -70,35 +70,35 @@ pre {
     padding-left: 5px;
 }
 
-.typ {
+.dart-code .typ {
     color: #2b91af;
 }
 
-.str {
+.dart-code .str {
     color: #800000;
 }
 
-.kwd {
+.dart-code .kwd {
     color: #00008b;
 }
 
-.lit {
+.dart-code .lit {
     color: #800000;
 }
 
-.com {
+.dart-code .com {
     color: gray;
 }
 
-.var {
+.dart-code .var {
     color: #7F1294;
 }
 
-.pln {
+.dart-code .pln {
     color: #000000;
 }
 
-.pun {
+.dart-code .pun {
     color: #000000;
 }
 
