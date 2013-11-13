@@ -205,58 +205,19 @@
         </div>
         <div id="isolate-section" class="section-container">
           <p>dart:isolate</p>
-          <div class="section-group">
             <div class="section">
-              <p>Messaging</p>
+              <p>Static Methods</p>
               <ul class="section-content">
-                <li class="section-content">
-                  <p>Top-level</p>
-                  <ul class="section-content">
-                    <li>ReceivePort port</li>
-                    <li>spawnFunction</li>
-                    <li>spawnUri</li>
-                  </ul>
-                </li>
-                <li class="section-content">
-                  <p>Receveir</p>
-                  <ul class="section-content">
-                    <li>ReceivePort</li>
-                  </ul>
-                </li>
-                <li class="section-content">
-                  <p>Sender</p>
-                  <ul class="section-content">
-                    <li>SendPort</li>
-                    <li>SendPortSync</li>
-                  </ul>
-                </li>
+                <li>Future spawn(void entryPoint(message), message)</li>
+                <li>Future spawnUri(Uri uri, List args, message)</li>
               </ul>
             </div>
             <div class="section">
-              <p>Streaming</p>
-              <ul class="section-content">
-                <li class="section-content">
-                  <p>Top-level</p>
-                  <ul class="section-content">
-                    <li>IsolateStream stream</li>
-                    <li>streamSpawnFunction</li>
-                  </ul>
-                </li>
-                <li class="section-content">
-                  <p>Receveir</p>
-                  <ul class="section-content">
-                    <li>IsolateSink</li>
-                  </ul>
-                </li>
-                <li class="section-content">
-                  <p>Sender</p>
-                  <ul class="section-content">
-                    <li>IsolateStream</li>
-                    <li>MessageBox</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
+            <p>Classes</p>
+            <ul class="section-content">
+              <li>RawReceivePort, ReceivePort, </li>
+              <li>SendPort, IsolateSpawnException</li>
+            </ul>
           </div>
         </div>
         <div id="mirrors-section" class="section-container">
