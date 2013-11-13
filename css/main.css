@@ -51,6 +51,15 @@ code {
   border-color: #ccc;
 }
 
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: .65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 .btn:hover, .btn:focus {
   color: #333;
   text-decoration: none;
