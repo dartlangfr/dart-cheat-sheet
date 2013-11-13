@@ -438,7 +438,6 @@
               <li>insert(index, E e)</li>
               <li>addAll(Iterable&lt;E&gt; elements)</li>
               <li>remove(Object element)</li>
-              <li>removeAll(Iterable elements)</li>
               <li>retainWhere(predicate)</li>
               <li>insertAll(index, Iterable&lt;E&gt; iterable)</li>
               <li>setAll(index, Iterable&lt;E&gt; iterable)</li>
@@ -451,10 +450,10 @@
               <li>int lastIndexOf(E e, [start])</li>
               <li>E removeAt(index)</li>
               <li>E removeLast()</li>
-              <li>List&lt;E&gt; sublist(start, length)</li>
-              <li>removeRange(start, length)</li>
-              <li>fillRange(start, length, [E fill])</li>
-              <li>replaceRange(start, end, Iterable&lt;E&gt; iterable)</li>
+              <li>List&lt;E&gt; sublist(int start, [int end])</li>
+              <li>removeRange(int start, int end)</li>
+              <li>fillRange(int start, int end, [E fillValue])</li>
+              <li>replaceRange(int start, int end, Iterable<E> iterable)</li>
               <li>setRange(start, end, Iterable&lt;E&gt; iterable)</li>
               <li>Map&lt;int, E&gt; asMap()</li>
             </ul>
