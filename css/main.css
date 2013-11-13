@@ -217,6 +217,12 @@ pre {
 	color: #EEE;
 }
 
+#footer img {
+  float: left;
+  width: 32px;
+  margin: 0.3em;
+}
+
 #footer div {
 	padding: 2px;
 }
