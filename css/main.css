@@ -42,7 +42,7 @@ code {
 
 .btn-default {
   color: #333;
-  background-color: #fff;
+  background-color: #ddd;
   border-color: #ccc;
 }
 
@@ -58,7 +58,7 @@ code {
 }
 
 .btn-default.disabled, .btn-default[disabled], fieldset[disabled] .btn-default, .btn-default.disabled:hover, .btn-default[disabled]:hover, fieldset[disabled] .btn-default:hover, .btn-default.disabled:focus, .btn-default[disabled]:focus, fieldset[disabled] .btn-default:focus, .btn-default.disabled:active, .btn-default[disabled]:active, fieldset[disabled] .btn-default:active, .btn-default.disabled.active, .btn-default[disabled].active, fieldset[disabled] .btn-default.active {
-  background-color: #fff;
+  background-color: #ddd;
   border-color: #ccc;
 }
 
