@@ -363,6 +363,20 @@ pre {
 	font-weight: bold;
 }
 
+div#welcome {
+  display: table; 
+  width: 100%;
+}
+div#welcome > div {
+  display: table-row;
+}
+div#welcome > div > div {
+  display: table-cell; 
+  text-align: center; 
+  vertical-align: middle;
+  padding: 1em;
+}
+
 @media print {
 	.noprint {
 		display: none ;
@@ -430,4 +444,8 @@ pre {
 		-webkit-column-count: 1;
 		column-count: 1;
 	}
+  
+  div#welcome, div#welcome > div, div#welcome > div > div {
+    display: block; 
+  }
 }
