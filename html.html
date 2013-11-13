@@ -383,6 +383,37 @@
             </ul>
           </div>
         </div>
+        <div id="local-storage-section" class="section-container">
+          <p>Local Storage</p>
+          <i>Storage is implemented as a Map&lt;String, String&gt;</i>
+          <div class="section">
+            <p>Examples</p>
+            <ul class="section-content samples">
+              <li>var foo = window.localStorage['bar']</li>
+              <li>window.localStorage['bar'] = "foo"</li>
+            </ul>
+          </div>
+        </div>
+        <div id="index-db-section" class="section-container">
+          <p>Index DB</p>
+          <div class="section">
+            <p>Example</p>
+            <pre>
+<span class="typ">Future</span> open() {
+  <span class="kwd">return</span> window.indexedDB.open(<span class="str">'myIndexedDB'</span>,
+      version: <span class="lit">1</span>,
+      onUpgradeNeeded: _initializeDatabase)
+    .then(_loadFromDB);
+}
+<span class="kwd">void</span> _initializeDatabase(<span class="typ">VersionChangeEvent</span> e) {
+  <span class="com">// Initialize your database</span>
+}
+<span class="typ">Future</span> _loadFromDB(<span class="typ">Database</span> db) {
+  <span class="com">// Load request</span>
+}
+                </pre>
+          </div>
+        </div>        
         <div id="web-socket-section" class="section-container">
           <p>Web Socket</p>
           <div class="section">
@@ -414,37 +445,6 @@ webSocket.onMessage.listen((<span class="typ">MessageEvent</span> e) {
           print(<span class="str">'Message: ${me.data}'</span>)
     );
               </pre>
-          </div>
-        </div>
-        <div id="local-storage-section" class="section-container">
-          <p>Local Storage</p>
-          <i>Storage is implemented as a Map&lt;String, String&gt;</i>
-          <div class="section">
-            <p>Examples</p>
-            <ul class="section-content samples">
-              <li>var foo = window.localStorage['bar']</li>
-              <li>window.localStorage['bar'] = "foo"</li>
-            </ul>
-          </div>
-        </div>
-        <div id="index-db-section" class="section-container">
-          <p>Index DB</p>
-          <div class="section">
-            <p>Example</p>
-            <pre>
-<span class="typ">Future</span> open() {
-  <span class="kwd">return</span> window.indexedDB.open(<span class="str">'myIndexedDB'</span>,
-      version: <span class="lit">1</span>,
-      onUpgradeNeeded: _initializeDatabase)
-    .then(_loadFromDB);
-}
-<span class="kwd">void</span> _initializeDatabase(<span class="typ">VersionChangeEvent</span> e) {
-  <span class="com">// Initialize your database</span>
-}
-<span class="typ">Future</span> _loadFromDB(<span class="typ">Database</span> db) {
-  <span class="com">// Load request</span>
-}
-                </pre>
           </div>
         </div>
         <div id="web-rtc-section" class="section-container">
