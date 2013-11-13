@@ -64,10 +64,14 @@
 }
 
 /* Dart lint */
-pre {
+pre .dart-code {
     background-color: #EEEEEE;
     padding-top: 7px;
     padding-left: 5px;
+}
+
+.dart-code {
+    font-size: 0.8em;
 }
 
 .dart-code .typ {
