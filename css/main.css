@@ -119,6 +119,56 @@ code {
   border-top-left-radius: 0;
 }
 
+/* Dart lint */
+pre {
+  background-color: #EEEEEE;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  margin: 0;
+  font-family: Arial;
+  font-size: 1em;
+}
+
+/* Type */
+.dart-code .typ {
+  color: #2b91af;
+}
+
+/* String */
+.dart-code .str {
+  color: #800000;
+}
+
+/* Keyword */
+.dart-code .kwd {
+  color: #00008b;
+}
+
+/* Literal */
+.dart-code .lit {
+  color: #800000;
+}
+
+/* Comment */
+.dart-code .com {
+  color: gray;
+}
+
+/* Variable */
+.dart-code .var {
+  color: #7F1294;
+}
+
+/* Plain */
+.dart-code .pln {
+  color: #000000;
+}
+
+/* Punctuation */
+.dart-code .pun {
+  color: #000000;
+}
+
 #header, #content, #footer {
 	width: 100%;
 }

@@ -63,49 +63,6 @@
     background-color: #B81B6C;
 }
 
-/* Dart lint */
-pre {
-    background-color: #EEEEEE;
-    padding-top: 7px;
-    padding-left: 5px;
-}
-
-.dart-code {
-    font-size: 0.9em;
-}
-
-.dart-code .typ {
-    color: #2b91af;
-}
-
-.dart-code .str {
-    color: #800000;
-}
-
-.dart-code .kwd {
-    color: #00008b;
-}
-
-.dart-code .lit {
-    color: #800000;
-}
-
-.dart-code .com {
-    color: gray;
-}
-
-.dart-code .var {
-    color: #7F1294;
-}
-
-.dart-code .pln {
-    color: #000000;
-}
-
-.dart-code .pun {
-    color: #000000;
-}
-
 @media only screen and (min-width: 1200px) {
 
 	#element-section {
