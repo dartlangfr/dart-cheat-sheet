@@ -65,7 +65,15 @@
 
 @media only screen and (min-width: 1200px) {
 
-	#element-section {
+	#element-section, #http-request-section, #canvas-section{
+		-webkit-column-break-before: always;
+		-moz-column-break-before: always;
+		column-break-before: always;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	#css-section, #local-storage-section {
 		-webkit-column-break-before: always;
 		-moz-column-break-before: always;
 		column-break-before: always;
