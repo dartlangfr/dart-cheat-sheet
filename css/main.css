@@ -212,6 +212,7 @@ pre {
 }
 
 #footer {
+  min-height: 40px;
 	margin-top: 7px;
 	background-color: #555;
 	color: #EEE;
