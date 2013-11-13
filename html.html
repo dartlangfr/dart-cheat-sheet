@@ -39,55 +39,6 @@
     </div>
     <div id="content">
       <div class="grid">
-        <div id="query-dom-section" class="section-container">
-          <p>Query the DOM</p>
-          <div class="section">
-            <p>Methods</p>
-            <ul class="section-content">
-              <li>querySelector(cssSelector);</li>
-              <li>querySelectorAll(cssSelector);</li>
-            </ul>
-          </div>
-          <div class="section">
-            <p>Examples</p>
-             <ul class="section-content">
-                <li>querySelector(<span class="str">'#foo'</span>);</li>
-                <li>querySelectorAll(<span class="str">'div'</span>);</li>
-                <li>querySelectorAll(<span class="str">'[name="foo"]'</span>);</li>
-                <li>querySelectorAll(<span class="str">'.foo'</span>);</li>
-                <li>querySelector(<span class="str">'.foo .bar'</span>);</li>
-                <li>querySelectorAll(<span class="str">'.foo .bar'</span>);</li>
-              </ul>
-          </div>
-        </div>
-        <div id="http-request-section" class="section-container">
-          <p>HTTP Request</p>
-          <div class="section">
-            <p>Static Methods</p>
-            <ul class="section-content">
-              <li>getString(String url, {bool withCredentials, void onProgress(Event e)})</li>
-              <li>postFormData(String url, Map data, {bool withCredentials, String responseType, Map requestHeaders, void onProgress(Event e)})</li>
-            </ul>
-          </div>
-          <div class="section">
-            <p>Methods</p>
-            <ul class="section-content">
-              <li>String getResponseHeader(String header)</li>
-              <li>open(String method, String url, {bool async, String user, String password}) </li>
-              <li>setRequestHeader(String header, String value)</li>
-              <li>abort()</li>
-            </ul>
-          </div>
-          <div class="section">
-            <p>Example</p>
-            <pre class="dart-code">
-<span class="typ">HttpRequest</span>.getString(<span class="str">'http://theUrl'</span>)
-           .then((<span class="var">response</span>) {
-  doSomethingWith(<span class="var">response</span>);
-});
-          </pre>
-          </div>
-        </div>
         <div id="elements-section" class="section-container">
           <p>Elements</p>
           <div id="html-elements-section" class="section">
@@ -186,90 +137,25 @@
             </ul>
           </div>
         </div>
-        <div id="element-section" class="section-container">
-          <p>Element</p>
-          <div class="section">
-            <p>Creation</p>
-            <ul class="section-content">
-              <li>new Element.div()</li>
-              <li>new Element.tag('div')</li>
-              <li>new DivElement()</li>
-            </ul>
-          </div>
-          <div class="section">
-            <p>Properties</p>
-            <ul class="section-content column2">
-              <li>Map attributes</li>
-              <li>classes</li>
-              <li>className</li>
-              <li>document</li>
-              <li>id</li>
-              <li>innerHtml</li>
-              <li>nodeName</li>
-              <li>nodes</li>
-              <li>Events on</li>
-              <li>outerHtml</li>
-              <li>style</li>
-              <li>tabIndex</li>
-              <li>tagName</li>
-              <li>text</li>
-              <li>title</li>
-              <li><b>Elements Navigation</b></li>
-              <li>children</li>
-              <li>nextElementSibling</li>
-              <li>offsetParent</li>
-              <li>parent</li>
-              <li>previousElementSibling</li>
-              <li><b>Nodes Navigation</b></li>
-              <li>childNodes</li>
-              <li>firstChild</li>
-              <li>lastChild</li>
-              <li>nextNode</li>
-              <li>parentNode</li>
-              <li>previousNode</li>
-              <li><b>Dimensions &amp; positions</b></li>
-              <li>client</li>
-              <li>documentOffset</li>
-              <li>offset</li>
-              <li>borderEdge</li>
-              <li>contentEdge</li>
-              <li>marginEdge</li>
-              <li>paddingEdge</li>
-              <li>scrollHeight</li>
-              <li>scrollLeft</li>
-              <li>scrollTop</li>
-              <li>scrollWidth</li>
-            </ul>
-          </div>
+        <div id="query-dom-section" class="section-container">
+          <p>Query the DOM</p>
           <div class="section">
             <p>Methods</p>
             <ul class="section-content">
-              <li>Node append(Node newChild)</li>
-              <li>appendHtml(String text)</li>
-              <li>appendText(String text)</li>
-              <li>blur()</li>
-              <li>click()</li>
-              <li>bool contains(Node other)</li>
-              <li>bool dispatchEvent(Event event)</li>
-              <li>focus()</li>
-              <li>Point offsetTo(Element parent)</li>
-              <li>Element querySelector(String selectors)</li>
-              <li>ElementList querySelectorAll(String selectors)</li>
-              <li>remove()</li>
-              <li>Node replaceWith(Node otherNode)</li>
-              <li>scrollByLines(int lines)</li>
-              <li>scrollByPages(int pages)</li>
-              <li>scrollIntoView([ScrollAlignment alignment])</li>
+              <li>querySelector(cssSelector);</li>
+              <li>querySelectorAll(cssSelector);</li>
             </ul>
           </div>
           <div class="section">
             <p>Examples</p>
-            <ul class="section-content">
-              <li>element.attributes.containsKey('name');</li>
-              <li>element.attributes['name'];</li>
-              <li>element.attributes['name'] = 'value';</li>
-              <li>element.attributes.remove('name');</li>
-            </ul>
+             <ul class="section-content">
+                <li>querySelector(<span class="str">'#foo'</span>);</li>
+                <li>querySelectorAll(<span class="str">'div'</span>);</li>
+                <li>querySelectorAll(<span class="str">'[name="foo"]'</span>);</li>
+                <li>querySelectorAll(<span class="str">'.foo'</span>);</li>
+                <li>querySelector(<span class="str">'.foo .bar'</span>);</li>
+                <li>querySelectorAll(<span class="str">'.foo .bar'</span>);</li>
+              </ul>
           </div>
         </div>
         <div id="events-section" class="section-container">
@@ -357,203 +243,89 @@
             </ul>
           </div>
         </div>
-        <div id="local-storage-section" class="section-container">
-          <p>Local Storage</p>
-          <i>Storage is implemented as a Map&lt;String, String&gt;</i>
+        <div id="element-section" class="section-container">
+          <p>Element</p>
           <div class="section">
-            <p>Examples</p>
-            <ul class="section-content samples">
-              <li>var foo = window.localStorage['bar']</li>
-              <li>window.localStorage['bar'] = "foo"</li>
-            </ul>
-          </div>
-        </div>
-        <div id="index-db-section" class="section-container">
-          <p>Index DB</p>
-          <div class="section">
-            <p>Example</p>
-            <pre  class="dart-code">
-<span class="typ">Future</span> open() {
-  <span class="kwd">return</span> <span class="var">window</span>.indexedDB.open(<span class="str">'myIndexedDB'</span>,
-      version: <span class="lit">1</span>,
-      onUpgradeNeeded: _initializeDatabase)
-    .then(_loadFromDB);
-}
-_initializeDatabase(<span class="typ">VersionChangeEvent</span> e) {
-  <span class="com">// Initialize your database</span>
-}
-<span class="typ">Future</span> _loadFromDB(<span class="typ">Database</span> db) {
-  <span class="com">// Load request</span>
-}
-                </pre>
-          </div>
-        </div>        
-        <div id="web-socket-section" class="section-container">
-          <p>Web Socket</p>
-          <div class="section">
-            <p>Example</p>
-            <pre  class="dart-code">
-<span class="kwd">var</span> <span class="var">webSocket</span> =
-    <span class="kwd">new</span> <span class="typ">WebSocket</span>(<span class="str">'ws://127.0.0.1:1337/ws'</span>);
-if (<span class="var">webSocket</span> != <span class="kwd">null</span> &&
-    <span class="var">webSocket</span>.readyState == <span class="typ">WebSocket</span>.OPEN) {
-  <span class="var">webSocket</span>.send(data);
-} else {
-  print(<span class="str">'WebSocket not connected'</span>);
-}
-<span class="var">webSocket</span>.onMessage.listen((<span class="typ">MessageEvent</span> <span class="var">e</span>) {
-  receivedData(<span class="var">e</span>.data);
-});
-            </pre>
-          </div>
-        </div> 
-        <div id="event-source-section" class="section-container">
-          <p>Event Source</p>
-          <div class="section">
-            <p>Example</p>
-            <pre class="dart-code">
-<span class="kwd">var</span> <span class="var">source</span> = <span class="kwd">new</span> <span class="typ">EventSource</span>(<span class="str">'/the/url'</span>)
-  ..onError.listen((<span class="typ">Event</span> <span class="var">e</span>) => print(<span class="str">'Error: $e'</span>))
-  ..onOpen.listen((<span class="typ">Event</span> <span class="var">e</span>) => print(<span class="str">'Open'</span>))
-  ..onMessage.listen((<span class="typ">MessageEvent</span> <span class="var">me</span>) =>
-          print(<span class="str">'Message: ${me.data}'</span>)
-    );
-              </pre>
-          </div>
-        </div>
-        <div id="web-rtc-section" class="section-container">
-          <p>Web RTC</p>
-          <div class="section">
-            <p>Example</p>
-            <pre class="dart-code">
-<span class="var">window</span>.navigator
-  .getUserMedia(audio: <span class="kwd">true</span>, video: <span class="kwd">true</span>)
-  .then(_onStream);
-
-_onStream((<span class="var">stream</span>) {
-  <span class="kwd">var</span> <span class="var">video</span> = <span class="kwd">new</span> <span class="typ">VideoElement</span>()
-   ..autoplay = <span class="kwd">true</span>
-   ..src = <span class="typ">Url</span>.createObjectUrlFromStream(<span class="var">stream</span>)
-   ..onLoadedMetadata.listen((<span class="var">e</span>) {
-     <span class="com">// Ready</span>
-   });
-  <span class="var">document</span>.body.append(<span class="var">video</span>);
-}
-              </pre>
-          </div>
-        </div>
-        <div id="canvas-section" class="section-container">
-          <p>Canvas Api</p>
-          <div class="section">
-            <p>Example</p>
-            <pre class="dart-code">
-<span class="typ">CanvasElement</span> <span class="var">canvas</span> =
-   <span class="kwd">new</span> <span class="typ">CanvasElement</span>(width: <span class="lit">600</span>, height: <span class="lit">600</span>);
-<span class="typ">CanvasRenderingContext2D</span> <span class="var">ctx</span> = <span class="var">canvas</span>.context2D;
-<span class="typ">ImageElement</span> <span class="var">img</span> = <span class="var">document</span>.query(<span class="str">'img'</span>);
-
-<span class="var">ctx</span>.drawImage(img, <span class="lit">100</span>, <span class="lit">100</span>);
-                </pre>
-          </div>
-        </div>
-        <div id="file-api-section" class="section-container">
-          <p>File Api</p>
-          <div class="section">
-            <p>File</p>
+            <p>Creation</p>
             <ul class="section-content">
-              <li>DateTime lastModifiedDate</li>
-              <li>String name</li>
-              <li>String relativePath</li>
-              <li>int size</li>
-              <li>String type</li>
+              <li>new Element.div()</li>
+              <li>new Element.tag('div')</li>
+              <li>new DivElement()</li>
             </ul>
           </div>
-          <div class="section">
-            <p>File Reader</p>
-            <ul class="section-content column2">
-              <li>int readyState</li>
-              <li>Object result</li>
-              <li>void abort()</li>
-              <li><b>readAs___(Blob blob)</b></li>
-              <li>ArrayBuffer</li>
-              <li>BinaryString</li>
-              <li>DataUrl</li>
-              <li>Text</li>
-              <li><b>EventStreamProvider</b></li>
-              <li>errorEvent</li>
-              <li>abortEvent</li>
-              <li>loadEndEvent</li>
-              <li>loadEvent</li>
-              <li>loadStartEvent</li>
-              <li>progressEvent</li>
-              <li><b>Stream on___</b></li>
-              <li>Abort</li>
-              <li>Error</li>
-              <li>Load</li>
-              <li>LoadEnd</li>
-              <li>LoadStart</li>
-              <li>Progress</li>
-            </ul>
-          </div>
-          <div class="section">
-            <p>Example</p>
-            <pre class="dart-code">
-<span class="kwd">var</span> <span class="var">reader</span> = <span class="kwd">new</span> <span class="typ">FileReader</span>();
-<span class="kwd">var</span> <span class="var">fileInput</span> = querySelector(<span class="str">'#fileInput'</span>)
-     ..onChange.listen(_onFileChange);
-
-_onFileChange(<span class="var">e</span>){
-  <span class="var">reader</span>..readAsText(fileInput.files[<span class="lit">0</span>])
-        ..onLoad.listen((<span class="var">e2</span>) {
-           print(reader.result);      
-        });
-}
-                </pre>
-          </div>
-          <div class="section">
-            <p>File Writer</p>
-            <ul class="section-content column2">
-              <li>int position</li>
-              <li>int readyStage</li>
-              <li>abort()</li>
-              <li>seek(int position)</li>
-              <li>truncate(int size)</li>
-              <li>write(Blob data</li>
-              <li><b>EventStreamProvider</b></li>
-              <li>errorEvent</li>
-              <li>abortEvent</li>
-              <li>progressEvent</li>
-              <li>writeEndEvent</li>
-              <li>writeEvent</li>
-              <li>writeStartEvent</li>
-              <li><b>Stream on___</b></li>
-              <li>Error</li>
-              <li>Abort</li>
-              <li>Progress</li>
-              <li>Write</li>
-              <li>WriteEnd</li>
-              <li>WriteStart</li>
-            </ul>
-          </div>
-        </div>
-        <div id="history-section" class="section-container">
-          <p>History</p>
           <div class="section">
             <p>Properties</p>
-            <ul class="section-content">
-              <li>bool supportsState</li>
-              <li>int length</li>
-              <li>dynamic state</li>
+            <ul class="section-content column2">
+              <li>Map attributes</li>
+              <li>classes</li>
+              <li>className</li>
+              <li>document</li>
+              <li>id</li>
+              <li>innerHtml</li>
+              <li>nodeName</li>
+              <li>nodes</li>
+              <li>Events on</li>
+              <li>outerHtml</li>
+              <li>style</li>
+              <li>tabIndex</li>
+              <li>tagName</li>
+              <li>text</li>
+              <li>title</li>
+              <li><b>Elements Navigation</b></li>
+              <li>children</li>
+              <li>nextElementSibling</li>
+              <li>offsetParent</li>
+              <li>parent</li>
+              <li>previousElementSibling</li>
+              <li><b>Nodes Navigation</b></li>
+              <li>childNodes</li>
+              <li>firstChild</li>
+              <li>lastChild</li>
+              <li>nextNode</li>
+              <li>parentNode</li>
+              <li>previousNode</li>
+              <li><b>Dimensions &amp; positions</b></li>
+              <li>client</li>
+              <li>documentOffset</li>
+              <li>offset</li>
+              <li>borderEdge</li>
+              <li>contentEdge</li>
+              <li>marginEdge</li>
+              <li>paddingEdge</li>
+              <li>scrollHeight</li>
+              <li>scrollLeft</li>
+              <li>scrollTop</li>
+              <li>scrollWidth</li>
             </ul>
           </div>
           <div class="section">
             <p>Methods</p>
             <ul class="section-content">
-              <li>back()</li>
-              <li>forward()</li>
-              <li>go(int distance)</li>
-              <li>pushState(Object data, String title)</li>
-              <li>replaceState(Object data, String title)</li>
+              <li>Node append(Node newChild)</li>
+              <li>appendHtml(String text)</li>
+              <li>appendText(String text)</li>
+              <li>blur()</li>
+              <li>click()</li>
+              <li>bool contains(Node other)</li>
+              <li>bool dispatchEvent(Event event)</li>
+              <li>focus()</li>
+              <li>Point offsetTo(Element parent)</li>
+              <li>Element querySelector(String selectors)</li>
+              <li>ElementList querySelectorAll(String selectors)</li>
+              <li>remove()</li>
+              <li>Node replaceWith(Node otherNode)</li>
+              <li>scrollByLines(int lines)</li>
+              <li>scrollByPages(int pages)</li>
+              <li>scrollIntoView([ScrollAlignment alignment])</li>
+            </ul>
+          </div>
+          <div class="section">
+            <p>Examples</p>
+            <ul class="section-content">
+              <li>element.attributes.containsKey('name');</li>
+              <li>element.attributes['name'];</li>
+              <li>element.attributes['name'] = 'value';</li>
+              <li>element.attributes.remove('name');</li>
             </ul>
           </div>
         </div>
@@ -640,6 +412,234 @@ _onFileChange(<span class="var">e</span>){
               <li>item(index)</li>
               <li>removeProperty(propertyName)</li>
               <li>setProperty(propertyName, value, [priority])</li>
+            </ul>
+          </div>
+        </div>
+        <div id="http-request-section" class="section-container">
+          <p>HTTP Request</p>
+          <div class="section">
+            <p>Static Methods</p>
+            <ul class="section-content">
+              <li>getString(String url, {bool withCredentials, void onProgress(Event e)})</li>
+              <li>postFormData(String url, Map data, {bool withCredentials, String responseType, Map requestHeaders, void onProgress(Event e)})</li>
+            </ul>
+          </div>
+          <div class="section">
+            <p>Methods</p>
+            <ul class="section-content">
+              <li>String getResponseHeader(String header)</li>
+              <li>open(String method, String url, {bool async, String user, String password}) </li>
+              <li>setRequestHeader(String header, String value)</li>
+              <li>abort()</li>
+            </ul>
+          </div>
+          <div class="section">
+            <p>Example</p>
+            <pre class="dart-code">
+<span class="typ">HttpRequest</span>.getString(<span class="str">'http://theUrl'</span>)
+           .then((<span class="var">response</span>) {
+  doSomethingWith(<span class="var">response</span>);
+});
+          </pre>
+          </div>
+        </div>
+        <div id="web-socket-section" class="section-container">
+          <p>Web Socket</p>
+          <div class="section">
+            <p>Example</p>
+            <pre  class="dart-code">
+<span class="kwd">var</span> <span class="var">webSocket</span> =
+    <span class="kwd">new</span> <span class="typ">WebSocket</span>(<span class="str">'ws://127.0.0.1:1337/ws'</span>);
+if (<span class="var">webSocket</span> != <span class="kwd">null</span> &&
+    <span class="var">webSocket</span>.readyState == <span class="typ">WebSocket</span>.OPEN) {
+  <span class="var">webSocket</span>.send(data);
+} else {
+  print(<span class="str">'WebSocket not connected'</span>);
+}
+<span class="var">webSocket</span>.onMessage.listen((<span class="typ">MessageEvent</span> <span class="var">e</span>) {
+  receivedData(<span class="var">e</span>.data);
+});
+            </pre>
+          </div>
+        </div> 
+        <div id="event-source-section" class="section-container">
+          <p>Event Source</p>
+          <div class="section">
+            <p>Example</p>
+            <pre class="dart-code">
+<span class="kwd">var</span> <span class="var">source</span> = <span class="kwd">new</span> <span class="typ">EventSource</span>(<span class="str">'/the/url'</span>)
+  ..onError.listen((<span class="typ">Event</span> <span class="var">e</span>) => print(<span class="str">'Error: $e'</span>))
+  ..onOpen.listen((<span class="typ">Event</span> <span class="var">e</span>) => print(<span class="str">'Open'</span>))
+  ..onMessage.listen((<span class="typ">MessageEvent</span> <span class="var">me</span>) =>
+          print(<span class="str">'Message: ${me.data}'</span>)
+    );
+              </pre>
+          </div>
+        </div>
+        <div id="web-rtc-section" class="section-container">
+          <p>Web RTC</p>
+          <div class="section">
+            <p>Example</p>
+            <pre class="dart-code">
+<span class="var">window</span>.navigator
+  .getUserMedia(audio: <span class="kwd">true</span>, video: <span class="kwd">true</span>)
+  .then(_onStream);
+
+_onStream((<span class="var">stream</span>) {
+  <span class="kwd">var</span> <span class="var">video</span> = <span class="kwd">new</span> <span class="typ">VideoElement</span>()
+   ..autoplay = <span class="kwd">true</span>
+   ..src = <span class="typ">Url</span>.createObjectUrlFromStream(<span class="var">stream</span>)
+   ..onLoadedMetadata.listen((<span class="var">e</span>) {
+     <span class="com">// Ready</span>
+   });
+  <span class="var">document</span>.body.append(<span class="var">video</span>);
+}
+              </pre>
+          </div>
+        </div>
+        <div id="local-storage-section" class="section-container">
+          <p>Local Storage</p>
+          <i>Storage is implemented as a Map&lt;String, String&gt;</i>
+          <div class="section">
+            <p>Examples</p>
+            <ul class="section-content samples">
+              <li>var foo = window.localStorage['bar']</li>
+              <li>window.localStorage['bar'] = "foo"</li>
+            </ul>
+          </div>
+        </div>
+        <div id="index-db-section" class="section-container">
+          <p>Index DB</p>
+          <div class="section">
+            <p>Example</p>
+            <pre  class="dart-code">
+<span class="typ">Future</span> open() {
+  <span class="kwd">return</span> <span class="var">window</span>.indexedDB.open(<span class="str">'myIndexedDB'</span>,
+      version: <span class="lit">1</span>,
+      onUpgradeNeeded: _initializeDatabase)
+    .then(_loadFromDB);
+}
+_initializeDatabase(<span class="typ">VersionChangeEvent</span> e) {
+  <span class="com">// Initialize your database</span>
+}
+<span class="typ">Future</span> _loadFromDB(<span class="typ">Database</span> db) {
+  <span class="com">// Load request</span>
+}
+                </pre>
+          </div>
+        </div>        
+        <div id="canvas-section" class="section-container">
+          <p>Canvas Api</p>
+          <div class="section">
+            <p>Example</p>
+            <pre class="dart-code">
+<span class="typ">CanvasElement</span> <span class="var">canvas</span> =
+   <span class="kwd">new</span> <span class="typ">CanvasElement</span>(width: <span class="lit">600</span>, height: <span class="lit">600</span>);
+<span class="typ">CanvasRenderingContext2D</span> <span class="var">ctx</span> = <span class="var">canvas</span>.context2D;
+<span class="typ">ImageElement</span> <span class="var">img</span> = <span class="var">document</span>.query(<span class="str">'img'</span>);
+
+<span class="var">ctx</span>.drawImage(img, <span class="lit">100</span>, <span class="lit">100</span>);
+                </pre>
+          </div>
+        </div>
+        <div id="history-section" class="section-container">
+          <p>History</p>
+          <div class="section">
+            <p>Properties</p>
+            <ul class="section-content">
+              <li>bool supportsState</li>
+              <li>int length</li>
+              <li>dynamic state</li>
+            </ul>
+          </div>
+          <div class="section">
+            <p>Methods</p>
+            <ul class="section-content">
+              <li>back()</li>
+              <li>forward()</li>
+              <li>go(int distance)</li>
+              <li>pushState(Object data, String title)</li>
+              <li>replaceState(Object data, String title)</li>
+            </ul>
+          </div>
+        </div>
+        <div id="file-api-section" class="section-container">
+          <p>File Api</p>
+          <div class="section">
+            <p>File</p>
+            <ul class="section-content">
+              <li>DateTime lastModifiedDate</li>
+              <li>String name</li>
+              <li>String relativePath</li>
+              <li>int size</li>
+              <li>String type</li>
+            </ul>
+          </div>
+          <div class="section">
+            <p>File Reader</p>
+            <ul class="section-content column2">
+              <li>int readyState</li>
+              <li>Object result</li>
+              <li>void abort()</li>
+              <li><b>readAs___(Blob blob)</b></li>
+              <li>ArrayBuffer</li>
+              <li>BinaryString</li>
+              <li>DataUrl</li>
+              <li>Text</li>
+              <li><b>EventStreamProvider</b></li>
+              <li>errorEvent</li>
+              <li>abortEvent</li>
+              <li>loadEndEvent</li>
+              <li>loadEvent</li>
+              <li>loadStartEvent</li>
+              <li>progressEvent</li>
+              <li><b>Stream on___</b></li>
+              <li>Abort</li>
+              <li>Error</li>
+              <li>Load</li>
+              <li>LoadEnd</li>
+              <li>LoadStart</li>
+              <li>Progress</li>
+            </ul>
+          </div>
+          <div class="section">
+            <p>Example</p>
+            <pre class="dart-code">
+<span class="kwd">var</span> <span class="var">reader</span> = <span class="kwd">new</span> <span class="typ">FileReader</span>();
+<span class="kwd">var</span> <span class="var">fileInput</span> = querySelector(<span class="str">'#fileInput'</span>)
+     ..onChange.listen(_onFileChange);
+
+_onFileChange(<span class="var">e</span>){
+  <span class="var">reader</span>..readAsText(fileInput.files[<span class="lit">0</span>])
+        ..onLoad.listen((<span class="var">e2</span>) {
+           print(reader.result);      
+        });
+}
+                </pre>
+          </div>
+          <div class="section">
+            <p>File Writer</p>
+            <ul class="section-content column2">
+              <li>int position</li>
+              <li>int readyStage</li>
+              <li>abort()</li>
+              <li>seek(int position)</li>
+              <li>truncate(int size)</li>
+              <li>write(Blob data</li>
+              <li><b>EventStreamProvider</b></li>
+              <li>errorEvent</li>
+              <li>abortEvent</li>
+              <li>progressEvent</li>
+              <li>writeEndEvent</li>
+              <li>writeEvent</li>
+              <li>writeStartEvent</li>
+              <li><b>Stream on___</b></li>
+              <li>Error</li>
+              <li>Abort</li>
+              <li>Progress</li>
+              <li>Write</li>
+              <li>WriteEnd</li>
+              <li>WriteStart</li>
             </ul>
           </div>
         </div>

@@ -102,16 +102,11 @@ pre {
     color: #000000;
 }
 
-/*
-#elements-section  #html-elements-section li:nth-child(n+22),
-#elements-section  #input-elements-section li:nth-child(n+8)
-{
-  text-align: center;
-}
+@media only screen and (min-width: 1200px) {
 
-#elements-section  #html-elements-section li:nth-child(n+43),
-#elements-section  #input-elements-section li:nth-child(n+15)
-{
-  text-align: right;
+	#element-section {
+		-webkit-column-break-before: always;
+		-moz-column-break-before: always;
+		column-break-before: always;
+	}
 }
-*/
