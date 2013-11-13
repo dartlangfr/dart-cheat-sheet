@@ -394,7 +394,7 @@ if (webSocket != <span class="kwd">null</span> &&
     webSocket.readyState == <span class="typ">WebSocket</span>.OPEN) {
   webSocket.send(data);
 } else {
-  <span class="kwd">print</span>(<span class="str">'WebSocket not connected'</span>);
+  print(<span class="str">'WebSocket not connected'</span>);
 }
 webSocket.onMessage.listen((<span class="typ">MessageEvent</span> e) {
   receivedData(e.data);
@@ -408,10 +408,10 @@ webSocket.onMessage.listen((<span class="typ">MessageEvent</span> e) {
             <p>Example</p>
             <pre>
 <span class="kwd">var</span> source = <span class="kwd">new</span> <span class="typ">EventSource</span>(<span class="str">'/the/url'</span>)
-  ..onError.listen((<span class="typ">Event</span> e) => <span class="kwd">print</span>(<span class="str">'Error: $e'</span>))
-  ..onOpen.listen((<span class="typ">Event</span> e) => <span class="kwd">print</span>(<span class="str">'Open'</span>))
+  ..onError.listen((<span class="typ">Event</span> e) => print(<span class="str">'Error: $e'</span>))
+  ..onOpen.listen((<span class="typ">Event</span> e) => print(<span class="str">'Open'</span>))
   ..onMessage.listen((<span class="typ">MessageEvent</span> me) =>
-          <span class="kwd">print</span>(<span class="str">'Message: ${me.data}'</span>)
+          print(<span class="str">'Message: ${me.data}'</span>)
     );
               </pre>
           </div>
@@ -472,7 +472,7 @@ window.navigator
             <p>Example</p>
             <pre>
 <span class="typ">CanvasElement</span> canvas =
-   <span class="typ">new</span> <span class="typ">CanvasElement</span>(width: <span class="lit">600</span>, height: <span class="lit">600</span>);
+   <span class="kwd">new</span> <span class="typ">CanvasElement</span>(width: <span class="lit">600</span>, height: <span class="lit">600</span>);
 <span class="typ">CanvasRenderingContext2D</span> ctx = canvas.context2D;
 <span class="typ">ImageElement</span> img = document.query(<span class="str">'img'</span>);
 
@@ -527,7 +527,7 @@ ctx.drawImage(img, <span class="lit">100</span>, <span class="lit">100</span>);
 fileInput.onChange.listen((e) {
 reader..readAsText(fileInput.files[<span class="lit">0</span>])
       ..onLoad.listen((e) {
-        <span class="kwd">print</span>(reader.result);
+        print(reader.result);
     });
 });
                 </pre>
