@@ -44,12 +44,15 @@ code {
   color: #333;
   background-color: #fff;
   border-color: #ccc;
+}
+
+.nav .btn-default {
   filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(1);
 }
 
-.btn-default.active {
+.btn-default.active, .btn-default:hover {
     filter: none !important;
     -webkit-filter: grayscale(0) !important;
 }
