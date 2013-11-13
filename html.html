@@ -405,7 +405,7 @@
       onUpgradeNeeded: _initializeDatabase)
     .then(_loadFromDB);
 }
-<span class="kwd">void</span> _initializeDatabase(<span class="typ">VersionChangeEvent</span> e) {
+_initializeDatabase(<span class="typ">VersionChangeEvent</span> e) {
   <span class="com">// Initialize your database</span>
 }
 <span class="typ">Future</span> _loadFromDB(<span class="typ">Database</span> db) {
@@ -523,13 +523,15 @@ ctx.drawImage(img, <span class="lit">100</span>, <span class="lit">100</span>);
             <p>Example</p>
             <pre>
 <span class="kwd">var</span> reader = <span class="kwd">new</span> <span class="typ">FileReader</span>();
-<span class="kwd">var</span> fileInput = querySelector(<span class="str">'#fileInput'</span>);
-fileInput.onChange.listen((e) {
-reader..readAsText(fileInput.files[<span class="lit">0</span>])
-      ..onLoad.listen((e) {
-        print(reader.result);
-    });
-});
+<span class="kwd">var</span> fileInput = querySelector(<span class="str">'#fileInput'</span>)
+     ..onChange.listen(_onFileChange);
+
+_onFileChange(Event e){
+  reader..readAsText(fileInput.files[<span class="lit">0</span>])
+        ..onLoad.listen((e) {
+           print(reader.result);      
+        });
+}
                 </pre>
           </div>
           <div class="section">
