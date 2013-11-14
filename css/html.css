@@ -1,0 +1,81 @@
+#query-dom-section {
+	background-color: #ED764A;
+}
+
+#query-dom-section  table {
+  width: 99%;
+}
+
+#http-request-section {
+	background-color: #ed79e3;
+  column-span: all;
+/*  -moz-column-span: all;
+  -ms-column-span: all;
+  -webkit-column-span: all;
+  -o-column-span: all;*/
+}
+
+#elements-section {
+	background-color: #009999;
+}
+
+#element-section {
+	background-color: #A200FF;
+}
+
+#events-section {
+	background-color: #86B32D;
+}
+
+#file-api-section {
+    background-color: #BF3030;
+}
+
+#history-section {
+    background-color: #2d9943;
+}
+
+#local-storage-section {
+	background-color: #2d3999;
+}
+
+#index-db-section {
+    background-color: #56C5FF;
+}
+
+#event-source-section {
+    background-color: #ff842e;
+}
+
+#web-socket-section {
+    background-color: #91D100; 
+}
+
+#web-rtc-section {
+    background-color: #FFE25F;
+}
+
+#canvas-section {
+  background-color: #009999;
+}
+
+#css-section {
+    background-color: #B81B6C;
+}
+
+@media only screen and (min-width: 1200px) {
+
+	#element-section, #http-request-section, #canvas-section{
+		-webkit-column-break-before: always;
+		-moz-column-break-before: always;
+		column-break-before: always;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	#css-section, #local-storage-section {
+		-webkit-column-break-before: always;
+		-moz-column-break-before: always;
+		column-break-before: always;
+	}
+}
