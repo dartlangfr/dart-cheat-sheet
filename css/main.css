@@ -172,6 +172,29 @@ pre {
   color: #000000;
 }
 
+/* String */
+.lang-html .str{color:#800000}
+/* Keyword */
+.lang-html .kwd{color:#00008b}
+/* Comment */
+.lang-html .com{color:#808080}
+/* Type */
+.lang-html .typ{color:#2b91af}
+/* Literal */
+.lang-html .lit{color:#800000}
+/* Punctuation */
+.lang-html .pun{color:#000}
+/* Plain */
+.lang-html .pln{color:#000}
+/* Tag */
+.lang-html .tag{color:#800000}
+/* Html attribute name */
+.lang-html .atn{color:#f00}
+/* Html attribute value */
+.lang-html .atv{color:#00f}
+/* Decimal */
+.lang-html .dec{color:#800080}
+
 #header, #content, #footer {
 	width: 100%;
 }
