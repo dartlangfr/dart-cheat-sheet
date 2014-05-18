@@ -49,13 +49,13 @@
           <div class="section">
             <p>HTML</p>
             <pre class="lang-html"><span class="tag">&lt;html</span><span class="pln"> </span><span class="atn">ng-app</span><span class="tag">&gt;</span><span class="pln">
-  </span><span class="tag">&lt;head&gt;</span><span class="pln">
+  </span><span class="tag">&lt;body&gt;</span><span class="pln">
     ...
     </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"packages/shadow_dom/shadow_dom.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
     </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"application/dart"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"main.dart"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
     </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"packages/browser/dart.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
-  </span><span class="tag">&lt;/head&gt;</span><span class="pln">
-  ...</span></pre>
+  </span><span class="tag">&lt;/body&gt;</span><span class="pln">
+</span><span class="tag">&lt;/html&gt;</span></pre>
           </div>
           <div class="section">
             <p>main.dart script</p>
@@ -67,6 +67,35 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
 </span><span class="pun">}</span></pre>
           </div>
         </div> 
+
+        <div id="template-section" class="section-container">
+          <p>Template directives</p>
+          <div class="section">
+            <p>ng-if / ng-unless</p>
+<pre class="lang-html prettyprint prettyprinted"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-if</span><span class="pun">=</span><span class="atv">"condition expression"</span><span class="tag">&gt;</span><span class="pln">
+  Removed from the DOM if ng-unless is falsy
+</span><span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-unless</span><span class="pun">=</span><span class="atv">"..."</span><span class="tag">&gt;</span><span class="pln">
+  Removed from the DOM if ng-unless is truthy
+</span><span class="tag">&lt;/div&gt;</span></pre>
+          </div>
+          <div class="section">
+            <p>ng-switch</p>
+<pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-switch</span><span class="pun">=</span><span class="atv">"selection"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-switch-when</span><span class="pun">=</span><span class="atv">"settings"</span><span class="tag">&gt;</span><span class="pln">Settings Div</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-switch-when</span><span class="pun">=</span><span class="atv">"home"</span><span class="tag">&gt;</span><span class="pln">Home Span</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-switch-default</span><span class="tag">&gt;</span><span class="pln">default</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></pre>
+          </div>
+          <div class="section">
+            <p>ng-repeat</p>
+<pre class="lang-html"><span class="tag">&lt;ul&gt;</span><span class="pln">
+  </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">ng-repeat</span><span class="pun">=</span><span class="atv">"item in ['foo', 'bar', 'baz']"</span><span class="tag">&gt;</span><span class="pln">
+    {{item}}
+  </span><span class="tag">&lt;/li&gt;</span><span class="pln">
+</span><span class="tag">&lt;/ul&gt;</span></pre>
+          </div>
+        </div>
       </div>
     </div>
     <div id="footer">
