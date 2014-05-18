@@ -1,0 +1,9 @@
+name: angular_dart_cheat_sheet_samples
+version: 1.0.0
+dependencies:
+  angular: any
+  browser: any
+  js: any
+
+dev_dependencies:
+  unittest: any
