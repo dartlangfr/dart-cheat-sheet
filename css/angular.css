@@ -6,6 +6,14 @@
 	background-color: #ed79e3;
 }
 
+#filter-section {
+    background-color: #86B32D;
+}
+
+#core-section {
+    background-color: #FFE25F;
+}
+
 /*#elements-section {
 	background-color: #009999;
 }
@@ -39,7 +47,7 @@
 }
 
 #web-socket-section {
-    background-color: #91D100; 
+    background-color: #91D100;
 }
 
 #web-rtc-section {
