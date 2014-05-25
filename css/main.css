@@ -409,7 +409,7 @@ div#welcome > div > div {
 
 @media print {
 	.noprint {
-		display: none ;
+		display: none !important;
 	}
 
 	body {
