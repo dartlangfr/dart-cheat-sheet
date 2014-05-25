@@ -4,3 +4,7 @@ import 'package:angular/application_factory.dart';
 main() {
   applicationFactory().run();
 }
+
+dblClickHandler() {
+  print("dblClickHandler");
+}

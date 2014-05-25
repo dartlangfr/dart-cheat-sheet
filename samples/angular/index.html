@@ -34,6 +34,12 @@
     
     <hr/>
 
+    <!-- ng-event -->
+    <button ng-click=" lastEvent = 'Click' " 
+        ng-doubleclick=" lastEvent = 'DblClick' ">
+        ng-event
+    </button> {{lastEvent}}
+
     <script src="packages/shadow_dom/shadow_dom.min.js"></script>
     <script type="application/dart" src="main.dart"></script>
     <script type="text/javascript" src="packages/browser/dart.js"></script>
