@@ -68,6 +68,25 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
           </div>
         </div>
 
+          <div id="module-section" class="section-container">
+              <p>Module</p>
+              <div class="section">
+                  <pre class="dart-code">
+<span class="kwd">class</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Module</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="typ">MyAppModule</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    type</span><span class="pun">(</span><span class="typ">RecipeBookController</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  applicationFactory</span><span class="pun">()</span><span class="pln">
+      </span><span class="pun">.</span><span class="pln">addModule</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pun">())</span><span class="pln">
+      </span><span class="pun">.</span><span class="pln">run</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">}</span>
+                  </pre>
+              </div>
+          </div>
+
         <div id="template-section" class="section-container">
           <p>Template directives</p>
           <div class="section">
@@ -197,7 +216,7 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
           </div>
           <div class="section">
             <p>Examples</p>
-            <pre class="lang-html"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">ng-click</span><span class="pun">=</span><span class="atv">" lastEvent = 'Click' "</span><span class="pln"> 
+            <pre class="lang-html"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">ng-click</span><span class="pun">=</span><span class="atv">" lastEvent = 'Click' "</span><span class="pln">
     </span><span class="atn">ng-doubleclick</span><span class="pun">=</span><span class="atv">" lastEvent = 'DblClick' "</span><span class="tag">&gt;</span><span class="pln">
 </span><span class="tag">&lt;/button&gt;</span></pre>
           </div>
