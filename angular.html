@@ -1,150 +1,150 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Dart Cheat Sheet [AngularDart]</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="./favicon.ico" rel="icon" type="image/x-icon" />
-    <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/angular.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700%7CAnton' rel='stylesheet' type='text/css'>
-    <meta name="description" content="The cheat sheet references main classes and methods from Dart SDK.">
-    <meta name="author" content="Guillaume Girou, Nicolas François, Vincent Bostoen">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!-- Google Analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<head>
+  <title>Dart Cheat Sheet [AngularDart]</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="./favicon.ico" rel="icon" type="image/x-icon" />
+  <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/angular.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700%7CAnton' rel='stylesheet' type='text/css'>
+  <meta name="description" content="The cheat sheet references main classes and methods from Dart SDK.">
+  <meta name="author" content="Guillaume Girou, Nicolas François, Vincent Bostoen">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-42028125-2', 'dartlangfr.net');
-      ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <div id="header">
-      <h1>
-        <img alt="Dart Logo" src="img/dart-logo.png"/>
-        dart:html
-        <span class="noprint" style="display: inline">
-          <span class="g-plusone" data-href="http://dartlangfr.net/dart-cheat-sheet/"></span>
-        </span>
-      </h1>
-      <div class="nav">
-        <ul>
-          <li>
-            <div class="btn-group">
-              <a href="core.html" class="btn btn-default"><img src="img/core32.png" alt="Core"> Core</a>
-              <a href="html.html" class="btn btn-default active"><img src="img/html32.png" alt="HTML"> HTML</a>
-            </div>
-          </li>
-        </ul>
-      </div>
+  ga('create', 'UA-42028125-2', 'dartlangfr.net');
+  ga('send', 'pageview');
+  </script>
+</head>
+<body>
+  <div id="header">
+    <h1>
+      <img alt="Dart Logo" src="img/dart-logo.png"/>
+      dart:html
+      <span class="noprint" style="display: inline">
+        <span class="g-plusone" data-href="http://dartlangfr.net/dart-cheat-sheet/"></span>
+      </span>
+    </h1>
+    <div class="nav">
+      <ul>
+        <li>
+          <div class="btn-group">
+            <a href="core.html" class="btn btn-default"><img src="img/core32.png" alt="Core"> Core</a>
+            <a href="html.html" class="btn btn-default active"><img src="img/html32.png" alt="HTML"> HTML</a>
+          </div>
+        </li>
+      </ul>
     </div>
-    <div id="content">
-      <div class="grid">
-        <div id="bootstrap-section" class="section-container">
-          <p>Bootstrap</p>
-          <div class="section">
-            <p>HTML</p>
-            <pre class="lang-html"><span class="tag">&lt;html</span><span class="pln"> </span><span class="atn">ng-app</span><span class="tag">&gt;</span><span class="pln">
-  </span><span class="tag">&lt;body&gt;</span><span class="pln">
-    ...
-    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"packages/shadow_dom/shadow_dom.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
-    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"application/dart"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"main.dart"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+  </div>
+  <div id="content">
+    <div class="grid">
+      <div id="bootstrap-section" class="section-container">
+        <p>Bootstrap</p>
+        <div class="section">
+          <p>HTML</p>
+          <pre class="lang-html"><span class="tag">&lt;html</span><span class="pln"> </span><span class="atn">ng-app</span><span class="tag">&gt;</span><span class="pln">
+          </span><span class="tag">&lt;body&gt;</span><span class="pln">
+          ...
+        </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"packages/shadow_dom/shadow_dom.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+      </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"application/dart"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"main.dart"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
     </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"packages/browser/dart.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
   </span><span class="tag">&lt;/body&gt;</span><span class="pln">
 </span><span class="tag">&lt;/html&gt;</span></pre>
-          </div>
-          <div class="section">
-            <p>main.dart script</p>
-            <pre class="dart-code"><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:angular/angular.dart'</span><span class="pun">;</span><span class="pln">
-</span><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:angular/application_factory.dart'</span><span class="pun">;</span><span class="pln">
+</div>
+<div class="section">
+  <p>main.dart script</p>
+  <pre class="dart-code"><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:angular/angular.dart'</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:angular/application_factory.dart'</span><span class="pun">;</span><span class="pln">
 
-main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
   applicationFactory</span><span class="pun">().</span><span class="pln">run</span><span class="pun">();</span><span class="pln">
 </span><span class="pun">}</span></pre>
-          </div>
-        </div>
+</div>
+</div>
 
-          <div id="module-section" class="section-container">
-              <p>Module</p>
-              <div class="section">
-                  <pre class="dart-code">
-<span class="kwd">class</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Module</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  </span><span class="typ">MyAppModule</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+<div id="module-section" class="section-container">
+  <p>Module</p>
+  <div class="section">
+    <pre class="dart-code">
+      <span class="kwd">class</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Module</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="typ">MyAppModule</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
     type</span><span class="pun">(</span><span class="typ">RecipeBookController</span><span class="pun">);</span><span class="pln">
     type</span><span class="pun">(</span><span class="typ">CategoryFilter</span><span class="pun">);</span><span class="pln">
   </span><span class="pun">}</span><span class="pln">
 </span><span class="pun">}</span><span class="pln">
 
 main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  applicationFactory</span><span class="pun">()</span><span class="pln">
-      </span><span class="pun">.</span><span class="pln">addModule</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pun">())</span><span class="pln">
-      </span><span class="pun">.</span><span class="pln">run</span><span class="pun">();</span><span class="pln">
+applicationFactory</span><span class="pun">()</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">addModule</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pun">())</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">run</span><span class="pun">();</span><span class="pln">
 </span><span class="pun">}</span>
-                  </pre>
-              </div>
-          </div>
+</pre>
+</div>
+</div>
 
-        <div id="template-section" class="section-container">
-          <p>Template directives</p>
-          <div class="section">
-            <p>ng-if / ng-unless</p>
-<pre class="lang-html prettyprint prettyprinted"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-if</span><span class="pun">=</span><span class="atv">"condition expression"</span><span class="tag">&gt;</span><span class="pln">
-  Removed from the DOM if ng-unless is falsy
-</span><span class="tag">&lt;/div&gt;</span>
-<span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-unless</span><span class="pun">=</span><span class="atv">"..."</span><span class="tag">&gt;</span><span class="pln">
-  Removed from the DOM if ng-unless is truthy
-</span><span class="tag">&lt;/div&gt;</span></pre>
-          </div>
-          <div class="section">
-            <p>ng-switch</p>
-<pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-switch</span><span class="pun">=</span><span class="atv">"selection"</span><span class="tag">&gt;</span><span class="pln">
+<div id="template-section" class="section-container">
+  <p>Template directives</p>
+  <div class="section">
+    <p>ng-if / ng-unless</p>
+    <pre class="lang-html prettyprint prettyprinted"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-if</span><span class="pun">=</span><span class="atv">"condition expression"</span><span class="tag">&gt;</span><span class="pln">
+      Removed from the DOM if ng-unless is falsy
+    </span><span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-unless</span><span class="pun">=</span><span class="atv">"..."</span><span class="tag">&gt;</span><span class="pln">
+    Removed from the DOM if ng-unless is truthy
+  </span><span class="tag">&lt;/div&gt;</span></pre>
+</div>
+<div class="section">
+  <p>ng-switch</p>
+  <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-switch</span><span class="pun">=</span><span class="atv">"selection"</span><span class="tag">&gt;</span><span class="pln">
   </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-switch-when</span><span class="pun">=</span><span class="atv">"settings"</span><span class="tag">&gt;</span><span class="pln">Settings Div</span><span class="tag">&lt;/div&gt;</span><span class="pln">
-  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-switch-when</span><span class="pun">=</span><span class="atv">"home"</span><span class="tag">&gt;</span><span class="pln">Home Span</span><span class="tag">&lt;/div&gt;</span><span class="pln">
-  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-switch-default</span><span class="tag">&gt;</span><span class="pln">default</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-switch-when</span><span class="pun">=</span><span class="atv">"home"</span><span class="tag">&gt;</span><span class="pln">Home Span</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-switch-default</span><span class="tag">&gt;</span><span class="pln">default</span><span class="tag">&lt;/div&gt;</span><span class="pln">
 </span><span class="tag">&lt;/div&gt;</span></pre>
-          </div>
-          <div class="section">
-            <p>ng-repeat</p>
-<pre class="lang-html"><span class="tag">&lt;ul&gt;</span><span class="pln">
+</div>
+<div class="section">
+  <p>ng-repeat</p>
+  <pre class="lang-html"><span class="tag">&lt;ul&gt;</span><span class="pln">
   </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">ng-repeat</span><span class="pun">=</span><span class="atv">"item in ['foo', 'bar', 'baz']"</span><span class="tag">&gt;</span><span class="pln">
-    {{item}}
-  </span><span class="tag">&lt;/li&gt;</span><span class="pln">
+  {{item}}
+</span><span class="tag">&lt;/li&gt;</span><span class="pln">
 </span><span class="tag">&lt;/ul&gt;</span></pre>
-          </div>
-        </div>
+</div>
+</div>
 
-        <div id="core-section" class="section-container">
-              <p>Core</p>
-              <div class="section">
-                  <p>Controller</p>
-<pre class="dart-code"><span class="lit">@Controller</span><span class="pun">(</span><span class="pln">
-    selector</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[recipe-book]'</span><span class="pun">,</span><span class="pln">
-    publishAs</span><span class="pun">:</span><span class="pln"> </span><span class="str">'ctrl'</span><span class="pun">)</span><span class="pln">
-</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">RecipeBookController</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">}</span></pre>
-              </div>
-              <div class="section">
-                <p>Http Service</p>
-<pre class="dart-code"><span class="kwd">class</span><span class="pln"> </span><span class="typ">RecipeBookController</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">Http</span><span class="pln"> _http</span><span class="pun">;</span><span class="pln">
+<div id="core-section" class="section-container">
+  <p>Core</p>
+  <div class="section">
+    <p>Controller</p>
+    <pre class="dart-code"><span class="lit">@Controller</span><span class="pun">(</span><span class="pln">
+      selector</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[recipe-book]'</span><span class="pun">,</span><span class="pln">
+      publishAs</span><span class="pun">:</span><span class="pln"> </span><span class="str">'ctrl'</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">RecipeBookController</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">}</span></pre>
+  </div>
+  <div class="section">
+    <p>Http Service</p>
+    <pre class="dart-code"><span class="kwd">class</span><span class="pln"> </span><span class="typ">RecipeBookController</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">Http</span><span class="pln"> _http</span><span class="pun">;</span><span class="pln">
   </span><span class="typ">RecipeBookController</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">_http</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    _loadData</span><span class="pun">();</span><span class="pln">
-  </span><span class="pun">}</span>
+  _loadData</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">}</span>
 
-  <span class="kwd">void</span><span class="pln"> _loadData</span><span class="pun">()</span><span class="pun">{</span><span class="pln">
-  _http</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'recipes.json'</span><span class="pun">)</span><span class="pln">
-    </span><span class="pun">.</span><span class="kwd">then</span><span class="pun">((</span><span class="typ">HttpResponse</span><span class="pln"> response</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span>
-      <span class="pun">...</span><span class="pln">
-    </span><span class="pun">});</span><span class="pln">
-  </span><span class="pun">}</span>
+<span class="kwd">void</span><span class="pln"> _loadData</span><span class="pun">()</span><span class="pun">{</span><span class="pln">
+_http</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'recipes.json'</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">.</span><span class="kwd">then</span><span class="pun">((</span><span class="typ">HttpResponse</span><span class="pln"> response</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span>
+<span class="pun">...</span><span class="pln">
+</span><span class="pun">});</span><span class="pln">
+</span><span class="pun">}</span>
 <span class="pun">}</span>
 
 </pre>
-              </div>
-        </div>
+</div>
+</div>
 
           <!--
           <div id="filter-section" class="section-container">
@@ -154,7 +154,7 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
                   <pre class="lang-html"></pre>
               </div>
           </div>
-          -->
+        -->
 
         <div id="events-section" class="section-container">
           <p>Event directives</p>
@@ -236,28 +236,79 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
           <div class="section">
             <p>Examples</p>
             <pre class="lang-html"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">ng-click</span><span class="pun">=</span><span class="atv">" lastEvent = 'Click' "</span><span class="pln">
-    </span><span class="atn">ng-doubleclick</span><span class="pun">=</span><span class="atv">" lastEvent = 'DblClick' "</span><span class="tag">&gt;</span><span class="pln">
-</span><span class="tag">&lt;/button&gt;</span></pre>
-          </div>
+            </span><span class="atn">ng-doubleclick</span><span class="pun">=</span><span class="atv">" lastEvent = 'DblClick' "</span><span class="tag">&gt;</span><span class="pln">
+          </span><span class="tag">&lt;/button&gt;</span></pre>
         </div>
+      </div>
 
-      </div>
+<div id="filters-section" class="section-container">
+  <p>Formatters</p>
+    <div class="section">
+    <p>Built-in Formatters</p>
+    <table>
+      <tr>
+        <td>arrayify</td>
+      </tr>
+      <tr>
+        <td>currency[:symbol[:leading]]</td>
+      </tr>
+      <tr>
+        <td>date[:format]</td>
+      </tr>
+      <tr>
+        <td>filter:expression[:comparator]</td>
+      </tr>
+      <tr>
+        <td>json</td>
+      </tr>
+      <tr>
+        <td>limitTo:number</td>
+      </tr>
+      <tr>
+        <td>lowercase</td>
+      </tr>
+      <tr>
+        <td>number[:fractionSize]</td>
+      </tr>
+      <tr>
+        <td>orderBy:predicate[:true]</td>
+      </tr>
+      <tr>
+        <td>stringify</td>
+      </tr>
+      <tr>
+        <td>uppercase</td>
+      </tr>
+    </table>
+</div>
+    <div class="section">
+      <p>Usage</p>
+      <pre>{{ item in items | limitTo:2 }}</pre>
     </div>
-    <div id="footer">
-      <a href="https://plus.google.com/115816334172157652403">
-        <img src="img/dartlangfr.png" alt="Dartlang [FR] - &#661;&#3663;&#814;&#3663;&#660;">
-      </a>
-      <div>
-        +Made by <a href="http://plus.google.com/115049522200141162219"><span>Guillaume Girou</span></a>, <a href="http://plus.google.com/106226789128312528511"><span>Nicolas François</span></a> and <a href="http://plus.google.com/109253530406296308866"><span>Vincent Bostoen</span></a> from
-        <a href="https://plus.google.com/115816334172157652403"><span>Dartlang [FR] - &#661;&#3663;&#814;&#3663;&#660;</span></a><br>
-        <em>+Version 1.0.0 - 20131114</em><br>
-      </div>
+  <div class="section">
+    <p>Custom formaters</p>
+ <pre>@Formatter(name: 'categoryfilter')
+class CategoryFilter { ... }</pre>
+  </div>
+</div>
+
     </div>
-    <!-- Google+ +1 button. -->
-    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-      {parsetags: 'explicit'}
-    </script>
-    <script type="text/javascript">gapi.plusone.go("header");</script>
-  </body>
+  </div>
+  <div id="footer">
+    <a href="https://plus.google.com/115816334172157652403">
+      <img src="img/dartlangfr.png" alt="Dartlang [FR] - &#661;&#3663;&#814;&#3663;&#660;">
+    </a>
+    <div>
+      +Made by <a href="http://plus.google.com/115049522200141162219"><span>Guillaume Girou</span></a>, <a href="http://plus.google.com/106226789128312528511"><span>Nicolas François</span></a> and <a href="http://plus.google.com/109253530406296308866"><span>Vincent Bostoen</span></a> from
+      <a href="https://plus.google.com/115816334172157652403"><span>Dartlang [FR] - &#661;&#3663;&#814;&#3663;&#660;</span></a><br>
+      <em>+Version 1.0.0 - 20131114</em><br>
+    </div>
+  </div>
+  <!-- Google+ +1 button. -->
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+  {parsetags: 'explicit'}
+  </script>
+  <script type="text/javascript">gapi.plusone.go("header");</script>
+</body>
 </html>
 
