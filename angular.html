@@ -116,7 +116,21 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
 </span><span class="tag">&lt;/ul&gt;</span></pre>
           </div>
         </div>
-
+<div id="member-section" class="section-container">
+  <p>Member access</p>
+    <div class="section">
+    <ul>
+      <li>String :<br/>
+<pre>&lt;p ng-class=&quot;ctrl.style&quot;&gt;Setting classes using string syntax&lt;/p&gt;<pre></li>
+      <li>List :<br/>
+<pre>&lt;div ng-class=&quot;[ctrl.style1, ctrl.style2, ctrl.style3]&quot;&gt;</li></pre>
+      <li>Map :<br/>
+<pre>&lt;input type=&quot;checkbox&quot; ng-model=&quot;ctrl.classesMap['bold']&quot;&gt;</li></pre>
+      <li>Function call :<br/>
+<pre>&lt;button ng-click='toggle()'&gt;{{button}}&lt;/button&gt;</li></pre>s
+    </ul>
+</div>
+</div>
         <div id="core-section" class="section-container">
               <p>Core</p>
               <div class="section">
@@ -283,7 +297,7 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
     <div class="section">
       <p>Usage</p>
       <pre>{{ item in items | limitTo:2 }}</pre>
-      <pre<li ng-repeat="item in items | limitTo:2">{{item}}</li></pre>
+      <pre>&lt;li ng-repeat=&quot;item in items | limitTo:2&quot;&gt;{{item}}&lt;/li&gt;</pre>
     </div>
   <div class="section">
     <p>Custom formaters</p>
