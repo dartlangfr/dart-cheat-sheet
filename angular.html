@@ -240,8 +240,8 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
 </span><span class="tag">&lt;/button&gt;</span></pre>
           </div>
         </div>
-<div id="filters-section" class="section-container">
-  <p>Formatters</p>
+<div id="formatters-section" class="section-container">
+  <p>Formatters /  Filters</p>
     <div class="section">
     <p>Built-in Formatters</p>
     <table>
@@ -283,11 +283,12 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
     <div class="section">
       <p>Usage</p>
       <pre>{{ item in items | limitTo:2 }}</pre>
+      <pre<li ng-repeat="item in items | limitTo:2">{{item}}</li></pre>
     </div>
   <div class="section">
     <p>Custom formaters</p>
- <pre>@Formatter(name: 'categoryfilter')
-class CategoryFilter { ... }</pre>
+ <pre>@Formatter(name: 'camelCase')
+class CamelCaseFormatter { ... }</pre>
   </div>
 </div>
       </div>
