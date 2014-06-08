@@ -75,8 +75,16 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
 <span class="kwd">class</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Module</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
   </span><span class="typ">MyAppModule</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
     type</span><span class="pun">(</span><span class="typ">RecipeBookController</span><span class="pun">);</span><span class="pln">
+    type</span><span class="pun">(</span><span class="typ">RatingComponent</span><span class="pun">);</span><span class="pln">
+    type</span><span class="pun">(</span><span class="typ">Tooltip</span><span class="pun">);</span><span class="pln">
     type</span><span class="pun">(</span><span class="typ">CategoryFilter</span><span class="pun">);</span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
+    type</span><span class="pun">(</span><span class="typ">SearchRecipeComponent</span><span class="pun">);</span><span class="pln">
+    type</span><span class="pun">(</span><span class="typ">ViewRecipeComponent</span><span class="pun">);</span><span class="pln">
+    type</span><span class="pun">(</span><span class="typ">QueryService</span><span class="pun">);</span><span class="pln">
+    value</span><span class="pun">(</span><span class="typ">NgRoutingUsePushState</span><span class="pun">,&nbsp;</span><span class="typ">recipeBookRouteInitializer</span><span class="pun">);</span><span class="kwd">
+    factory</span><span class="pun">(</span><span class="typ">NgRoutingUsePushState</span><span class="pun">,
+           (_) => </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">NgRoutingUsePushState</span><span class="pun">.</span><span class="typ">value</span><span class="pun">(</span><span class="kwd">false</span><span class="pun">);</span>
+    <span class="pun">}</span><span class="pln">
 </span><span class="pun">}</span><span class="pln">
 
 main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
@@ -132,24 +140,20 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
 </div>
 </div>
         <div id="core-section" class="section-container">
-              <p>Core</p>
-              <div class="section">
-                  <p>Controller</p>
+            <p>Core</p>
+            <div class="section">
+                <p>Controller</p>
 <pre class="dart-code"><span class="lit">@Controller</span><span class="pun">(</span><span class="pln">
     selector</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[recipe-book]'</span><span class="pun">,</span><span class="pln">
     publishAs</span><span class="pun">:</span><span class="pln"> </span><span class="str">'ctrl'</span><span class="pun">)</span><span class="pln">
 </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">RecipeBookController</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">}</span></pre>
-              </div>
-              <div class="section">
+            </div>
+            <div class="section">
                 <p>Http Service</p>
 <pre class="dart-code"><span class="kwd">class</span><span class="pln"> </span><span class="typ">RecipeBookController</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
   </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">Http</span><span class="pln"> _http</span><span class="pun">;</span><span class="pln">
-  </span><span class="typ">RecipeBookController</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">_http</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    _loadData</span><span class="pun">();</span><span class="pln">
-  </span><span class="pun">}</span>
-
-  <span class="kwd">void</span><span class="pln"> _loadData</span><span class="pun">()</span><span class="pun">{</span><span class="pln">
-  _http</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'recipes.json'</span><span class="pun">)</span><span class="pln">
+  </span><span class="typ">RecipeBookController</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">http</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span>
+  http</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'recipes.json'</span><span class="pun">)</span><span class="pln">
     </span><span class="pun">.</span><span class="kwd">then</span><span class="pun">((</span><span class="typ">HttpResponse</span><span class="pln"> response</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span>
       <span class="pun">...</span><span class="pln">
     </span><span class="pun">});</span><span class="pln">
@@ -157,7 +161,7 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
 <span class="pun">}</span>
 
 </pre>
-              </div>
+            </div>
         </div>
 
           <!--
