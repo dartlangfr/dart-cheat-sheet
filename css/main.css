@@ -133,42 +133,42 @@ pre {
 }
 
 /* Type */
-.dart-code .typ {
+.lang-dart .typ {
   color: #2b91af;
 }
 
 /* String */
-.dart-code .str {
+.lang-dart .str {
   color: #800000;
 }
 
 /* Keyword */
-.dart-code .kwd {
+.lang-dart .kwd {
   color: #00008b;
 }
 
 /* Literal */
-.dart-code .lit {
+.lang-dart .lit {
   color: #800000;
 }
 
 /* Comment */
-.dart-code .com {
+.lang-dart .com {
   color: gray;
 }
 
 /* Variable */
-.dart-code .var {
+.lang-dart .var {
   color: #7F1294;
 }
 
 /* Plain */
-.dart-code .pln {
+.lang-dart .pln {
   color: #000000;
 }
 
 /* Punctuation */
-.dart-code .pun {
+.lang-dart .pun {
   color: #000000;
 }
 

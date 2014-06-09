@@ -59,7 +59,7 @@
           </div>
           <div class="section">
             <p>main.dart script</p>
-            <pre class="dart-code"><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:angular/angular.dart'</span><span class="pun">;</span><span class="pln">
+            <pre class="lang-dart"><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:angular/angular.dart'</span><span class="pun">;</span><span class="pln">
 </span><span class="kwd">import</span><span class="pln"> </span><span class="str">'package:angular/application_factory.dart'</span><span class="pun">;</span><span class="pln">
 
 main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
@@ -71,7 +71,7 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
           <div id="module-section" class="section-container">
               <p>Module</p>
               <div class="section">
-                  <pre class="dart-code">
+                  <pre class="lang-dart">
 <span class="kwd">class</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Module</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
   </span><span class="typ">MyAppModule</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
     type</span><span class="pun">(</span><span class="typ">RecipeBookController</span><span class="pun">);</span><span class="pln">
@@ -143,14 +143,14 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
             <p>Core</p>
             <div class="section">
                 <p>Controller</p>
-<pre class="dart-code"><span class="lit">@Controller</span><span class="pun">(</span><span class="pln">
+<pre class="lang-dart"><span class="lit">@Controller</span><span class="pun">(</span><span class="pln">
     selector</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[recipe-book]'</span><span class="pun">,</span><span class="pln">
     publishAs</span><span class="pun">:</span><span class="pln"> </span><span class="str">'ctrl'</span><span class="pun">)</span><span class="pln">
 </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">RecipeBookController</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">}</span></pre>
             </div>
             <div class="section">
                 <p>Http Service</p>
-<pre class="dart-code"><span class="kwd">class</span><span class="pln"> </span><span class="typ">RecipeBookController</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+<pre class="lang-dart"><span class="kwd">class</span><span class="pln"> </span><span class="typ">RecipeBookController</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
   </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">Http</span><span class="pln"> _http</span><span class="pun">;</span><span class="pln">
   </span><span class="typ">RecipeBookController</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">http</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span>
   http</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'recipes.json'</span><span class="pun">)</span><span class="pln">
@@ -309,6 +309,46 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
 class CamelCaseFormatter { ... }</pre>
   </div>
 </div>
+        <div id="model-section" class="section-container">
+          <p>Model directives</p>
+          <div class="section">
+            <p>Checkbox</p>
+<pre class="lang-html"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"checkbox"</span><span class="pln">
+  </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"expr"</span><span class="pln">
+  [</span><span class="atn">ng-true-value</span><span class="pun">=</span><span class="atv">"t_expr"</span><span class="pln">]
+  [</span><span class="atn">ng-false-value</span><span class="pun">=</span><span class="atv">"f_expr"</span><span class="pln">]</span><span class="tag">&gt;</span></pre>
+          </div>
+          <div class="section">
+            <p>Date / Time</p>
+<pre class="lang-html"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"date|datetime|datetime-local|month|time|week"</span><span class="pln">
+  [</span><span class="atn">ng-bind-type</span><span class="pun">=</span><span class="atv">"date"</span><span class="pln">]
+  </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"myModel"</span><span class="tag">&gt;</span></pre>
+          </div>
+          <div class="section">
+            <p>Numbers</p>
+<pre class="lang-html"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"number|range"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"myModel"</span><span class="tag">&gt;</span></pre>
+          </div>
+          <div class="section">
+            <p>Radio</p>
+<pre class="lang-html"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"radio"</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"foo"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"category"</span><span class="tag">&gt;</span></pre>
+          </div>
+          <div class="section">
+            <p>Select</p>
+<pre class="lang-html"><span class="tag">&lt;select</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">""</span><span class="tag">&gt;</span><span class="pln">
+  ...
+</span><span class="tag">&lt;/select&gt;</span></pre>
+          </div>
+          <div class="section">
+            <p>Texts</p>
+<pre class="lang-html"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text|url|password|email|search|tel"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"myModel"</span><span class="tag">&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;textarea</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"myModel"</span><span class="tag">&gt;&lt;/textarea&gt;</span></pre>
+          </div>
+          <div class="section">
+            <p>Content editable</p>
+<pre class="lang-html"><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">contenteditable</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"name"</span><span class="tag">&gt;</span></pre>          
+          </div>
+        </div>
       </div>
     </div>
     <div id="footer">
