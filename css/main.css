@@ -173,27 +173,27 @@ pre {
 }
 
 /* String */
-.lang-html .str{color:#800000}
+.lang-html .str, .lang-css .str{color:#800000}
 /* Keyword */
-.lang-html .kwd{color:#00008b}
+.lang-html .kwd, .lang-css .kwd{color:#00008b}
 /* Comment */
-.lang-html .com{color:#808080}
+.lang-html .com, .lang-css .com{color:#808080}
 /* Type */
-.lang-html .typ{color:#2b91af}
+.lang-html .typ, .lang-css .typ{color:#2b91af}
 /* Literal */
-.lang-html .lit{color:#800000}
+.lang-html .lit, .lang-css .lit{color:#800000}
 /* Punctuation */
-.lang-html .pun{color:#000}
+.lang-html .pun, .lang-css .pun{color:#000}
 /* Plain */
-.lang-html .pln{color:#000}
+.lang-html .pln, .lang-css .pln{color:#000}
 /* Tag */
-.lang-html .tag{color:#800000}
+.lang-html .tag, .lang-css .tag{color:#800000}
 /* Html attribute name */
-.lang-html .atn{color:#f00}
+.lang-html .atn, .lang-css .atn{color:#f00}
 /* Html attribute value */
-.lang-html .atv{color:#00f}
+.lang-html .atv, .lang-css .atv{color:#00f}
 /* Decimal */
-.lang-html .dec{color:#800080}
+.lang-html .dec, .lang-css .dec{color:#800080}
 
 #header, #content, #footer {
 	width: 100%;

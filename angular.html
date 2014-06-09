@@ -121,6 +121,14 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
   </span><span class="tag">&lt;/li&gt;</span><span class="pln">
 </span><span class="tag">&lt;/ul&gt;</span></pre>
           </div>
+          <div class="section">
+            <p>ng-bind / ng-bind-html / ng-bind-template</p>
+<pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-bind</span><span class="pun">=</span><span class="atv">"expression"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-bind-html</span><span class="pun">=</span><span class="atv">"expression"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-bind-template</span><span class="pun">=</span><span class="atv">"{{salutation}} {{name}}!"</span><span class="tag">&gt;</span></pre>
+          </div>
         </div>
 <div id="member-section" class="section-container">
   <p>Member access</p>
@@ -352,17 +360,20 @@ class CamelCaseFormatter { ... }</pre>
           <p>Attribute directives</p>
           <div class="section">
             <p>Source attributes</p>
+            <div class="section-content">
+              <pre class="lang-html"><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">ng-src</span><span class="pun">=</span><span class="atv">"{{username}}.png"</span><span class="tag">&gt;</span><span class="pln">.</span></pre>
+            </div>
             <ul class="section-content column3">
               <li>ng-href</li>
               <li>ng-src</li>
               <li>ng-srcset</li>
             </ul>
-            <div class="section-content">
-              <pre class="lang-html"><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">ng-src</span><span class="pun">=</span><span class="atv">"{{username}}.png"</span><span class="tag">&gt;</span><span class="pln">.</span></pre>
-            </div>
           </div>
           <div class="section">
             <p>Boolean attributes</p>
+            <div class="section-content">
+              <pre class="lang-html"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">ng-disabled</span><span class="pun">=</span><span class="atv">"{{false}}"</span><span class="tag">&gt;</span></pre>
+            </div>
             <ul class="section-content column3">
               <li>ng-checked</li>
               <li>ng-disabled</li>
@@ -372,15 +383,48 @@ class CamelCaseFormatter { ... }</pre>
               <li>ng-required</li>
               <li>ng-selected</li>
             </ul>
-            <div class="section-content">
-              <pre class="lang-html"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">ng-disabled</span><span class="pun">=</span><span class="atv">"{{false}}"</span><span class="tag">&gt;</span></pre>
-            </div>
           </div>
           <div class="section">
             <p>Other attributes</p>
 <pre class="lang-html"><span class="tag">&lt;svg&gt;</span><span class="pln">
   </span><span class="tag">&lt;circle</span><span class="pln"> </span><span class="atn">ng-attr-cx</span><span class="pun">=</span><span class="atv">"{{cx}}"</span><span class="tag">&gt;&lt;/circle&gt;</span><span class="pln">
 </span><span class="tag">&lt;/svg&gt;</span></pre>
+          </div>
+        </div>
+        <div id="style-section" class="section-container">
+          <p>Style directives</p>
+          <div class="section">
+            <p>ng-base-css</p>
+            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-base-css</span><span class="pun">=</span><span class="atv">"my_application.css"</span><span class="tag">&gt;</span></pre>
+          </div>
+          <div class="section">
+            <p>ng-class</p>
+<pre class="lang-html"><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">ng-class</span><span class="pun">=</span><span class="atv">"style"</span><span class="tag">&gt;</span><span class="pln">String Syntax</span><span class="tag">&lt;/p&gt;</span></pre>
+<pre class="lang-html"><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">ng-class</span><span class="pun">=</span><span class="atv">"[style1, style2, style3]"</span><span class="tag">&gt;</span><span class="pln">Array Syntax</span><span class="tag">&lt;/p&gt;</span></pre>
+<pre class="lang-html"><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">ng-class</span><span class="pun">=</span><span class="atv">"{
+    'text-remove': deleted,
+    'strong': bold,
+    'alert': caution}"</span><span class="tag">&gt;</span><span class="pln">Map Syntax</span><span class="tag">&lt;/p&gt;</span></pre>
+          </div>
+          <div class="section">
+            <p>ng-style</p>
+            <pre class="lang-html"><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">ng-style</span><span class="pun">=</span><span class="atv">"{color: 'red'}"</span><span class="tag">&gt;</span><span class="pln">Sample Text</span><span class="tag">&lt;/span&gt;</span></pre>
+          </div>
+          <div class="section">
+            <p>ng-class-odd / ng-class-even</p>
+<pre class="lang-html"><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">ng-repeat</span><span class="pun">=</span><span class="atv">"name in ['John', 'Mary', 'Cate', 'Suz']"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">ng-class-odd</span><span class="pun">=</span><span class="atv">" 'odd' "</span><span class="pln"> </span><span class="atn">ng-class-even</span><span class="pun">=</span><span class="atv">" 'even' "</span><span class="tag">&gt;</span><span class="pln">
+    {{name}}
+  </span><span class="tag">&lt;/span&gt;</span><span class="pln">
+</span><span class="tag">&lt;/li&gt;</span></pre>
+          </div>
+          <div class="section">
+            <p>ng-cloak</p>
+<pre class="lang-css"><span class="pun">[</span><span class="pln">ng-cloak</span><span class="pun">],</span><span class="pln"> </span><span class="pun">[</span><span class="pln">data-ng-cloak</span><span class="pun">],</span><span class="pln"> </span><span class="pun">.</span><span class="pln">ng-cloak </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">display</span><span class="pun">:</span><span class="pln"> none </span><span class="kwd">!important</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+<pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-cloak</span><span class="tag">&gt;</span></pre>
           </div>
         </div>
       </div>
