@@ -131,19 +131,17 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
           </div>
           <div class="section">
             <p>ng-pluralize</p>
-            <pre>< ng-pluralize count="personCount"
-              when="{'0': 'Nobody is viewing.',
-                     'one': '1 person is viewing.',
-                     'other': '{} people are viewing.'}">
-< /ng-pluralize>
-            </pre>
+<pre class="lang-html"><span class="tag">&lt;ng-pluralize</span><span class="pln"> </span><span class="atn">count</span><span class="pun">=</span><span class="atv">"personCount"</span><span class="pln">
+          </span><span class="atn">when</span><span class="pun">=</span><span class="atv">"{'0': 'Nobody is viewing.',
+                 'one': '1 person is viewing.',
+                 'other': '{} people are viewing.'}"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="tag">&lt;/ng-pluralize&gt;</span></pre>
           </div>
           <div class="section">
             <p>ng-show / ng-hide</p>
-            <pre>< div ng-show="myValue">< /div>
+            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-show</span><span class="pun">=</span><span class="atv">"myValue"</span><span class="tag">&gt;&lt;/div&gt;</span></pre>
             </pre>
-            <pre>< div ng-show="myValue" class="ng-hide">< /div>
-            </pre>
+            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-show</span><span class="pun">=</span><span class="atv">"myValue"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"ng-hide"</span><span class="tag">&gt;&lt;/div&gt;</span></pre>
           </div>
         </div>
         <div id="routing-section" class="section-container">
@@ -179,19 +177,19 @@ class MyAppModule extends Module {
   <p>Member access</p>
     <div class="section">
     <p>String :</p>
-<pre>&lt;p ng-class=&quot;ctrl.style&quot;&gt;Setting classes using string syntax&lt;/p&gt;<pre>
+<pre class="lang-html"><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">ng-class</span><span class="pun">=</span><span class="atv">"ctrl.style"</span><span class="tag">&gt;</span><span class="pln">Setting classes using string syntax</span><span class="tag">&lt;/p&gt;</span></pre>
 </div>
 <div class="section">
       <p>List :</p>
-<pre>&lt;div ng-class=&quot;[ctrl.style1, ctrl.style2, ctrl.style3]&quot;&gt;</pre>
+<pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-class</span><span class="pun">=</span><span class="atv">"[ctrl.style1, ctrl.style2, ctrl.style3]"</span><span class="tag">&gt;</span></pre>
 </div>
 <div class="section">
       <p>Map :</p>
-<pre>&lt;input type=&quot;checkbox&quot; ng-model=&quot;ctrl.classesMap['bold']&quot;&gt;</pre>
+<pre class="lang-html"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"checkbox"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"ctrl.classesMap['bold']"</span><span class="tag">&gt;</span></pre>
 </div>
 <div class="section">
       <p>Function call :</p>
-<pre>&lt;button ng-click='toggle()'&gt;{{button}}&lt;/button&gt;</pre>
+<pre class="lang-html"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">ng-click</span><span class="pun">=</span><span class="atv">'toggle()'</span><span class="tag">&gt;</span><span class="pln">{{button}}</span><span class="tag">&lt;/button&gt;</span></pre>
 </div>
 </div>
         <div id="core-section" class="section-container">
@@ -354,7 +352,7 @@ class MyAppModule extends Module {
           <div class="section">
             <p>Usage</p>
             <pre>{{ item in items | limitTo:2 }}</pre>
-            <pre>&lt;li ng-repeat=&quot;item in items | limitTo:2&quot;&gt;{{item}}&lt;/li&gt;</pre>
+            <pre class="lang-html"><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">ng-repeat</span><span class="pun">=</span><span class="atv">"item in items | limitTo:2"</span><span class="tag">&gt;</span><span class="pln">{{item}}</span><span class="tag">&lt;/li&gt;</span></pre>
             <p>Chaining</p>
             <pre>{{ item in items | limitTo:2 | uppercase }}</pre>
           </div>
