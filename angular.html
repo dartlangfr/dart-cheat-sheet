@@ -129,6 +129,15 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
 
 </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-bind-template</span><span class="pun">=</span><span class="atv">"{{salutation}} {{name}}!"</span><span class="tag">&gt;</span></pre>
           </div>
+          <div class="section">
+            <p>ng-pluralize</p>
+            <pre>< ng-pluralize count="personCount"
+              when="{'0': 'Nobody is viewing.',
+                     'one': '1 person is viewing.',
+                     'other': '{} people are viewing.'}">
+</ng-pluralize>
+            </pre>
+          </div>
         </div>
         <div id="routing-section" class="section-container">
             <p>Routing</p>
@@ -149,7 +158,7 @@ myRouteInitializer(Router router, RouteViewFactory views) {
     <div class="section">
       <p>Module</p>
       <pre>
-        class MyAppModule extends Module {
+class MyAppModule extends Module {
   MyAppModule() {
     value(RouteInitializerFn, myRouteInitializer);
     factory(NgRoutingUsePushState,
