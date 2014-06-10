@@ -133,6 +133,7 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
         <div id="routing-section" class="section-container">
             <p>Routing</p>
     <div class="section">
+      <p>Router</p>
       <pre>
 myRouteInitializer(Router router, RouteViewFactory views) {
   views.configure({
@@ -143,6 +144,18 @@ myRouteInitializer(Router router, RouteViewFactory views) {
         path: '/goodbye',
         enter: views('views/goodbye.html'))
   });
+      </pre>
+    </div>
+    <div class="section">
+      <p>Module</p>
+      <pre>
+        class MyAppModule extends Module {
+  MyAppModule() {
+    value(RouteInitializerFn, myRouteInitializer);
+    factory(NgRoutingUsePushState,
+        (_) => new NgRoutingUsePushState.value(false));
+  }
+}
       </pre>
     </div>
   </div>
