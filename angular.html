@@ -148,29 +148,25 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
             <p>Routing</p>
     <div class="section">
       <p>Router</p>
-      <pre>
-myRouteInitializer(Router router, RouteViewFactory views) {
-  views.configure({
-    'hello': ngRoute(
-        path: '/hello',
-        enter: views('views/hello.html')),
-    'goodbye': ngRoute(
-        path: '/goodbye',
-        enter: views('views/goodbye.html'))
-  });
-      </pre>
+<pre class="lang-dart"><span class="pln">myRouteInitializer</span><span class="pun">(</span><span class="typ">Router</span><span class="pln"> router</span><span class="pun">,</span><span class="pln"> </span><span class="typ">RouteViewFactory</span><span class="pln"> views</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  views</span><span class="pun">.</span><span class="pln">configure</span><span class="pun">({</span><span class="pln">
+    </span><span class="str">'hello'</span><span class="pun">:</span><span class="pln"> ngRoute</span><span class="pun">(</span><span class="pln">
+        path</span><span class="pun">:</span><span class="pln"> </span><span class="str">'/hello'</span><span class="pun">,</span><span class="pln">
+        enter</span><span class="pun">:</span><span class="pln"> views</span><span class="pun">(</span><span class="str">'views/hello.html'</span><span class="pun">)),</span><span class="pln">
+    </span><span class="str">'goodbye'</span><span class="pun">:</span><span class="pln"> ngRoute</span><span class="pun">(</span><span class="pln">
+        path</span><span class="pun">:</span><span class="pln"> </span><span class="str">'/goodbye'</span><span class="pun">,</span><span class="pln">
+        enter</span><span class="pun">:</span><span class="pln"> views</span><span class="pun">(</span><span class="str">'views/goodbye.html'</span><span class="pun">))</span><span class="pln">
+</span><span class="pun">});</span></pre>
     </div>
     <div class="section">
       <p>Module</p>
-      <pre>
-class MyAppModule extends Module {
-  MyAppModule() {
-    value(RouteInitializerFn, myRouteInitializer);
-    factory(NgRoutingUsePushState,
-        (_) => new NgRoutingUsePushState.value(false));
-  }
-}
-      </pre>
+<pre class="lang-dart"><span class="kwd">class</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Module</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="typ">MyAppModule</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    value</span><span class="pun">(</span><span class="typ">RouteInitializerFn</span><span class="pun">,</span><span class="pln"> myRouteInitializer</span><span class="pun">);</span><span class="pln">
+    factory</span><span class="pun">(</span><span class="typ">NgRoutingUsePushState</span><span class="pun">,</span><span class="pln">
+        </span><span class="pun">(</span><span class="pln">_</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">NgRoutingUsePushState</span><span class="pun">.</span><span class="pln">value</span><span class="pun">(</span><span class="kwd">false</span><span class="pun">));</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
     </div>
   </div>
 <div id="member-section" class="section-container">
@@ -358,8 +354,8 @@ class MyAppModule extends Module {
           </div>
           <div class="section">
             <p>Custom formaters</p>
-            <pre>@Formatter(name: 'camelCase')
-class CamelCaseFormatter { ... }</pre>
+            <pre class="lang-dart"><span class="lit">@Formatter</span><span class="pun">(</span><span class="pln">name</span><span class="pun">:</span><span class="pln"> </span><span class="str">'camelCase'</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">CamelCaseFormatter</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">}</span></pre>
           </div>
         </div>
         <div id="model-section" class="section-container">
