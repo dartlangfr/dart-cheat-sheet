@@ -130,6 +130,22 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
 </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-bind-template</span><span class="pun">=</span><span class="atv">"{{salutation}} {{name}}!"</span><span class="tag">&gt;</span></pre>
           </div>
         </div>
+        <div id="routing-section" class="section-container">
+            <p>Routing</p>
+    <div class="section">
+      <pre>
+myRouteInitializer(Router router, RouteViewFactory views) {
+  views.configure({
+    'hello': ngRoute(
+        path: '/hello',
+        enter: views('views/hello.html')),
+    'goodbye': ngRoute(
+        path: '/goodbye',
+        enter: views('views/goodbye.html'))
+  });
+      </pre>
+    </div>
+  </div>
 <div id="member-section" class="section-container">
   <p>Member access</p>
     <div class="section">
