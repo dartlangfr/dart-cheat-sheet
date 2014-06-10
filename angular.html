@@ -71,22 +71,14 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
           <p>Module</p>
           <div class="section">
             <pre class="lang-dart">
-<span class="kwd">class</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Module</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  </span><span class="typ">MyAppModule</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    type</span><span class="pun">(</span><span class="typ">RecipeBookController</span><span class="pun">);</span><span class="pln">
-    type</span><span class="pun">(</span><span class="typ">RatingComponent</span><span class="pun">);</span><span class="pln">
-    type</span><span class="pun">(</span><span class="typ">Tooltip</span><span class="pun">);</span><span class="pln">
-    type</span><span class="pun">(</span><span class="typ">CategoryFilter</span><span class="pun">);</span><span class="pln">
-    type</span><span class="pun">(</span><span class="typ">SearchRecipeComponent</span><span class="pun">);</span><span class="pln">
-    type</span><span class="pun">(</span><span class="typ">ViewRecipeComponent</span><span class="pun">);</span><span class="pln">
-    type</span><span class="pun">(</span><span class="typ">QueryService</span><span class="pun">);</span><span class="pln">
-    value</span><span class="pun">(</span><span class="typ">NgRoutingUsePushState</span><span class="pun">,&nbsp;</span><span class="typ">recipeBookRouteInitializer</span><span class="pun">);</span><span class="kwd">
-    factory</span><span class="pun">(</span><span class="typ">NgRoutingUsePushState</span><span class="pun">,
-           (_) => </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">NgRoutingUsePushState</span><span class="pun">.</span><span class="typ">value</span><span class="pun">(</span><span class="kwd">false</span><span class="pun">);</span>
-    <span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span><span class="pln">
+<span class="kwd">class</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Module</span><span class="pln"> </span><span class="pun">{</span><span class="pln"></span>
+  <span class="typ">MyAppModule</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span>
+    <span class="pln">install</span><span class="pun">(</span><span class="typ">anotherModule</span><span class="pun">);</span>
+    <span class="pln">bind</span><span class="pun">(</span><span class="typ">typeToBind</span><span class="pun">);</span>
+  <span class="pun">}</span>
+<span class="pun">}</span>
 
-main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+ <span class="pln">main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
   applicationFactory</span><span class="pun">()</span><span class="pln">
       </span><span class="pun">.</span><span class="pln">addModule</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pun">())</span><span class="pln">
       </span><span class="pun">.</span><span class="pln">run</span><span class="pun">();</span><span class="pln">
@@ -200,7 +192,7 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
           <div class="section">
             <p>Http Service</p>
             <pre class="lang-dart"><span class="kwd">class</span><span class="pln"> </span><span class="typ">RecipeBookController</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">Http</span><span class="pln"> _http</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">Http</span><span class="pln"> http</span><span class="pun">;</span><span class="pln">
   </span><span class="typ">RecipeBookController</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">http</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span>
   http</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'recipes.json'</span><span class="pun">)</span><span class="pln">
     </span><span class="pun">.</span><span class="kwd">then</span><span class="pun">((</span><span class="typ">HttpResponse</span><span class="pln"> response</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span>
