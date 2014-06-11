@@ -140,26 +140,24 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
         <div id="routing-section" class="section-container">
             <p>Routing</p>
     <div class="section">
+      <p>Insertion Point</p>
+      <pre class="lang-html"><span class="tag">&lt;section</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"details"</span><span class="tag">&gt;</span><span class="pln">
+   </span><span class="tag">&lt;ng-view&gt;&lt;/ng-view&gt;</span><span class="pln">
+</span><span class="tag">&lt;/section&gt;</span></pre>
+    </div>
+    <div class="section">
       <p>Router</p>
-<pre class="lang-dart"><span class="pln">myRouteInitializer</span><span class="pun">(</span><span class="typ">Router</span><span class="pln"> router</span><span class="pun">,</span><span class="pln"> </span><span class="typ">RouteViewFactory</span><span class="pln"> views</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+<pre class="lang-dart"><span class="kwd">void</span><span class="pln"> initRoutes</span><span class="pun">(</span><span class="typ">Router</span><span class="pln"> router</span><span class="pun">,</span><span class="pln"> </span><span class="typ">RouteViewFactory</span><span class="pln"> views</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
   views</span><span class="pun">.</span><span class="pln">configure</span><span class="pun">({</span><span class="pln">
-    </span><span class="str">'hello'</span><span class="pun">:</span><span class="pln"> ngRoute</span><span class="pun">(</span><span class="pln">
-        path</span><span class="pun">:</span><span class="pln"> </span><span class="str">'/hello'</span><span class="pun">,</span><span class="pln">
-        enter</span><span class="pun">:</span><span class="pln"> views</span><span class="pun">(</span><span class="str">'views/hello.html'</span><span class="pun">)),</span><span class="pln">
-    </span><span class="str">'goodbye'</span><span class="pun">:</span><span class="pln"> ngRoute</span><span class="pun">(</span><span class="pln">
-        path</span><span class="pun">:</span><span class="pln"> </span><span class="str">'/goodbye'</span><span class="pun">,</span><span class="pln">
-        enter</span><span class="pun">:</span><span class="pln"> views</span><span class="pun">(</span><span class="str">'views/goodbye.html'</span><span class="pun">))</span><span class="pln">
-</span><span class="pun">});</span></pre>
+    </span><span class="str">'recipes'</span><span class="pun">:</span><span class="pln"> ngRoute</span><span class="pun">(</span><span class="pln">path</span><span class="pun">:</span><span class="pln"> </span><span class="str">'/recipes'</span><span class="pun">,</span><span class="pln"> view</span><span class="pun">:</span><span class="pln"> </span><span class="str">'recipes.html'</span><span class="pun">),</span><span class="pln">
+    </span><span class="str">'viewRecipe'</span><span class="pun">:</span><span class="pln"> ngRoute</span><span class="pun">(</span><span class="pln">path</span><span class="pun">:</span><span class="pln"> </span><span class="str">'/recipe/:recipeId/view'</span><span class="pun">,</span><span class="pln"> view</span><span class="pun">:</span><span class="pln"> </span><span class="str">'recipe.html'</span><span class="pun">),</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">}</span></pre>
     </div>
     <div class="section">
       <p>Module</p>
-<pre class="lang-dart"><span class="kwd">class</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Module</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  </span><span class="typ">MyAppModule</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    value</span><span class="pun">(</span><span class="typ">RouteInitializerFn</span><span class="pun">,</span><span class="pln"> myRouteInitializer</span><span class="pun">);</span><span class="pln">
-    factory</span><span class="pun">(</span><span class="typ">NgRoutingUsePushState</span><span class="pun">,</span><span class="pln">
-        </span><span class="pun">(</span><span class="pln">_</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">NgRoutingUsePushState</span><span class="pun">.</span><span class="pln">value</span><span class="pun">(</span><span class="kwd">false</span><span class="pun">));</span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></pre>
+<pre class="lang-dart"><span class="kwd">var</span><span class="pln"> </span><span class="kwd">module</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Module</span><span class="pun">()</span><span class="pln">
+    </span><span class="pun">..</span><span class="pln">bind</span><span class="pun">(</span><span class="typ">RouteInitializerFn</span><span class="pun">,</span><span class="pln"> toValue</span><span class="pun">:</span><span class="pln"> initRoutes</span><span class="pun">);</span></pre>
     </div>
   </div>
 <div id="member-section" class="section-container">
