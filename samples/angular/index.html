@@ -43,5 +43,19 @@
     <script src="packages/shadow_dom/shadow_dom.min.js"></script>
     <script type="application/dart" src="main.dart"></script>
     <script type="text/javascript" src="packages/browser/dart.js"></script>
+  
+    <hr/>
+
+    <!-- ng-include -->
+    <div ng-include="template1.html"></div>
+    <div ng-include="template2.html"></div>
+    <select ng-model="templateUrl">
+     <option value="">(blank)</option>
+     <option ng-repeat="t in ['template1.html', 'template2.html']" ng-bind="t"></option>
+    </select>
+    url of the template: <code>{{templateUrl}}</code>
+    <div>
+      <div ng-include="{{templateUrl}}"></div>
+    </div>
   </body>
 </html>

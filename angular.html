@@ -70,25 +70,36 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
         <div id="module-section" class="section-container">
           <p>Module</p>
           <div class="section">
-            <pre class="lang-dart">
-<span class="kwd">class</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Module</span><span class="pln"> </span><span class="pun">{</span><span class="pln"></span>
-  <span class="typ">MyAppModule</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span>
-    <span class="pln">install</span><span class="pun">(</span><span class="typ">anotherModule</span><span class="pun">);</span>
-    <span class="pln">bind</span><span class="pun">(</span><span class="typ">typeToBind</span><span class="pun">);</span>
-    <span class="pln">bindByKey</span><span class="pun">(</span><span class="typ">keyToBind</span><span class="pun">);</span>
-  <span class="pun">}</span>
-<span class="pun">}</span>
+<pre class="lang-dart"><span class="kwd">class</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Module</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="typ">MyAppModule</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    install</span><span class="pun">(</span><span class="typ">AnotherModule</span><span class="pun">);</span><span class="pln">
+    bind</span><span class="pun">(</span><span class="typ">TypeToBind</span><span class="pun">);</span><span class="pln">
+    bindByKey</span><span class="pun">(</span><span class="typ">KeyToBind</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
 
- <span class="pln">main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
   applicationFactory</span><span class="pun">()</span><span class="pln">
-      </span><span class="pun">.</span><span class="pln">addModule</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pun">())</span><span class="pln">
-      </span><span class="pun">.</span><span class="pln">run</span><span class="pun">();</span><span class="pln">
-</span><span class="pun">}</span>
-                  </pre>
+    </span><span class="pun">.</span><span class="pln">addModule</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pun">())</span><span class="pln">
+    </span><span class="pun">.</span><span class="pln">run</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">}</span></pre>
           </div>
         </div>
         <div id="template-section" class="section-container">
           <p>Template directives</p>
+          <div class="section">
+            <p>ng-bind / ng-bind-html / ng-bind-template</p>
+<pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-bind</span><span class="pun">=</span><span class="atv">"expression"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-bind-html</span><span class="pun">=</span><span class="atv">"expression"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-bind-template</span><span class="pun">=</span><span class="atv">"{{salutation}} {{name}}!"</span><span class="tag">&gt;</span></pre>
+          </div>
+          <div class="section">
+            <p>ng-show / ng-hide</p>
+            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-show</span><span class="pun">=</span><span class="atv">"myValue"</span><span class="tag">&gt;&lt;/div&gt;</span></pre>
+            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-hide</span><span class="pun">=</span><span class="atv">"myValue"</span><span class="tag">&gt;&lt;/div&gt;</span></pre>
+          </div>
           <div class="section">
             <p>ng-if / ng-unless</p>
             <pre class="lang-html prettyprint prettyprinted"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-if</span><span class="pun">=</span><span class="atv">"condition expression"</span><span class="tag">&gt;</span><span class="pln">
@@ -115,26 +126,16 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
 </span><span class="tag">&lt;/ul&gt;</span></pre>
           </div>
           <div class="section">
-            <p>ng-bind / ng-bind-html / ng-bind-template</p>
-<pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-bind</span><span class="pun">=</span><span class="atv">"expression"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
-
-</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-bind-html</span><span class="pun">=</span><span class="atv">"expression"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
-
-</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-bind-template</span><span class="pun">=</span><span class="atv">"{{salutation}} {{name}}!"</span><span class="tag">&gt;</span></pre>
-          </div>
-          <div class="section">
             <p>ng-pluralize</p>
 <pre class="lang-html"><span class="tag">&lt;ng-pluralize</span><span class="pln"> </span><span class="atn">count</span><span class="pun">=</span><span class="atv">"personCount"</span><span class="pln">
-          </span><span class="atn">when</span><span class="pun">=</span><span class="atv">"{'0': 'Nobody is viewing.',
-                 'one': '1 person is viewing.',
-                 'other': '{} people are viewing.'}"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="atn">when</span><span class="pun">=</span><span class="atv">"{'0': 'Nobody is viewing.',
+    'one': '1 person is viewing.',
+    'other': '{} people are viewing.'}"</span><span class="tag">&gt;</span><span class="pln">
 </span><span class="tag">&lt;/ng-pluralize&gt;</span></pre>
           </div>
           <div class="section">
-            <p>ng-show / ng-hide</p>
-            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-show</span><span class="pun">=</span><span class="atv">"myValue"</span><span class="tag">&gt;&lt;/div&gt;</span></pre>
-            </pre>
-            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-hide</span><span class="pun">=</span><span class="atv">"myValue"</span><span class="tag">&gt;&lt;/div&gt;</span></pre>
+            <p>ng-include</p>
+            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-include</span><span class="pun">=</span><span class="atv">"{{templateUrl}}"</span><span class="tag">&gt;&lt;/div&gt;</span></pre>
           </div>
         </div>
         <div id="routing-section" class="section-container">
@@ -199,7 +200,7 @@ Name: </span><span class="tag">&lt;input</span><span class="pln"> </span><span c
             <p>Http Service</p>
             <pre class="lang-dart"><span class="kwd">class</span><span class="pln"> </span><span class="typ">RecipeBookController</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
   </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">Http</span><span class="pln"> http</span><span class="pun">;</span><span class="pln">
-  </span><span class="typ">RecipeBookController</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">http</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span>
+  </span><span class="typ">RecipeBookController</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">http</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{
   http</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'recipes.json'</span><span class="pun">)</span><span class="pln">
     </span><span class="pun">.</span><span class="kwd">then</span><span class="pun">((</span><span class="typ">HttpResponse</span><span class="pln"> response</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span>
       <span class="pun">...</span><span class="pln">
@@ -364,7 +365,7 @@ Name: </span><span class="tag">&lt;input</span><span class="pln"> </span><span c
           </div>
           <div class="section">
             <p>Select</p>
-            <pre class="lang-html"><span class="tag">&lt;select</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">""</span><span class="tag">&gt;</span><span class="pln">
+            <pre class="lang-html"><span class="tag">&lt;select</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"selectedValue"</span><span class="tag">&gt;</span><span class="pln">
   ...
 </span><span class="tag">&lt;/select&gt;</span></pre>
           </div>
