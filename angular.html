@@ -72,7 +72,7 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
           <div class="section">
 <pre class="lang-dart"><span class="kwd">class</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Module</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
   </span><span class="typ">MyAppModule</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    install</span><span class="pun">(</span><span class="typ">AnotherModule</span><span class="pun">);</span><span class="pln">
+    install</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">AnotherModule</span><span class="pun">());</span><span class="pln">
     bind</span><span class="pun">(</span><span class="typ">TypeToBind</span><span class="pun">);</span><span class="pln">
     bindByKey</span><span class="pun">(</span><span class="typ">KeyToBind</span><span class="pun">);</span><span class="pln">
   </span><span class="pun">}</span><span class="pln">
