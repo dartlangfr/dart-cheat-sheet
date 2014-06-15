@@ -46,15 +46,16 @@
 	background-color: #56C5FF;
 }
 
-#assignment-section {
-	background-color: #2d3999;
-}
-/*#history-section {
+#binding-section {
     background-color: #2d9943;
 }
 
-#local-storage-section {
+/*#local-storage-section {
 	background-color: #2d3999;
+}
+
+#assignment-section {
+  background-color: #2d3999;
 }
 
 #index-db-section {

@@ -125,11 +125,11 @@ code {
 /* Dart lint */
 pre {
   background-color: #EEEEEE;
-  padding-top: 0.5em;
-  padding-left: 0.5em;
+  padding: 0.5em;
   margin: 0;
   font-family: Arial;
   font-size: 1em;
+  overflow: hidden;
 }
 
 /* Type */

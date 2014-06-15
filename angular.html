@@ -71,15 +71,18 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
         <div id="module-section" class="section-container">
           <p>Module</p>
           <div class="section">
+            <p>Declaration:</p>
             <pre class="lang-dart"><span class="kwd">class</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Module</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
   </span><span class="typ">MyAppModule</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
     install</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">AnotherModule</span><span class="pun">());</span><span class="pln">
     bind</span><span class="pun">(</span><span class="typ">TypeToBind</span><span class="pun">);</span><span class="pln">
     bindByKey</span><span class="pun">(</span><span class="typ">KeyToBind</span><span class="pun">);</span><span class="pln">
   </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span><span class="pln">
-
-main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+</span><span class="pun">}</span></pre>
+          </div>
+          <div class="section">
+            <p>Registration:</p>
+            <pre class="lang-dart"><span class="pln">main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
   applicationFactory</span><span class="pun">()</span><span class="pln">
     </span><span class="pun">.</span><span class="pln">addModule</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pun">())</span><span class="pln">
     </span><span class="pun">.</span><span class="pln">run</span><span class="pun">();</span><span class="pln">
@@ -165,30 +168,58 @@ bind</span><span class="pun">(</span><span class="typ">NgRoutingUsePushState</sp
   </span><span class="pun">(</span><span class="pln">_</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">NgRoutingUsePushState</span><span class="pun">.</span><span class="pln">value</span><span class="pun">(</span><span class="kwd">false</span><span class="pun">));</span></pre>
           </div>
         </div>
-        <div id="member-section" class="section-container">
-          <p>Member access</p>
+        <div id="binding-section" class="section-container">
+          <p>Bindings</p>
+          
           <div class="section">
-            <p>String :</p>
-            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-bind</span><span class="pun">=</span><span class="atv">"stringValue"</span><span class="tag">&gt;&lt;/div&gt;</span></pre>
+            <p>One-way binding:</p>
+            <pre class="lang-html"><span class="tag">&lt;span&gt;</span><span class="pln">{{ expr }}</span><span class="tag">&lt;/span&gt;</span><span class="pln">
+</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">ng-bind</span><span class="pun">=</span><span class="atv">" expr "</span><span class="tag">&gt;&lt;/span&gt;</span></pre>
           </div>
           <div class="section">
-            <p>List :</p>
-            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-bind</span><span class="pun">=</span><span class="atv">"list[42]"</span><span class="tag">&gt;&lt;/div&gt;</span></pre>
-          </div>
-          <div class="section">
-            <p>Map :</p>
-            <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-bind</span><span class="pun">=</span><span class="atv">"map['field']"</span><span class="tag">&gt;&lt;/div&gt;</span></pre>
-          </div>
-          <div class="section">
-            <p>Function call :</p>
-            <pre class="lang-html"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">ng-click</span><span class="pun">=</span><span class="atv">'toggle()'</span><span class="tag">&gt;</span><span class="pln">{{button}}</span><span class="tag">&lt;/button&gt;</span></pre>
+            <p>Two-way binding:</p>
+            <pre class="lang-html"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">" expr "</span><span class="tag">&gt;</span></pre>
           </div>
         </div>
-        <div id="assignment-section" class="section-container">
-          <p>Assignment</p>
+        <div id="member-section" class="section-container">
+          <p>Expressions</p>
           <div class="section">
-            <pre class="lang-html"><span class="tag">&lt;h3&gt;</span><span class="pln">Hello {{name}}!</span><span class="tag">&lt;/h3&gt;</span><span class="pln">
-Name: </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"name"</span><span class="tag">&gt;</span></pre>
+            <p>Statements:</p>
+            <pre class="lang-dart"><span class="pln">expr</span><span class="pun">;</span><span class="pln"> expr</span><span class="pun">;</span><span class="pln"> expr</span></pre>
+          </div>
+          <div class="section">
+            <p>Member access:</p>
+            <pre class="lang-dart"><span class="pln">field
+nested</span><span class="pun">.</span><span class="pln">otherNested</span><span class="pun">.</span><span class="pln">field
+list</span><span class="pun">[</span><span class="lit">42</span><span class="pun">]</span><span class="pln">
+map</span><span class="pun">[</span><span class="str">'key'</span><span class="pun">]</span></pre>
+          </div>
+          <div class="section">
+            <p>Function call:</p>
+            <pre class="lang-dart"><span class="pln">toggle()</span><span class="pln">
+obj</span><span class="pun">.</span><span class="pln">distance</span><span class="pun">(</span><span class="lit">42</span><span class="pun">,</span><span class="pln"> y</span><span class="pun">)</span></pre>
+          </div>
+          <div class="section">
+            <p>List / Map literals:</p>
+            <pre class="lang-dart"><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">]</span><span class="pln">
+</span><span class="pun">{</span><span class="str">'question'</span><span class="pun">:</span><span class="pln"> </span><span class="str">'?'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'response'</span><span class="pun">:</span><span class="pln"> </span><span class="lit">42</span><span class="pun">}</span></pre>
+          </div>
+          <div class="section">
+            <p>Assignment:</p>
+            <pre class="lang-dart"><span class="pln">field </span><span class="pun">=</span><span class="pln"> value
+nested</span><span class="pun">.</span><span class="pln">field </span><span class="pun">=</span><span class="pln"> value
+list</span><span class="pun">[</span><span class="lit">42</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> value
+map</span><span class="pun">[</span><span class="str">'key'</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> value</span></pre>
+          </div>
+          <div class="section">
+            <p>Ternary operator:</p>
+            <pre class="lang-dart"><span class="pln">a </span><span class="pun">?</span><span class="pln"> b </span><span class="pun">:</span><span class="pln"> c</span></pre>
+          </div>
+          <div class="section">
+            <p>Filters:</p>
+            <pre class="lang-dart"><span class="pln">name </span><span class="pun">|</span><span class="pln"> uppercase
+items </span><span class="pun">|</span><span class="pln"> limitTo</span><span class="pun">:</span><span class="lit">2</span><span class="pln">
+items </span><span class="pun">|</span><span class="pln"> limitTo</span><span class="pun">:</span><span class="lit">2</span><span class="pln"> </span><span class="pun">|</span><span class="pln"> uppercase</span></pre>
           </div>
         </div>
         <div id="core-section" class="section-container">
