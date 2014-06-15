@@ -16,8 +16,18 @@ class MyAppModule extends Module {
     bind(RecipeBookController);
     bind(Tooltip);
     bind(RatingComponent);
+    bind(RouteInitializerFn, toValue: initRoutes);
+    bind(NgRoutingUsePushState, toFactory: (_) => new NgRoutingUsePushState.value(false));
     // TODO: working examples
     //    bindByKey(KeyToBind);
+  }
+
+  initRoutes(Router router, RouteViewFactory views) {
+    print("Hello");
+    views.configure({
+      'recipes': ngRoute(path: '/recipes', view: 'template1.html'),
+      'viewRecipe': ngRoute(path: '/recipe/:recipeId/view', view: 'template2.html'),
+    });
   }
 }
 class AnotherModule extends Module {
@@ -25,11 +35,9 @@ class AnotherModule extends Module {
   }
 }
 
-@Decorator(
-  selector: '[tooltip]', 
-  map: const {
-    'tooltip': '@text'
-  })
+@Decorator(selector: '[tooltip]', map: const {
+  'tooltip': '@text'
+})
 class Tooltip {
   final Element element;
 
@@ -42,26 +50,19 @@ class Tooltip {
   }
 }
 
-@Component(
-  selector: 'rating',
-  map: const {
-    'rating': '<=>rating',
-    'max-rating': '=>maxRating'
-  },
-  templateUrl: 'rating_component.html',
-  cssUrl: 'rating_component.css',
-  publishAs: 'cmp')
+@Component(selector: 'rating', templateUrl: 'rating_component.html', cssUrl: 'rating_component.css', map: const {
+  'rating': '<=>rating',
+  'max-rating': '=>maxRating'
+}, publishAs: 'cmp')
 class RatingComponent {
-  List<bool>  stars = new List.generate(5, (i) => i + 1);
-  
+  List<bool> stars = new List.generate(5, (i) => i + 1);
+
   int rating;
   int maxRating;
 }
 
 //@Component?
-@Controller(
-  selector: '[recipe-book]',
-  publishAs: 'ctrl')
+@Controller(selector: '[recipe-book]', publishAs: 'ctrl')
 class RecipeBookController {
   String data = "Hello World!";
 }

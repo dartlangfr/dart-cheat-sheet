@@ -1,6 +1,13 @@
 <html ng-app>
   <body>
     <!-- ng-if / ng-unless -->
+    <h3>Route</h3>
+    <a href="#/recipes">Recipes</a> <a href="#/recipe/123/view">Recipe</a>
+    <section>
+      <ng-view></ng-view>
+    </section>
+
+    <!-- ng-if / ng-unless -->
     <h3>ng-if / ng-unless</h3>
     <div ng-if="true">
       Removed from the DOM if ng-unless is falsy
