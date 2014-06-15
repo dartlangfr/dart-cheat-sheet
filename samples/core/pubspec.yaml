@@ -1,0 +1,6 @@
+name: dart_core_cheat_sheet_samples
+version: 1.0.0
+#dependencies:
+
+dev_dependencies:
+  unittest: any
