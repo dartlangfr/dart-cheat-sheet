@@ -1,6 +1,7 @@
 <html ng-app>
   <body>
     <!-- ng-if / ng-unless -->
+    <h3>ng-if / ng-unless</h3>
     <div ng-if="true">
       Removed from the DOM if ng-unless is falsy
     </div>
@@ -11,6 +12,7 @@
     <hr/>
     
     <!-- ng-switch -->
+    <h3>ng-switch</h3>
     <div>
       <button ng-click="selection='settings'">Show Settings</button>
       <button ng-click="selection='home'">Show Home Span</button>
@@ -26,6 +28,7 @@
     <hr/>
 
     <!-- ng-repeat -->
+    <h3>ng-repeat</h3>
     <ul>
       <li ng-repeat="item in ['foo', 'bar', 'baz']">
         {{item}}
@@ -35,6 +38,7 @@
     <hr/>
 
     <!-- ng-event -->
+    <h3>ng-event</h3>
     <button ng-click=" lastEvent = 'Click' " 
         ng-doubleclick=" lastEvent = 'DblClick' ">
         ng-event
@@ -47,6 +51,7 @@
     <hr/>
 
     <!-- ng-include -->
+    <h3>ng-include</h3>
     <div ng-include="template1.html"></div>
     <div ng-include="template2.html"></div>
     <select ng-model="templateUrl">
@@ -58,7 +63,6 @@
       <div ng-include="{{templateUrl}}"></div>
     </div>
       
-      
     <hr/>
 
     <!-- Controller -->
@@ -67,6 +71,13 @@
     <hr/>
 
     <!-- Decorator -->
-    <h3 tooltip="Hello World!">Tooltip</h3>
+    <h3>Decorator</h3>
+    <div tooltip="Hello World!">Tooltip</div>
+
+    <hr/>
+    
+    <!-- Component -->
+    <h3>Component</h3>
+    <rating rating="rating"></rating> {{rating}}
   </body>
 </html>

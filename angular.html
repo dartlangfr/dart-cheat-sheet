@@ -197,6 +197,36 @@ Name: </span><span class="tag">&lt;input</span><span class="pln"> </span><span c
 </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">RecipeBookController</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">}</span></pre>
           </div>
           <div class="section">
+            <p>Decorator</p>
+            <pre class="lang-dart"><span class="lit">@Decorator</span><span class="pun">(</span><span class="pln">
+  selector</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[tooltip]'</span><span class="pun">,</span><span class="pln"> 
+  map</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">const</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="str">'tooltip'</span><span class="pun">:</span><span class="pln"> </span><span class="str">'@text'</span><span class="pln">
+  </span><span class="pun">})</span><span class="pln">
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Tooltip</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">Element</span><span class="pln"> element</span><span class="pun">;</span><span class="pln">
+
+  </span><span class="typ">String</span><span class="pln"> text</span><span class="pun">;</span><span class="pln">
+
+  </span><span class="typ">Tooltip</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">element</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="pun">...</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+          </div>
+          <div class="section">
+            <p>Component</p>
+<pre class="lang-dart"><span class="lit">@Component</span><span class="pun">(</span><span class="pln">
+  selector</span><span class="pun">:</span><span class="pln"> </span><span class="str">'rating'</span><span class="pun">,</span><span class="pln">
+  map</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">const</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="str">'rating'</span><span class="pun">:</span><span class="pln"> </span><span class="str">'&lt;=&gt;rating'</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">'max-rating'</span><span class="pun">:</span><span class="pln"> </span><span class="str">'=&gt;maxRating'</span><span class="pln">
+  </span><span class="pun">},</span><span class="pln">
+  templateUrl</span><span class="pun">:</span><span class="pln"> </span><span class="str">'rating_component.html'</span><span class="pun">,</span><span class="pln">
+  cssUrl</span><span class="pun">:</span><span class="pln"> </span><span class="str">'rating_component.css'</span><span class="pun">,</span><span class="pln">
+  publishAs</span><span class="pun">:</span><span class="pln"> </span><span class="str">'cmp'</span><span class="pun">)</span><span class="pln">
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">RatingComponent</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">}</span></pre>          
+          </div>
+          <div class="section">
             <p>Http Service</p>
             <pre class="lang-dart"><span class="kwd">class</span><span class="pln"> </span><span class="typ">RecipeBookController</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
   </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">Http</span><span class="pln"> http</span><span class="pun">;</span><span class="pln">
@@ -211,15 +241,6 @@ Name: </span><span class="tag">&lt;input</span><span class="pln"> </span><span c
 </pre>
           </div>
         </div>
-        <!--
-          <div id="filter-section" class="section-container">
-              <p>Filter</p>
-              <div class="section">
-                  <p></p>
-                  <pre class="lang-html"></pre>
-              </div>
-          </div>
-          -->
         <div id="events-section" class="section-container">
           <p>Event directives</p>
           <div class="section">

@@ -15,6 +15,7 @@ class MyAppModule extends Module {
     install(new AnotherModule());
     bind(RecipeBookController);
     bind(Tooltip);
+    bind(RatingComponent);
     // TODO: working examples
     //    bindByKey(KeyToBind);
   }
@@ -41,9 +42,26 @@ class Tooltip {
   }
 }
 
+@Component(
+  selector: 'rating',
+  map: const {
+    'rating': '<=>rating',
+    'max-rating': '=>maxRating'
+  },
+  templateUrl: 'rating_component.html',
+  cssUrl: 'rating_component.css',
+  publishAs: 'cmp')
+class RatingComponent {
+  List<bool>  stars = new List.generate(5, (i) => i + 1);
+  
+  int rating;
+  int maxRating;
+}
+
+//@Component?
 @Controller(
-    selector: '[recipe-book]',
-    publishAs: 'ctrl')
+  selector: '[recipe-book]',
+  publishAs: 'ctrl')
 class RecipeBookController {
   String data = "Hello World!";
 }
