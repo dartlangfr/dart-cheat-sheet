@@ -23,7 +23,6 @@ class MyAppModule extends Module {
   }
 
   initRoutes(Router router, RouteViewFactory views) {
-    print("Hello");
     views.configure({
       'recipes': ngRoute(path: '/recipes', view: 'template1.html'),
       'viewRecipe': ngRoute(path: '/recipe/:recipeId/view', view: 'template2.html'),
@@ -50,6 +49,7 @@ class Tooltip {
   }
 }
 
+// FIXME: publishAs is deprecated
 @Component(selector: 'rating', templateUrl: 'rating_component.html', cssUrl: 'rating_component.css', map: const {
   'rating': '<=>rating',
   'max-rating': '=>maxRating'
@@ -61,7 +61,7 @@ class RatingComponent {
   int maxRating;
 }
 
-//@Component?
+//FIXME: replace with @Component?
 @Controller(selector: '[recipe-book]', publishAs: 'ctrl')
 class RecipeBookController {
   String data = "Hello World!";

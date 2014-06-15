@@ -48,8 +48,8 @@
     <h3>ng-event</h3>
     <button ng-click=" lastEvent = 'Click' " 
         ng-doubleclick=" lastEvent = 'DblClick' ">
-        ng-event
-    </button> {{lastEvent}}
+        lastEvent: {{lastEvent}}
+    </button>
 
     <script src="packages/shadow_dom/shadow_dom.min.js"></script>
     <script type="application/dart" src="main.dart"></script>
@@ -85,6 +85,6 @@
     
     <!-- Component -->
     <h3>Component</h3>
-    <rating rating="rating"></rating> {{rating}}
+    <rating rating="rating" max-rating="5"></rating> {{rating}}
   </body>
 </html>
