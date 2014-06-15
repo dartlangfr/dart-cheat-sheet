@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   viewBox="7 226 400 400"
+   width="500"
+   height="500"
+   id="svg3187"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="angular.svg"
+   inkscape:export-filename="D:\dev\dart\dart-cheat-sheet\img\angular.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="838"
+     id="namedview3267"
+     showgrid="false"
+     inkscape:zoom="0.86961484"
+     inkscape:cx="224.21454"
+     inkscape:cy="249.28309"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g3335" />
+  <metadata
+     id="metadata3189">
+    <dc:date>2013-12-05 22:59Z</dc:date>
+    <!-- Produced by OmniGraffle Professional 5.4.4 -->
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3191">
+    <filter
+       id="Shadow"
+       filterUnits="userSpaceOnUse"
+       color-interpolation-filters="sRGB">
+      <feOffset
+         in="SourceAlpha"
+         result="offset"
+         dx="-1.5"
+         dy="2.2"
+         id="feOffset3194" />
+      <feFlood
+         flood-color="#c1c1c1"
+         result="flood"
+         id="feFlood3196" />
+      <feComposite
+         in="flood"
+         in2="offset"
+         operator="in"
+         id="feComposite3198" />
+    </filter>
+    <font-face
+       font-family="Sansation"
+       font-size="81"
+       panose-1="2 0 0 0 0 0 0 0 0 0"
+       units-per-em="1000"
+       underline-position="-80.078125"
+       underline-thickness="73.242188"
+       slope="0"
+       x-height="512.20703"
+       cap-height="703.125"
+       ascent="905.27344"
+       descent="-213.86719"
+       font-weight="500"
+       id="font-face3200"
+       stemv="0"
+       stemh="0"
+       accent-height="0"
+       ideographic="0"
+       alphabetic="0"
+       mathematical="0"
+       hanging="0"
+       v-ideographic="0"
+       v-alphabetic="0"
+       v-mathematical="0"
+       v-hanging="0"
+       strikethrough-position="0"
+       strikethrough-thickness="0"
+       overline-position="0"
+       overline-thickness="0">
+      <font-face-src
+         id="font-face-src3202">
+        <font-face-name
+           name="Sansation-Regular"
+           id="font-face-name3204" />
+      </font-face-src>
+    </font-face>
+  </defs>
+  <g
+     id="g3335"
+     transform="matrix(2.8528271,0,0,2.8528271,-27.327738,-446.96509)">
+    <g
+       id="g3342"
+       transform="matrix(0.82326961,0,0,0.82326961,14.516419,66.558305)">
+      <path
+         d="M 81.9273,235.9375 16,259.13878 l 10.417784,86.37582 55.579346,30.5479 55.86609,-30.96192 10.41434,-86.37232 z"
+         id="path3242"
+         inkscape:connector-curvature="0"
+         style="fill:#a4a4a4;stroke:none" />
+      <path
+         d="m 141.70173,263.71983 -59.92842,-20.43577 0,125.4798 50.22283,-27.79478 z"
+         id="path3244"
+         inkscape:connector-curvature="0"
+         style="fill:#a51c25;stroke:none" />
+      <path
+         d="m 23.398132,264.08867 8.926927,77.2492 49.447616,27.42631 0,-125.48296 z"
+         id="path3246"
+         inkscape:connector-curvature="0"
+         style="fill:#d91b2a;stroke:none" />
+      <path
+         d="M 95.6641,305.69568 81.88259,276.91529 69.74965,305.69568 z m 5.2545,12.10138 -36.532113,0 -8.172854,20.4427 -15.202141,0.28074 40.762328,-90.68032 42.18302,90.68032 -14.09018,0 z"
+         id="path3248"
+         inkscape:connector-curvature="0"
+         style="fill:#efefef;stroke:none" />
+      <path
+         d="m 81.773223,247.84 0.108817,29.07517 13.76747,28.80254 -13.84528,0 -0.03101,12.06079 19.14489,0.0187 8.94801,20.72677 14.54627,0.27005 z"
+         id="path3250"
+         inkscape:connector-curvature="0"
+         style="fill:#a4a4a4;stroke:none" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:26.522295px;font-style:normal;font-weight:normal;text-align:center;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="82.176414"
+       y="254.85745"
+       id="text3002"
+       sodipodi:linespacing="80.000001%"
+       inkscape:export-filename="D:\dev\dart\dart-cheat-sheet\img\g5978.png"
+       inkscape:export-xdpi="109.33344"
+       inkscape:export-ydpi="109.33344"><tspan
+         sodipodi:role="line"
+         x="82.176414"
+         y="254.85745"
+         style="font-size:26.522295px;font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;text-align:center;line-height:80.00000119%;text-anchor:middle;fill:#000000;font-family:Gotham Ultra;-inkscape-font-specification:Gotham Ultra Heavy"
+         id="tspan3246">ANGULAR</tspan></text>
+  </g>
+</svg>
