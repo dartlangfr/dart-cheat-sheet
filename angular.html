@@ -225,13 +225,6 @@ items </span><span class="pun">|</span><span class="pln"> limitTo</span><span cl
         <div id="core-section" class="section-container">
           <p>Core</p>
           <div class="section">
-            <p>Controller</p>
-            <pre class="lang-dart"><span class="lit">@Controller</span><span class="pun">(</span><span class="pln">
-    selector</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[recipe-book]'</span><span class="pun">,</span><span class="pln">
-    publishAs</span><span class="pun">:</span><span class="pln"> </span><span class="str">'ctrl'</span><span class="pun">)</span><span class="pln">
-</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">RecipeBookController</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">}</span></pre>
-          </div>
-          <div class="section">
             <p>Decorator</p>
             <pre class="lang-dart"><span class="lit">@Decorator</span><span class="pun">(</span><span class="pln">
   selector</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[tooltip]'</span><span class="pun">,</span><span class="pln">
@@ -280,17 +273,10 @@ items </span><span class="pun">|</span><span class="pln"> limitTo</span><span cl
             </div>
           <div class="section">
             <p>Examples</p>
-            <pre class="lang-dart"><span class="kwd">class</span><span class="pln"> </span><span class="typ">RecipeBookController</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  </span><span class="kwd">final</span><span class="pln"> </span><span class="typ">Http</span><span class="pln"> http</span><span class="pun">;</span><span class="pln">
-  </span><span class="typ">RecipeBookController</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">http</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{
-  http</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'recipes.json'</span><span class="pun">)</span><span class="pln">
-    </span><span class="pun">.</span><span class="kwd">then</span><span class="pun">((</span><span class="typ">HttpResponse</span><span class="pln"> response</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span>
-      <span class="pun">...</span><span class="pln">
-    </span><span class="pun">});</span><span class="pln">
-  </span><span class="pun">}</span>
-<span class="pun">}</span>
-
-</pre>
+            <pre class="lang-dart"><span class="pln">http</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'recipes.json'</span><span class="pun">)</span><span class="pln">
+  </span><span class="pun">.</span><span class="kwd">then</span><span class="pun">((</span><span class="typ">HttpResponse</span><span class="pln"> response</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span>
+    <span class="pun">...</span><span class="pln">
+  </span><span class="pun">});</span></pre>
           </div>
         </div>
         <div id="events-section" class="section-container">
