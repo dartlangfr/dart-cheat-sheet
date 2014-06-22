@@ -10,7 +10,7 @@
     background-color: #86B32D;
 }
 
-#core-section {
+#custom-section {
     background-color: #FFE25F;
 }
 
@@ -34,7 +34,7 @@
     background-color: #BF3030;
 }
 
-#member-section {
+#expressions-section {
 	background-color: #91D100;
 }
 
@@ -54,41 +54,9 @@
     background-color: #ff842e;
 }
 
-/*#local-storage-section {
-	background-color: #2d3999;
-}
+/*@media only screen and (min-width: 1200px) {
 
-#assignment-section {
-  background-color: #2d3999;
-}
-
-#index-db-section {
-    background-color: #56C5FF;
-}
-
-#event-source-section {
-    background-color: #ff842e;
-}
-
-#web-socket-section {
-    background-color: #91D100;
-}
-
-#web-rtc-section {
-    background-color: #FFE25F;
-}
-
-#canvas-section {
-  background-color: #009999;
-}
-
-#css-section {
-    background-color: #B81B6C;
-}*/
-
-@media only screen and (min-width: 1200px) {
-
-	#element-section, #http-request-section, #canvas-section{
+	#module-section {
 		-webkit-column-break-before: always;
 		-moz-column-break-before: always;
 		column-break-before: always;
@@ -96,9 +64,9 @@
 }
 
 @media only screen and (max-width: 1200px) {
-	#css-section, #local-storage-section {
+	#tto-section {
 		-webkit-column-break-before: always;
 		-moz-column-break-before: always;
 		column-break-before: always;
 	}
-}
+}*/
