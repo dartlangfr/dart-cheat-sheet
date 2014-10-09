@@ -303,7 +303,7 @@ items </span><span class="pun">|</span><span class="pln"> limitTo</span><span cl
           <div class="section">
             <p>ng-if / ng-unless</p>
             <pre class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-if</span><span class="pun">=</span><span class="atv">"condition expression"</span><span class="tag">&gt;</span><span class="pln">
-  Removed from the DOM if ng-unless is falsy
+  Removed from the DOM if ng-if is falsy
 </span><span class="tag">&lt;/div&gt;</span>
 <span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">ng-unless</span><span class="pun">=</span><span class="atv">"..."</span><span class="tag">&gt;</span><span class="pln">
   Removed from the DOM if ng-unless is truthy
@@ -321,7 +321,7 @@ items </span><span class="pun">|</span><span class="pln"> limitTo</span><span cl
             <p>ng-repeat</p>
             <pre class="lang-html"><span class="tag">&lt;ul&gt;</span><span class="pln">
   </span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">ng-repeat</span><span class="pun">=</span><span class="atv">"item in ['foo', 'bar', 'baz']"</span><span class="tag">&gt;</span><span class="pln">
-    {{item}}
+    {{$index}} : {{item}}
   </span><span class="tag">&lt;/li&gt;</span><span class="pln">
 </span><span class="tag">&lt;/ul&gt;</span></pre>
           </div>
@@ -438,8 +438,8 @@ items </span><span class="pun">|</span><span class="pln"> limitTo</span><span cl
           <div class="section">
             <p>Module registration</p>
             <pre class="lang-dart"><span class="pln">bind</span><span class="pun">(</span><span class="typ">RouteInitializerFn</span><span class="pun">,</span><span class="pln"> toValue</span><span class="pun">:</span><span class="pln"> initRoutes</span><span class="pun">);</span><span class="pln">
-bind</span><span class="pun">(</span><span class="typ">NgRoutingUsePushState</span><span class="pun">,</span><span class="pln"> toFactory</span><span class="pun">:</span><span class="pln">
-  </span><span class="pun">(</span><span class="pln">_</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">NgRoutingUsePushState</span><span class="pun">.</span><span class="pln">value</span><span class="pun">(</span><span class="kwd">false</span><span class="pun">));</span></pre>
+bind</span><span class="pun">(</span><span class="typ">NgRoutingUsePushState</span><span class="pun">,</span><span class="pln"> toValue</span><span class="pun">:</span><span class="pln">
+  </span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">NgRoutingUsePushState</span><span class="pun">.</span><span class="pln">value</span><span class="pun">(</span><span class="kwd">false</span><span class="pun">));</span></pre>
           </div>
         </div>
         <div id="custom-section" class="section-container">
@@ -498,7 +498,7 @@ bind</span><span class="pun">(</span><span class="typ">NgRoutingUsePushState</sp
           <div class="section">
             <p>Usage</p>
             <pre>{{ item in items | limitTo:2 }}</pre>
-            <pre class="lang-html"><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">ng-repeat</span><span class="pun">=</span><span class="atv">"item in items | limitTo:2"</span><span class="tag">&gt;</span><span class="pln">{{item}}</span><span class="tag">&lt;/li&gt;</span></pre>
+            <pre class="lang-html"><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">ng-repeat</span><span class="pun">=</span><span class="atv">"item in items | limitTo:2"</span><span class="tag">&gt;</span><span class="tag">&lt;/li&gt;</span></pre>
             <p>Chaining</p>
             <pre>{{ item in items | limitTo:2 | uppercase }}</pre>
           </div>
@@ -521,7 +521,7 @@ bind</span><span class="pun">(</span><span class="typ">NgRoutingUsePushState</sp
       <div>
         +Made by <a href="http://plus.google.com/115049522200141162219"><span>Guillaume Girou</span></a>, <a href="http://plus.google.com/106226789128312528511"><span>Nicolas François</span></a> and <a href="http://plus.google.com/109253530406296308866"><span>Vincent Bostoen</span></a> from
         <a href="https://plus.google.com/115816334172157652403"><span>Dartlang [FR] - &#661;&#3663;&#814;&#3663;&#660;</span></a><br>
-        <em>AngularDart v0.12.0 - 20140625</em><br>
+        <em>AngularDart v0.14.0 - 20141009</em><br>
       </div>
     </div>
     <!-- Google+ +1 button. -->

@@ -17,7 +17,7 @@ class MyAppModule extends Module {
     bind(Tooltip);
     bind(RatingComponent);
     bind(RouteInitializerFn, toValue: initRoutes);
-    bind(NgRoutingUsePushState, toFactory: (_) => new NgRoutingUsePushState.value(false));
+    bind(NgRoutingUsePushState, toValue: new NgRoutingUsePushState.value(false));
     // TODO: working examples
     //    bindByKey(KeyToBind);
   }

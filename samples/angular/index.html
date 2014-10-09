@@ -9,10 +9,11 @@
 
     <!-- ng-if / ng-unless -->
     <h3>ng-if / ng-unless</h3>
-    <div ng-if="true">
-      Removed from the DOM if ng-unless is falsy
+    <input type="checkbox" ng-model="bool_value" id="bool_value"> <label ng-bind="bool_value || false" for="ngif"></label>
+    <div ng-if="bool_value">
+      Removed from the DOM if ng-if is falsy
     </div>
-    <div ng-unless="false">
+    <div ng-unless="bool_value">
       Removed from the DOM if ng-unless is truthy
     </div>
 
@@ -38,7 +39,7 @@
     <h3>ng-repeat</h3>
     <ul>
       <li ng-repeat="item in ['foo', 'bar', 'baz']">
-        {{item}}
+        {{$index}} - {{item}}
       </li>
     </ul>
     
@@ -50,22 +51,20 @@
         ng-doubleclick=" lastEvent = 'DblClick' ">
         lastEvent: {{lastEvent}}
     </button>
-
-    <script src="packages/shadow_dom/shadow_dom.min.js"></script>
-    <script type="application/dart" src="main.dart"></script>
-    <script type="text/javascript" src="packages/browser/dart.js"></script>
   
     <hr/>
 
     <!-- ng-include -->
     <h3>ng-include</h3>
+    Static:
     <div ng-include="template1.html"></div>
     <div ng-include="template2.html"></div>
+    Dynamic:
     <select ng-model="templateUrl">
      <option value="">(blank)</option>
      <option ng-repeat="t in ['template1.html', 'template2.html']" ng-bind="t"></option>
     </select>
-    url of the template: <code>{{templateUrl}}</code>
+    url of the template: <code ng-bind="templateUrl"></code>
     <div>
       <div ng-include="{{templateUrl}}"></div>
     </div>
@@ -86,5 +85,9 @@
     <!-- Component -->
     <h3>Component</h3>
     <rating rating="rating" max-rating="5"></rating> {{rating}}
+    
+    <!-- Include scripts -->
+    <script type="application/dart" src="main.dart"></script>
+    <script type="text/javascript" src="packages/browser/dart.js"></script>
   </body>
 </html>
