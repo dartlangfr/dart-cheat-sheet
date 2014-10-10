@@ -209,7 +209,7 @@
             <div class="section">
               <p>Static Methods</p>
               <ul class="section-content">
-                <li>Future spawn(void entryPoint(message), message)</li>
+                <li>Future spawn(entryPoint(message), message)</li>
                 <li>Future spawnUri(Uri uri, List args, message)</li>
               </ul>
             </div>
@@ -397,7 +397,7 @@
           <div class="section">
             <p>List</p>
             <ul class="section-content">
-              <li>void add(E e)</li>
+              <li>add(E e)</li>
               <li>insert(index, E e)</li>
               <li>addAll(Iterable&lt;E&gt; elements)</li>
               <li>remove(Object element)</li>
@@ -431,7 +431,7 @@
               <li>operator [&nbsp;]=(K key, V value)</li>
               <li>V putIfAbsent(K key, V ifAbsent())</li>
               <li>V remove(K key)</li>
-              <li>forEach(void f(K key, V value))</li>
+              <li>forEach(f(K key, V value))</li>
               <li>Iterable&lt;K&gt; get keys</li>
               <li>Iterable&lt;V&gt; get values</li>
             </ul>
