@@ -544,7 +544,7 @@ _initializeDatabase(<span class="typ">VersionChangeEvent</span> e) {
 <span class="typ">CanvasElement</span> <span class="var">canvas</span> =
    <span class="kwd">new</span> <span class="typ">CanvasElement</span>(width: <span class="lit">600</span>, height: <span class="lit">600</span>);
 <span class="typ">CanvasRenderingContext2D</span> <span class="var">ctx</span> = <span class="var">canvas</span>.context2D;
-<span class="typ">ImageElement</span> <span class="var">img</span> = <span class="var">document</span>.query(<span class="str">'img'</span>);
+<span class="typ">ImageElement</span> <span class="var">img</span> = <span class="var">document</span>.querySelector(<span class="str">'img'</span>);
 
 <span class="var">ctx</span>.drawImage(img, <span class="lit">100</span>, <span class="lit">100</span>);
                 </pre>
