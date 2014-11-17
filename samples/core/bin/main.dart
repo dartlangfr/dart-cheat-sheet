@@ -142,14 +142,10 @@ testHttpServer() {
 }
 
 testRunZoned() {
-  var staticFiles = new VirtualDirectory('.')
-    ..allowDirectoryListing = true;
-  
-  runZoned(() {
-    HttpServer.bind('0.0.0.0', 7777).then((server) {
-      server.listen(staticFiles.serveRequest);
-      server.close(force:true);
-    });
-  },
-  onError: (e, stackTrace) => print('Oh noes! $e $stackTrace'));
+  runZoned(() { 
+    new Future(() { 
+      throw "asynchronous error"; 
+      }); 
+    }, 
+   onError: print); // Will print "asynchronous error".
 }
