@@ -4,3 +4,4 @@ version: 1.0.0
 
 dev_dependencies:
   unittest: any
+  http: any

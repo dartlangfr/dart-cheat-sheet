@@ -1,9 +1,11 @@
 import 'dart:collection';
+import 'package:http/http.dart' as http;
 
 main() {
   testCollections();
   testIterable();
   testList();
+  testHttpClient();
 }
 
 even(i) => i % 2 == 0;
@@ -97,4 +99,28 @@ testList() {
       ..removeRange(0, 1)
       ..retainWhere(even)
       ..clear();
+}
+
+testHttpClient() {
+  var jokesUrl = "http://api.icndb.com/jokes/random?firstName=John&amp;lastName=Doe";
+  var url = "http://devnull-as-a-service.com/dev/null";
+  
+  http.get(jokesUrl).then((response){
+    print("Response status: ${response.statusCode}");
+    print("Response body: ${response.body}");
+  });
+  
+  http.post(url, body: {"param1": "yop", "param2": "blop"});
+  http.put(url);  
+  http.delete(url);
+  http.head(jokesUrl);
+  http.readBytes(jokesUrl);
+  http.read(jokesUrl).then(print);
+  
+  var client = new http.Client();
+  client.post(
+      "http://devnull-as-a-service.com/dev/null",
+      body: {"param1": "yop", "param2": "blop"})
+    .then((response) => print(response.body))
+    .whenComplete(client.close);
 }
