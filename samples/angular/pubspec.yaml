@@ -7,3 +7,5 @@ dependencies:
 
 dev_dependencies:
   unittest: any
+transformers:
+- angular

@@ -1,9 +1,16 @@
 import 'dart:html';
 import 'package:angular/angular.dart';
 import 'package:angular/application_factory.dart';
+import 'rating_component.dart';
 
 main() {
-  applicationFactory().addModule(new MyAppModule()).run();
+  applicationFactory()
+    .addModule(new MyAppModule())
+    .run();
+
+//  applicationFactory()
+//    .rootContextType(RecipeBookContext)
+//    .run();
 }
 
 dblClickHandler() {
@@ -13,7 +20,6 @@ dblClickHandler() {
 class MyAppModule extends Module {
   MyAppModule() {
     install(new AnotherModule());
-    bind(RecipeBookController);
     bind(Tooltip);
     bind(RatingComponent);
     bind(RouteInitializerFn, toValue: initRoutes);
@@ -29,6 +35,7 @@ class MyAppModule extends Module {
     });
   }
 }
+
 class AnotherModule extends Module {
   AnotherModule() {
   }
@@ -49,20 +56,8 @@ class Tooltip {
   }
 }
 
-// FIXME: publishAs is deprecated
-@Component(selector: 'rating', templateUrl: 'rating_component.html', cssUrl: 'rating_component.css', map: const {
-  'rating': '<=>rating',
-  'max-rating': '=>maxRating'
-}, publishAs: 'cmp')
-class RatingComponent {
-  List<bool> stars = new List.generate(5, (i) => i + 1);
-
-  int rating;
-  int maxRating;
-}
-
-//FIXME: replace with @Component?
-@Controller(selector: '[recipe-book]', publishAs: 'ctrl')
-class RecipeBookController {
-  String data = "Hello World!";
+// Controller: doesn't work anymore. Looking for alternative...
+@Injectable()
+class RecipeBookContext {
+  String name = "Hello World Recipe!";
 }

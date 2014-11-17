@@ -109,43 +109,41 @@ testList() {
 testHttpClient() {
   var jokesUrl = "http://api.icndb.com/jokes/random?firstName=John&amp;lastName=Doe";
   var url = "http://devnull-as-a-service.com/dev/null";
-  
-  http.get(jokesUrl).then((response){
+
+  http.get(jokesUrl).then((response) {
     print("Response status: ${response.statusCode}");
     print("Response body: ${response.body}");
   });
-  
-  http.post(url, body: {"param1": "yop", "param2": "blop"});
-  http.put(url);  
+
+  http.post(url, body: {
+    "param1": "yop",
+    "param2": "blop"
+  });
+  http.put(url);
   http.delete(url);
   http.head(jokesUrl);
   http.readBytes(jokesUrl);
   http.read(jokesUrl).then(print);
-  
+
   var client = new http.Client();
-  client.post(
-      "http://devnull-as-a-service.com/dev/null",
-      body: {"param1": "yop", "param2": "blop"})
-    .then((response) => print(response.body))
-    .whenComplete(client.close);
+  client.post("http://devnull-as-a-service.com/dev/null", body: {
+    "param1": "yop",
+    "param2": "blop"
+  }).then((response) => print(response.body)).whenComplete(client.close);
 }
 
 testHttpServer() {
-    var staticFiles = new VirtualDirectory('.')
-      ..allowDirectoryListing = true;
+  var staticFiles = new VirtualDirectory('.')..allowDirectoryListing = true;
 
-      HttpServer.bind('0.0.0.0', 7777).then((server) {
-        print('Server running');
-        server.listen(staticFiles.serveRequest);
-        server.close(force:true);
-      });
+  HttpServer.bind('0.0.0.0', 7777).then((server) {
+    print('Server running');
+    server.listen(staticFiles.serveRequest);
+    server.close(force: true);
+  });
 }
 
 testRunZoned() {
-  runZoned(() { 
-    new Future(() { 
-      throw "asynchronous error"; 
-      }); 
-    }, 
-   onError: print); // Will print "asynchronous error".
+  runZoned(() {
+    new Future(() => throw "asynchronous error");
+  }, onError: (e) => print("Async error occured: $e"));
 }

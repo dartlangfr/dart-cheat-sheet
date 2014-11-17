@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html ng-app>
   <body>
     <!-- ng-if / ng-unless -->
@@ -71,11 +72,6 @@
       
     <hr/>
 
-    <!-- Controller -->
-    <h3 recipe-book>Controller: {{ctrl.data}}</h3>
-
-    <hr/>
-
     <!-- Decorator -->
     <h3>Decorator</h3>
     <div tooltip="Hello World!">Tooltip</div>
@@ -85,6 +81,9 @@
     <!-- Component -->
     <h3>Component</h3>
     <rating rating="rating" max-rating="5"></rating> {{rating}}
+    
+    <!-- Controller: doesn't work anymore. Looking for alternative... -->
+    <h3 recipe-book>Controller: {{ctrl.name}}</h3>
     
     <!-- Include scripts -->
     <script type="application/dart" src="main.dart"></script>
