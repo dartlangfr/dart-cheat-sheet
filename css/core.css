@@ -27,6 +27,14 @@
 	background-color: #BF3030;
 }
 
+#http-client-section {
+    background-color: #56C5FF;
+}
+
+#http-server-section {
+    background-color: #ff842e;
+}
+
 #io-section .section:nth-child(3) {
   -webkit-column-break-before: always;
   -moz-column-break-before: always;

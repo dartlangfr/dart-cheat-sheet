@@ -146,6 +146,14 @@
               <li>cancel()</li>
             </ul>
           </div>
+          <div class="section">
+            <p>Zone</p>
+            <pre class="lang-dart">
+<span class="pln">runZoned</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Future</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="kwd">throw</span><span class="pln"> </span><span class="str">"asynchronous error"</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">},</span><span class="pln"> onError</span><span class="pun">:</span><span class="pln"> </span><span class="pun">(</span><span class="pln">e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Async error occured: $e"</span><span class="pun">));</span>
+          </pre>
+          </div>
         </div>
         <div id="keyword-section" class="section-container">
           <p>Keywords</p>
@@ -203,6 +211,50 @@
               </ul>
             </div>
           </div>
+        </div>
+        <div id="http-client-section" class="section-container">
+          <p>package:http</p>
+            <div class="section">
+              <p>HTTP Client</p>
+              <ul class="section-content">
+                <li>get</li>
+                <li>put</li>
+                <li>post</li>
+                <li>delete</li>
+                <li>head</li>
+                <li>read</li>
+                <li>readBytes</li>
+              </ul>
+            </div>
+            <div class="section">
+              <p>Example</p>
+              <pre class="lang-dart">
+<span class="pln">http</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="pln">jokesUrl</span><span class="pun">).</span><span class="kwd">then</span><span class="pun">((</span><span class="pln">response</span><span class="pun">){</span><span class="pln">
+  </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Response status: ${response.statusCode}"</span><span class="pun">);</span><span class="pln">
+  </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Response body: ${response.body}"</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">});</span></pre>
+            </div>
+        </div>
+        <div id="http-server-section" class="section-container">
+          <p>package:http_server</p>
+            <div class="section">
+              <p>HTTP Server</p>
+              <ul class="section-content">
+                <li>bind</li>
+                <li>bindSecure</li>
+             </ul>
+            </div>
+            <div class="section">
+              <pre class="lang-dart">
+<span class="kwd">var</span><span class="pln"> staticFiles </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">VirtualDirectory</span><span class="pun">(</span><span class="str">'.'</span><span class="pun">)</span><span class="pln">
+  </span><span class="pun">..</span><span class="pln">allowDirectoryListing </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+
+</span><span class="typ">HttpServer</span><span class="pun">.</span><span class="pln">bind</span><span class="pun">(</span><span class="str">'0.0.0.0'</span><span class="pun">,</span><span class="pln"> </span><span class="lit">7777</span><span class="pun">).</span><span class="kwd">then</span><span class="pun">((</span><span class="pln">server</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">print</span><span class="pun">(</span><span class="str">'Server running'</span><span class="pun">);</span><span class="pln">
+  server</span><span class="pun">.</span><span class="pln">listen</span><span class="pun">(</span><span class="pln">staticFiles</span><span class="pun">.</span><span class="pln">serveRequest</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">});</span>
+              </pre>
+            </div>
         </div>
         <div id="isolate-section" class="section-container">
           <p>dart:isolate</p>
