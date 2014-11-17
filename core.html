@@ -217,13 +217,12 @@
             <div class="section">
               <p>HTTP Client</p>
               <ul class="section-content">
-                <li>Future<Response> delete(url, {Map<String, String> headers})</li>
-                <li>Future<Response> get(url, {Map<String, String> headers})</li>
-                <li>Future<Response> head(url, {Map<String, String> headers})</li>
-                <li>Future<Response> post(url, {Map<String, String> headers, body, Encoding encoding})</li>
-                <li>Future<Response> put(url, {Map<String, String> headers, body, Encoding encoding})</li>
-                <li>Future<String> read(url, {Map<String, String> headers})</li>
-                <li>Future<Uint8List> readBytes(url, {Map<String, String> headers})</li>
+                <li>Future&lt;String&gt; read(url)</li>
+                <li>Future&lt;Response&gt; get(url)</li>
+                <li>Future&lt;Response&gt; post(url)</li>
+                <li>Future&lt;Response&gt; put(url)</li>
+                <li>Future&lt;Response&gt; delete(url)</li>
+                <li>Future&lt;Response&gt; head(url)</li>
               </ul>
             </div>
             <div class="section">
@@ -240,8 +239,8 @@
             <div class="section">
               <p>HTTP Server</p>
               <ul class="section-content">
-                <li>bind</li>
-                <li>bindSecure</li>
+                <li>bind(address, port)</li>
+                <li>bindSecure(address, port)</li>
              </ul>
             </div>
             <div class="section">
@@ -252,8 +251,7 @@
 </span><span class="typ">HttpServer</span><span class="pun">.</span><span class="pln">bind</span><span class="pun">(</span><span class="str">'0.0.0.0'</span><span class="pun">,</span><span class="pln"> </span><span class="lit">7777</span><span class="pun">).</span><span class="kwd">then</span><span class="pun">((</span><span class="pln">server</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
   </span><span class="kwd">print</span><span class="pun">(</span><span class="str">'Server running'</span><span class="pun">);</span><span class="pln">
   server</span><span class="pun">.</span><span class="pln">listen</span><span class="pun">(</span><span class="pln">staticFiles</span><span class="pun">.</span><span class="pln">serveRequest</span><span class="pun">);</span><span class="pln">
-</span><span class="pun">});</span>
-              </pre>
+</span><span class="pun">});</span></pre>
             </div>
         </div>
         <div id="isolate-section" class="section-container">
