@@ -493,7 +493,7 @@ if (<span class="var">webSocket</span> != <span class="kwd">null</span> &&
   .getUserMedia(audio: <span class="kwd">true</span>, video: <span class="kwd">true</span>)
   .then(_onStream);
 
-_onStream((<span class="var">stream</span>) {
+_onStream(<span class="var">stream</span>) {
   <span class="kwd">var</span> <span class="var">video</span> = <span class="kwd">new</span> <span class="typ">VideoElement</span>()
    ..autoplay = <span class="kwd">true</span>
    ..src = <span class="typ">Url</span>.createObjectUrlFromStream(<span class="var">stream</span>)
