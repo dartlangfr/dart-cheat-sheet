@@ -1,11 +1,16 @@
 import 'dart:collection';
+import 'dart:io';
+import 'dart:async';
 import 'package:http/http.dart' as http;
+import 'package:http_server/http_server.dart';
 
 main() {
   testCollections();
   testIterable();
   testList();
   testHttpClient();
+  testHttpServer();
+  testRunZoned();
 }
 
 even(i) => i % 2 == 0;
@@ -123,4 +128,28 @@ testHttpClient() {
       body: {"param1": "yop", "param2": "blop"})
     .then((response) => print(response.body))
     .whenComplete(client.close);
+}
+
+testHttpServer() {
+    var staticFiles = new VirtualDirectory('.')
+      ..allowDirectoryListing = true;
+
+      HttpServer.bind('0.0.0.0', 7777).then((server) {
+        print('Server running');
+        server.listen(staticFiles.serveRequest);
+        server.close(force:true);
+      });
+}
+
+testRunZoned() {
+  var staticFiles = new VirtualDirectory('.')
+    ..allowDirectoryListing = true;
+  
+  runZoned(() {
+    HttpServer.bind('0.0.0.0', 7777).then((server) {
+      server.listen(staticFiles.serveRequest);
+      server.close(force:true);
+    });
+  },
+  onError: (e, stackTrace) => print('Oh noes! $e $stackTrace'));
 }
