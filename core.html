@@ -217,13 +217,13 @@
             <div class="section">
               <p>HTTP Client</p>
               <ul class="section-content">
-                <li>get</li>
-                <li>put</li>
-                <li>post</li>
-                <li>delete</li>
-                <li>head</li>
-                <li>read</li>
-                <li>readBytes</li>
+                <li>Future<Response> delete(url, {Map<String, String> headers})</li>
+                <li>Future<Response> get(url, {Map<String, String> headers})</li>
+                <li>Future<Response> head(url, {Map<String, String> headers})</li>
+                <li>Future<Response> post(url, {Map<String, String> headers, body, Encoding encoding})</li>
+                <li>Future<Response> put(url, {Map<String, String> headers, body, Encoding encoding})</li>
+                <li>Future<String> read(url, {Map<String, String> headers})</li>
+                <li>Future<Uint8List> readBytes(url, {Map<String, String> headers})</li>
               </ul>
             </div>
             <div class="section">
