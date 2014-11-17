@@ -1,5 +1,6 @@
 import 'dart:html';
 import 'dart:async';
+import 'dart:indexed_db';
 
 void main() {
   drawCanvas();
@@ -89,9 +90,7 @@ void localStorage(){
 
 void indexDB(){
   Future open() {
-    return window.indexedDB.open('myIndexedDB',
-        version: 1,
-        onUpgradeNeeded: _initializeDatabase)
+    return window.indexedDB.open('myIndexedDB', version: 1, onUpgradeNeeded: _initializeDatabase)
       .then(_loadFromDB);
   }
 }
@@ -99,6 +98,7 @@ void indexDB(){
 _initializeDatabase(VersionChangeEvent e) {
   // Initialize your database
 }
+
 Future _loadFromDB(Database db) {
   // Load request
 }
