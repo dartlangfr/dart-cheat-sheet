@@ -68,6 +68,27 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
 </span><span class="pun">}</span></pre>
           </div>
         </div>
+        <div id="module-section" class="section-container">
+          <p>Module</p>
+          <div class="section">
+            <p>Declaration:</p>
+            <pre class="lang-dart"><span class="kwd">class</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Module</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="typ">MyAppModule</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    install</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">AnotherModule</span><span class="pun">());</span><span class="pln">
+    bind</span><span class="pun">(</span><span class="typ">TypeToBind</span><span class="pun">);</span><span class="pln">
+    bindByKey</span><span class="pun">(</span><span class="typ">KeyToBind</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+          </div>
+          <div class="section">
+            <p>Registration:</p>
+            <pre class="lang-dart"><span class="pln">main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  applicationFactory</span><span class="pun">()</span><span class="pln">
+    </span><span class="pun">.</span><span class="pln">addModule</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pun">())</span><span class="pln">
+    </span><span class="pun">.</span><span class="pln">run</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">}</span></pre>
+          </div>
+        </div>
         <div id="binding-section" class="section-container">
           <p>Bindings</p>
 
@@ -122,41 +143,6 @@ items </span><span class="pun">|</span><span class="pln"> limitTo</span><span cl
 items </span><span class="pun">|</span><span class="pln"> limitTo</span><span class="pun">:</span><span class="lit">2</span><span class="pln"> </span><span class="pun">|</span><span class="pln"> uppercase</span></pre>
           </div>
         </div>
-        <div id="attribute-section" class="section-container">
-          <p>Attribute directives</p>
-          <div class="section">
-            <p>Source attributes</p>
-            <div class="section-content">
-              <pre class="lang-html"><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">ng-src</span><span class="pun">=</span><span class="atv">"{{username}}.png"</span><span class="tag">&gt;</span><span class="pln">.</span></pre>
-            </div>
-            <ul class="section-content column3">
-              <li>ng-href</li>
-              <li>ng-src</li>
-              <li>ng-srcset</li>
-            </ul>
-          </div>
-          <div class="section">
-            <p>Boolean attributes</p>
-            <div class="section-content">
-              <pre class="lang-html"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">ng-disabled</span><span class="pun">=</span><span class="atv">"{{false}}"</span><span class="tag">&gt;</span></pre>
-            </div>
-            <ul class="section-content column3">
-              <li>ng-checked</li>
-              <li>ng-disabled</li>
-              <li>ng-multiple</li>
-              <li>ng-open</li>
-              <li>ng-readonly</li>
-              <li>ng-required</li>
-              <li>ng-selected</li>
-            </ul>
-          </div>
-          <div class="section">
-            <p>Other attributes</p>
-            <pre class="lang-html"><span class="tag">&lt;svg&gt;</span><span class="pln">
-  </span><span class="tag">&lt;circle</span><span class="pln"> </span><span class="atn">ng-attr-cx</span><span class="pun">=</span><span class="atv">"{{cx}}"</span><span class="tag">&gt;&lt;/circle&gt;</span><span class="pln">
-</span><span class="tag">&lt;/svg&gt;</span></pre>
-          </div>
-        </div>
         <div id="model-section" class="section-container">
           <p>Model directives</p>
           <div class="section">
@@ -198,6 +184,41 @@ items </span><span class="pun">|</span><span class="pln"> limitTo</span><span cl
           <div class="section">
             <p>Content editable</p>
             <pre class="lang-html"><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">contenteditable</span><span class="pln"> </span><span class="atn">ng-model</span><span class="pun">=</span><span class="atv">"name"</span><span class="tag">&gt;</span></pre>
+          </div>
+        </div>
+        <div id="attribute-section" class="section-container">
+          <p>Attribute directives</p>
+          <div class="section">
+            <p>Source attributes</p>
+            <div class="section-content">
+              <pre class="lang-html"><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">ng-src</span><span class="pun">=</span><span class="atv">"{{username}}.png"</span><span class="tag">&gt;</span><span class="pln">.</span></pre>
+            </div>
+            <ul class="section-content column3">
+              <li>ng-href</li>
+              <li>ng-src</li>
+              <li>ng-srcset</li>
+            </ul>
+          </div>
+          <div class="section">
+            <p>Boolean attributes</p>
+            <div class="section-content">
+              <pre class="lang-html"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">ng-disabled</span><span class="pun">=</span><span class="atv">"{{false}}"</span><span class="tag">&gt;</span></pre>
+            </div>
+            <ul class="section-content column3">
+              <li>ng-checked</li>
+              <li>ng-disabled</li>
+              <li>ng-multiple</li>
+              <li>ng-open</li>
+              <li>ng-readonly</li>
+              <li>ng-required</li>
+              <li>ng-selected</li>
+            </ul>
+          </div>
+          <div class="section">
+            <p>Other attributes</p>
+            <pre class="lang-html"><span class="tag">&lt;svg&gt;</span><span class="pln">
+  </span><span class="tag">&lt;circle</span><span class="pln"> </span><span class="atn">ng-attr-cx</span><span class="pun">=</span><span class="atv">"{{cx}}"</span><span class="tag">&gt;&lt;/circle&gt;</span><span class="pln">
+</span><span class="tag">&lt;/svg&gt;</span></pre>
           </div>
         </div>
         <div id="events-section" class="section-container">
@@ -393,27 +414,6 @@ items </span><span class="pun">|</span><span class="pln"> limitTo</span><span cl
   </span><span class="pun">.</span><span class="kwd">then</span><span class="pun">((</span><span class="typ">HttpResponse</span><span class="pln"> response</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span>
     <span class="pun">...</span><span class="pln">
   </span><span class="pun">});</span></pre>
-          </div>
-        </div>
-        <div id="module-section" class="section-container">
-          <p>Module</p>
-          <div class="section">
-            <p>Declaration:</p>
-            <pre class="lang-dart"><span class="kwd">class</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Module</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  </span><span class="typ">MyAppModule</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-    install</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">AnotherModule</span><span class="pun">());</span><span class="pln">
-    bind</span><span class="pun">(</span><span class="typ">TypeToBind</span><span class="pun">);</span><span class="pln">
-    bindByKey</span><span class="pun">(</span><span class="typ">KeyToBind</span><span class="pun">);</span><span class="pln">
-  </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">}</span></pre>
-          </div>
-          <div class="section">
-            <p>Registration:</p>
-            <pre class="lang-dart"><span class="pln">main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  applicationFactory</span><span class="pun">()</span><span class="pln">
-    </span><span class="pun">.</span><span class="pln">addModule</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">MyAppModule</span><span class="pun">())</span><span class="pln">
-    </span><span class="pun">.</span><span class="pln">run</span><span class="pun">();</span><span class="pln">
-</span><span class="pun">}</span></pre>
           </div>
         </div>
         <div id="routing-section" class="section-container">
