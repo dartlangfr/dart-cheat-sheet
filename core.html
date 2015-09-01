@@ -264,18 +264,34 @@
         <div id="isolate-section" class="section-container">
           <p>dart:isolate</p>
             <div class="section">
-              <p>Static Methods</p>
-              <ul class="section-content">
-                <li>Future spawn(entryPoint(message), message)</li>
-                <li>Future spawnUri(Uri uri, List args, message)</li>
+              <p>Classes</p>
+              <ul class="section-content column2">
+                <li>Isolate</li>
+                <li>Capability</li>
+                <li>ReceivePort</li>
+                <li>SendPort</li>
               </ul>
             </div>
             <div class="section">
-            <p>Classes</p>
-            <ul class="section-content">
-              <li>RawReceivePort, ReceivePort, </li>
-              <li>SendPort, IsolateSpawnException</li>
-            </ul>
+              <p>Isolate</p>
+              <ul class="section-content">
+                <li>Isolate.spawn(entryPoint(msg), msg)</li>
+                <li>Isolate.spawnUri(Uri uri, List args, msg)</li>
+                <li>SendPort controlPort</li>
+                <li>Stream errors</li>
+                <li>pause()</li>
+                <li>resume()</li>
+                <li>kill()</li>
+              </ul>
+            </div>
+            <div class="section">
+            <p>Examples</p>
+            <pre style="" class="lang-dart"><span class="pln">Isolate</span><span class="pun">.</span><span class="pln">spawn</span><span class="pun">(</span><span class="pln">entryPoint</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Hello"</span><span class="pun">);</span><span class="pln">
+</span><span class="pln">entryPoint</span><span class="pun">(</span><span class="pln">msg</span><span class="pun">)</span><span class="pln"> </span><span class="pln">
+  </span><span class="pun">=&gt;</span><span class="pln"> print</span><span class="pun">(</span><span class="str">"$msg from isolate!"</span><span class="pun">);</span><span class="pln">
+
+Isolate</span><span class="pun">.</span><span class="pln">spawnUri</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> Uri</span><span class="pun">.</span><span class="pln">file</span><span class="pun">(</span><span class="str">"hello.dart"</span><span class="pun">),</span><span class="pln">
+  </span><span class="pun">[],</span><span class="pln"> </span><span class="str">"World"</span><span class="pun">);</span></pre>
           </div>
         </div>
         <div id="mirrors-section" class="section-container">

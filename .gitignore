@@ -8,6 +8,7 @@ packages
 
 # Include when developing application packages
 pubspec.lock
+.packages
 
 # Avoid committing generated JavaScript files
 *.dart.js

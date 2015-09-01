@@ -11,7 +11,7 @@ class MyClass {}
 
 enum Color { red, green, blue }
 
-testKeywords() {
+main() {
   _if();
   // TODO: all others...
   _asyncAwait();

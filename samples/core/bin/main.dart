@@ -3,20 +3,22 @@ library dart_cheat_sheet;
 import 'dart:collection';
 import 'dart:io';
 import 'dart:async';
+import 'dart:isolate';
 import 'package:http/http.dart' as http;
 import 'package:http_server/http_server.dart';
 
-import 'keywords.dart';
+import 'keywords.dart' as keywords;
 part 'some_part.dart';
 
 main() {
+  keywords.main();
   testCollections();
   testIterable();
   testList();
   testHttpClient();
   testHttpServer();
   testRunZoned();
-  testKeywords();
+  testIsolate();
 }
 
 even(i) => i % 2 == 0;
@@ -151,4 +153,11 @@ testRunZoned() {
   runZoned(() {
     new Future(() => throw "asynchronous error");
   }, onError: (e) => print("Async error occured: $e"));
+}
+
+isolateEntryPoint(msg) => print("$msg from isolate!");
+
+testIsolate() {
+  Isolate.spawn(isolateEntryPoint, "Hello");
+  Isolate.spawnUri(new Uri.file("keywords.dart"), [], "Hello");
 }
