@@ -12,19 +12,36 @@ part 'some_part.dart';
 
 main() {
   keywords.main();
+  testAnnotations();
   testCollections();
   testIterable();
   testList();
   testHttpClient();
   testHttpServer();
+  testTimer();
   testRunZoned();
   testIsolate();
 }
 
+testAnnotations() {
+  @deprecated
+  foo() => 0;
+
+  @override
+  bar() => 0;
+
+  @proxy
+  baz() => 0;
+}
+
 even(i) => i % 2 == 0;
+
 single(i) => i == 50;
+
 double(i) => i * 2;
+
 expand(i) => [i, i + 1];
+
 sum(a, b) => a + b;
 
 testCollections() {
@@ -115,32 +132,29 @@ testList() async {
 }
 
 testHttpClient() {
-  var jokesUrl =
-      "http://api.icndb.com/jokes/random?firstName=John&amp;lastName=Doe";
   var url = "http://devnull-as-a-service.com/dev/null";
 
-  http.get(jokesUrl).then((response) {
-    print("Response status: ${response.statusCode}");
-    print("Response body: ${response.body}");
+  http.get(url).then((resp) {
+    print("Response status: ${resp.statusCode}");
+    print("Response body: ${resp.body}");
   });
 
   http.post(url, body: {"param1": "yop", "param2": "blop"});
   http.put(url);
   http.delete(url);
-  http.head(jokesUrl);
-  http.readBytes(jokesUrl);
-  http.read(jokesUrl).then(print);
+  http.head(url);
+  http.readBytes(url);
+  http.read(url).then(print);
 
   var client = new http.Client();
-  client
-      .post("http://devnull-as-a-service.com/dev/null",
-          body: {"param1": "yop", "param2": "blop"})
-      .then((response) => print(response.body))
-      .whenComplete(client.close);
+  client.post(url, body: {"param1": "yop", "param2": "blop"})
+  .then((response) => print(response.body))
+  .whenComplete(client.close);
 }
 
 testHttpServer() {
-  var staticFiles = new VirtualDirectory('.')..allowDirectoryListing = true;
+  var staticFiles = new VirtualDirectory('.')
+    ..allowDirectoryListing = true;
 
   HttpServer.bind('0.0.0.0', 7777).then((server) {
     print('Server running');
@@ -149,9 +163,15 @@ testHttpServer() {
   });
 }
 
+testTimer() {
+  new Timer(const Duration(seconds: 1), () => print("Timer 1s"));
+  var timer = new Timer.periodic(const Duration(milliseconds: 300), (Timer timer) => print("Timer.periodic 300ms"));
+  new Timer(const Duration(seconds: 1), timer.cancel);
+}
+
 testRunZoned() {
   runZoned(() {
-    new Future(() => throw "asynchronous error");
+    new Future(() => throw "async error");
   }, onError: (e) => print("Async error occured: $e"));
 }
 

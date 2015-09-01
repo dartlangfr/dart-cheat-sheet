@@ -66,6 +66,14 @@
             </ul>
           </div>
           <div class="section">
+            <p>Annotations</p>
+            <ul class="section-content">
+              <li>@deprecated</li>
+              <li>@override</li>
+              <li>@proxy</li>
+            </ul>
+          </div>
+          <div class="section">
             <p>RegExp</p>
             <ul class="section-content">
               <li>Iterable&lt;Match&gt; allMatches(String str)</li>
@@ -87,24 +95,26 @@
           <div class="section">
             <p>Future&lt;T&gt;</p>
             <ul class="section-content">
-              <li>Future&lt;List&gt; Future.wait(Iterable&lt;Future&gt; futures)</li>
-              <li>Future Future.forEach(Iterable input, Future f(e))</li>
               <li>new Future(computation())</li>
-              <li>new Future.delayed(Duration duration)</li>
-              <li>new Future.error(Object error)</li>
-              <li>new Future.value(T value)</li>
-              <li>Stream&lt;List&gt; asStream()</li>
-              <li>Future catchError(onError(Object error))</li>
-              <li>Future then(onValue(T value))</li>
-              <li>Future&lt;List&gt; whenComplete(action())</li>
+              <li>new Future.delayed(duration, [compute()])</li>
+              <li>new Future.value(value)</li>
+              <li>new Future.error(error)</li>
+              <li>Future&lt;List&gt; Future.wait(futures)</li>
+              <li>Future Future.forEach(iterable, Future f(e))</li>
+              <li>Future Future.doWhile(f())</li>
+              <li>Stream&lt;T&gt; asStream()</li>
+              <li>Future catchError(onError(error))</li>
+              <li>Future then(onValue(value))</li>
+              <li>Future whenComplete(action())</li>
             </ul>
           </div>
           <div class="section">
             <p>Stream&lt;T&gt;</p>
             <ul class="section-content">
-              <li>new Stream.fromFuture(Future&lt;T&gt; future)</li>
-              <li>new Stream.fromIterable(Iterable&lt;T&gt; iterable)</li>
-              <li>new Stream.periodic(Duration period)</li>
+              <li>new Stream.fromIterable(iterable)</li>
+              <li>new Stream.fromFuture(future)</li>
+              <li>new Stream.periodic(period)</li>
+              <li>new Stream.empty()</li>
               <li>Future&lt;bool&gt; get isEmpty</li>
               <li>Future&lt;int&gt; get length</li>
               <li>Future&lt;T&gt; get first</li>
@@ -121,18 +131,18 @@
               <li>Stream&lt;T&gt; takeWhile(predicate)</li>
               <li>Stream expand(Iterable convert(T value))</li>
               <li>Stream map(convert(T event))</li>
-              <li>Stream transform(StreamTransformer streamTransformer)</li>
+              <li>Stream transform(streamTransformer)</li>
               <li>Stream&lt;T&gt; handleError(handle(error))</li>
-              <li>StreamSubscription&lt;T&gt; listen(onData(T event))</li>
-              <li>Future pipe(StreamConsumer&lt;T&gt; streamConsumer)</li>
+              <li>StreamSubscription listen(onData(event))</li>
+              <li>Future pipe(streamConsumer)</li>
               <li>Future&lt;bool&gt; contains(T match)</li>
               <li>Future&lt;T&gt; elementAt(index)</li>
               <li>Future&lt;bool&gt; every(predicate)</li>
               <li>Future&lt;T&gt; firstWhere(predicate)</li>
               <li>Future&lt;T&gt; lastWhere(predicate)</li>
               <li>Future&lt;T&gt; singleWhere(predicate)</li>
-              <li>Future&lt;T&gt; reduce(T combine(T previous, T element))</li>
-              <li>Future fold(initialValue, combine(previous, T element))</li>
+              <li>Future&lt;T&gt; reduce(combine(previous, e))</li>
+              <li>Future fold(initValue, combine(previous, e))</li>
               <li>Future&lt;List&lt;T&gt;&gt; toList()</li>
               <li>Future&lt;Set&lt;T&gt;&gt; toSet()</li>
             </ul>
@@ -141,8 +151,8 @@
             <p>Timer</p>
             <ul class="section-content">
               <li>Timer.run(callback()))</li>
-              <li>new Timer.Timer(Duration duration, callback())</li>
-              <li>new Timer.periodic(Duration duration, callback(timer)</li>
+              <li>new Timer(duration, callback())</li>
+              <li>new Timer.periodic(duration, callback())</li>
               <li>cancel()</li>
             </ul>
           </div>
@@ -150,8 +160,8 @@
             <p>Zone</p>
             <pre class="lang-dart">
 <span class="pln">runZoned</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Future</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="kwd">throw</span><span class="pln"> </span><span class="str">"asynchronous error"</span><span class="pun">);</span><span class="pln">
-</span><span class="pun">},</span><span class="pln"> onError</span><span class="pun">:</span><span class="pln"> </span><span class="pun">(</span><span class="pln">e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Async error occured: $e"</span><span class="pun">));</span></pre>
+  </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Future</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="kwd">throw</span><span class="pln"> </span><span class="str">"async error"</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">},</span><span class="pln"> onError</span><span class="pun">:</span><span class="pln"> </span><span class="pun">(</span><span class="pln">e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Async error: $e"</span><span class="pun">));</span></pre>
           </div>
         </div>
         <div id="keyword-section" class="section-container">
@@ -228,9 +238,9 @@
             <div class="section">
               <p>Example</p>
               <pre class="lang-dart">
-<span class="pln">http</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="pln">jokesUrl</span><span class="pun">).</span><span class="kwd">then</span><span class="pun">((</span><span class="pln">response</span><span class="pun">){</span><span class="pln">
-  </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Response status: ${response.statusCode}"</span><span class="pun">);</span><span class="pln">
-  </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Response body: ${response.body}"</span><span class="pun">);</span><span class="pln">
+<span class="pln">http</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="pln">url</span><span class="pun">).</span><span class="kwd">then</span><span class="pun">((</span><span class="pln">resp</span><span class="pun">){</span><span class="pln">
+  </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Response status: ${resp.statusCode}"</span><span class="pun">);</span><span class="pln">
+  </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Response body: ${resp.body}"</span><span class="pun">);</span><span class="pln">
 </span><span class="pun">});</span></pre>
             </div>
         </div>
@@ -299,13 +309,16 @@ Isolate</span><span class="pun">.</span><span class="pln">spawnUri</span><span c
           <div class="section">
             <p>Top-level functions</p>
             <ul class="section-content">
-              <li>InstanceMirror reflect(Object reflectee)</li>
               <li>MirrorSystem currentMirrorSystem()</li>
+              <li>InstanceMirror reflect(Object reflectee)</li>
+              <li>ClassMirror reflectClass(Type key)</li>
+              <li>TypeMirror reflectType(Type key)</li>
             </ul>
           </div>
           <div class="section">
             <p>Classes</p>
             <ul class="section-content">
+              <!-- TODO add new ones? -->
               <li>MirrorSystem, LibraryMirror, ClassMirror, </li>
               <li>MethodMirror, Mirror, InstanceMirror, Comment</li>
             </ul>
@@ -314,6 +327,7 @@ Isolate</span><span class="pun">.</span><span class="pln">spawnUri</span><span c
         <div id="operators-section" class="section-container">
           <p>Operators</p>
           <div class="section">
+            <!-- TODO add new ones? null-operators, ... -->
             <ul class="section-content">
               <li><b>Arithmetics</b>: &nbsp;&nbsp; + &nbsp;&nbsp; - &nbsp;&nbsp; * &nbsp;&nbsp; / &nbsp;&nbsp; %
                 &nbsp;&nbsp; ~/ &nbsp;&nbsp; -<em class="replaceable"><code>expr</code></em>
@@ -437,7 +451,8 @@ Isolate</span><span class="pun">.</span><span class="pln">spawnUri</span><span c
           <div class="section">
             <p>Iterable</p>
             <ul class="section-content">
-              <li>factory Iterable.generate(count, E generator(index))</li>
+              <li>const Iterable.empty()</li>
+              <li>new Iterable.generate(count, generator(i))</li>
               <li>bool isEmpty</li>
               <li>bool isNotEmpty</li>
               <li>Iterator&lt;E&gt; iterator</li>
@@ -461,7 +476,7 @@ Isolate</span><span class="pun">.</span><span class="pln">spawnUri</span><span c
               <li>Iterable&lt;E&gt; take(n)</li>
               <li>Iterable&lt;E&gt; takeWhile(predicate)</li>
               <li>E reduce(combine(E value, E e))</li>
-              <li>dynamic fold(initialValue, combine(previous, E e))</li>
+              <li>fold(initValue, combine(previous, e))</li>
               <li>String join([separator])</li>
               <li>List&lt;E&gt; toList()</li>
               <li>Set&lt;E&gt; toSet()</li>
