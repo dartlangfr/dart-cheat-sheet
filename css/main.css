@@ -324,6 +324,16 @@ pre {
 	background-color: rgba(255, 255, 255, 0.4);
 }
 
+table.table tbody tr:nth-of-type(odd) td:nth-of-type(even),
+table.table tbody tr:nth-of-type(even) td:nth-of-type(odd) {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+table.table tbody tr:nth-of-type(even) td:nth-of-type(even),
+table.table tbody tr:nth-of-type(odd) td:nth-of-type(odd) {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
 .section-group {
 	-moz-column-count: 2;
 	-webkit-column-count: 2;
@@ -359,6 +369,10 @@ pre {
 	font-weight: normal;
 	font-size: 0.85em;	
 	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.section.no-padding {
+	padding: 0;
 }
 
 .section p {
