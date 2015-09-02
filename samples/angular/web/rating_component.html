@@ -1,6 +1,6 @@
 <span class="stars"
-      ng-repeat="star in cmp.stars"
-      ng-click="cmp.rating = star"
-      ng-class="{'star-on': star <= cmp.rating, 'star-off': star > cmp.rating}"
-      ng-bind="star <= cmp.rating ? '\u2605' : '\u2606'">
+      ng-repeat="star in stars"
+      ng-click="rating = star"
+      ng-class="{'star-on': star <= rating, 'star-off': star > rating}"
+      ng-bind="star <= rating ? '\u2605' : '\u2606'">
 </span>

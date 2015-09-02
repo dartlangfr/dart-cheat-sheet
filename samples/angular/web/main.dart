@@ -5,8 +5,8 @@ import 'rating_component.dart';
 
 main() {
   applicationFactory()
-    .addModule(new MyAppModule())
-    .run();
+  .addModule(new MyAppModule())
+  .run();
 
 //  applicationFactory()
 //    .rootContextType(RecipeBookContext)
@@ -51,8 +51,8 @@ class Tooltip {
 
   Tooltip(this.element) {
     element
-        ..onMouseEnter.listen((_) => element.text = "Tooltip: $text")
-        ..onMouseLeave.listen((_) => element.text = "Tooltip");
+      ..onMouseEnter.listen((_) => element.text = "Tooltip: $text")
+      ..onMouseLeave.listen((_) => element.text = "Tooltip");
   }
 }
 

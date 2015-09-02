@@ -10,7 +10,7 @@
 
     <!-- ng-if / ng-unless -->
     <h3>ng-if / ng-unless</h3>
-    <input type="checkbox" ng-model="bool_value" id="bool_value"> <label ng-bind="bool_value || false" for="ngif"></label>
+    <input type="checkbox" ng-model="bool_value" id="bool_value"> <label ng-bind="bool_value || false" for="bool_value"></label>
     <div ng-if="bool_value">
       Removed from the DOM if ng-if is falsy
     </div>
@@ -21,6 +21,7 @@
     <hr/>
     
     <!-- ng-switch -->
+    <!--TODO Fix it-->
     <h3>ng-switch</h3>
     <div>
       <button ng-click="selection='settings'">Show Settings</button>
@@ -47,6 +48,7 @@
     <hr/>
 
     <!-- ng-event -->
+    <!--TODO Fix it-->
     <h3>ng-event</h3>
     <button ng-click=" lastEvent = 'Click' " 
         ng-doubleclick=" lastEvent = 'DblClick' ">
