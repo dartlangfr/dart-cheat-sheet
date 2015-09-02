@@ -318,7 +318,6 @@ Isolate</span><span class="pun">.</span><span class="pln">spawnUri</span><span c
         <div id="operators-section" class="section-container">
           <p>Operators</p>
           <div class="section">
-            <!-- TODO add new ones? null-operators, ... -->
             <ul class="section-content">
               <li><b>Arithmetics</b>: &nbsp;&nbsp; + &nbsp;&nbsp; - &nbsp;&nbsp; * &nbsp;&nbsp; / &nbsp;&nbsp; %
                 &nbsp;&nbsp; ~/ &nbsp;&nbsp; -<em class="replaceable"><code>expr</code></em>
@@ -334,16 +333,18 @@ Isolate</span><span class="pun">.</span><span class="pln">spawnUri</span><span c
                 &lt;= &nbsp;&nbsp; &lt; &nbsp;&nbsp; 
               </li>
               <li><b>Logical</b>: &nbsp;&nbsp; &amp;&amp; &nbsp;&nbsp; || &nbsp;&nbsp; !<em class="replaceable"><code>expr</code></em></li>
-              <li><b>Conditional</b>: <em class="replaceable"><code>expr1</code></em> ?
-                <em class="replaceable"><code>expr2</code></em> :
-                <em class="replaceable"><code>expr3</code></em>
+              <li><b>Conditional</b>: <em class="replaceable"><code>condition</code></em> ?
+                <em class="replaceable"><code>expr1</code></em> :
+                <em class="replaceable"><code>expr2</code></em><br>
+                <em class="replaceable"><code>ifNullExpr</code></em> ??
+                <em class="replaceable"><code>thenValueExpr</code></em>
               </li>
               <li><b>Assignment</b>: &nbsp;&nbsp; = &nbsp;&nbsp; *= &nbsp;&nbsp; /=
                 &nbsp;&nbsp; ~/= &nbsp;&nbsp; %= &nbsp;&nbsp; += &nbsp;&nbsp; -=
                 &nbsp;&nbsp; &lt;&lt;= &nbsp;&nbsp; &gt;&gt;= &nbsp;&nbsp; &amp;=
-                &nbsp;&nbsp; ^= &nbsp;&nbsp; |= &nbsp;&nbsp;
+                &nbsp;&nbsp; ^= &nbsp;&nbsp; |= &nbsp;&nbsp; ??=
               </li>
-              <li><b>Accessors</b>: &nbsp;&nbsp; [] &nbsp;&nbsp; . &nbsp;&nbsp; ..</li>
+              <li><b>Accessors</b>: &nbsp;&nbsp; [] &nbsp;&nbsp; . &nbsp;&nbsp; .. &nbsp;&nbsp; ?.</li>
               <li><b>Type / Argument</b>: &nbsp;&nbsp; as &nbsp;&nbsp; is &nbsp;&nbsp; is! &nbsp;&nbsp; ?<em class="replaceable"><code>identifier</code></em></li>
               <li><b>Symbol</b>: #<code>identifier</code></li>
             </ul>
