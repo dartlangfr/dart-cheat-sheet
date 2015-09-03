@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html ng-app>
   <body>
+    <h3>RootContext</h3>
+    <span ng-if="visible">Hello {{name}}!</span>
+
     <!-- ng-if / ng-unless -->
     <h3>Route</h3>
     <a href="#/recipes">Recipes</a> <a href="#/recipe/123/view">Recipe</a>
@@ -50,7 +53,7 @@
     <!-- ng-event -->
     <!--TODO Fix it-->
     <h3>ng-event</h3>
-    <button ng-click=" lastEvent = 'Click' " 
+    <button ng-click=" lastEvent = 'Click' "
         ng-doubleclick=" lastEvent = 'DblClick' ">
         lastEvent: {{lastEvent}}
     </button>
@@ -83,10 +86,7 @@
     <!-- Component -->
     <h3>Component</h3>
     <rating rating="rating" max-rating="5"></rating> {{rating}}
-    
-    <!-- Controller: doesn't work anymore. Looking for alternative... -->
-    <h3 recipe-book>Controller: {{ctrl.name}}</h3>
-    
+
     <!-- Include scripts -->
     <script type="application/dart" src="main.dart"></script>
     <script type="text/javascript" src="packages/browser/dart.js"></script>

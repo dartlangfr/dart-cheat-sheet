@@ -52,9 +52,10 @@
             <pre class="lang-html"><span class="tag">&lt;html</span><span class="pln"> </span><span class="atn">ng-app</span><span class="tag">&gt;</span><span class="pln">
   </span><span class="tag">&lt;body&gt;</span><span class="pln">
     ...
-    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"packages/shadow_dom/shadow_dom.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
-    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"application/dart"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"main.dart"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
-    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"packages/browser/dart.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"application/dart"</span><span class="pln">
+        </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"main.dart"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="pln">
+        </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"packages/browser/dart.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
   </span><span class="tag">&lt;/body&gt;</span><span class="pln">
 </span><span class="tag">&lt;/html&gt;</span></pre>
           </div>
@@ -68,6 +69,29 @@ main</span><span class="pun">()</span><span class="pln"> </span><span class="pun
 </span><span class="pun">}</span></pre>
           </div>
         </div>
+          <div id="root-context-section" class="section-container">
+              <p>Root Context</p>
+              <div class="section">
+                  <p>Declaration:</p>
+            <pre class="lang-dart"><span class="lit">@Injectable</span><span class="pun">()</span><span class="pln">
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">RootContext</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  bool visible</span><span class="pun">;</span><span class="pln">
+  </span><span class="typ">String</span><span class="pln"> name</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+              </div>
+              <div class="section">
+                  <p>Registration:</p>
+            <pre class="lang-dart"><span class="pln">main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  applicationFactory</span><span class="pun">()</span><span class="pln">
+    </span><span class="pun">.</span><span class="pln">rootContextType</span><span class="pun">(</span><span class="typ">RootContext</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">.</span><span class="pln">run</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">}</span></pre>
+              </div>
+              <div class="section">
+                  <p>HTML</p>
+                  <pre class="lang-html"><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">ng-if</span><span class="pun">=</span><span class="atv">"visible"</span><span class="tag">&gt;</span><span class="pln">Hello {{name}}!</span><span class="tag">&lt;/span&gt;</span></pre>
+              </div>
+          </div>
         <div id="module-section" class="section-container">
           <p>Module</p>
           <div class="section">
@@ -472,6 +496,8 @@ bind</span><span class="pun">(</span><span class="typ">NgRoutingUsePushState</sp
     </span><span class="str">'max-rating'</span><span class="pun">:</span><span class="pln"> </span><span class="str">'=&gt;maxRating'</span><span class="pln">
   </span><span class="pun">}</span><span class="pun">)</span><span class="pln">
 </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">RatingComponent</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">int</span><span class="pln"> rating</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">int</span><span class="pln"> maxRating</span><span class="pun">;</span><span class="pln">
   </span><span class="pun">...</span><span class="pln">
 </span><span class="pun">}</span></pre>
             <pre class="lang-html"><span class="tag">&lt;rating</span><span class="pln"> </span><span class="atn">rating</span><span class="pun">=</span><span class="atv">"rating"</span><span class="pln"> </span><span class="atn">max-rating</span><span class="pun">=</span><span class="atv">"5"</span><span class="tag">&gt;&lt;/rating&gt;</span></pre>
@@ -521,7 +547,7 @@ bind</span><span class="pun">(</span><span class="typ">NgRoutingUsePushState</sp
       <div>
         +Made by <a href="http://plus.google.com/115049522200141162219"><span>Guillaume Girou</span></a>, <a href="http://plus.google.com/106226789128312528511"><span>Nicolas François</span></a> and <a href="http://plus.google.com/109253530406296308866"><span>Vincent Bostoen</span></a> from
         <a href="https://plus.google.com/115816334172157652403"><span>Dartlang [FR] - &#661;&#3663;&#814;&#3663;&#660;</span></a><br>
-        <em>AngularDart v1.1.2 - 20150902</em><br>
+        <em>AngularDart v1.1.2 - 20150903</em><br>
       </div>
     </div>
     <!-- Google+ +1 button. -->

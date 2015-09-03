@@ -5,12 +5,9 @@ import 'rating_component.dart';
 
 main() {
   applicationFactory()
+  .rootContextType(RootContext) // Needed for assignment expression
   .addModule(new MyAppModule())
   .run();
-
-//  applicationFactory()
-//    .rootContextType(RecipeBookContext)
-//    .run();
 }
 
 dblClickHandler() {
@@ -36,6 +33,17 @@ class MyAppModule extends Module {
   }
 }
 
+@Injectable()
+class RootContext {
+  bool visible = true;
+  String name = "John Doe";
+  bool bool_value;
+  String selection;
+  String lastEvent;
+  String templateUrl;
+  int rating;
+}
+
 class AnotherModule extends Module {
   AnotherModule() {
   }
@@ -54,10 +62,4 @@ class Tooltip {
       ..onMouseEnter.listen((_) => element.text = "Tooltip: $text")
       ..onMouseLeave.listen((_) => element.text = "Tooltip");
   }
-}
-
-// Controller: doesn't work anymore. Looking for alternative...
-@Injectable()
-class RecipeBookContext {
-  String name = "Hello World Recipe!";
 }
