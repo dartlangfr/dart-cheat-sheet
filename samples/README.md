@@ -1,5 +1,5 @@
-Angular samples used in Dart Cheat Sheet
-----------------------------------------
+Code samples used in Dart Cheat Sheet
+-------------------------------------
 
 # How to generate styled code source:
 

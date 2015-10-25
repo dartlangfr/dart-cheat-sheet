@@ -455,19 +455,13 @@
           <p>Web Socket</p>
           <div class="section">
             <p>Example</p>
-            <pre  class="lang-dart">
-<span class="kwd">var</span> <span class="var">webSocket</span> =
-    <span class="kwd">new</span> <span class="typ">WebSocket</span>(<span class="str">'ws://127.0.0.1:1337/ws'</span>);
-if (<span class="var">webSocket</span> != <span class="kwd">null</span> &&
-    <span class="var">webSocket</span>.readyState == <span class="typ">WebSocket</span>.OPEN) {
-  <span class="var">webSocket</span>.send(data);
-} else {
-  print(<span class="str">'WebSocket not connected'</span>);
-}
-<span class="var">webSocket</span>.onMessage.listen((<span class="typ">MessageEvent</span> <span class="var">e</span>) {
-  receivedData(<span class="var">e</span>.data);
-});
-            </pre>
+<pre style="" class="lang-dart"><span class="pln">var ws </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">WebSocket</span><span class="pun">(</span><span class="str">'ws://localhost:3000/ws'</span><span class="pun">);</span><span class="pln">
+ws</span><span class="pun">.</span><span class="pln">onOpen</span><span class="pun">.</span><span class="pln">listen</span><span class="pun">((</span><span class="pln">e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  ws</span><span class="pun">.</span><span class="pln">send</span><span class="pun">(</span><span class="str">'Hello from Dart!'</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">});</span><span class="pln">
+ws</span><span class="pun">.</span><span class="pln">onMessage</span><span class="pun">.</span><span class="pln">listen</span><span class="pun">((</span><span class="typ">MessageEvent</span><span class="pln"> e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  print</span><span class="pun">(</span><span class="str">'WebSocket message received: ${e.data}'</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">});</span></pre>
           </div>
         </div> 
         <div id="event-source-section" class="section-container">

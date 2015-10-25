@@ -1,1 +1,5 @@
 name: dart_html_cheat_sheet_samples
+version: 1.0.0
+dependencies:
+  browser: any
+  http_server: any

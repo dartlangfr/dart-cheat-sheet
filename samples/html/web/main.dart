@@ -3,13 +3,13 @@ import 'dart:async';
 import 'dart:indexed_db';
 
 void main() {
-  drawCanvas();
-  runSocket("anyData");
-  eventSource();
+  runSocket();
   sendHttpRequest();
   webRTC();
   localStorage();
   indexDB();
+  drawCanvas();
+  eventSource();
 }
 
 void buttonEvent(){
@@ -20,7 +20,7 @@ void buttonEvent(){
 }
 
 sendHttpRequest(){
-  HttpRequest.getString('http://theUrl').then((response) {
+  HttpRequest.getString('index.html').then((response) {
     print(response);
   });
 }
@@ -34,16 +34,14 @@ void drawCanvas(){
   ctx.drawImage(img, 100, 100);
 }
 
-void runSocket(data){
-  var webSocket = new WebSocket('ws://127.0.0.1:1337/ws');
-  if (webSocket != null && webSocket.readyState == WebSocket.OPEN) {
-    webSocket.send(data);
-  } else {
-    print('WebSocket not connected');
-  }
-  webSocket.onMessage.listen((MessageEvent e) {
-    print(e.data);
-  });  
+void runSocket(){
+    var ws = new WebSocket('ws://localhost:3000/ws');
+    ws.onOpen.listen((e) {
+      ws.send('Hello from Dart!');
+    });
+    ws.onMessage.listen((MessageEvent e) {
+      print('WebSocket message received: ${e.data}');
+    });
 }
 
 void eventSource(){
