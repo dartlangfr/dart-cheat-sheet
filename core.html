@@ -237,12 +237,9 @@
             </div>
             <div class="section">
               <p>Example</p>
-              <pre class="lang-dart">
-<span class="pln">http</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="pln">url</span><span class="pun">).</span><span class="kwd">then</span><span class="pun">((</span><span class="pln">resp</span><span class="pun">){</span><span class="pln">
-  </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Response status: ${resp.statusCode}"</span><span class="pun">);</span><span class="pln">
-  </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Response body: ${resp.body}"</span><span class="pun">);</span><span class="pln">
-</span><span class="pun">});</span></pre>
-            </div>
+              <pre class="lang-dart"><span class="kwd">var</span><span class="pln"> resp </span><span class="pun">=</span> <span class="kwd">await</span> <span class="pln">http</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="pln">url</span><span class="pun">);</span>
+</span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Response status: ${resp.statusCode}"</span><span class="pun">);</span><span class="pln">
+</span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Response body: ${resp.body}"</span><span class="pun">);</span><span class="pln"></div>
         </div>
         <div id="http-server-section" class="section-container">
           <p>package:http_server</p>
@@ -263,12 +260,10 @@
               <p>Example</p>
               <pre class="lang-dart">
 <span class="kwd">var</span><span class="pln"> staticFiles </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">VirtualDirectory</span><span class="pun">(</span><span class="str">'.'</span><span class="pun">)</span><span class="pln">
-  </span><span class="pun">..</span><span class="pln">allowDirectoryListing </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
-
-</span><span class="typ">HttpServer</span><span class="pun">.</span><span class="pln">bind</span><span class="pun">(</span><span class="str">'0.0.0.0'</span><span class="pun">,</span><span class="pln"> </span><span class="lit">7777</span><span class="pun">).</span><span class="kwd">then</span><span class="pun">((</span><span class="pln">server</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
-  </span><span class="kwd">print</span><span class="pun">(</span><span class="str">'Server running'</span><span class="pun">);</span><span class="pln">
-  server</span><span class="pun">.</span><span class="pln">listen</span><span class="pun">(</span><span class="pln">staticFiles</span><span class="pun">.</span><span class="pln">serveRequest</span><span class="pun">);</span><span class="pln">
-</span><span class="pun">});</span></pre>
+  </span><span class="pun">..</span><span class="pln">allowDirectoryListing </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln"></span>
+<span class="kwd">var</span><span class="pln"> server </span><span class="pun">=</span> <span class="kwd">await</span> <span class="typ">HttpServer</span><span class="pun">.</span><span class="pln">bind</span><span class="pun">(</span><span class="str">'0.0.0.0'</span><span class="pun">,</span><span class="pln"> </span><span class="lit">7777</span><span class="pun">);
+<span class="kwd">print</span><span class="pun">(</span><span class="str">'Server running'</span><span class="pun">);</span><span class="pln">
+server</span><span class="pun">.</span><span class="pln">listen</span><span class="pun">(</span><span class="pln">staticFiles</span><span class="pun">.</span><span class="pln">serveRequest</span><span class="pun">);</span></pre>
           </div>
         </div>
         <div id="isolate-section" class="section-container">
@@ -525,7 +520,7 @@ Isolate</span><span class="pun">.</span><span class="pln">spawnUri</span><span c
       <div>
         +Made by <a href="http://plus.google.com/115049522200141162219"><span>Guillaume Girou</span></a>, <a href="http://plus.google.com/106226789128312528511"><span>Nicolas François</span></a> and <a href="http://plus.google.com/109253530406296308866"><span>Vincent Bostoen</span></a> from 
         <a href="https://plus.google.com/115816334172157652403"><span>Dartlang [FR] - &#661;&#3663;&#814;&#3663;&#660;</span></a><br>
-        <em>Dart v1.12.0 - 20150902</em><br>
+        <em>Dart v1.12.2 - 20151028</em><br>
       </div>
     </div>
     <!-- Google+ +1 button. -->
