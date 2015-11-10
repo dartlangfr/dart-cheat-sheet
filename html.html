@@ -247,8 +247,7 @@
             <pre class="lang-dart">
 <span class="var">buttonElem</span>.onClick.listen((<span class="typ">MouseEvent</span> event) {
   print(event);
-});
-            </pre>
+});</pre>
           </div>
         </div>
         <div id="element-section" class="section-container">
@@ -447,8 +446,7 @@
 <span class="typ">HttpRequest</span>.getString(<span class="str">'http://theUrl'</span>)
            .then((<span class="var">response</span>) {
   doSomethingWith(<span class="var">response</span>);
-});
-          </pre>
+});</pre>
           </div>
         </div>
         <div id="web-socket-section" class="section-container">
@@ -469,13 +467,12 @@ ws</span><span class="pun">.</span><span class="pln">onMessage</span><span class
           <div class="section">
             <p>Example</p>
             <pre class="lang-dart">
-<span class="kwd">var</span> <span class="var">source</span> = <span class="kwd">new</span> <span class="typ">EventSource</span>(<span class="str">'/the/url'</span>)
+<span class="kwd">var</span> <span class="var">source</span> = <span class="kwd">new</span> <span class="typ">EventSource</span>(<span class="str">'/events'</span>)
   ..onError.listen((<span class="typ">Event</span> <span class="var">e</span>) => print(<span class="str">'Error: $e'</span>))
   ..onOpen.listen((<span class="typ">Event</span> <span class="var">e</span>) => print(<span class="str">'Open'</span>))
   ..onMessage.listen((<span class="typ">MessageEvent</span> <span class="var">me</span>) =>
           print(<span class="str">'Message: ${me.data}'</span>)
-    );
-              </pre>
+    );</pre>
           </div>
         </div>
         <div id="web-rtc-section" class="section-container">
@@ -495,8 +492,7 @@ _onStream(<span class="var">stream</span>) {
      <span class="com">// Ready</span>
    });
   <span class="var">document</span>.body.append(<span class="var">video</span>);
-}
-              </pre>
+}</pre>
           </div>
         </div>
         <div id="local-storage-section" class="section-container">
@@ -526,8 +522,7 @@ _initializeDatabase(<span class="typ">VersionChangeEvent</span> e) {
 }
 <span class="typ">Future</span> _loadFromDB(<span class="typ">Database</span> db) {
   <span class="com">// Load request</span>
-}
-                </pre>
+}</pre>
           </div>
         </div>        
         <div id="canvas-section" class="section-container">
@@ -540,8 +535,7 @@ _initializeDatabase(<span class="typ">VersionChangeEvent</span> e) {
 <span class="typ">CanvasRenderingContext2D</span> <span class="var">ctx</span> = <span class="var">canvas</span>.context2D;
 <span class="typ">ImageElement</span> <span class="var">img</span> = <span class="var">document</span>.querySelector(<span class="str">'img'</span>);
 
-<span class="var">ctx</span>.drawImage(img, <span class="lit">100</span>, <span class="lit">100</span>);
-                </pre>
+<span class="var">ctx</span>.drawImage(img, <span class="lit">100</span>, <span class="lit">100</span>);</pre>
           </div>
         </div>
         <div id="history-section" class="section-container">
@@ -616,8 +610,7 @@ _onFileChange(<span class="var">e</span>){
         ..onLoad.listen((<span class="var">e2</span>) {
            print(reader.result);      
         });
-}
-                </pre>
+}</pre>
           </div>
           <div class="section">
             <p>File Writer</p>
@@ -654,7 +647,7 @@ _onFileChange(<span class="var">e</span>){
       <div>
         +Made by <a href="http://plus.google.com/115049522200141162219"><span>Guillaume Girou</span></a>, <a href="http://plus.google.com/106226789128312528511"><span>Nicolas François</span></a> and <a href="http://plus.google.com/109253530406296308866"><span>Vincent Bostoen</span></a> from 
         <a href="https://plus.google.com/115816334172157652403"><span>Dartlang [FR] - &#661;&#3663;&#814;&#3663;&#660;</span></a><br>
-        <em>Dart v1.7.2 - 20141117</em><br>
+        <em>Dart v1.12.2 - 20151110</em><br>
       </div>
     </div>
     <!-- Google+ +1 button. -->
@@ -664,4 +657,3 @@ _onFileChange(<span class="var">e</span>){
     <script type="text/javascript">gapi.plusone.go("header");</script>
   </body>
 </html>
-
