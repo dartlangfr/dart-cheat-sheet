@@ -8,8 +8,8 @@ void main() {
   webRTC();
   localStorage();
   indexDB();
-  drawCanvas();
   eventSource();
+  drawCanvas();
 }
 
 void buttonEvent(){
@@ -45,7 +45,7 @@ void runSocket(){
 }
 
 void eventSource(){
-  var source = new EventSource('/the/url')
+  new EventSource('http://localhost:3000/es')
     ..onError.listen((Event e) => print('Error: $e'))
     ..onOpen.listen((Event e) => print('Open'))
     ..onMessage.listen((MessageEvent me) =>
@@ -60,7 +60,7 @@ var fileInput = querySelector('#fileInput')
 _onFileChange(e){
   reader..readAsText(fileInput.files[0])
         ..onLoad.listen((e2) {
-           print(reader.result);      
+           print(reader.result);
         });
 }
 

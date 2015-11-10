@@ -17,6 +17,8 @@ startServer() async {
   await for (HttpRequest req in server) {
     if (req.uri.path == '/ws') {
       handleWebSocket(req);
+    } else if (req.uri.path == '/es') {
+      handleEventStream(req);
     } else {
       staticFiles.serveRequest(req);
     }
@@ -31,3 +33,31 @@ handleWebSocket(req) async {
     socket.add(msg);
   });
 }
+
+handleEventStream(HttpRequest req) async {
+  req.response.bufferOutput = false;
+
+  req.response.headers
+    ..add('Content-Type', 'text/event-stream')
+    ..add('Cache-Control', 'no-cache');
+
+  sendTime() async {
+    await new Future.delayed(new Duration(seconds: 1));
+    var time = new DateTime.now();
+    req.response.write('data: The server time is: $time\n\n');
+    return await req.response.flush();
+  }
+
+  await sendTime();
+  await sendTime();
+  await sendTime();
+  await sendTime();
+  await sendTime();
+  await sendTime();
+  await sendTime();
+  await sendTime();
+  await sendTime();
+
+  await req.response.close();
+}
+
