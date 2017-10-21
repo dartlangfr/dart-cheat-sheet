@@ -1,5 +1,6 @@
 dart-cheat-sheet
 ===
+
 This project hosts the http://dartlangfr.github.io/dart-cheat-sheet source code.  
 The cheat sheet references main classes and methods from Dart SDK.
 

@@ -4,5 +4,5 @@
 #   Name/Organization <email address>
 
 Guillaume Girou <>
-Nicolas François <>
+Nicolas FranÃ§ois <>
 Vincent Bostoen <>
